@@ -1,0 +1,306 @@
+{
+  "paired_validation_before_px": {
+    "n": 12,
+    "mean": 43.4925020210951,
+    "median": 42.87812017959772,
+    "p95": 78.24237973215845,
+    "max": 86.87543428193571
+  },
+  "paired_validation_after_px": {
+    "n": 12,
+    "mean": 22.780305871111437,
+    "median": 18.864715509548997,
+    "p95": 46.77618440890533,
+    "max": 52.12960586111627
+  },
+  "common_validation_tracks": 11,
+  "status": "iteration_limit_or_unconverged",
+  "optimizer_success": false,
+  "optimizer_message": "The maximum number of function evaluations is exceeded.",
+  "function_evaluations": 400,
+  "training_tracks": 90,
+  "validation_tracks": 23,
+  "prior_weight": 1.0,
+  "calibration_training_reprojection_px": {
+    "n": 331,
+    "mean": 7.45171176760814,
+    "median": 1.1869873907794053,
+    "p95": 38.25348009570758,
+    "max": 170.02111852326817
+  },
+  "validation_before": {
+    "heldout_reprojection_px": {
+      "n": 22,
+      "mean": 32.773128218942865,
+      "median": 24.54747288325566,
+      "p95": 71.06209043363695,
+      "max": 86.87543428193571
+    }
+  },
+  "validation_after": {
+    "heldout_reprojection_px": {
+      "n": 12,
+      "mean": 22.780305871111437,
+      "median": 18.864715509548997,
+      "p95": 46.77618440890533,
+      "max": 52.12960586111627
+    }
+  },
+  "cameras": [
+    {
+      "view": 0,
+      "yaw_deg": 0.0,
+      "elevation_deg": 0.0,
+      "roll_deg": 0.0,
+      "effective_scale_px": 255.99999999999994,
+      "center_px": [
+        256.0,
+        256.0
+      ],
+      "projection_3x4": [
+        [
+          255.99999999999994,
+          0.0,
+          0.0,
+          256.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -255.99999999999994,
+          256.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 1,
+      "yaw_deg": 15.000000000000005,
+      "elevation_deg": -0.8146079515448419,
+      "roll_deg": 0.12948913869727,
+      "effective_scale_px": 254.9995439572579,
+      "center_px": [
+        244.58518676660714,
+        256.45440181986754
+      ],
+      "projection_3x4": [
+        [
+          246.31213675897072,
+          65.9906557579258,
+          0.5762432460063381,
+          244.58518676660714
+        ],
+        [
+          -0.3816445579408,
+          3.6509748592444966,
+          -254.97312044295583,
+          256.45440181986754
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 2,
+      "yaw_deg": 60.00000000000002,
+      "elevation_deg": -0.8232016433972363,
+      "roll_deg": 0.39154130528941483,
+      "effective_scale_px": 251.42358716517492,
+      "center_px": [
+        223.23147412118675,
+        258.07175675382734
+      ],
+      "projection_3x4": [
+        [
+          125.73023576887441,
+          217.7217871821996,
+          1.7179588751101056,
+          223.23147412118675
+        ],
+        [
+          -2.2691365942458863,
+          3.29401942697101,
+          -251.39176724414762,
+          258.07175675382734
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 3,
+      "yaw_deg": 164.99999999999997,
+      "elevation_deg": -8.69294421135881,
+      "roll_deg": 12.0,
+      "effective_scale_px": 255.02188406284102,
+      "center_px": [
+        230.3743299777124,
+        255.06717780252342
+      ],
+      "projection_3x4": [
+        [
+          -238.8751754037233,
+          72.30280461579869,
+          52.412940878099946,
+          230.3743299777124
+        ],
+        [
+          -60.97321578846436,
+          -22.693742373601697,
+          -246.58349978142311,
+          255.06717780252342
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 4,
+      "yaw_deg": 170.5788965830516,
+      "elevation_deg": -7.876391711885963,
+      "roll_deg": 10.028928895066732,
+      "effective_scale_px": 262.02428136246976,
+      "center_px": [
+        223.36495983065174,
+        251.551650003962
+      ],
+      "projection_3x4": [
+        [
+          -253.51678881100403,
+          48.4038827169642,
+          45.19984460590391,
+          223.36495983065174
+        ],
+        [
+          -50.80261696948758,
+          -27.412096013379216,
+          -255.58637507645733,
+          251.551650003962
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 5,
+      "yaw_deg": 254.99999999999997,
+      "elevation_deg": 6.370339479182362,
+      "roll_deg": 11.899773277781199,
+      "effective_scale_px": 264.8172165241269,
+      "center_px": [
+        232.32260400864044,
+        250.25995345264377
+      ],
+      "projection_3x4": [
+        [
+          -61.21453966917074,
+          -251.86483944408573,
+          54.26823152160703,
+          232.32260400864044
+        ],
+        [
+          -41.90445655611956,
+          -45.30339744017549,
+          -257.52626442500986,
+          250.25995345264377
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 6,
+      "yaw_deg": 280.0802356512965,
+      "elevation_deg": 10.066129217879144,
+      "roll_deg": 7.696801895105069,
+      "effective_scale_px": 265.43236618234596,
+      "center_px": [
+        235.55307997088593,
+        250.24238574252672
+      ],
+      "projection_3x4": [
+        [
+          52.15691537624693,
+          -257.8930628565948,
+          35.00236172086784,
+          235.55307997088593
+        ],
+        [
+          -39.0437045004642,
+          -43.047797088745924,
+          -258.9919252058751,
+          250.24238574252672
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "view": 7,
+      "yaw_deg": 285.00000000000006,
+      "elevation_deg": 10.32413661965493,
+      "roll_deg": 7.0991971775994225,
+      "effective_scale_px": 265.79549451871947,
+      "center_px": [
+        235.9394803214249,
+        250.04643646330382
+      ],
+      "projection_3x4": [
+        [
+          73.95204100491915,
+          -253.24679718253523,
+          32.317182031316285,
+          235.9394803214249
+        ],
+        [
+          -37.15716768373231,
+          -43.9640409158818,
+          -259.4874812057805,
+          250.04643646330382
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "min_yaw_step_deg": 4.91976434870353,
+  "gauge": "Camera0 yaw/elevation/roll=0, scale256px and center(256,256) fixed; world units arbitrary. Mean-depth weak gauge term.",
+  "intrinsics_status": "Effective orthographic image scales estimated; perspective focal length and camera distance not identifiable in this assumed orthographic model.",
+  "assumptions": "Same rigid points, level orbit prior, \u00b130deg yaw correction and bounded roll/elevation/scale/framing. False periodic-grid matches can bias or defeat the fit.",
+  "holdout_protocol": "20% identity-level track split chosen by SHA256. Validation tracks never optimize camera parameters; views1/5 withheld from their point triangulation.",
+  "acceptance": "This numerical optimum is not calibrated truth. Judge held-out errors, track identity, camera plausibility and known controls separately.",
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

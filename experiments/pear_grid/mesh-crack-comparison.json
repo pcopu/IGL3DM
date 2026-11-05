@@ -1,0 +1,123 @@
+{
+  "bean-grid-002": {
+    "baseline_extractor": {
+      "vertices": 36800,
+      "triangles": 73588,
+      "edges": 110390,
+      "boundary_edges": 16,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": false,
+      "euler_characteristic": -2,
+      "signed_volume": 1.0033488273620605,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "repaired_extractor": {
+      "vertices": 36800,
+      "triangles": 73596,
+      "edges": 110394,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": 2,
+      "signed_volume": 1.0033488273620605,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "same_vertices": true,
+    "same_faces": false,
+    "removed_faces": 8,
+    "added_faces": 16
+  },
+  "lion-001": {
+    "baseline_extractor": {
+      "vertices": 54160,
+      "triangles": 108324,
+      "edges": 162486,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 0.9537594318389893,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "repaired_extractor": {
+      "vertices": 54160,
+      "triangles": 108324,
+      "edges": 162486,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 0.9537594318389893,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "same_vertices": true,
+    "same_faces": true,
+    "removed_faces": 0,
+    "added_faces": 0
+  },
+  "lion-dual-001-combined": {
+    "baseline_extractor": {
+      "vertices": 47684,
+      "triangles": 95372,
+      "edges": 143058,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 0.8605944514274597,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "repaired_extractor": {
+      "vertices": 47684,
+      "triangles": 95372,
+      "edges": 143058,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 0.8605944514274597,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "same_vertices": true,
+    "same_faces": true,
+    "removed_faces": 0,
+    "added_faces": 0
+  },
+  "lion-dense-contour-001": {
+    "baseline_extractor": {
+      "vertices": 59778,
+      "triangles": 119560,
+      "edges": 179340,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 1.0729609727859497,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "repaired_extractor": {
+      "vertices": 59778,
+      "triangles": 119560,
+      "edges": 179340,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight_edge_incidence": true,
+      "euler_characteristic": -2,
+      "signed_volume": 1.0729609727859497,
+      "self_intersections_checked": false,
+      "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+    },
+    "same_vertices": true,
+    "same_faces": true,
+    "removed_faces": 0,
+    "added_faces": 0
+  },
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

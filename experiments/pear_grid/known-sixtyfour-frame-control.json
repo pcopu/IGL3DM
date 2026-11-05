@@ -1,0 +1,31 @@
+{
+  "source": "64 genuinely rendered frames of known analytic pear, 5.625deg steps, encoded12fps; not an ImageGen animation and not copied endpoints.",
+  "tracks_at_least_3_samples": 806,
+  "identity_classification": {
+    "correct": 200,
+    "wrong_identity": 599,
+    "unresolved_detection_or_drift": 7
+  },
+  "known_correct_track_3d_error": {
+    "n": 200,
+    "mean": 0.009743304189643937,
+    "median": 0.00822559675120823,
+    "p95": 0.02004421180770245,
+    "max": 0.04989268073865304
+  },
+  "heldout_3px_pass_track_identity": {
+    "correct": 50,
+    "wrong_identity": 100,
+    "unresolved_detection_or_drift": 1
+  },
+  "all_track_heldout_reprojection_px": {
+    "n": 477,
+    "mean": 10.370679437344936,
+    "median": 5.579651414965358,
+    "p95": 48.40585199475258,
+    "max": 88.07000047576607
+  },
+  "ground_truth_qualification": "Each observation associated with nearest actually visible known vertex within3px; otherwise unresolved. Known geometry used only to evaluate, never to track.",
+  "interpretation": "Small temporal steps may help correspondence, but periodic swaps and drift remain. Passing a reprojection threshold alone is not identity proof.",
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

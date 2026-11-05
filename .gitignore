@@ -31,3 +31,10 @@ experiments/marker_consistency/generated/
 experiments/marker_consistency/controls/metrics.json
 experiments/marker_consistency/results/*.png
 experiments/marker_consistency/controls/*.png
+experiments/marker_consistency/controls/known_pear*/
+**/ground_truth.json
+**/candidate_vertices.json
+**/mesh.json
+*.mp4
+*.avi
+*.mov

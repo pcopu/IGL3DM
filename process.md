@@ -279,3 +279,37 @@ Black-line skeletonization detected5,119 junction candidates, including T-juncti
 ### Video preparation, not a video result
 
 Added a local clip decoder and timestamped forward/backward junction-track harness for future supplied video. It stops tracks at ambiguity/occlusion and requires explicit projection matrices for any3D triangulation; duration is not treated as a calibrated360° orbit. Synthetic decode/translation/full-occlusion and camera-DLT tests pass, bringing this separate marker/grid/video suite to13 tests. No real turntable clip has been tested, and no video-derived mesh is claimed. [Harness and limits](experiments/marker_consistency/VIDEO.md).
+
+
+## Round 16 · Requested animation returned a static sheet
+
+The separate native-animation attempt produced a1774×887 PNG containing a6×3 grid of drawn views. Local file inspection confirms one stored frame and no animation flag. No GIF/video was obtained in this attempt, and replaying cropped cells would not create evidence of temporal consistency. Preserve the [returned still sheet and file check](docs/experiments/16-static-animation-attempt/README.md) as a failed format trial. The video tracker remains synthetic-tested infrastructure awaiting a real supplied clip.
+
+## Round 17 · Classical square-derived pear geometry, with independent controls
+
+The next generated input is a solid, slightly bent white pear with a side dimple and dense black quads. Software assigns cell/corner IDs. The current task requires strictly mathematical processing after generation: no learned depth or neural completion. A software-depth trial that finished before that restriction arrived was stopped and archived locally; it is excluded from these results.
+
+- Closed-cell detection finds 458–489 quads per view. Shared edges, classical SIFT context, neighboring-cell votes and constrained corner welding produce 320 candidate tracks. These are hypotheses, not authenticated physical IDs.
+- Linear triangulation under nominal 45° orthographic cameras yields 320 candidate points. Only seven have three-view prediction p95 at most 3 pixels. Ninety-three quad faces have the same candidate corner IDs and cyclic connectivity in at least two views, but zero have all four corners qualified by the three-view test.
+- Exported the actual partial grid-derived mesh, without unseen faces, hole filling or shape completion. The display uses the original coordinates and one explicit 0–2 diagonal per quad, yielding 186 triangles. It is visibly fragmented and unvalidated, not a successful pear reconstruction.
+- Joint classical camera fitting is rejected: both runs hit iteration limits, some yaw corrections hit bounds, and minimum spacing collapses to 4.92°. Paired held-out p95 improves from 78.24 to 46.78 pixels, while evaluable coverage falls from 22 to 12 observations. Better training fit is not reliable calibration. The partial mesh uses the nominal cameras instead.
+- A separate known-rendered analytic control exposes a decoder problem: 203 of 204 eight-view candidate tracks change true physical identity; one is unresolved. This cannot be blamed entirely on ImageGen.
+- A genuine 64-frame known control improves temporal continuity, but remains unreliable: of 806 tracks lasting at least three samples, 200 retain correct identity, 599 switch, and seven are unresolved. The correct subset triangulates with median error 0.00823 in a control of height 2.4. Crucially, 100 wrong tracks still pass a 3-pixel held-out reprojection gate. Known geometry is used only for evaluation, never as missing surface for the generated pear.
+
+A separate **silhouette-only envelope control** fits the pear outline at mean IoU 0.961952 but misses the inward dimple. It is not square reconstruction. A first 2-pixel-gutter attempt rejected border contamination; a shared 6-pixel gutter works without per-view recentering. Its 16 numerical boundary edges exposed a marching-tetrahedra bug: deleting exactly collinear triangles left incompatible subdivisions. Exact-predicate subdivision at existing vertices closes all edges without changing any of the 36,800 vertex coordinates, surface area, volume or actual overlap. Faces change from 73,588 to 73,596; no anatomy is added. Six focused numerical regressions and a thick-frame regression were added. The main suite passes 27 tests with optional dependencies; the separate classical suite passes 20.
+
+[Input and software tags](docs/experiments/17-classical-pear/software-tagged-detail.png) · [Actual unvalidated square patches](docs/experiments/17-classical-pear/unvalidated-square-patches.gif) · [Separate silhouette control](docs/experiments/17-classical-pear/silhouette-control-only.gif) · [Full method and control metrics](experiments/pear_grid/README.md)
+
+## Round 18 · Shape from square distortion: local algebra works, shape remains ambiguous
+
+No new generation. Tested a purely mathematical formulation on detected pear cells. An orthographic projection of a planar physical square gives its conditional scale, tilt and two possible local depth-increment signs from the 2×2 edge Gram matrix. Adjacent normal smoothness is optimized by exact binary MILP; vertex depths then solve a stated linear least-squares integration problem. No manually selected convexity, concavity, anatomy or depth signs are used.
+
+- All 105 exact square-plane fixtures recover the intended local quantities to numerical precision; a connected 30-cell plane integrates correctly. Five independent tests pass, including comparison of the sign optimizer with exhaustive enumeration.
+- A decisive negative control uses 72 exact equal-square cylinder facets. The globally optimal normal-smoothness solution integrates almost perfectly, but yields an incorrect monotone surface. Best-reflection depth RMSE is 1.094 against true depth span 1.748. Ambiguity is more extensive than one global front/back reflection; low residual is not proof of correct shape.
+- Any nonsingular projected parallelogram can satisfy the local square algebra at its own inferred size. A front-facing non-square rectangle therefore produces a false tilt. Physical square geometry is an assumption, not something this equation verifies.
+- The automatically largest acceptable generated-image component is view 4, with 238 quads and 370 vertices. Its inferred square side varies by 13.1% CV; shared-edge predicted depth increments disagree by median 1.61 pixels, p95 6.03. Integration residual is 2.52 pixels RMS, 37.6% of target increments.
+- Exported both reflected open diagnostic patches, each 370 vertices / 476 triangles, with no hidden completion. These do not exhaust all possible sign fields and are not a validated reconstruction. Source-ready code reproduces ten original artifacts byte-for-byte; raw models stay local.
+
+Reject this tested formulation as a reliable object estimator here. Extending it requires independently supported square geometry and additional correspondence/depth evidence, not arbitrary smoothing or choosing the visually desired branch.
+
+[Source, normals and conditional depth](docs/experiments/18-square-tilt/source-normals-depth-comparison.png) · [Actual diagnostic patches](docs/experiments/18-square-tilt/conditional-patch-mesh-preview.png) · [Exact-cylinder falsification](docs/experiments/18-square-tilt/synthetic-cylinder-ambiguity.png) · [Mathematics, tests and reproduction](experiments/square_shape/README.md)

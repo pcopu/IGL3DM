@@ -380,6 +380,81 @@
       "path": "docs/experiments/15-dense-quad-grid/strict-adjacent-candidates.png",
       "bytes": 2947156,
       "sha256": "94c63248ad126f423840454b56a86898c4e7e131ca7cca19663e423450fcc039"
+    },
+    {
+      "path": "docs/experiments/16-static-animation-attempt/returned-static-sheet.png",
+      "bytes": 2045921,
+      "sha256": "e6c0fcb0a38a6d551f329270574ede98d11b122e6e6a56493d73895426e1263c"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/candidate-points.png",
+      "bytes": 22568,
+      "sha256": "cd09cd89779b1086699acc7b2734fa8d4bd68cf6f04a399887c9865117e2b6b4"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/input.png",
+      "bytes": 1896532,
+      "sha256": "28e2a918f97b80499b99529f2922a2e783896bc2436de55caf40d17a24342e75"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/known-rendered-control-input.png",
+      "bytes": 372036,
+      "sha256": "42d1e9af127e958889e19aa1e0cffb8b341328e718f2bfcb2c9e2217b7626159"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/known-rendered-control-tags.png",
+      "bytes": 526537,
+      "sha256": "16d7db8ffca320b04abc7aed1671e616e011771038e877b1da82eba8fb5701b4"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/known-video-tracks.png",
+      "bytes": 249286,
+      "sha256": "c80b60f2686e42fbd697fbc82bbf9e6479041bd4b691eebf8fd266370ed014aa"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/silhouette-control-only.gif",
+      "bytes": 151419,
+      "sha256": "79bd8469935fae2efdffd9afaddbb67e30ade4a3368686d3f54a97066e7ae83b"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/silhouette-control-only.png",
+      "bytes": 177489,
+      "sha256": "fa182592622b75350e71d9fefed4b7fc6d3b786611a39ec7a8c863cc03fa78b8"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/software-tagged-cells.png",
+      "bytes": 1991595,
+      "sha256": "935463c8295065e8ab2ef3635924ec7d07d38ac21bf7eb981152c8846e1eda64"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/software-tagged-detail.png",
+      "bytes": 608617,
+      "sha256": "685d50d090c801ca0b014430bc855a4e95d52522ee3e2341110b27b169d5996a"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/unvalidated-square-patches.gif",
+      "bytes": 132962,
+      "sha256": "6d6fa2c6405c0b831c55f65240be9fcc58c1f3af588e07dbea6d060d4206d38e"
+    },
+    {
+      "path": "docs/experiments/17-classical-pear/unvalidated-square-patches.png",
+      "bytes": 113916,
+      "sha256": "1cc27161b6c1ead9facbe4647cad4b1c2d8b16ae1d31afd85b654bafb3e500b3"
+    },
+    {
+      "path": "docs/experiments/18-square-tilt/conditional-patch-mesh-preview.png",
+      "bytes": 360177,
+      "sha256": "869d10fc5194a3b57a5679373588e66c872c818df04491d57b2da906082bc97e"
+    },
+    {
+      "path": "docs/experiments/18-square-tilt/source-normals-depth-comparison.png",
+      "bytes": 691233,
+      "sha256": "33fe2da721b5d851dea0451c9382ad7b955fdb6f222280bbf4fdba5548a85829"
+    },
+    {
+      "path": "docs/experiments/18-square-tilt/synthetic-cylinder-ambiguity.png",
+      "bytes": 92264,
+      "sha256": "b77ec2aa6bfaa3d796bee927d3c81948c268fbde155f5a311c7b5bbae80acced"
     }
   ]
 }

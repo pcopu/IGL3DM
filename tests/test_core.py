@@ -27,6 +27,23 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(mask[32,32]);self.assertFalse(mask[0,0])
         self.assertFalse(info["touches_frame"])
 
+    def test_uniform_gutter_removes_thick_atlas_frames(self):
+        atlas=Image.new("RGB",(256,128),"white")
+        draw=ImageDraw.Draw(atlas)
+        for row in range(2):
+            for col in range(4):
+                x,y=col*64,row*64
+                draw.rectangle((x,y,x+63,y+63),outline="black",width=4)
+                draw.ellipse((x+18,y+12,x+46,y+52),outline="black",width=2)
+        with self.assertRaises(ValueError):segment(split_atlas(atlas,2,4,gutter=2)[0])
+        tiles=split_atlas(atlas,2,4,gutter=6)
+        results=[segment(tile) for tile in tiles]
+        self.assertEqual(len({tuple(info["bbox_xyxy"]) for _,info in results}),1)
+        for mask,info in results:
+            self.assertTrue(mask[26,26])
+            self.assertFalse(info["touches_frame"])
+            self.assertLess(info["foreground_fraction"],.5)
+
     def test_empty_segmentation_fails(self):
         with self.assertRaises(ValueError):segment(Image.new("RGB",(64,64),"white"))
 

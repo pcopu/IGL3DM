@@ -1,0 +1,7 @@
+{
+  "status": "rejected",
+  "reason": "Foreground fraction0.9613 exceeded segmentation plausibility bound due to thick cell borders at2px gutter.",
+  "geometry_exported": false,
+  "next_control": "A new run uses one uniform6px gutter across every cell, with no individual recentering or scale fitting.",
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

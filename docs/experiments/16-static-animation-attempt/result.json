@@ -1,0 +1,13 @@
+{
+  "status": "requested_animation_not_obtained",
+  "file_format": "PNG",
+  "dimensions": [
+    1774,
+    887
+  ],
+  "file_frames": 1,
+  "animated": false,
+  "visible_layout": "six columns by three rows of drawn views in one still image",
+  "source_sha256": "e6c0fcb0a38a6d551f329270574ede98d11b122e6e6a56493d73895426e1263c",
+  "interpretation": "A static atlas may be useful as drawings but is not a generated temporal sequence. No real video tracking or video-derived mesh is claimed."
+}

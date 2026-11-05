@@ -1,0 +1,7 @@
+{
+  "point_count": 320,
+  "quad_faces_seen_in_at_least_two_views": 93,
+  "three_view_consistent_quad_faces": 0,
+  "status": "Exploratory disconnected grid-derived partial mesh, not a complete reconstructed pear. Two-view support does not validate physical identity or camera calibration. No hidden faces filled.",
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

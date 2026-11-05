@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*.ply
+selected_patch_data.json
+output/
+outputs/

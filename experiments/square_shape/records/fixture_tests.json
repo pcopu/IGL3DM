@@ -1,0 +1,371 @@
+{
+  "passed": true,
+  "exact_square_cases": 105,
+  "worst_exact_errors": {
+    "scale_abs_error": 3.552713678800501e-15,
+    "depth_increment_abs_error": 2.9200193199910854e-07,
+    "tilt_error_deg": 1.2074182697257333e-06,
+    "metric_residual": 1.2058310082691391e-13
+  },
+  "planar_patch": {
+    "cells": 30,
+    "best_reflection_depth_rmse": 1.143264237977141e-15
+  },
+  "noise_sensitivity": [
+    {
+      "tilt_deg": 5,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.25,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.6206275931704165,
+        "p05": 4.777158221959903,
+        "median": 11.671410883652374,
+        "p95": 18.470167762961438,
+        "max": 22.391283935920175,
+        "mean": 11.27112325037168,
+        "std": 4.120786797185012,
+        "coefficient_of_variation": 0.36560569036889234
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.12470180058241268,
+        "p05": 0.9668507576802564,
+        "median": 2.400557886591637,
+        "p95": 3.852678339249815,
+        "max": 4.779910606923937,
+        "mean": 2.3209243193118194,
+        "std": 0.8722485338479969,
+        "coefficient_of_variation": 0.37581946407741057
+      }
+    },
+    {
+      "tilt_deg": 5,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.5,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 2.4229583207661882,
+        "p05": 7.190929892833245,
+        "median": 16.76242738342403,
+        "p95": 25.45922430819857,
+        "max": 29.717468411916915,
+        "mean": 16.50966571141443,
+        "std": 5.424972352807721,
+        "coefficient_of_variation": 0.32859371277620786
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.4886866339595922,
+        "p05": 1.4520875583698563,
+        "median": 3.5169009545595236,
+        "p95": 5.521152137628945,
+        "max": 6.906467450508425,
+        "mean": 3.487248399588846,
+        "std": 1.2165261330540038,
+        "coefficient_of_variation": 0.34884986489561076
+      }
+    },
+    {
+      "tilt_deg": 5,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 1.0,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 6.077997586350753,
+        "p05": 12.449706350176168,
+        "median": 25.808513533765648,
+        "p95": 35.0182178540047,
+        "max": 41.26289840949558,
+        "mean": 24.99833286499741,
+        "std": 7.085513217057753,
+        "coefficient_of_variation": 0.28343942995410176
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 1.237734356155279,
+        "p05": 2.58784588426675,
+        "median": 5.7334480038698965,
+        "p95": 8.293925923687741,
+        "max": 10.354890931987025,
+        "mean": 5.601021054377362,
+        "std": 1.817732489335744,
+        "coefficient_of_variation": 0.32453591437852797
+      }
+    },
+    {
+      "tilt_deg": 45,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.25,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.19936764333556728,
+        "p05": 0.5300753873878816,
+        "median": 2.108329858032657,
+        "p95": 4.29715681148964,
+        "max": 6.695655779327533,
+        "mean": 2.303040057854739,
+        "std": 1.2253143200835004,
+        "coefficient_of_variation": 0.5320421222828706
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.0049343794921008636,
+        "p05": 0.016777909232936244,
+        "median": 0.06444880150281498,
+        "p95": 0.13927126492227607,
+        "max": 0.2393687863103031,
+        "mean": 0.06974023399756547,
+        "std": 0.039289110809103564,
+        "coefficient_of_variation": 0.5633636217864582
+      }
+    },
+    {
+      "tilt_deg": 45,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.5,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.14915583835270518,
+        "p05": 1.218975821225192,
+        "median": 4.199435983263469,
+        "p95": 8.513850135922967,
+        "max": 11.648647112739086,
+        "mean": 4.392342588430135,
+        "std": 2.2738926955791,
+        "coefficient_of_variation": 0.5176947493960873
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.0037204894047048105,
+        "p05": 0.03596462843868977,
+        "median": 0.1251255878395212,
+        "p95": 0.2715599130417504,
+        "max": 0.326810982273571,
+        "mean": 0.13254103315224589,
+        "std": 0.07128493578260606,
+        "coefficient_of_variation": 0.5378329569886724
+      }
+    },
+    {
+      "tilt_deg": 45,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 1.0,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 1.0411894346677941,
+        "p05": 2.270557409374151,
+        "median": 8.119556735677692,
+        "p95": 15.921897648027295,
+        "max": 34.397852799818835,
+        "mean": 8.472411820176625,
+        "std": 4.664143443585085,
+        "coefficient_of_variation": 0.5505095293500324
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.0258877983734224,
+        "p05": 0.06587534886152768,
+        "median": 0.2529015326274141,
+        "p95": 0.5547096019756295,
+        "max": 0.8025934935671554,
+        "mean": 0.2667085641871778,
+        "std": 0.1501902443150885,
+        "coefficient_of_variation": 0.5631249404113023
+      }
+    },
+    {
+      "tilt_deg": 80,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.25,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.09008137583503902,
+        "p05": 0.3826728176954462,
+        "median": 1.315993961271464,
+        "p95": 2.503722567242313,
+        "max": 3.146873803629321,
+        "mean": 1.3517985806967205,
+        "std": 0.6385575643877469,
+        "coefficient_of_variation": 0.47237626485643497
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.00228325761512049,
+        "p05": 0.013865395221438355,
+        "median": 0.08102979309635283,
+        "p95": 0.20078870170142998,
+        "max": 0.40485224112885376,
+        "mean": 0.09568656393686802,
+        "std": 0.06837113945401424,
+        "coefficient_of_variation": 0.7145322879304568
+      }
+    },
+    {
+      "tilt_deg": 80,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.5,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.14486825724302685,
+        "p05": 0.8046279903109519,
+        "median": 2.672518046426103,
+        "p95": 5.714844088485719,
+        "max": 7.60038047169941,
+        "mean": 2.839836552819256,
+        "std": 1.4611250118482255,
+        "coefficient_of_variation": 0.5145102489781285
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.01070469442951237,
+        "p05": 0.03559341662328529,
+        "median": 0.1629500308217424,
+        "p95": 0.5785687832463234,
+        "max": 1.418538745674253,
+        "mean": 0.2141343944264078,
+        "std": 0.1834664579971127,
+        "coefficient_of_variation": 0.8567818284799883
+      }
+    },
+    {
+      "tilt_deg": 80,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 1.0,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.05399119508780348,
+        "p05": 0.9041017394143521,
+        "median": 4.9819983799176235,
+        "p95": 9.593849081052955,
+        "max": 13.857509842421662,
+        "mean": 5.17284676333561,
+        "std": 2.7377965919192566,
+        "coefficient_of_variation": 0.529263037777257
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.0012503712818342787,
+        "p05": 0.04050433913372715,
+        "median": 0.2662398764825184,
+        "p95": 1.7794484997052487,
+        "max": 55.27999886211444,
+        "mean": 0.8900563680761607,
+        "std": 4.247334461127403,
+        "coefficient_of_variation": 4.771983678188756
+      }
+    },
+    {
+      "tilt_deg": 89,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.25,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.04525710347408183,
+        "p05": 0.30205188971546665,
+        "median": 0.9275919213446041,
+        "p95": 2.1556699129466232,
+        "max": 3.7835797682478254,
+        "mean": 1.0778233468226983,
+        "std": 0.6342976649022227,
+        "coefficient_of_variation": 0.5884987245563577
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.012324920629410525,
+        "p05": 0.050620131112340275,
+        "median": 0.46970432078683183,
+        "p95": 5.529726856975571,
+        "max": 2767.014616804486,
+        "mean": 15.179403788047,
+        "std": 195.10140546341106,
+        "coefficient_of_variation": 12.85303482189751
+      }
+    },
+    {
+      "tilt_deg": 89,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 0.5,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.19039001794491414,
+        "p05": 0.4987115024581527,
+        "median": 1.7034948280548492,
+        "p95": 4.065655149558521,
+        "max": 5.423218059496072,
+        "mean": 1.9887760854467238,
+        "std": 1.2066135381073386,
+        "coefficient_of_variation": 0.6067116086808265
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.0141312163844526,
+        "p05": 0.06633483328329608,
+        "median": 0.5799538989998481,
+        "p95": 5.675429498366512,
+        "max": 178.63495237550956,
+        "mean": 2.3266750823837428,
+        "std": 13.50719975508583,
+        "coefficient_of_variation": 5.805365715803915
+      }
+    },
+    {
+      "tilt_deg": 89,
+      "cell_side_px": 14,
+      "corner_noise_sigma_px": 1.0,
+      "best_sign_normal_error_deg": {
+        "count": 200,
+        "min": 0.30828777320626904,
+        "p05": 1.1193044842582491,
+        "median": 4.34900072166575,
+        "p95": 9.726866313971664,
+        "max": 14.533724815874184,
+        "mean": 4.708452657594156,
+        "std": 2.727453984686048,
+        "coefficient_of_variation": 0.5792675817366454
+      },
+      "best_sign_gradient_relative_error": {
+        "count": 200,
+        "min": 0.048164064385927,
+        "p05": 0.15357318407304743,
+        "median": 0.7106689485088324,
+        "p95": 3.7798202958420863,
+        "max": 27.604279602918645,
+        "mean": 1.1484581196537664,
+        "std": 2.561990757225181,
+        "coefficient_of_variation": 2.230809041602285
+      }
+    }
+  ],
+  "front_facing_12_by_8_rectangle": {
+    "actual_tilt_deg": 0,
+    "square_assumption_inferred_tilt_deg": 48.18968510422141,
+    "inferred_side": 12.0,
+    "conclusion": "Square-ness is an input prior, not a locally testable conclusion."
+  },
+  "faceted_cylinder_negative_control": {
+    "cell_count": 72,
+    "equal_square_size_error": 0.0,
+    "maximum_parallelogram_error": 2.220446049250313e-16,
+    "optimizer": {
+      "success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "mip_node_count": 1,
+      "linear_objective": 0.0,
+      "linear_lower_bound": 0.0,
+      "variables": 198,
+      "cell_signs": 72,
+      "adjacent_pairs": 126,
+      "objective": "sum squared neighboring unit-normal differences, reflection gauge sigma[0]=+1"
+    },
+    "true_normal_smoothness_energy": 0.6599999999999998,
+    "optimized_normal_smoothness_energy": 0.6000000000000064,
+    "integrated_edge_rmse": 2.6044421100404176e-14,
+    "depth_rmse_to_truth_best_global_reflection": 1.0944705559481542,
+    "truth_depth_span": 1.7480573059949993,
+    "reconstruction_depth_span": 3.4961146119899986,
+    "conclusion": "The objective prefers an incorrect monotone depth surface over the true convex cylinder, despite exact equal square input. Ambiguity exceeds a single global reflection."
+  }
+}

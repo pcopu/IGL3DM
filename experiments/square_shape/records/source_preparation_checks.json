@@ -1,0 +1,39 @@
+{
+  "original_file_hashes": {
+    "fixture_tests.json": "9d128885c806311bc576e484b4590ec9ef94db36101c90003a62af472dd48d25",
+    "test_experiment.py": "044780185fdb8dac1fdfb7bc5efbe7bbb83a742431c96e9345216973eab82842",
+    "conditional_patch_B.ply": "81869e56127f5e5cca01de64df1462613b752483030a90128bf61e5ca6471c82",
+    "run_experiment.py": "d685d688d1ef884af51501acfa48ed906edb5c636b3f3c85eb1076bfe16e174d",
+    "synthetic_cylinder_ambiguity.png": "b77ec2aa6bfaa3d796bee927d3c81948c268fbde155f5a311c7b5bbae80acced",
+    "source_normals_depth_comparison.png": "33fe2da721b5d851dea0451c9382ad7b955fdb6f222280bbf4fdba5548a85829",
+    "unittest.log": "841312ff1271511606f2023f106a6402c8fe8fa9149a593ca5ae136695936a9d",
+    "conditional_patch_A.ply": "ce11773ad739eb1149c2f0d5349a04faa6c43fbc8b5815c31d0b35eb2bd9d8de",
+    "selected_patch_data.json": "a193ba5ab5feeaae435f25f2bdf840e07cb4d8b1a23733cba73dff737339bbd2",
+    "measurement_summary.json": "88cc2e9b2922d2ddf7d14aeefca700d412fff206a03e52d65332f0d6601e72ea",
+    "run_log.json": "9c30a209461dd53b2a989eb160127140e9940f3bf6026a49adc78a722cdae9bf",
+    "conditional_patch_mesh_preview.png": "869d10fc5194a3b57a5679373588e66c872c818df04491d57b2da906082bc97e",
+    "cell_measurements.json": "4622fa904e0d016cc62fe52877e4d688a1324ba62d008bebfa3990f50d38bb91",
+    "README.md": "b6a04391882f93d6cafba7eb93079aebea916b3c7f2e780f434fbd999a4b6f33",
+    "inspect_input.py": "50a5c71b5ed1becc24e921d27bf39da5308aee1a734543e0a26eaafac72e3fd3",
+    "integration_report.json": "ee2d14e3efae77b2bf316be0f9599816111a2cc52b8fd8a8a0329f916236b3c5"
+  },
+  "original_files_unchanged": true,
+  "smoke_byte_identical_artifacts": {
+    "fixture_tests.json": true,
+    "measurement_summary.json": true,
+    "cell_measurements.json": true,
+    "integration_report.json": true,
+    "selected_patch_data.json": true,
+    "conditional_patch_A.ply": true,
+    "conditional_patch_B.ply": true,
+    "synthetic_cylinder_ambiguity.png": true,
+    "source_normals_depth_comparison.png": true,
+    "conditional_patch_mesh_preview.png": true
+  },
+  "overwrite_refused": {
+    "exit_code": 2,
+    "message": "run_experiment.py: error: Refusing nonempty or non-directory output: square_shape_experiment/smoke_cli_20261105"
+  },
+  "import_and_repeatability": "Import is side-effect-free; repeated fixture results match.",
+  "five_existing_tests_passed": true
+}

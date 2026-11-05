@@ -7,7 +7,9 @@ vertices from painted wireframes or treat drawn depth colors as measurements.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from fractions import Fraction
 import hashlib
+import heapq
 import json
 from pathlib import Path
 
@@ -198,6 +200,113 @@ _CORNERS = np.array([[0,0,0], [1,0,0], [1,1,0], [0,1,0],
 _TETS = ((0,1,2,6),(0,2,3,6),(0,3,7,6),(0,7,4,6),(0,4,5,6),(0,5,1,6))
 
 
+def _collinear_candidates(points):
+    """Conservative determinant error bound; acceptance is tested exactly."""
+    ab, ac = points[...,1,:]-points[...,0,:], points[...,2,:]-points[...,0,:]
+    left = ab[...,[1,2,0]]*ac[...,[2,0,1]]
+    right = ab[...,[2,0,1]]*ac[...,[1,2,0]]
+    # Cover rounding in coordinate differences, products and subtraction.
+    # This is an arithmetic-error filter, not a geometric area tolerance.
+    bound = 8*np.finfo(np.float64).eps*(np.abs(left)+np.abs(right))
+    return np.all(np.abs(left-right) <= bound, axis=-1)
+
+
+def _collinear_segment(vertices, face):
+    """Return a straight face's endpoints, middle vertex and squared length.
+
+    The fast float64 determinant bound is only a candidate filter. Convert
+    binary coordinates to common-denominator integers to avoid treating a
+    very small, nonzero triangle as collinear through cancellation.
+    """
+    ratios = [[float(x).as_integer_ratio() for x in vertices[i]] for i in face]
+    denominator = max(d for point in ratios for _, d in point)
+    points = [[p*(denominator//d) for p, d in point] for point in ratios]
+    ab = [b-a for a, b in zip(points[0], points[1])]
+    ac = [c-a for a, c in zip(points[0], points[2])]
+    if any(ab[i]*ac[j] != ab[j]*ac[i] for i, j in ((0,1),(1,2),(2,0))):
+        return None
+    lengths = [sum((a-b)**2 for a, b in zip(points[i], points[(i+1)%3]))
+               for i in range(3)]
+    k = max(range(3), key=lengths.__getitem__)
+    # Vertices have already been welded and repeated-index faces removed.
+    # For three distinct collinear points, the longest edge contains the third.
+    return face[k], face[(k+1)%3], face[(k+2)%3], Fraction(lengths[k], denominator**2)
+
+
+def _remove_collinear_faces(vertices, triangles):
+    """Remove straight triangles by conforming edge subdivision, not holes.
+
+    Float32 rounding can flatten a thin triangle without making its three
+    vertices identical. Just deleting it leaves different subdivisions on
+    either side of an edge. Split every incident face on its longest edge at
+    the existing middle vertex instead. This preserves the exact geometric
+    surface, vertex positions and winding; no tolerance or new points are
+    used. Processing the longest straight face first makes all replacement
+    straight faces strictly shorter, so a finite vertex set terminates.
+
+    Inputs are finite float32 coordinates with exactly welded positions and
+    no repeated-index faces, as supplied by extract_mesh below.
+    """
+    v = vertices.astype(np.float64)
+    candidates = np.flatnonzero(_collinear_candidates(v[triangles]))
+    if not len(candidates):
+        return triangles
+    pending = []
+    faces = triangles.tolist()
+    edges = {}
+
+    def enqueue(index):
+        face = faces[index]
+        segment = _collinear_segment(vertices, face)
+        if segment is not None:
+            a, b, middle, length = segment
+            heapq.heappush(pending, (-length,index,a,b,middle))
+
+    for index in candidates:
+        enqueue(int(index))
+    if not pending:
+        return triangles
+
+    def add_edges(index, face):
+        for a, b in zip(face, face[1:]+face[:1]):
+            edges.setdefault(tuple(sorted((a,b))), set()).add(index)
+
+    def remove(index):
+        face = faces[index]
+        faces[index] = None
+        for a, b in zip(face, face[1:]+face[:1]):
+            key = tuple(sorted((a,b)))
+            edges[key].remove(index)
+            if not edges[key]:
+                del edges[key]
+
+    def add(face):
+        if len(set(face)) < 3:
+            return
+        index = len(faces)
+        faces.append(face)
+        add_edges(index, face)
+        if _collinear_candidates(v[face]):
+            enqueue(index)
+
+    for index, face in enumerate(faces):
+        add_edges(index, face)
+    while pending:
+        _, index, a, b, middle = heapq.heappop(pending)
+        if faces[index] is None:
+            continue
+        for neighbor in sorted(edges[tuple(sorted((a,b)))]):
+            face = faces[neighbor]
+            remove(neighbor)
+            for k in range(3):
+                start, end, opposite = face[k], face[(k+1)%3], face[(k+2)%3]
+                if {start,end} == {a,b}:
+                    break
+            add([start,middle,opposite])
+            add([middle,end,opposite])
+    return np.asarray([face for face in faces if face is not None], dtype=np.int32).reshape(-1,3)
+
+
 def extract_mesh(field):
     """Marching tetrahedra with edge deduplication, using only NumPy.
 
@@ -242,19 +351,18 @@ def extract_mesh(field):
             for tri in triangles:
                 a,b,c=(vertices[i] for i in tri)
                 normal=np.cross(b-a,c-a)
-                if np.linalg.norm(normal) == 0: continue
                 if np.dot(normal,out_direction)<0: tri=[tri[0],tri[2],tri[1]]
                 faces.append(tri)
     if not faces: raise ValueError("No surface was extracted")
     # Match the float32 precision used by the portable mesh formats. Distinct
     # near-zero intersections can round to identical positions; weld those
-    # positions and remove only faces that collapse after that exact weld.
+    # positions and remove faces with repeated indices. Collinear faces with
+    # distinct vertices require conforming subdivision rather than deletion.
     v, inverse = np.unique(np.asarray(vertices,dtype=np.float32),axis=0,return_inverse=True)
     t = inverse[np.asarray(faces,dtype=np.int32)]
     keep = (t[:,0]!=t[:,1]) & (t[:,1]!=t[:,2]) & (t[:,2]!=t[:,0])
     t = t[keep]
-    area = np.cross(v[t[:,1]].astype(np.float64)-v[t[:,0]],v[t[:,2]].astype(np.float64)-v[t[:,0]])
-    t = t[np.any(area!=0,axis=1)]
+    t = _remove_collinear_faces(v, t)
     used, inverse = np.unique(t,return_inverse=True)
     return v[used], inverse.reshape(-1,3).astype(np.int32)
 

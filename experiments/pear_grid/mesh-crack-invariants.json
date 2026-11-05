@@ -1,0 +1,13 @@
+{
+  "before": {
+    "surface_area_float64": 5.363937258767116,
+    "signed_volume_float64": 1.0033487821477922,
+    "exact_collinear_faces": 0
+  },
+  "after": {
+    "surface_area_float64": 5.363937258767116,
+    "signed_volume_float64": 1.0033487821477922,
+    "exact_collinear_faces": 0
+  },
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}

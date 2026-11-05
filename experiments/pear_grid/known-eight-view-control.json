@@ -1,0 +1,74 @@
+{
+  "control": "Rendered analytic asymmetric pear, independent from generated input; exact cameras and surface known.",
+  "coverage": [
+    {
+      "view": 0,
+      "visible_canonical_ground_truth_vertices": 327,
+      "detected_nodes": 249,
+      "ground_truth_vertices_with_detection_within_3px": 195,
+      "detected_nodes_near_ground_truth": 239
+    },
+    {
+      "view": 1,
+      "visible_canonical_ground_truth_vertices": 327,
+      "detected_nodes": 263,
+      "ground_truth_vertices_with_detection_within_3px": 199,
+      "detected_nodes_near_ground_truth": 253
+    },
+    {
+      "view": 2,
+      "visible_canonical_ground_truth_vertices": 328,
+      "detected_nodes": 235,
+      "ground_truth_vertices_with_detection_within_3px": 177,
+      "detected_nodes_near_ground_truth": 228
+    },
+    {
+      "view": 3,
+      "visible_canonical_ground_truth_vertices": 323,
+      "detected_nodes": 235,
+      "ground_truth_vertices_with_detection_within_3px": 181,
+      "detected_nodes_near_ground_truth": 224
+    },
+    {
+      "view": 4,
+      "visible_canonical_ground_truth_vertices": 326,
+      "detected_nodes": 225,
+      "ground_truth_vertices_with_detection_within_3px": 176,
+      "detected_nodes_near_ground_truth": 212
+    },
+    {
+      "view": 5,
+      "visible_canonical_ground_truth_vertices": 322,
+      "detected_nodes": 252,
+      "ground_truth_vertices_with_detection_within_3px": 184,
+      "detected_nodes_near_ground_truth": 239
+    },
+    {
+      "view": 6,
+      "visible_canonical_ground_truth_vertices": 308,
+      "detected_nodes": 263,
+      "ground_truth_vertices_with_detection_within_3px": 194,
+      "detected_nodes_near_ground_truth": 254
+    },
+    {
+      "view": 7,
+      "visible_canonical_ground_truth_vertices": 325,
+      "detected_nodes": 261,
+      "ground_truth_vertices_with_detection_within_3px": 197,
+      "detected_nodes_near_ground_truth": 247
+    }
+  ],
+  "tracks_total": 204,
+  "correct_identity_tracks": 0,
+  "wrong_identity_tracks": 203,
+  "unresolved_detection_tracks": 1,
+  "correct_track_3d_error": {
+    "n": 0,
+    "mean": null,
+    "median": null,
+    "p95": null,
+    "max": null
+  },
+  "interpretation": "This measures the entire cell/context matcher, not just triangulation. False matches on a true consistent render cannot be blamed on image generation. Three-pixel nearest-vertex association is an evaluation tolerance, not a decoder guarantee.",
+  "public_record_note": "Model coordinates, raw faces and ground-truth arrays remain local; this record contains summary diagnostics only."
+}
