@@ -1,168 +1,90 @@
-# IGL3DM — Image Gen Led 3D Modeling
+# IGL3DM: Image Gen Led 3D Modeling
 
-**Concept:** Use image generation to perform most of the visual design and reference creation for a 3D character, then use software to turn those references into a coherent, editable 3D mesh. Finish and validate it in Blender with an agent.
+**Goal:** one image-generation call produces a multiview reference; software turns it into a useful, inspectable 3D asset. **No manual agent modeling.**
 
-This is a proposed workflow, **not** a claim that a complete 1:1 reconstruction pipeline already exists.
+This repository now contains a working CPU baseline, regression tests, and an experiment journal in [process.md](process.md). It does **not** claim exact reconstruction or a solved image-to-3D system.
 
-## Core idea
+## What actually runs today
 
-Instead of generating one image and asking an agent to sculpt a model from it, generate **synchronized multi-view references** in three complementary representations:
+1. Generate one 4×4 atlas of a character at 16 yaw angles, 22.5° apart.
+2. Split the atlas at shared grid boundaries, remove narrow divider gutters, and segment foreground.
+3. Assume common level orthographic cameras. Do not resize or recenter individual silhouettes independently.
+4. Compare strict 16-view intersection with explicitly relaxed 15/16 and 14/16 silhouette constraints.
+5. Extract one shared mesh with marching tetrahedra, keep the largest occupied component, and project approximate visible colors.
+6. Export colored PLY and GLB. Blender renders the **unchanged** mesh from 16 reference and 16 unseen intermediate yaws.
+7. Measure the actual mesh's silhouette reprojection. Produce a real mesh turntable GIF, raw depth/XYZ maps, and a result report.
 
-| Reference | Views | Purpose |
-| --- | --- | --- |
-| Color / shaded | 8 | Silhouette, volumes, proportions, color, expressions and character identity |
-| High-contrast mesh-like | 8 | Structural landmarks, boundaries between major masses, visibility relationships |
-| Topology / edge flow | 8 | Suggested edge loops around face, joints, extremities and surface transitions |
+The first generated lion experiment produced a recognizable, imperfect mesh. Final mesh mean silhouette IoU was **0.8482**, worst view **0.7647**. The mesh had 54,160 vertices / 108,324 triangles with zero boundary or nonmanifold edges by incidence counting. These figures describe image-space fit and mesh integrity, **not 84.8% 3D accuracy**. See the journal for failures, fixes and what has not been checked.
 
-**Important:** These are image-generated *reference drawings*. A drawn wireframe is not guaranteed to be an actual, consistent polygon mesh, and the apparent vertex locations in different images may not correspond to the same physical points. Software must solve the 3D geometry.
+## Quick start
 
-## End-to-end workflow
+Python 3.10+, NumPy, SciPy and Pillow are required. Blender 4.3.2 was tested for export/rendering. No GPU, model weights, credentials or network are required after dependencies are installed.
 
-### 1. Lock the character and camera
+```bash
+python -m venv .venv
+. .venv/bin/activate
+pip install -e .
+python -m unittest discover -s tests -v
 
-- Choose a single character pose, including limb placement, expression and tail position.
-- Choose a consistent frame, ground plane, orthographic or calibrated perspective camera and rotation axis.
-- Generate the same subject at **0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°**.
-- Lock overall object scale, camera pitch, lighting and frame composition.
-- Validate that adjacent views depict a physically plausible single object before committing to reconstruction.
-
-To reduce view drift, consider generating a coarse 3D anchor first and using its rendered views as control/reference images for subsequent detail generation. This trades off some image-first freedom for much better cross-view consistency.
-
-### 2. Generate three aligned sheets
-
-**A — Color sheet:** Establish the final intended appearance with clearly separated forms and a stable silhouette.  
-**B — Mesh-contrast sheet:** Render the identical pose from the same cameras with white/gray clay and readable dark structural lines.  
-**C — Edge-flow sheet:** Overlay topology guides, such as rings around the eyes and mouth, transitions between facial planes, shoulders, elbows, knees, paws and tail.
-
-Create matching crops for each angle. Reject or repair inconsistent camera views and mismatched anatomy *before* fitting the mesh.
-
-### 3. Extract constraints from the images
-
-For each view:
-
-1. Segment the subject into a binary **silhouette mask**.
-2. Trace the exterior contour at pixel accuracy.
-3. Identify major **3D-relevant landmarks** such as eyes, ear tips, muzzle, paw contacts, joint centers and tail root.
-4. Trace internal structural curves (mouth edge, mane masses, body transitions).
-5. Estimate which landmarks/curves are occluded; annotate confidence and view visibility.
-6. Link the same semantic landmarks and curves across views.
-
-**Do not attempt to instantiate every drawn wireframe crossing as an independent 3D vertex.** Use correspondences only when they are reliable; otherwise rely on a predefined mesh topology and image-space constraints.
-
-### 4. Solve an initial solid
-
-- Use calibrated cameras and masks to build a **visual hull** or signed-distance/voxel occupancy field.
-- Extract a watertight surface with marching cubes or a comparable method.
-- Optionally initialize a riggable quadruped template and deform it toward the visual hull.
-- Keep separate semantic regions for body, mane, face, mouth, paws and tail when that helps topology and animation.
-
-The initial hull captures what the views permit, but cannot reconstruct concavities hidden from all silhouettes; internal feature lines and geometry priors are needed for the rest.
-
-### 5. Optimize a shared 3D mesh
-
-Fit **one mesh** against all eight cameras at once. For each candidate vertex arrangement, render the mesh back into all reference views and evaluate:
-
-- **Silhouette loss:** discrepancy between rendered and source masks.
-- **Landmark reprojection loss:** difference in projected feature positions.
-- **Contour/curve loss:** discrepancy around the muzzle, mane, mouth and body transitions.
-- **Regularization:** mesh smoothness, minimum thickness, plausible anatomy, no self-intersections.
-- **Cross-view consistency:** the same geometry must explain every input view.
-
-A conceptual objective is:
-
-```text
-L = w_s * silhouette_loss
-  + w_l * landmark_reprojection_loss
-  + w_c * feature_curve_loss
-  + w_r * geometry_regularization
-  + w_v * cross_view_consistency_loss
+# atlas.png is the output of one external ImageGen call.
+# The tool/service call itself is not bundled in this CLI.
+igl3dm atlas.png --output runs/example --imagegen-calls 1 --render
 ```
 
-Treat `w_*` as tunable priorities, not fixed parameters. Prefer a differentiable renderer or iterative optimization with projected masks. Keep the template's connectivity stable during early fitting; remesh only after convergence or in dedicated refinement phases.
+The output directory must be new or empty. To run without installing the editable package:
 
-### 6. Build physical surface detail
-
-Use the color and wireframe-like references to add genuinely 3D features:
-
-- Separately layered mane geometry rather than a large smooth blob.
-- Eyebrows, eyelids, ears, nose bridge, nostrils and muzzle volumes.
-- A real mouth opening and interior, tongue and teeth if visible.
-- Individual toes and paws, recognizable joints and grounded foot contact.
-- A continuous tail with controlled taper and tuft shape.
-
-Apply UVs / vertex colors / textures only after the underlying shape meets multi-view projection tests. Color projections should be visibility-aware to avoid painting the wrong side of the model.
-
-### 7. Blender agent refinement
-
-An automated Blender pass can handle:
-
-- topology cleanup and selective retopology
-- surface intersections, loose geometry and shading artifacts
-- mirrored/paired anatomy where applicable
-- UV unwrapping and texture baking
-- optional skeleton, skin weights and animation checks
-- turntable renders from exact source camera angles
-
-The agent should make bounded changes and rerun visual validation after each pass. Do not let cleanup improve one view while silently degrading the others.
-
-### 8. Validate before calling it done
-
-Render the model from all eight original angles (and several **intermediate, unseen angles**) at locked camera settings.
-
-Track:
-- per-view and mean silhouette IoU
-- landmark reprojection error in normalized image coordinates
-- consistency of the outline, joint locations and face across views
-- mesh watertightness, self-intersections and non-manifold edges
-- subjective character likeness and material match
-
-Use generated references as *targets*, not ground truth about hidden geometry. A perfect 2D silhouette score alone does not prove a 1:1 model: the mesh may be malformed, topologically unsuitable or inconsistent at unseen viewpoints.
-
-## Proposed software architecture
-
-```text
-ImageGen
-  → synchronized view generation
-  → quality control / registration
-  → silhouettes + landmarks + feature curves
-  → camera calibration
-  → visual-hull / template initialization
-  → multi-view vertex optimization
-  → geometry + UV/material refinement
-  → Blender agent cleanup
-  → eight-view + novel-view validation
-  ↺ iterate until quality targets are met
+```bash
+PYTHONPATH=src python -m igl3dm.cli atlas.png \
+  --output runs/example --resolution 80 --image-size 192 \
+  --max-misses 2 --imagegen-calls 1 --render
 ```
 
-Potential implementation modules:
+A later render-only pass is supported:
 
-- `view_generator` — prompts, pose/view controls, image batches, provenance.
-- `view_registration` — camera/scale checks and crop alignment.
-- `constraint_extractor` — segmentation, silhouettes, curves and landmarks.
-- `mesh_initializer` — voxel occupancy, visual hull and initial mesh.
-- `mesh_fitter` — common-topology vertex optimization and reprojection.
-- `material_builder` — visibility-aware color projection and texture baking.
-- `blender_agent` — mesh cleanup, rigging preparation and renders.
-- `validator` — quantitative view comparisons and mesh integrity tests.
+```bash
+blender -b --threads 4 --python scripts/render_mesh.py -- \
+  --mesh runs/example/mesh.json --output runs/example/renders \
+  --size 192 --views 16 --elevation 0 --midpoints --save-blend
+PYTHONPATH=src python -m igl3dm.finish runs/example
+```
 
-## Development order
+`--imagegen-calls` is caller-attested provenance, not something software can infer from pixels. If omitted, the report records it as unknown. The generation service may produce a static sheet, an animation or another format; this prototype accepts a static atlas, and does not assume an animated generation API exists.
 
-1. Prove robust silhouette fitting from eight **known consistent** views using a simple shape.
-2. Add view-specific feature landmarks and recover a stable, plausible 3D form.
-3. Test on stylized quadrupeds with limbs and tails.
-4. Introduce mesh-reference and edge-flow image sheets as additional, confidence-weighted constraints.
-5. Automate sculpting/cleanup in Blender and validate on unseen viewpoints.
-6. Only then attempt highly detailed, near-1:1 stylized characters.
+## Input contract
 
-## Guiding principles
+Request a single fixed character pose, plain white background, no ground/shadows/text, constant lighting, common scale, level orthographic camera, and enough margin. Use a 4×4 row-major grid: 0°, 22.5°, …, 337.5°. Front is first; positive yaw shows the animal's left-facing profile at 90°. Thin mesh-like lines and cel-shaded colors are useful appearance references, not correspondence guarantees.
 
-- **ImageGen leads the design; geometry software enforces physical consistency.**
-- Multi-view agreement matters more than how convincing one frame looks.
-- Separate generated **wireframe appearance** from mathematically real vertices and edges.
-- Silhouettes are the starting point, not the entire solution.
-- Every automated improvement should be measured by rendering the *actual* mesh.
-- Be explicit about failure modes; do not advertise pixel-perfect 1:1 fidelity until it is demonstrated.
+Generated files need not divide perfectly into 16 square cells. The splitter rounds shared boundaries, trims the same configurable gutter from each cell and pads cells to a common canvas. This handles one-pixel differences without individually fitting the animals. Segmentation assumes a plain border background or meaningful alpha. A sheet with large labels, thick frames, missing margins or changing pose may fail or reconstruct poorly.
 
-## Repository scope
+World coordinates are right-handed, Z-up, nominally in [-1, 1]. The yaw-zero camera is on negative Y; positive yaw moves toward positive X. Orthographic scale is 2.0. These are **requested assumptions**, not camera calibration recovered from the images.
 
-This repository documents the **overall approach**. It intentionally does **not** include example models, GLB/OBJ meshes, image-generation outputs, chat transcripts, or historical test artifacts.
+## Outputs
+
+- `model.ply`: inferred mesh with approximate RGB vertex colors.
+- `renders/model.glb`: portable Y-up glTF, unlit vertex colors.
+- `renders/model.blend`: reproducible Blender inspection scene when requested.
+- `rendered_views.png`, `reference_vs_mesh.png`: actual-mesh review images.
+- `turntable.gif`: actual mesh rotation, including unseen yaws, one shared palette.
+- `report.json`: source hash, caller-attested provenance, settings, segmentation, all candidate scores, selected tolerance, mesh integrity and final reprojection scores.
+- `renders/data/*.npz`: float32 mesh-ray depth and world-space XYZ, validity mask, face index and camera transforms.
+- `renders/data/*_depth.png`: 16-bit preview with explicit shared near/far encoding.
+- `renders/data/*_position.png`: world XYZ visualization using one global bounding box.
+- `renders/render_manifest.json`: depth/position decoding conventions and timings.
+
+Raw depth/XYZ are generated **from the inferred mesh**. They make that mesh measurable and reusable; they do not add missing evidence or prove it is correct. XYZ maps are per-visible-surface positions, not original vertex IDs. Invalid pixels remain masked/NaN. Display PNGs are not a replacement for raw floats.
+
+## Honest limits
+
+- A painted wireframe cannot establish identical vertices across views. Color-coding arbitrary vertices in ImageGen is not a reliable geometric correspondence protocol.
+- Synthetic images can disagree on pose, camera, proportions, tail and facial detail. A relaxed hull deliberately tolerates some conflicting views; the exact tolerance is reported.
+- Silhouettes cannot recover hidden concavities, separate every touching limb, or create correct facial topology. Texture projection smears or conflicts when the drawings disagree.
+- Keeping the largest component can discard detached details. Discarded voxel counts are recorded.
+- Edge incidence checks do not prove lack of self-intersection, anatomical correctness, riggability or game-ready topology.
+- No learned depth/correspondence model, semantic template fitting, rigging, UV atlas or high-quality material reconstruction is in this baseline.
+- GIF playback alone cannot recover 3D. Frame count is not evidence of geometric consistency. GIF generation, if available, should be evaluated as an alternative source of frames, not confused with the renderer's output GIF.
+
+## Research direction
+
+Compare this measured baseline with licensed learned multiview depth/pose and image-to-3D systems, within the available machine's CPU/RAM/GPU constraints. Preserve the same generated input when comparing software methods. Only regenerate when testing a specific input hypothesis, and record the prompt, call count, outcome and limitation. Research candidates are not results until they have actually run and been inspected.
+
+Every meaningful round belongs in [process.md](process.md). Source changes, tests and concise result summaries are committed. Large generated assets and machine-local runtime artifacts stay under ignored `runs/` unless deliberately selected for publication. Never commit credentials, private user data or unrelated diagnostics.
