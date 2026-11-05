@@ -1,0 +1,270 @@
+[
+  {
+    "model": "ZipDepth Base NPU, via LibreYOLO 1.5.0 PyPI port",
+    "source_url": "https://github.com/fabiotosi92/ZipDepth",
+    "source_commit": "91f3fd21e131641f51e8d35736d1958350180e3a",
+    "implementation_metadata": {
+      "official_source_url": "https://github.com/fabiotosi92/ZipDepth",
+      "official_commit": "91f3fd21e131641f51e8d35736d1958350180e3a",
+      "checkpoint_url": "https://raw.githubusercontent.com/fabiotosi92/ZipDepth/91f3fd21e131641f51e8d35736d1958350180e3a/checkpoints/zipdepth_base_npu.pth",
+      "checkpoint_sha256": "627c04fda584133ead4310074884a4a037061b4c01ba86e73e492ea30fab570d",
+      "checkpoint_bytes": 27295474,
+      "download_seconds": 12.277369908013497,
+      "implementation": "LibreYOLO 1.5.0 from PyPI, isolated unchanged numerical files",
+      "wheel_sha256": "2a921340908e7560301b9358feddf7bc32dd7ed8ff0b3c90ed7a5090342fe513"
+    },
+    "checkpoint_sha256": "627c04fda584133ead4310074884a4a037061b4c01ba86e73e492ea30fab570d",
+    "license": "MIT code and published checkpoint; DA2 Large teacher lineage documented",
+    "parameters": 6142058,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "network_input_resolution": 384,
+    "output_shape": [
+      16,
+      312,
+      312
+    ],
+    "output_convention": "Inverse relative depth; larger means nearer. Not meters, not calibrated across views.",
+    "image_mapping": "Entire 312x312 crop is resized to the network square, then bilinearly returned to 312x312; no crop or recentering.",
+    "load_seconds": 0.14740841800812632,
+    "inference_seconds": 1.0128882819990395,
+    "per_view_seconds": [
+      0.09796817600727081,
+      0.04944292700383812,
+      0.06110508200072218,
+      0.05775707999418955,
+      0.052257867995649576,
+      0.04975769099837635,
+      0.05597819801187143,
+      0.06937834499694873,
+      0.07180029799928889,
+      0.0758442560036201,
+      0.06864638399565592,
+      0.0502909820061177,
+      0.05889175499032717,
+      0.06935899099335074,
+      0.06592983099108096,
+      0.05848041801073123
+    ],
+    "peak_rss_kib": 423780,
+    "per_view_foreground_display_quantiles": [
+      [
+        0.05964791625738144,
+        0.10934682935476303
+      ],
+      [
+        0.061353232562541965,
+        0.12490085870027541
+      ],
+      [
+        0.05806805193424225,
+        0.11513859421014785
+      ],
+      [
+        0.05792824313044548,
+        0.11381043568253517
+      ],
+      [
+        0.0618914870172739,
+        0.11875087678432465
+      ],
+      [
+        0.06025746762752533,
+        0.10435031726956367
+      ],
+      [
+        0.05523145757615566,
+        0.11110242232680322
+      ],
+      [
+        0.060366034507751465,
+        0.10477983206510544
+      ],
+      [
+        0.06014988586306572,
+        0.10415470838546753
+      ],
+      [
+        0.061801369562745095,
+        0.10719706073403358
+      ],
+      [
+        0.0628686472773552,
+        0.10568175464868546
+      ],
+      [
+        0.05906146228313446,
+        0.10459715127944946
+      ],
+      [
+        0.06135779656469822,
+        0.11069527268409729
+      ],
+      [
+        0.06689663469791413,
+        0.11351425230503082
+      ],
+      [
+        0.05831578187644482,
+        0.11182672813534736
+      ],
+      [
+        0.04989893510937691,
+        0.12140626072883606
+      ]
+    ],
+    "notes": [
+      "All 16 existing original-sheet crops, no new image generation or hand modeling.",
+      "Unchanged numerical files from PyPI LibreYOLO 1.5.0 and official tensor-only checkpoint. Empty package initializers isolate numerical modules; no full framework import.",
+      "Depth contact visualization is independently normalized per view and cannot show absolute cross-view scale consistency.",
+      "No camera pose or confidence prediction; do not substitute these maps directly into metric fusion.",
+      "No paid inference API; download, setup, and load excluded from inference runtime."
+    ],
+    "run": "npu_384"
+  },
+  {
+    "model": "ZipDepth Base NPU, via LibreYOLO 1.5.0 PyPI port",
+    "source_url": "https://github.com/fabiotosi92/ZipDepth",
+    "source_commit": "91f3fd21e131641f51e8d35736d1958350180e3a",
+    "implementation_metadata": {
+      "official_source_url": "https://github.com/fabiotosi92/ZipDepth",
+      "official_commit": "91f3fd21e131641f51e8d35736d1958350180e3a",
+      "checkpoint_url": "https://raw.githubusercontent.com/fabiotosi92/ZipDepth/91f3fd21e131641f51e8d35736d1958350180e3a/checkpoints/zipdepth_base_npu.pth",
+      "checkpoint_sha256": "627c04fda584133ead4310074884a4a037061b4c01ba86e73e492ea30fab570d",
+      "checkpoint_bytes": 27295474,
+      "download_seconds": 12.277369908013497,
+      "implementation": "LibreYOLO 1.5.0 from PyPI, isolated unchanged numerical files",
+      "wheel_sha256": "2a921340908e7560301b9358feddf7bc32dd7ed8ff0b3c90ed7a5090342fe513"
+    },
+    "checkpoint_sha256": "627c04fda584133ead4310074884a4a037061b4c01ba86e73e492ea30fab570d",
+    "license": "MIT code and published checkpoint; DA2 Large teacher lineage documented",
+    "parameters": 6142058,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "network_input_resolution": 384,
+    "input_dir": "runs/lion-pattern-001/views",
+    "source_sha256": {
+      "view_00.png": "2099f7149428d4220687716b20ea726e2f814d94eacb58d0c413e4ebb71dd67a",
+      "view_01.png": "484b1f1fd2d2ee2e7b8650964457390e87decb10371d56b32217fcb652c3c7f7",
+      "view_02.png": "a85816fa96f14ccbc959f33ca5a2abf98ff1c98c201ca6dff6282cdcfa4cca66",
+      "view_03.png": "f168d853d0fbb078cf16ff16e96b137c84fd3831b0afdab26a8441c979816430",
+      "view_04.png": "3fd047a5d97e08a484b3e63304780d488428a02841907ac548e03423f4ac8b8f",
+      "view_05.png": "997bdb958ce80bfbd835cafdb6a70af17a2f6f0ab6defdacf73de5964ac46b0a",
+      "view_06.png": "d8a93c70df96428bd49a340a38c796445a9be4fddf36be34f16f963ef1d36a62",
+      "view_07.png": "a418c2f9d2decec858c307f68b3af82bd25e1b2362c04b88cc07b46e07d15751",
+      "view_08.png": "e3aae09a856b0fd8107aa4785f98c8f629d9aae34701151878c48c28d63906ed",
+      "view_09.png": "b11fb08565ae0785fe3abde92d07e1159decdf473a056378581e821683e94f65",
+      "view_10.png": "3699ad62603c977f16fbc8badf1bcd8d268cb4ef95db69c5b7e2d8d03530b70f",
+      "view_11.png": "a4a3d54beb9a3c525aa40722a714cf0ba1f53539550a298817914c1d5f6d85c6",
+      "view_12.png": "0a5e11841d7483e253474bf9c7c0a24f1a661d2aa1041f4f4299c4599eb0afd1",
+      "view_13.png": "3ce7d6298af751e8ac164853dea91ee678416e3293a37710098b43adbfaaa7f8",
+      "view_14.png": "279e5bd42005c34db795df85ef19fcb9329692b4529db6eb0d16db81d6ecd047",
+      "view_15.png": "38dfe061f5415be5b29ed5a7278346dfa9b48425d66a35a7d326c2f69fa3c99e"
+    },
+    "output_shape": [
+      16,
+      310,
+      310
+    ],
+    "output_convention": "Inverse relative depth; larger means nearer. Not meters, not calibrated across views.",
+    "image_mapping": "Entire 310x310 crop is resized to the network square, then bilinearly returned to its original size; no crop or recentering.",
+    "load_seconds": 0.1852747380034998,
+    "inference_seconds": 1.10859643004369,
+    "per_view_seconds": [
+      0.14082967801368795,
+      0.06484726298367605,
+      0.0641669169999659,
+      0.06298864798736759,
+      0.06418345199199393,
+      0.06592213601106778,
+      0.06399436501669697,
+      0.06655265702283941,
+      0.06370200499077328,
+      0.06410887898528017,
+      0.06355423200875521,
+      0.06644110899651423,
+      0.06354019002174027,
+      0.0643448049959261,
+      0.06449737600632943,
+      0.06492271801107563
+    ],
+    "peak_rss_kib": 418832,
+    "per_view_foreground_display_quantiles": [
+      [
+        0.057853081375360486,
+        0.09843463212251663
+      ],
+      [
+        0.0664475528895855,
+        0.11974998906254769
+      ],
+      [
+        0.061291330680251124,
+        0.11404158696532249
+      ],
+      [
+        0.06378507137298584,
+        0.11886803209781648
+      ],
+      [
+        0.06661461293697357,
+        0.12827261507511137
+      ],
+      [
+        0.06435885429382324,
+        0.11265056312084198
+      ],
+      [
+        0.06469834119081497,
+        0.10881196528673172
+      ],
+      [
+        0.0628340259194374,
+        0.10163023024797439
+      ],
+      [
+        0.062145245671272276,
+        0.10425883412361145
+      ],
+      [
+        0.06369856119155884,
+        0.11421020686626435
+      ],
+      [
+        0.058822540938854216,
+        0.10648775458335877
+      ],
+      [
+        0.06245312064886093,
+        0.10356778055429458
+      ],
+      [
+        0.06405542984604835,
+        0.12800528466701508
+      ],
+      [
+        0.06623546242713928,
+        0.13289341807365418
+      ],
+      [
+        0.06572523117065429,
+        0.12592410594224931
+      ],
+      [
+        0.06412141352891922,
+        0.10935202673077583
+      ]
+    ],
+    "notes": [
+      "All 16 supplied controlled-pattern-sheet crops, no new image generation or hand modeling.",
+      "Unchanged numerical files from PyPI LibreYOLO 1.5.0 and official tensor-only checkpoint. Empty package initializers isolate numerical modules; no full framework import.",
+      "Depth contact visualization is independently normalized per view and cannot show absolute cross-view scale consistency.",
+      "No camera pose or confidence prediction; do not substitute these maps directly into metric fusion.",
+      "No paid inference API; download, setup, and load excluded from inference runtime.",
+      "Diagnostic PNG foreground mask fills enclosed white landmark holes; raw model depth is unchanged."
+    ],
+    "run": "pattern_npu_384"
+  }
+]

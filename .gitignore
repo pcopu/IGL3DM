@@ -9,3 +9,8 @@ runs/
 experiments/**/outputs/
 experiments/**/models/
 experiments/**/Depth-Anything-3/
+experiments/**/TripoSR/
+experiments/**/Depth-Anything-V2/
+experiments/**/package/
+experiments/**/hf-cache/
+experiments/**/numba-cache/

@@ -119,3 +119,52 @@ Next: validate calibration/visibility/confidence for software-predicted depth be
 ## Published experiment evidence
 
 Source and output visuals are versioned under [docs/experiments](docs/experiments), with hashes in [assets.json](docs/experiments/assets.json). Images and animated previews are included; mesh files, model weights, raw large arrays, environments and unrelated data are excluded. Machine-readable results and concise failed-experiment records are part of the journal, not just favorable screenshots.
+
+## Round 6 · Learned complete-object prior (TripoSR)
+
+Reused frontal and three-quarter crops from the original atlas, with no new generation. Unlike depth fusion, TripoSR conditions a learned whole-object prior on **one** view at a time.
+
+- Frontal input: 19.69 s inference + 4.02 s extraction, 12,420 vertices / 24,836 triangles. A watertight but structurally incomplete mane-and-legs result. Rejected.
+- Three-quarter input: 17.74 s + 3.63 s, 16,090 vertices / 32,176 triangles. Recognizable full lion with four legs/tail, rough surfaces/colors, inferred rear geometry and an untouched eight-face island. Useful comparison, not a faithful sixteen-view reconstruction.
+- Used official MIT source/checkpoint, CPU float32, four threads, 128³ extraction, and a disclosed scikit-image marching-cubes adapter. No manual anatomy, smoothing or repair.
+- Display-only uniform bbox normalization is not camera calibration. Meshes are retained locally; only previews and result metadata are published.
+
+[Reproducibility and caveats](experiments/triposr/README.md) · [Frontal failure](docs/experiments/06-triposr/front-failure.gif) · [Three-quarter result](docs/experiments/06-triposr/three-quarter.gif)
+
+## Round 7 · Software depth at shared mesh vertices
+
+Reused the original atlas; **no new generation**. Compared DA3 Small/Base with independent Depth Anything V2 Small and recent lightweight ZipDepth. V2 estimated all sixteen views at518² in16.585 s/689.6 MiB peak RSS; ZipDepth at384² took1.013 s/413.8 MiB. These are finite depth maps, not automatically correct geometry.
+
+1. Verified same-crop image registration and depth polarity.
+2. Fit positive affine camera-z relationships on fitting pixels. For V2/ZipDepth, negated inverse-relative-depth is an explicitly approximate ordinal surrogate.
+3. Rejected weak, sign-inconsistent or high-residual views. Original DA3 Small308 accepted views0–3 and12–15; rear-half views did not constrain deformation.
+4. Preserved all54,160 actual mesh vertex IDs and108,324 faces. Painted source dots were never treated as proven common vertices.
+
+**Failed normal-displacement attempt:** proposed motion flipped1,011 small triangles. Orientation-preserving line search reduced it to1/4096, effectively no useful change. Preserved as a failure record.
+
+**Bounded smooth-field attempt:** a24³ displacement field, Gaussian smoothing, maximum node movement0.03 and conservative derivative bound0.25 allowed a nontrivial step with no flipped faces. Actual maximum DA3 movement0.01345, mean0.00579 normalized units. Geometry stayed edge-watertight with no nonmanifold edges.
+
+| Prior | Spatial-assessment depth RMSE before → after | Actual silhouette mean IoU |
+|---|---:|---:|
+| Baseline | — | 0.848219 |
+| DA3 Small308 | 0.056476 → 0.051446 | 0.847961 |
+| V2 Small518 | 0.146960 → 0.142778 | 0.847312 |
+| ZipDepth384 | 0.164873 → 0.160983 | 0.846467 |
+
+All three improve agreement with their own depth priors but slightly worsen silhouettes. Visual changes are small. Different priors use different calibration/support; raw residual magnitudes are not a fair stand-alone ranking. Assessment blocks are excluded from fitting but used by view gates, and smooth warps couple nearby vertices: this is not blind independent validation or ground-truth3D accuracy.
+
+[Method/scripts and limits](experiments/depth_fit/README.md) · [Before/after and unexaggerated displacement colors](docs/experiments/07-software-depth-fit/da3-before-after.png) · [Depth models](docs/experiments/07-software-depth-fit/depth-models.png)
+
+## Round 8 · Coarse triangular pattern and region colors
+
+A fourth generation call supplied one new16-view atlas referencing the original character. It replaced fine quadrilateral lines with coarse triangles and flat color regions. Actual colors remain broad body-part groups, not unique stable face/vertex IDs.
+
+- Same80³,192px and14-of-16 hull settings:56,528 vertices /113,060 triangles, zero boundary/nonmanifold edges. Actual meanIoU0.847176, worst0.753353. Original was0.848219/worst0.764702: no improvement.
+- Mutual SIFT/assumed-camera matching found284→279 mutual matches and230→213 geometry-gated matches. Exact three-view cycles increased10→21; only2→7 also met the triangulation agreement gate. Too sparse and uncertain to reconstruct every drawn vertex.
+- Repeated DA3 Small308/V2 Small518/ZipDepth384 with identical software settings. Median normalized assessment residuals **worsened**: DA3 .223→.262, V2 .226→.256, ZipDepth .235→.267. Accepted views fell from8→6 for V2 and8→1 for ZipDepth; DA3 retained eight front-side views while rear correlations worsened.
+- TripoSR on the same new three-quarter index:17.05 s inference +3.01 s extraction,29,830 triangles. Recognizable but still rough/patchy; coarse drawn lines became surface artifacts. No clear geometry improvement over the original input.
+- The generation changed more than tessellation, so this is evidence against this **particular representation trial**, not a universal causal claim about triangles.
+
+[Input](docs/experiments/08-coarse-pattern/input.png) · [Actual hull turntable](docs/experiments/08-coarse-pattern/turntable.gif) · [Feature matches](docs/experiments/08-coarse-pattern/sift-matches.png) · [Paired TripoSR comparison](docs/experiments/08-coarse-pattern/triposr-original-vs-pattern.gif)
+
+The regression suite now includes a synthetic shared-vertex-warp check. Fifteen tests pass; optional learned-model runners are isolated from the baseline package. All model weights and meshes remain excluded from Git.

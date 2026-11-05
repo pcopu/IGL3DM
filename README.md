@@ -105,3 +105,14 @@ PYTHONPATH=src python scripts/validate_cross_views.py \
 ```
 
 `cameras.json` records every assumed yaw/elevation and original source index. The renderer accepts `--cameras` directly; midpoint generation requires complete uniformly spaced orbits. The combined turntable shows synchronized bands, not a discontinuous jump between elevations. Tolerance selection from voxel footprints remains approximate; use `--fixed-misses` and actual-mesh validation for controlled comparisons.
+
+
+## Optional learned-model experiments
+
+- [DA3 multiview depth/pose](experiments/learned_depth/README.md): fast CPU inference, rejected full-orbit raw fusion.
+- [V2 Small](experiments/depth_v2/README.md) and [ZipDepth](experiments/zipdepth/README.md): independent software depth, with explicit inverse-relative-depth semantics.
+- [Shared-vertex depth fitting](experiments/depth_fit/README.md): preserves actual vertex IDs/faces; small bounded changes, no demonstrated silhouette gain.
+- [TripoSR](experiments/triposr/README.md): one-view complete-object prior; frontal failure and imperfect three-quarter successes retained.
+- [Feature correspondence probe](experiments/features/README.md): tests drawn patterns without treating them as exact vertices.
+
+These runners require their own explicitly documented official source/checkpoints and dependencies. They do not silently download or execute models as part of the baseline CLI. Selected output visuals and failures are versioned in `docs/experiments`; model binaries are not.

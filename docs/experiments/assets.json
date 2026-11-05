@@ -75,6 +75,96 @@
       "path": "docs/experiments/05-abandoned-generated-depth/input-abandoned.png",
       "bytes": 1773592,
       "sha256": "1a465da0896b45b887e5f6082caf3877cfa980d28e53e76296b6395e8d371cff"
+    },
+    {
+      "path": "docs/experiments/06-triposr/front-failure.gif",
+      "bytes": 431345,
+      "sha256": "b646b87ac916b6136b01bd32fb8a026a5513c1064fada475f7721c7c9ed27f81"
+    },
+    {
+      "path": "docs/experiments/06-triposr/front-failure.png",
+      "bytes": 440559,
+      "sha256": "58ad15179551bf4ed55f57f5e2952ad551fb87944467718b78a554823c9d251f"
+    },
+    {
+      "path": "docs/experiments/06-triposr/three-quarter.gif",
+      "bytes": 460415,
+      "sha256": "4ae48ae5b816e307094fda7bed6926a7321159b15904cbe8ad0d0d15ec1cc33c"
+    },
+    {
+      "path": "docs/experiments/06-triposr/three-quarter.png",
+      "bytes": 536896,
+      "sha256": "8264e5d504422a2b1dbae36ff7d7703327443fcc481e874daed8bae3c174f755"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/da3-before-after.png",
+      "bytes": 337272,
+      "sha256": "9020e1f2868cdf9dbda0bd968061dd45a7bf3efe22850f4425ccce31a13a5024"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/da3-fit.gif",
+      "bytes": 482803,
+      "sha256": "06fb0d61696113d81c0dcc885dacae76279f6b9bcefa79fc2994586b505c1035"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/depth-models.png",
+      "bytes": 469808,
+      "sha256": "048916ff7a48daa8a46ad8d89fb86fe1bff0ad1af1923af0fb2c364401493eb7"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/v2-depth.png",
+      "bytes": 1082095,
+      "sha256": "13647a078ec5335a2124f2270b20393fda0342883a9cb190b1cc4278595439a5"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/v2-fit.gif",
+      "bytes": 484897,
+      "sha256": "96140efb29256a39dacad6d045ba29079b6c940f6e6cf2b2f4bf82f2b9aa5411"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/zip-fit.gif",
+      "bytes": 483869,
+      "sha256": "f55a8ee8733e367fe57af55bae5549166e603ebba764ab029c4cefce8a4e6372"
+    },
+    {
+      "path": "docs/experiments/07-software-depth-fit/zipdepth.png",
+      "bytes": 1089817,
+      "sha256": "bdffb63cfe6531cc3373dfbae95bc6fa181e2ae0672cdb6b73ca1838a512f7f8"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/input.png",
+      "bytes": 2118765,
+      "sha256": "069592cb2617e453896e46047abd91329bbb9bd487cedac870eac3556041e8ec"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/original-sift-matches.png",
+      "bytes": 682268,
+      "sha256": "426839dcfbe109830d4d8e5e8e3330cc50be2e9da83fa2759c6701b09cdd0ef8"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/reference-vs-mesh.png",
+      "bytes": 325734,
+      "sha256": "e115be5a2bca232ab8dfc3c4249d2c789c23803b534c7b8d49ab97fc0cf214fb"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/sift-matches.png",
+      "bytes": 642665,
+      "sha256": "c9675e667042de6076a660c2ebeba506190c417b24ee26e1dba8e12b4939698f"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/triposr-original-vs-pattern.gif",
+      "bytes": 871413,
+      "sha256": "1179013061c54e576df16e79ca966ec5f8f4f0f928634b548d5e99066ba543e0"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/triposr-pattern.png",
+      "bytes": 539589,
+      "sha256": "d20a992d0e46b8f1381eab410cde206663cd8319a49e4d31e8b0f1e1810605ab"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/turntable.gif",
+      "bytes": 490776,
+      "sha256": "b9db44ac678a1e11738d5644643e1e7be1da8ee1291b83a5b181de23e71d1589"
     }
   ]
 }

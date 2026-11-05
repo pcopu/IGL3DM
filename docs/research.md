@@ -1,6 +1,6 @@
 # Reconstruction research, 2026-11-05
 
-Primary-source candidates for the one-generated-image-to-3D goal. **Only DA3 Small/Base have completed the learned-model experiments recorded here.** Availability, licenses and hardware requirements should be rechecked before a new run.
+Primary-source candidates for the one-generated-image-to-3D goal. **DA3 Small/Base, Depth Anything V2 Small, ZipDepth and TripoSR have now completed local CPU experiments.** Availability, licenses and hardware requirements should be rechecked before a new run.
 
 ## Tested depth route
 
@@ -8,7 +8,7 @@ Primary-source candidates for the one-generated-image-to-3D goal. **Only DA3 Sma
 
 ## Complete-object priors
 
-- [TripoSR](https://github.com/VAST-AI-Research/TripoSR): MIT code/model, explicit CPU fallback. A useful independent full-mesh baseline, unlike depth-only point fusion. CPU performance and output quality remain to be established in this journal.
+- [TripoSR](https://github.com/VAST-AI-Research/TripoSR): MIT code/model, explicit CPU fallback. A useful independent full-mesh baseline, unlike depth-only point fusion. Two original-atlas crops and a coarse-pattern crop were tested on CPU; the frontal input failed structurally and three-quarter inputs produced rough complete-object priors. See the TripoSR experiment record.
 - [TRELLIS.2](https://github.com/microsoft/TRELLIS.2): MIT code/model and shape/PBR output; official implementation requires Linux/NVIDIA with at least 24 GB VRAM. Not a direct fit for the current CPU experiment.
 - [Pixal3D](https://github.com/TencentARC/Pixal3D): pixel-aligned multi-view conditioning, but requires camera poses/FOV and consistent image framing. Its supplied four-view rig is not a camera estimator.
 - [UniForge3D](https://github.com/xibushu/UniForge3D): sparse unposed views to complete assets, based on VGGT/TRELLIS.2. Original source is MIT, but released VGGT-derived weights are noncommercial and background-removal dependencies have separate terms.
@@ -30,3 +30,7 @@ Primary-source candidates for the one-generated-image-to-3D goal. **Only DA3 Sma
 3. Treat generated depth/XYZ/vertex colors as hypotheses, not calibrated data.
 4. Compare silhouette-only and depth-assisted solutions on the same inputs and cameras.
 5. Include held-out elevations, actual mesh renders, topology checks and visual rejection of duplicate surfaces. No single IoU score establishes 3D correctness.
+
+## Additional software-depth controls
+
+[Depth Anything V2 Small](https://github.com/DepthAnything/Depth-Anything-V2) and [ZipDepth](https://github.com/fabiotosi92/ZipDepth) were also run locally. Their inverse-relative-depth maps feed the same gated shared-vertex experiment. The coarse-pattern input worsened measured calibration for all three depth families; neither smooth depth nor faster inference establishes a correct3D model. See [depth fitting](../experiments/depth_fit/README.md).

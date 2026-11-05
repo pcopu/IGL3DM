@@ -1,0 +1,367 @@
+[
+  {
+    "model": "depth-anything/Depth-Anything-V2-Small",
+    "source_url": "https://github.com/DepthAnything/Depth-Anything-V2",
+    "source_commit": "a561b849ebae10a6f5ef49e26c83cbbcd36c71bf",
+    "model_revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+    "checkpoint_sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378",
+    "license": "Apache-2.0 code and Small checkpoint",
+    "parameters": 24785089,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "network_input_resolution": 308,
+    "output_shape": [
+      16,
+      312,
+      312
+    ],
+    "output_convention": "Inverse relative depth; larger means nearer. Not meters, not calibrated across views.",
+    "image_mapping": "Entire 312x312 crop is resized to the network square, then bilinearly returned to 312x312; no crop or recentering.",
+    "load_seconds": 0.38920805300585926,
+    "inference_seconds": 4.154310383004486,
+    "per_view_seconds": [
+      0.2301838949933881,
+      0.17339232099766377,
+      0.27111480200255755,
+      0.2641743580024922,
+      0.3018238829972688,
+      0.23869230700074695,
+      0.281263361001038,
+      0.26312793800025247,
+      0.26707882499613333,
+      0.2663386070053093,
+      0.2649471650074702,
+      0.27259734099789057,
+      0.2644473510008538,
+      0.26437182699737605,
+      0.26548679001280107,
+      0.26526961199124344
+    ],
+    "peak_rss_kib": 593192,
+    "per_view_foreground_display_quantiles": [
+      [
+        1.7688223838806152,
+        4.662824916839599
+      ],
+      [
+        1.7633387088775634,
+        4.771600189208984
+      ],
+      [
+        1.5031266593933106,
+        4.283747768402099
+      ],
+      [
+        1.5219478726387023,
+        4.036207809448242
+      ],
+      [
+        1.5352358555793761,
+        3.704703245162964
+      ],
+      [
+        1.7423020124435424,
+        3.5750154733657835
+      ],
+      [
+        1.5089722514152526,
+        3.6665430784225466
+      ],
+      [
+        1.4760479927062988,
+        3.51815128326416
+      ],
+      [
+        1.6168465089797974,
+        3.7702947998046876
+      ],
+      [
+        1.7235525178909301,
+        3.9220010757446286
+      ],
+      [
+        1.5034032821655274,
+        4.147382278442383
+      ],
+      [
+        1.6940513491630553,
+        3.8348246431350708
+      ],
+      [
+        1.8589604783058167,
+        3.550973024368286
+      ],
+      [
+        1.780484621524811,
+        3.9621151971817015
+      ],
+      [
+        1.5679913020133973,
+        4.210991411209106
+      ],
+      [
+        1.475619626045227,
+        4.431664695739746
+      ]
+    ],
+    "notes": [
+      "All 16 existing original-sheet crops, no new image generation or hand modeling.",
+      "Official unchanged source and tensor-only checkpoint loading.",
+      "Depth contact visualization is independently normalized per view and cannot show absolute cross-view scale consistency.",
+      "No camera pose or confidence prediction; do not substitute these maps directly into metric fusion.",
+      "No paid inference API; download, setup, and load excluded from inference runtime."
+    ],
+    "run": "small_308"
+  },
+  {
+    "model": "depth-anything/Depth-Anything-V2-Small",
+    "source_url": "https://github.com/DepthAnything/Depth-Anything-V2",
+    "source_commit": "a561b849ebae10a6f5ef49e26c83cbbcd36c71bf",
+    "model_revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+    "checkpoint_sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378",
+    "license": "Apache-2.0 code and Small checkpoint",
+    "parameters": 24785089,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "network_input_resolution": 518,
+    "output_shape": [
+      16,
+      312,
+      312
+    ],
+    "output_convention": "Inverse relative depth; larger means nearer. Not meters, not calibrated across views.",
+    "image_mapping": "Entire 312x312 crop is resized to the network square, then bilinearly returned to 312x312; no crop or recentering.",
+    "load_seconds": 0.3896004720008932,
+    "inference_seconds": 16.585115699999733,
+    "per_view_seconds": [
+      1.0709212939982535,
+      1.020393824990606,
+      1.099505512000178,
+      0.9480776660057018,
+      0.9659243799978867,
+      1.1077336210000794,
+      1.1878398440021556,
+      1.016703500004951,
+      1.0825338779977756,
+      0.9593321139982436,
+      0.9557816500018816,
+      1.020842558995355,
+      0.9423397799982922,
+      0.9970948310074164,
+      1.1606670490000397,
+      1.049424197000917
+    ],
+    "peak_rss_kib": 706200,
+    "per_view_foreground_display_quantiles": [
+      [
+        1.7308743238449098,
+        5.516161060333252
+      ],
+      [
+        1.5751147413253783,
+        5.550887451171874
+      ],
+      [
+        1.5162193441390992,
+        5.166834297180176
+      ],
+      [
+        1.6663321495056151,
+        4.419915857315063
+      ],
+      [
+        1.7466578555107117,
+        4.219424867630005
+      ],
+      [
+        1.8712044954299927,
+        4.172377109527588
+      ],
+      [
+        1.6168068885803224,
+        4.257292175292969
+      ],
+      [
+        1.6533836126327515,
+        4.185721397399902
+      ],
+      [
+        1.6374745273590088,
+        4.781062183380127
+      ],
+      [
+        1.6894301342964173,
+        4.5413213729858395
+      ],
+      [
+        1.6702744722366334,
+        4.548458423614502
+      ],
+      [
+        1.9013927340507508,
+        4.450733633041382
+      ],
+      [
+        2.007478504180908,
+        4.080222291946411
+      ],
+      [
+        1.7710305547714233,
+        4.631546192169189
+      ],
+      [
+        1.611060960292816,
+        5.09980330467224
+      ],
+      [
+        1.5226263523101806,
+        5.351087226867676
+      ]
+    ],
+    "notes": [
+      "All 16 existing original-sheet crops, no new image generation or hand modeling.",
+      "Official unchanged source and tensor-only checkpoint loading.",
+      "Depth contact visualization is independently normalized per view and cannot show absolute cross-view scale consistency.",
+      "No camera pose or confidence prediction; do not substitute these maps directly into metric fusion.",
+      "No paid inference API; download, setup, and load excluded from inference runtime."
+    ],
+    "run": "small_518"
+  },
+  {
+    "model": "depth-anything/Depth-Anything-V2-Small",
+    "source_url": "https://github.com/DepthAnything/Depth-Anything-V2",
+    "source_commit": "a561b849ebae10a6f5ef49e26c83cbbcd36c71bf",
+    "model_revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+    "checkpoint_sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378",
+    "license": "Apache-2.0 code and Small checkpoint",
+    "parameters": 24785089,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "network_input_resolution": 518,
+    "input_dir": "runs/lion-pattern-001/views",
+    "source_sha256": {
+      "view_00.png": "2099f7149428d4220687716b20ea726e2f814d94eacb58d0c413e4ebb71dd67a",
+      "view_01.png": "484b1f1fd2d2ee2e7b8650964457390e87decb10371d56b32217fcb652c3c7f7",
+      "view_02.png": "a85816fa96f14ccbc959f33ca5a2abf98ff1c98c201ca6dff6282cdcfa4cca66",
+      "view_03.png": "f168d853d0fbb078cf16ff16e96b137c84fd3831b0afdab26a8441c979816430",
+      "view_04.png": "3fd047a5d97e08a484b3e63304780d488428a02841907ac548e03423f4ac8b8f",
+      "view_05.png": "997bdb958ce80bfbd835cafdb6a70af17a2f6f0ab6defdacf73de5964ac46b0a",
+      "view_06.png": "d8a93c70df96428bd49a340a38c796445a9be4fddf36be34f16f963ef1d36a62",
+      "view_07.png": "a418c2f9d2decec858c307f68b3af82bd25e1b2362c04b88cc07b46e07d15751",
+      "view_08.png": "e3aae09a856b0fd8107aa4785f98c8f629d9aae34701151878c48c28d63906ed",
+      "view_09.png": "b11fb08565ae0785fe3abde92d07e1159decdf473a056378581e821683e94f65",
+      "view_10.png": "3699ad62603c977f16fbc8badf1bcd8d268cb4ef95db69c5b7e2d8d03530b70f",
+      "view_11.png": "a4a3d54beb9a3c525aa40722a714cf0ba1f53539550a298817914c1d5f6d85c6",
+      "view_12.png": "0a5e11841d7483e253474bf9c7c0a24f1a661d2aa1041f4f4299c4599eb0afd1",
+      "view_13.png": "3ce7d6298af751e8ac164853dea91ee678416e3293a37710098b43adbfaaa7f8",
+      "view_14.png": "279e5bd42005c34db795df85ef19fcb9329692b4529db6eb0d16db81d6ecd047",
+      "view_15.png": "38dfe061f5415be5b29ed5a7278346dfa9b48425d66a35a7d326c2f69fa3c99e"
+    },
+    "output_shape": [
+      16,
+      310,
+      310
+    ],
+    "output_convention": "Inverse relative depth; larger means nearer. Not meters, not calibrated across views.",
+    "image_mapping": "Entire 310x310 crop is resized to the network square, then bilinearly returned to its original size; no crop or recentering.",
+    "load_seconds": 0.422538265993353,
+    "inference_seconds": 17.320035223005107,
+    "per_view_seconds": [
+      1.1836571330204606,
+      1.1073806659842376,
+      1.1432082190003712,
+      1.2267098189913668,
+      0.9779794859932736,
+      1.09419211599743,
+      1.0992100099974778,
+      1.1481791010010056,
+      1.1448301750060637,
+      1.0613922479969915,
+      1.0988749520038255,
+      1.0560300359793473,
+      0.9051483549992554,
+      1.0319709590112325,
+      1.0375851720164064,
+      1.0036867760063615
+    ],
+    "peak_rss_kib": 695736,
+    "per_view_foreground_display_quantiles": [
+      [
+        1.5713281655311584,
+        4.873229961395261
+      ],
+      [
+        1.5261192917823792,
+        5.077929105758667
+      ],
+      [
+        1.5449358701705933,
+        4.845408248901368
+      ],
+      [
+        1.7383157444000243,
+        4.020100269317627
+      ],
+      [
+        1.6578950214385986,
+        3.985047540664673
+      ],
+      [
+        1.7980134296417236,
+        4.0539883041381835
+      ],
+      [
+        1.7116530704498292,
+        3.947759437561035
+      ],
+      [
+        1.6730209350585938,
+        3.7803338623046874
+      ],
+      [
+        1.7310052633285522,
+        3.8767348766326903
+      ],
+      [
+        1.7961331415176391,
+        3.752382297515869
+      ],
+      [
+        1.5536941432952884,
+        3.845871076583862
+      ],
+      [
+        1.888933491706848,
+        3.8870001602172852
+      ],
+      [
+        1.7902888584136962,
+        3.9558508729934694
+      ],
+      [
+        1.7177652597427369,
+        4.175914249420166
+      ],
+      [
+        1.493558442592621,
+        4.630601959228516
+      ],
+      [
+        1.4678238439559936,
+        4.844935455322266
+      ]
+    ],
+    "notes": [
+      "All 16 supplied controlled-pattern-sheet crops, no new image generation or hand modeling.",
+      "Official unchanged source and tensor-only checkpoint loading.",
+      "Depth contact visualization is independently normalized per view and cannot show absolute cross-view scale consistency.",
+      "No camera pose or confidence prediction; do not substitute these maps directly into metric fusion.",
+      "No paid inference API; download, setup, and load excluded from inference runtime.",
+      "Diagnostic PNG foreground mask fills enclosed white landmark holes; raw model depth is unchanged."
+    ],
+    "run": "pattern_small_518"
+  }
+]

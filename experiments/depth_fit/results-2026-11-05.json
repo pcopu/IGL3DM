@@ -1,0 +1,872 @@
+[
+  {
+    "run": "prior3",
+    "fit": {
+      "method": "one shared mesh, confidence-gated train-pixel depth residuals, regularized normal displacement",
+      "manual_modeling": false,
+      "vertex_count_unchanged": true,
+      "faces_unchanged": true,
+      "colors_unchanged": true,
+      "accepted_views": [
+        0,
+        1,
+        2,
+        3,
+        12,
+        13,
+        14,
+        15
+      ],
+      "config": {
+        "prior": 3.0,
+        "smooth": 1.0,
+        "max_displacement": 0.03
+      },
+      "applied_step_scale": 0.000244140625,
+      "line_search": [
+        {
+          "scale": 1.0,
+          "flipped_or_collapsed_faces": 1011
+        },
+        {
+          "scale": 0.5,
+          "flipped_or_collapsed_faces": 524
+        },
+        {
+          "scale": 0.25,
+          "flipped_or_collapsed_faces": 278
+        },
+        {
+          "scale": 0.125,
+          "flipped_or_collapsed_faces": 156
+        },
+        {
+          "scale": 0.0625,
+          "flipped_or_collapsed_faces": 76
+        },
+        {
+          "scale": 0.03125,
+          "flipped_or_collapsed_faces": 34
+        },
+        {
+          "scale": 0.015625,
+          "flipped_or_collapsed_faces": 17
+        },
+        {
+          "scale": 0.0078125,
+          "flipped_or_collapsed_faces": 7
+        },
+        {
+          "scale": 0.00390625,
+          "flipped_or_collapsed_faces": 4
+        },
+        {
+          "scale": 0.001953125,
+          "flipped_or_collapsed_faces": 4
+        },
+        {
+          "scale": 0.0009765625,
+          "flipped_or_collapsed_faces": 3
+        },
+        {
+          "scale": 0.00048828125,
+          "flipped_or_collapsed_faces": 4
+        },
+        {
+          "scale": 0.000244140625,
+          "flipped_or_collapsed_faces": 0
+        }
+      ],
+      "per_view": [
+        {
+          "view": 0,
+          "used_vertices": 2667,
+          "mean_absolute_initial_residual": 0.061506834544624155
+        },
+        {
+          "view": 1,
+          "used_vertices": 2902,
+          "mean_absolute_initial_residual": 0.04333737363614394
+        },
+        {
+          "view": 2,
+          "used_vertices": 3063,
+          "mean_absolute_initial_residual": 0.04199767768444883
+        },
+        {
+          "view": 3,
+          "used_vertices": 2767,
+          "mean_absolute_initial_residual": 0.0382451032748211
+        },
+        {
+          "view": 4,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 5,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 6,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 7,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 8,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 9,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 10,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 11,
+          "used_vertices": 0,
+          "mean_absolute_initial_residual": null
+        },
+        {
+          "view": 12,
+          "used_vertices": 2851,
+          "mean_absolute_initial_residual": 0.038638973159774985
+        },
+        {
+          "view": 13,
+          "used_vertices": 3383,
+          "mean_absolute_initial_residual": 0.03510969640349163
+        },
+        {
+          "view": 14,
+          "used_vertices": 4014,
+          "mean_absolute_initial_residual": 0.04808066989889587
+        },
+        {
+          "view": 15,
+          "used_vertices": 3429,
+          "mean_absolute_initial_residual": 0.05520373680872021
+        }
+      ],
+      "constrained_vertices": 14885,
+      "displacement_max": 7.3242187500000006e-06,
+      "displacement_mean": 4.438392957977702e-07,
+      "mesh": {
+        "vertices": 54160,
+        "triangles": 108324,
+        "edges": 162486,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "watertight_edge_incidence": true,
+        "euler_characteristic": -2,
+        "signed_volume": 0.953759339362458,
+        "self_intersections_checked": false,
+        "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+      },
+      "limitations": [
+        "Depth is relative and empirically aligned to an approximate mesh.",
+        "Orthographic rig is assumed; the learned depth model assumes perspective imagery.",
+        "Pixel holdout is not independent geometric truth; spatial regularization also couples nearby vertices.",
+        "Self-intersections are not checked."
+      ]
+    }
+  },
+  {
+    "run": "field24",
+    "fit": {
+      "method": "smooth low-resolution displacement field from accepted software-depth train pixels",
+      "manual_modeling": false,
+      "vertex_count_unchanged": true,
+      "faces_unchanged": true,
+      "colors_unchanged": true,
+      "accepted_views": [
+        0,
+        1,
+        2,
+        3,
+        12,
+        13,
+        14,
+        15
+      ],
+      "config": {
+        "prior": 0.2,
+        "grid": 24,
+        "sigma": 1.5,
+        "max_displacement": 0.03,
+        "gradient_bound": 0.25
+      },
+      "unscaled_gradient_bound": 0.5575149333029444,
+      "gradient_scale": 0.448418481849264,
+      "applied_step_scale": 1.0,
+      "line_search": [
+        {
+          "scale": 1.0,
+          "flipped_or_collapsed_faces": 0
+        }
+      ],
+      "per_view": [
+        {
+          "view": 0,
+          "used_vertices": 2667
+        },
+        {
+          "view": 1,
+          "used_vertices": 2902
+        },
+        {
+          "view": 2,
+          "used_vertices": 3063
+        },
+        {
+          "view": 3,
+          "used_vertices": 2767
+        },
+        {
+          "view": 4,
+          "used_vertices": 0
+        },
+        {
+          "view": 5,
+          "used_vertices": 0
+        },
+        {
+          "view": 6,
+          "used_vertices": 0
+        },
+        {
+          "view": 7,
+          "used_vertices": 0
+        },
+        {
+          "view": 8,
+          "used_vertices": 0
+        },
+        {
+          "view": 9,
+          "used_vertices": 0
+        },
+        {
+          "view": 10,
+          "used_vertices": 0
+        },
+        {
+          "view": 11,
+          "used_vertices": 0
+        },
+        {
+          "view": 12,
+          "used_vertices": 2851
+        },
+        {
+          "view": 13,
+          "used_vertices": 3383
+        },
+        {
+          "view": 14,
+          "used_vertices": 4014
+        },
+        {
+          "view": 15,
+          "used_vertices": 3429
+        }
+      ],
+      "constrained_vertices": 14885,
+      "displacement_max": 0.013452554453672393,
+      "displacement_mean": 0.005788160914426109,
+      "mesh": {
+        "vertices": 54160,
+        "triangles": 108324,
+        "edges": 162486,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "watertight_edge_incidence": true,
+        "euler_characteristic": -2,
+        "signed_volume": 0.9458187334235904,
+        "self_intersections_checked": false,
+        "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+      },
+      "limitations": [
+        "Relative depth was empirically aligned to an imperfect visual hull.",
+        "Camera-z under a learned perspective model is compared with an assumed orthographic rig.",
+        "Spatial holdout is not 3D ground truth and smooth deformation couples nearby vertices.",
+        "No anatomical primitives or manual corrections were used.",
+        "Self-intersections are not directly tested; deformation gradient and face orientation are bounded."
+      ]
+    },
+    "depth_evaluation": {
+      "comparisons": [
+        {
+          "split": "fit_train_mask",
+          "baseline_rmse": 0.05862140334021975,
+          "fitted_rmse": 0.053518882208128615,
+          "eligible_pixels": 23718,
+          "retained_pixels": 23718
+        },
+        {
+          "split": "fit_heldout_mask",
+          "baseline_rmse": 0.05647600660365147,
+          "fitted_rmse": 0.05144576554344526,
+          "eligible_pixels": 24001,
+          "retained_pixels": 24001
+        }
+      ],
+      "interpretation": "Agreement with calibrated software-depth predictions, not ground-truth geometry. Calibration used train pixels; smooth deformation couples nearby pixels."
+    },
+    "silhouette": {
+      "per_view": [
+        {
+          "iou": 0.855646377271645,
+          "precision": 0.9021839176637938,
+          "recall": 0.9431420573827851
+        },
+        {
+          "iou": 0.8407601572739187,
+          "precision": 0.9419279054401292,
+          "recall": 0.8867233395535282
+        },
+        {
+          "iou": 0.8136735944726138,
+          "precision": 0.9158356851677641,
+          "recall": 0.8794339054501656
+        },
+        {
+          "iou": 0.8149143432986228,
+          "precision": 0.8955885067372178,
+          "recall": 0.9004639653572534
+        },
+        {
+          "iou": 0.8910131514856308,
+          "precision": 0.9562830817486767,
+          "recall": 0.9288479847667407
+        },
+        {
+          "iou": 0.8951290439840058,
+          "precision": 0.9454789786907276,
+          "recall": 0.943848217707934
+        },
+        {
+          "iou": 0.8433288818744689,
+          "precision": 0.8870514621376581,
+          "recall": 0.9447806868412105
+        },
+        {
+          "iou": 0.8334047415024278,
+          "precision": 0.8483064398895188,
+          "recall": 0.9793572207770412
+        },
+        {
+          "iou": 0.8549797570850203,
+          "precision": 0.8835243912643294,
+          "recall": 0.9635882460302975
+        },
+        {
+          "iou": 0.8335618316424458,
+          "precision": 0.8927391527787975,
+          "recall": 0.9263350346613849
+        },
+        {
+          "iou": 0.8848652550529356,
+          "precision": 0.9225462527438069,
+          "recall": 0.955877574891156
+        },
+        {
+          "iou": 0.8176263761600092,
+          "precision": 0.8727619516396973,
+          "recall": 0.9282769452260977
+        },
+        {
+          "iou": 0.8832286432160804,
+          "precision": 0.9188394432464223,
+          "recall": 0.9579643003133942
+        },
+        {
+          "iou": 0.9075676334389471,
+          "precision": 0.9531579957765406,
+          "recall": 0.9499362244897959
+        },
+        {
+          "iou": 0.836381135707411,
+          "precision": 0.9432384114417061,
+          "recall": 0.8807082389412185
+        },
+        {
+          "iou": 0.7612918603265404,
+          "precision": 0.9286233464166304,
+          "recall": 0.8086075949367089
+        }
+      ],
+      "mean_iou": 0.8479607989870452,
+      "worst_iou": 0.7612918603265404
+    }
+  },
+  {
+    "run": "v2-field24",
+    "fit": {
+      "method": "smooth low-resolution displacement field from accepted software-depth train pixels",
+      "manual_modeling": false,
+      "vertex_count_unchanged": true,
+      "faces_unchanged": true,
+      "colors_unchanged": true,
+      "accepted_views": [
+        0,
+        1,
+        2,
+        6,
+        10,
+        13,
+        14,
+        15
+      ],
+      "config": {
+        "prior": 0.2,
+        "grid": 24,
+        "sigma": 1.5,
+        "max_displacement": 0.03,
+        "gradient_bound": 0.25
+      },
+      "unscaled_gradient_bound": 0.8246705936755928,
+      "gradient_scale": 0.30315134541870725,
+      "applied_step_scale": 1.0,
+      "line_search": [
+        {
+          "scale": 1.0,
+          "flipped_or_collapsed_faces": 0
+        }
+      ],
+      "per_view": [
+        {
+          "view": 0,
+          "used_vertices": 5046
+        },
+        {
+          "view": 1,
+          "used_vertices": 5817
+        },
+        {
+          "view": 2,
+          "used_vertices": 6468
+        },
+        {
+          "view": 3,
+          "used_vertices": 0
+        },
+        {
+          "view": 4,
+          "used_vertices": 0
+        },
+        {
+          "view": 5,
+          "used_vertices": 0
+        },
+        {
+          "view": 6,
+          "used_vertices": 7472
+        },
+        {
+          "view": 7,
+          "used_vertices": 0
+        },
+        {
+          "view": 8,
+          "used_vertices": 0
+        },
+        {
+          "view": 9,
+          "used_vertices": 0
+        },
+        {
+          "view": 10,
+          "used_vertices": 6410
+        },
+        {
+          "view": 11,
+          "used_vertices": 0
+        },
+        {
+          "view": 12,
+          "used_vertices": 0
+        },
+        {
+          "view": 13,
+          "used_vertices": 6869
+        },
+        {
+          "view": 14,
+          "used_vertices": 7462
+        },
+        {
+          "view": 15,
+          "used_vertices": 6542
+        }
+      ],
+      "constrained_vertices": 30682,
+      "displacement_max": 0.00909451926132952,
+      "displacement_mean": 0.008039695250108413,
+      "mesh": {
+        "vertices": 54160,
+        "triangles": 108324,
+        "edges": 162486,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "watertight_edge_incidence": true,
+        "euler_characteristic": -2,
+        "signed_volume": 0.9491916614015049,
+        "self_intersections_checked": false,
+        "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+      },
+      "limitations": [
+        "Relative depth was empirically aligned to an imperfect visual hull.",
+        "Camera-z under a learned perspective model is compared with an assumed orthographic rig.",
+        "Spatial holdout is not 3D ground truth and smooth deformation couples nearby vertices.",
+        "No anatomical primitives or manual corrections were used.",
+        "Self-intersections are not directly tested; deformation gradient and face orientation are bounded."
+      ]
+    },
+    "depth_evaluation": {
+      "comparisons": [
+        {
+          "split": "fit_train_mask",
+          "baseline_rmse": 0.14781445928399845,
+          "fitted_rmse": 0.1436119953453927,
+          "eligible_pixels": 46222,
+          "retained_pixels": 46222
+        },
+        {
+          "split": "fit_heldout_mask",
+          "baseline_rmse": 0.14696027818937787,
+          "fitted_rmse": 0.14277767594995286,
+          "eligible_pixels": 46467,
+          "retained_pixels": 46467
+        }
+      ],
+      "interpretation": "Agreement with calibrated software-depth predictions, not ground-truth geometry. Assessment pixels are excluded from fitting but are used by view gates; this is not blind independent validation. Smooth deformation couples nearby vertices."
+    },
+    "silhouette": {
+      "per_view": [
+        {
+          "iou": 0.8620689655172413,
+          "precision": 0.9018908608392768,
+          "recall": 0.9512771168649405
+        },
+        {
+          "iou": 0.8432336742722266,
+          "precision": 0.9426121372031663,
+          "recall": 0.888865851130002
+        },
+        {
+          "iou": 0.8072583782582116,
+          "precision": 0.9127757179664425,
+          "recall": 0.8747365251430292
+        },
+        {
+          "iou": 0.8086295551084284,
+          "precision": 0.8933621488113616,
+          "recall": 0.895020105165481
+        },
+        {
+          "iou": 0.8855026711996115,
+          "precision": 0.9531464418741423,
+          "recall": 0.9258013329101873
+        },
+        {
+          "iou": 0.8979024360756815,
+          "precision": 0.9435304579813251,
+          "recall": 0.9488948511562539
+        },
+        {
+          "iou": 0.8501763346710446,
+          "precision": 0.8892704954525218,
+          "recall": 0.950833049982999
+        },
+        {
+          "iou": 0.8275471163383874,
+          "precision": 0.841680478489587,
+          "recall": 0.9801124444071494
+        },
+        {
+          "iou": 0.8519472159639524,
+          "precision": 0.878089235362415,
+          "recall": 0.966234714363935
+        },
+        {
+          "iou": 0.8283704411965579,
+          "precision": 0.88896218117854,
+          "recall": 0.9239734897539422
+        },
+        {
+          "iou": 0.8875957305674486,
+          "precision": 0.9249670081065795,
+          "recall": 0.9564624082136591
+        },
+        {
+          "iou": 0.825330549756437,
+          "precision": 0.8787897499228157,
+          "recall": 0.9313526601662195
+        },
+        {
+          "iou": 0.8831103573896112,
+          "precision": 0.9187740965823694,
+          "recall": 0.9578961711404823
+        },
+        {
+          "iou": 0.9059258809971493,
+          "precision": 0.9487391221495268,
+          "recall": 0.9525510204081633
+        },
+        {
+          "iou": 0.8298890703305366,
+          "precision": 0.9373529224702665,
+          "recall": 0.8786216764039585
+        },
+        {
+          "iou": 0.7625014847369046,
+          "precision": 0.925199971175326,
+          "recall": 0.8125949367088607
+        }
+      ],
+      "mean_iou": 0.8473118663987144,
+      "worst_iou": 0.7625014847369046
+    }
+  },
+  {
+    "run": "zip-field24",
+    "fit": {
+      "method": "smooth low-resolution displacement field from accepted software-depth train pixels",
+      "manual_modeling": false,
+      "vertex_count_unchanged": true,
+      "faces_unchanged": true,
+      "colors_unchanged": true,
+      "accepted_views": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        9,
+        10,
+        15
+      ],
+      "config": {
+        "prior": 0.2,
+        "grid": 24,
+        "sigma": 1.5,
+        "max_displacement": 0.03,
+        "gradient_bound": 0.25
+      },
+      "unscaled_gradient_bound": 1.0199066963523218,
+      "gradient_scale": 0.2451204614050683,
+      "applied_step_scale": 1.0,
+      "line_search": [
+        {
+          "scale": 1.0,
+          "flipped_or_collapsed_faces": 0
+        }
+      ],
+      "per_view": [
+        {
+          "view": 0,
+          "used_vertices": 0
+        },
+        {
+          "view": 1,
+          "used_vertices": 5817
+        },
+        {
+          "view": 2,
+          "used_vertices": 6468
+        },
+        {
+          "view": 3,
+          "used_vertices": 6056
+        },
+        {
+          "view": 4,
+          "used_vertices": 0
+        },
+        {
+          "view": 5,
+          "used_vertices": 0
+        },
+        {
+          "view": 6,
+          "used_vertices": 7472
+        },
+        {
+          "view": 7,
+          "used_vertices": 6505
+        },
+        {
+          "view": 8,
+          "used_vertices": 0
+        },
+        {
+          "view": 9,
+          "used_vertices": 5922
+        },
+        {
+          "view": 10,
+          "used_vertices": 6410
+        },
+        {
+          "view": 11,
+          "used_vertices": 0
+        },
+        {
+          "view": 12,
+          "used_vertices": 0
+        },
+        {
+          "view": 13,
+          "used_vertices": 0
+        },
+        {
+          "view": 14,
+          "used_vertices": 0
+        },
+        {
+          "view": 15,
+          "used_vertices": 6542
+        }
+      ],
+      "constrained_vertices": 30934,
+      "displacement_max": 0.007353582196486926,
+      "displacement_mean": 0.006832835813641999,
+      "mesh": {
+        "vertices": 54160,
+        "triangles": 108324,
+        "edges": 162486,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "watertight_edge_incidence": true,
+        "euler_characteristic": -2,
+        "signed_volume": 0.9516618059319528,
+        "self_intersections_checked": false,
+        "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+      },
+      "limitations": [
+        "Relative depth was empirically aligned to an imperfect visual hull.",
+        "Camera-z under a learned perspective model is compared with an assumed orthographic rig.",
+        "Spatial holdout is not 3D ground truth and smooth deformation couples nearby vertices.",
+        "No anatomical primitives or manual corrections were used.",
+        "Self-intersections are not directly tested; deformation gradient and face orientation are bounded."
+      ]
+    },
+    "depth_evaluation": {
+      "comparisons": [
+        {
+          "split": "fit_train_mask",
+          "baseline_rmse": 0.16900532105731536,
+          "fitted_rmse": 0.16516715564215287,
+          "eligible_pixels": 45200,
+          "retained_pixels": 45195
+        },
+        {
+          "split": "fit_heldout_mask",
+          "baseline_rmse": 0.164872657062601,
+          "fitted_rmse": 0.16098339708475562,
+          "eligible_pixels": 44997,
+          "retained_pixels": 44997
+        }
+      ],
+      "interpretation": "Agreement with calibrated software-depth predictions, not ground-truth geometry. Assessment pixels are excluded from fitting but are used by view gates; this is not blind independent validation. Smooth deformation couples nearby vertices."
+    },
+    "silhouette": {
+      "per_view": [
+        {
+          "iou": 0.8581364103374693,
+          "precision": 0.8989154731351933,
+          "recall": 0.9497900629811057
+        },
+        {
+          "iou": 0.8439753507276779,
+          "precision": 0.9425287356321839,
+          "recall": 0.8897643237265879
+        },
+        {
+          "iou": 0.8087474264092148,
+          "precision": 0.9140880503144654,
+          "recall": 0.8752785305630834
+        },
+        {
+          "iou": 0.807707366183791,
+          "precision": 0.8939028164654905,
+          "recall": 0.8933498298793691
+        },
+        {
+          "iou": 0.8815645845967253,
+          "precision": 0.9518727082242011,
+          "recall": 0.9226912091399556
+        },
+        {
+          "iou": 0.8938945588501721,
+          "precision": 0.9423823772840135,
+          "recall": 0.9455730164814105
+        },
+        {
+          "iou": 0.8474802671523983,
+          "precision": 0.8877440691979902,
+          "recall": 0.9492009520571234
+        },
+        {
+          "iou": 0.8272295813558121,
+          "precision": 0.8414757169620983,
+          "recall": 0.9799446169337921
+        },
+        {
+          "iou": 0.8481347773766547,
+          "precision": 0.8752380163920854,
+          "recall": 0.9647745939039971
+        },
+        {
+          "iou": 0.8306451612903226,
+          "precision": 0.8898162383776265,
+          "recall": 0.9258779614534928
+        },
+        {
+          "iou": 0.886584262888152,
+          "precision": 0.9247798742138365,
+          "recall": 0.9554876860094873
+        },
+        {
+          "iou": 0.8262940800557718,
+          "precision": 0.8804085422469824,
+          "recall": 0.9307636934755579
+        },
+        {
+          "iou": 0.8863765194936071,
+          "precision": 0.9214903090623363,
+          "recall": 0.9587818503883363
+        },
+        {
+          "iou": 0.9075604716178437,
+          "precision": 0.9507226077545043,
+          "recall": 0.952359693877551
+        },
+        {
+          "iou": 0.8303013235708251,
+          "precision": 0.9376073268460218,
+          "recall": 0.878860140693931
+        },
+        {
+          "iou": 0.7588454927991466,
+          "precision": 0.9226778122072494,
+          "recall": 0.810379746835443
+        }
+      ],
+      "mean_iou": 0.8464673521690991,
+      "worst_iou": 0.7588454927991466
+    }
+  }
+]

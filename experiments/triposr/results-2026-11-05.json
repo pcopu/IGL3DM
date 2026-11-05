@@ -1,0 +1,141 @@
+[
+  {
+    "model": "stabilityai/TripoSR",
+    "source_commit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "model_revision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "checkpoint_sha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "parameters": 419275628,
+    "torch": "2.6.0+cpu",
+    "image_preprocessing": "Existing 192-pixel pipeline mask nearest-resized to the 312-pixel source view, official resize_foreground at 0.85, alpha composited on neutral gray.",
+    "mesh_resolution": 128,
+    "chunk_size": 4096,
+    "load_seconds": 36.4327282430022,
+    "inference_seconds": 19.68892129098822,
+    "mesh_extraction_seconds": 4.0228039149951655,
+    "peak_rss_kib": 2850132,
+    "vertices": 12420,
+    "faces": 24836,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 1,
+    "component_face_counts": [
+      24836
+    ],
+    "bounds": [
+      [
+        -0.23514997959136963,
+        -0.27677422761917114,
+        -0.5114138126373291
+      ],
+      [
+        0.2626234292984009,
+        0.27044177055358887,
+        0.5091003179550171
+      ]
+    ],
+    "notes": [
+      "No new imagegen calls or hand modeling.",
+      "Official TripoSR source is unchanged; a local API adapter uses standard scikit-image marching cubes instead of installing unrecognized torchmcubes source.",
+      "One view conditions a learned complete-object prior, not measured reconstruction of every sheet view.",
+      "No paid inference service used. Runtime excludes download and installation."
+    ],
+    "run": "view00_128"
+  },
+  {
+    "model": "stabilityai/TripoSR",
+    "source_commit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "model_revision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "checkpoint_sha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "parameters": 419275628,
+    "torch": "2.6.0+cpu",
+    "image_preprocessing": "Existing 192-pixel pipeline mask nearest-resized to the 312-pixel source view, official resize_foreground at 0.85, alpha composited on neutral gray.",
+    "mesh_resolution": 128,
+    "chunk_size": 4096,
+    "load_seconds": 12.5925273289904,
+    "inference_seconds": 17.740426927994122,
+    "mesh_extraction_seconds": 3.6319723750057165,
+    "peak_rss_kib": 3089744,
+    "vertices": 16090,
+    "faces": 32176,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 2,
+    "component_face_counts": [
+      32168,
+      8
+    ],
+    "bounds": [
+      [
+        -0.25087523460388184,
+        -0.4499547779560089,
+        -0.5253616571426392
+      ],
+      [
+        0.3893730640411377,
+        0.513360857963562,
+        0.525383710861206
+      ]
+    ],
+    "notes": [
+      "No new imagegen calls or hand modeling.",
+      "Official TripoSR source is unchanged; a local API adapter uses standard scikit-image marching cubes instead of installing unrecognized torchmcubes source.",
+      "One view conditions a learned complete-object prior, not measured reconstruction of every sheet view.",
+      "No paid inference service used. Runtime excludes download and installation."
+    ],
+    "run": "view02_128"
+  },
+  {
+    "model": "stabilityai/TripoSR",
+    "source_sha256": "a85816fa96f14ccbc959f33ca5a2abf98ff1c98c201ca6dff6282cdcfa4cca66",
+    "mask_sha256": "537eec8a6177f77e05a27ad76752f8f5dc9c76e9a9600c2b9533d6e8b4e5d224",
+    "source_commit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "model_revision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "checkpoint_sha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "parameters": 419275628,
+    "torch": "2.6.0+cpu",
+    "image_preprocessing": "Existing pipeline mask nearest-resized to the 310-pixel source view, official resize_foreground at 0.85, alpha composited on neutral gray.",
+    "mesh_resolution": 128,
+    "chunk_size": 4096,
+    "load_seconds": 19.400537112989696,
+    "inference_seconds": 17.05066419398645,
+    "mesh_extraction_seconds": 3.0128650550032035,
+    "peak_rss_kib": 2917648,
+    "vertices": 14917,
+    "faces": 29830,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 2,
+    "component_face_counts": [
+      29822,
+      8
+    ],
+    "bounds": [
+      [
+        -0.16640585660934448,
+        -0.4702829420566559,
+        -0.5112671852111816
+      ],
+      [
+        0.33292055130004883,
+        0.49431610107421875,
+        0.5135842561721802
+      ]
+    ],
+    "notes": [
+      "No new imagegen calls or hand modeling.",
+      "Official TripoSR source is unchanged; a local API adapter uses standard scikit-image marching cubes instead of installing unrecognized torchmcubes source.",
+      "One view conditions a learned complete-object prior, not measured reconstruction of every sheet view.",
+      "No paid inference service used. Runtime excludes download and installation."
+    ],
+    "run": "pattern_view02_128"
+  }
+]

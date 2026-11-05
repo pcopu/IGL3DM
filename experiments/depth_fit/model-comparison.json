@@ -1,0 +1,128 @@
+[
+  {
+    "model": "depth-anything/DA3-SMALL",
+    "median_pearson": 0.7337626516819,
+    "median_spearman": 0.7695317230935057,
+    "median_heldout_rmse": 0.1219574511051178,
+    "median_heldout_nrmse_p90": 0.22270254440180695,
+    "candidate_constraint_views": [
+      0,
+      1,
+      2,
+      3,
+      12,
+      13,
+      14,
+      15
+    ],
+    "label": "DA3-SMALL-308",
+    "summary_path": "analysis.json",
+    "aligned_npz": "aligned_depths.npz",
+    "accepted_heldout_rmse_range": [
+      0.06241200491786003,
+      0.122686468064785
+    ],
+    "valid_pixel_support_by_view": [
+      4642,
+      5533,
+      6412,
+      6227,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6166,
+      6565,
+      6583,
+      5591
+    ]
+  },
+  {
+    "model": "depth-anything/Depth-Anything-V2-Small",
+    "median_pearson": 0.7220385670661926,
+    "median_spearman": 0.7393934462243379,
+    "median_heldout_rmse": 0.15786125510931015,
+    "median_heldout_nrmse_p90": 0.22633042908527584,
+    "candidate_constraint_views": [
+      0,
+      1,
+      2,
+      6,
+      10,
+      13,
+      14,
+      15
+    ],
+    "label": "DA2-SMALL-518",
+    "summary_path": "analysis.json",
+    "aligned_npz": "aligned_depths.npz",
+    "accepted_heldout_rmse_range": [
+      0.08943650126457214,
+      0.18153062462806702
+    ],
+    "valid_pixel_support_by_view": [
+      9218,
+      10932,
+      12401,
+      0,
+      0,
+      0,
+      11657,
+      0,
+      0,
+      0,
+      12605,
+      0,
+      0,
+      12617,
+      12454,
+      10805
+    ]
+  },
+  {
+    "model": "ZipDepth Base NPU, via LibreYOLO 1.5.0 PyPI port",
+    "median_pearson": 0.7031659781932831,
+    "median_spearman": 0.756959852080217,
+    "median_heldout_rmse": 0.16792858392000198,
+    "median_heldout_nrmse_p90": 0.2349599349202261,
+    "candidate_constraint_views": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      15
+    ],
+    "label": "ZIPDEPTH-NPU-384",
+    "summary_path": "analysis.json",
+    "aligned_npz": "aligned_depths.npz",
+    "accepted_heldout_rmse_range": [
+      0.10770446062088013,
+      0.21500523388385773
+    ],
+    "valid_pixel_support_by_view": [
+      0,
+      10932,
+      12401,
+      12065,
+      0,
+      0,
+      11657,
+      9657,
+      0,
+      10075,
+      12605,
+      0,
+      0,
+      0,
+      0,
+      10805
+    ]
+  }
+]
