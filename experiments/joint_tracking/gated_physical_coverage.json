@@ -1,0 +1,17 @@
+{
+  "64": {
+    "unique_correct_physical_vertices": 26,
+    "unique_correct_visible_observations": 250,
+    "operational_classifier": "Same visible known vertex within3px at all observations. Truth used only after selection."
+  },
+  "96": {
+    "unique_correct_physical_vertices": 510,
+    "unique_correct_visible_observations": 12445,
+    "operational_classifier": "Same visible known vertex within3px at all observations. Truth used only after selection."
+  },
+  "256": {
+    "unique_correct_physical_vertices": 504,
+    "unique_correct_visible_observations": 33181,
+    "operational_classifier": "Same visible known vertex within3px at all observations. Truth used only after selection."
+  }
+}

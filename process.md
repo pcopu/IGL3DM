@@ -384,3 +384,15 @@ Tested one predeclared five-knot positive-speed PCHIP orbit model, with constant
 ### Reproduction maintenance
 
 Added a documented optional `classical` dependency extra for OpenCV/scikit-image and a consolidated TESTING.md. The base hull dependencies stay minimal; the extra installs no Torch, neural model or checkpoint. The guide separates unit tests, retained mathematical negative controls, local-video prerequisites and exact-replay limits. Package metadata and every referenced local input/script path were checked. No dependencies were installed and no numerical experiment changed in this maintenance step.
+
+## Round 24 · Joint graph retracking doubles control coverage, not real surface coverage
+
+A new image-only tracker re-detects junctions each frame, compares classical RootSIFT/patch descriptors within reciprocal optical-flow proposals, solves one-to-one assignments and checks neighboring graph edges. Coordinates are new detections, not adjusted old tracks. IDs restart at gaps. Truth is used only by the separate control evaluator.
+
+- Apply the preceding frozen 1 px trajectory gate unchanged: known 96-frame control gives 586 correct / 0 known-wrong / 5 unresolved long tracks covering 510 distinct vertices, versus the prior 258. The 64/256 controls give 26 / 0 / 0 and 570 / 0 / 8, respectively. These are one analytic shape at different cadences, not independent objects or an error-free guarantee.
+- Graph-only matching still retains 15 wrong long paths at 96 frames and 401 at 64. Direct skip-frame cycle veto loses all long 96-frame tracks and keeps 242 wrong / 1 unresolved / 0 correct at 64. Those failures remain in the report. Cost margins test only the local flow window, not all global lattice phases.
+- The actual unblended clip uses one shared affine normalization, with no recentering or temporal interpolation. Forty selected segments yield **38 conditional points and zero faces**. The unchanged, unaccepted variable-camera hypothesis yields **37 points and zero faces**. No hidden completion or new target mesh is supplied; earlier partial meshes remain unchanged.
+- Known control 64-frame angular steps are exactly half its local longitudinal grid pitch. This supplies a concrete temporal alias mechanism, distinct from generated-grid inconsistency. Global shape asymmetry can break full symmetry; neither observation proves all mathematical grid reconstruction impossible.
+- The portable fixed-gate CLI reproduces all three control summaries exactly and selected track/audit files byte-for-byte. A short detector/assignment replay reproduces three frame graphs and three pair audits exactly. Source-hash, one-to-one, no-gap and all-detections-accounted-for checks pass. Seven added tests bring the classical suite to 47, with 27 core and 2 quad-shape tests passing.
+
+[Control improvement](docs/experiments/24-joint-tracking/control96_improvement.png) · [Actual retained observations](docs/experiments/24-joint-tracking/real_selected_overlay.png) · [38-point output](docs/experiments/24-joint-tracking/real-38-points.png) · [Method, negative results and reproduction](experiments/joint_tracking/README.md).

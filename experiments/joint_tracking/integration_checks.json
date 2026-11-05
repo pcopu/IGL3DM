@@ -1,0 +1,20 @@
+{
+  "64": {
+    "summary_exact": true,
+    "tracks_audit_byte_identical": true
+  },
+  "96": {
+    "summary_exact": true,
+    "tracks_audit_byte_identical": true
+  },
+  "256": {
+    "summary_exact": true,
+    "tracks_audit_byte_identical": true
+  },
+  "short_tracker": {
+    "first_three_frame_graphs_exact": true,
+    "all_three_pair_audits_exact": true,
+    "structural_validation": "passed",
+    "source_hash_checked": true
+  }
+}

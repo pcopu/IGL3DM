@@ -1,0 +1,902 @@
+{
+  "controls": {
+    "known96": {
+      "graph_joint": {
+        "all_at_least_3": {
+          "tracks": 914,
+          "identity": {
+            "correct": 886,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 22
+          },
+          "correct_fraction_all": 0.9693654266958425,
+          "heldout_evaluated": 560,
+          "heldout_unevaluated": 354,
+          "heldout_passes": 559,
+          "passing_identity": {
+            "correct": 543,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 10
+          },
+          "heldout_observation_error_px": {
+            "n": 616,
+            "mean": 0.2640225572901787,
+            "median": 0.19086685872694226,
+            "p95": 0.6777548179820687,
+            "max": 5.513239504568569
+          },
+          "correct_3d_error": {
+            "n": 886,
+            "mean": 0.007985972945301432,
+            "median": 0.0072150488629862996,
+            "p95": 0.014782993449022576,
+            "max": 0.05317080689304402
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 626,
+          "identity": {
+            "correct": 605,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 15
+          },
+          "correct_fraction_all": 0.9664536741214057,
+          "heldout_evaluated": 532,
+          "heldout_unevaluated": 94,
+          "heldout_passes": 531,
+          "passing_identity": {
+            "correct": 515,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 10
+          },
+          "heldout_observation_error_px": {
+            "n": 588,
+            "mean": 0.2541521786167732,
+            "median": 0.18532042301730756,
+            "p95": 0.6058712182496532,
+            "max": 5.513239504568569
+          },
+          "correct_3d_error": {
+            "n": 605,
+            "mean": 0.006725750904347188,
+            "median": 0.006855726406552019,
+            "p95": 0.008278264713768241,
+            "max": 0.00909949969741833
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 914,
+            "unique_correct_physical_vertices": 554,
+            "unique_physical_vertices_with_any_nearby_observation": 562,
+            "correct_track_unique_visible_observations": 14011,
+            "any_track_unique_visible_observations": 14606,
+            "total_track_observations": 14612,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 31111,
+            "correct_vertex_coverage": 0.751696065128901,
+            "correct_observation_coverage": 0.450355179839928
+          },
+          "span_at_least_30": {
+            "tracks": 626,
+            "unique_correct_physical_vertices": 517,
+            "unique_physical_vertices_with_any_nearby_observation": 531,
+            "correct_track_unique_visible_observations": 12699,
+            "any_track_unique_visible_observations": 13248,
+            "total_track_observations": 13254,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 31111,
+            "correct_vertex_coverage": 0.7014925373134329,
+            "correct_observation_coverage": 0.4081836006557166
+          }
+        },
+        "track_source_sha256": "1ecae8b216e9507c765f6b60e0b4788d5a63fe989038870dca4b8fc5ca4a1a91",
+        "truth_evaluation_only": true
+      },
+      "graph_joint_cycle_veto": {
+        "all_at_least_3": {
+          "tracks": 197,
+          "identity": {
+            "correct": 193,
+            "unresolved_detection_or_drift": 1,
+            "wrong_identity": 3
+          },
+          "correct_fraction_all": 0.9796954314720813,
+          "heldout_evaluated": 26,
+          "heldout_unevaluated": 171,
+          "heldout_passes": 26,
+          "passing_identity": {
+            "correct": 26
+          },
+          "heldout_observation_error_px": {
+            "n": 26,
+            "mean": 0.42869731585988,
+            "median": 0.350280605655202,
+            "p95": 0.9100747760214034,
+            "max": 1.1142055599363443
+          },
+          "correct_3d_error": {
+            "n": 193,
+            "mean": 0.01449834820834834,
+            "median": 0.011792905058133822,
+            "p95": 0.031946949625029177,
+            "max": 0.0728945091082178
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 0,
+          "identity": {},
+          "correct_fraction_all": null,
+          "heldout_evaluated": 0,
+          "heldout_unevaluated": 0,
+          "heldout_passes": 0,
+          "passing_identity": {},
+          "heldout_observation_error_px": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "correct_3d_error": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 197,
+            "unique_correct_physical_vertices": 183,
+            "unique_physical_vertices_with_any_nearby_observation": 189,
+            "correct_track_unique_visible_observations": 665,
+            "any_track_unique_visible_observations": 679,
+            "total_track_observations": 680,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 31111,
+            "correct_vertex_coverage": 0.24830393487109906,
+            "correct_observation_coverage": 0.021375076339558357
+          },
+          "span_at_least_30": {
+            "tracks": 0,
+            "unique_correct_physical_vertices": 0,
+            "unique_physical_vertices_with_any_nearby_observation": 0,
+            "correct_track_unique_visible_observations": 0,
+            "any_track_unique_visible_observations": 0,
+            "total_track_observations": 0,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 31111,
+            "correct_vertex_coverage": 0.0,
+            "correct_observation_coverage": 0.0
+          }
+        },
+        "track_source_sha256": "8a921319d0456a906ef787c7e757329206bfda6756f01bafbc450c05aa620774",
+        "truth_evaluation_only": true
+      }
+    },
+    "known64": {
+      "graph_joint": {
+        "all_at_least_3": {
+          "tracks": 1075,
+          "identity": {
+            "correct": 327,
+            "wrong_identity": 746,
+            "unresolved_detection_or_drift": 2
+          },
+          "correct_fraction_all": 0.3041860465116279,
+          "heldout_evaluated": 484,
+          "heldout_unevaluated": 591,
+          "heldout_passes": 182,
+          "passing_identity": {
+            "correct": 86,
+            "wrong_identity": 95,
+            "unresolved_detection_or_drift": 1
+          },
+          "heldout_observation_error_px": {
+            "n": 513,
+            "mean": 6.186777970282342,
+            "median": 4.683100289988182,
+            "p95": 18.756819754400393,
+            "max": 88.52046367603535
+          },
+          "correct_3d_error": {
+            "n": 327,
+            "mean": 0.008520311200971341,
+            "median": 0.007661511931690707,
+            "p95": 0.015092988226877633,
+            "max": 0.026527314175609242
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 470,
+          "identity": {
+            "correct": 67,
+            "wrong_identity": 401,
+            "unresolved_detection_or_drift": 2
+          },
+          "correct_fraction_all": 0.1425531914893617,
+          "heldout_evaluated": 366,
+          "heldout_unevaluated": 104,
+          "heldout_passes": 115,
+          "passing_identity": {
+            "correct": 36,
+            "wrong_identity": 78,
+            "unresolved_detection_or_drift": 1
+          },
+          "heldout_observation_error_px": {
+            "n": 395,
+            "mean": 6.838027983160168,
+            "median": 5.250528814449083,
+            "p95": 20.135760081646847,
+            "max": 88.52046367603535
+          },
+          "correct_3d_error": {
+            "n": 67,
+            "mean": 0.006966138372364796,
+            "median": 0.00711385369973179,
+            "p95": 0.008562376154741591,
+            "max": 0.009077879682464297
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 1075,
+            "unique_correct_physical_vertices": 273,
+            "unique_physical_vertices_with_any_nearby_observation": 560,
+            "correct_track_unique_visible_observations": 1654,
+            "any_track_unique_visible_observations": 8243,
+            "total_track_observations": 8245,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 20817,
+            "correct_vertex_coverage": 0.3704206241519674,
+            "correct_observation_coverage": 0.07945429216505741
+          },
+          "span_at_least_30": {
+            "tracks": 470,
+            "unique_correct_physical_vertices": 67,
+            "unique_physical_vertices_with_any_nearby_observation": 525,
+            "correct_track_unique_visible_observations": 569,
+            "any_track_unique_visible_observations": 5707,
+            "total_track_observations": 5709,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 20817,
+            "correct_vertex_coverage": 0.09090909090909091,
+            "correct_observation_coverage": 0.027333429408656386
+          }
+        },
+        "track_source_sha256": "a78ba789b29244cd095e8034cb516e7ca1697f543b2578b11c62022a59b19dc0",
+        "truth_evaluation_only": true
+      },
+      "graph_joint_cycle_veto": {
+        "all_at_least_3": {
+          "tracks": 614,
+          "identity": {
+            "correct": 11,
+            "wrong_identity": 602,
+            "unresolved_detection_or_drift": 1
+          },
+          "correct_fraction_all": 0.017915309446254073,
+          "heldout_evaluated": 321,
+          "heldout_unevaluated": 293,
+          "heldout_passes": 41,
+          "passing_identity": {
+            "wrong_identity": 38,
+            "correct": 3
+          },
+          "heldout_observation_error_px": {
+            "n": 321,
+            "mean": 6.106201498753358,
+            "median": 6.254795559202155,
+            "p95": 9.66752236030633,
+            "max": 19.509630546655643
+          },
+          "correct_3d_error": {
+            "n": 11,
+            "mean": 0.009058584666432452,
+            "median": 0.008397495351268488,
+            "p95": 0.013375593827273533,
+            "max": 0.013726399175555973
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 243,
+          "identity": {
+            "wrong_identity": 242,
+            "unresolved_detection_or_drift": 1
+          },
+          "correct_fraction_all": 0.0,
+          "heldout_evaluated": 214,
+          "heldout_unevaluated": 29,
+          "heldout_passes": 28,
+          "passing_identity": {
+            "wrong_identity": 28
+          },
+          "heldout_observation_error_px": {
+            "n": 214,
+            "mean": 5.7508661514120005,
+            "median": 6.251175630669385,
+            "p95": 8.220935460930779,
+            "max": 12.769809657513177
+          },
+          "correct_3d_error": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 614,
+            "unique_correct_physical_vertices": 11,
+            "unique_physical_vertices_with_any_nearby_observation": 446,
+            "correct_track_unique_visible_observations": 35,
+            "any_track_unique_visible_observations": 3854,
+            "total_track_observations": 3855,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 20817,
+            "correct_vertex_coverage": 0.014925373134328358,
+            "correct_observation_coverage": 0.001681318153432291
+          },
+          "span_at_least_30": {
+            "tracks": 243,
+            "unique_correct_physical_vertices": 0,
+            "unique_physical_vertices_with_any_nearby_observation": 307,
+            "correct_track_unique_visible_observations": 0,
+            "any_track_unique_visible_observations": 2330,
+            "total_track_observations": 2331,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 20817,
+            "correct_vertex_coverage": 0.0,
+            "correct_observation_coverage": 0.0
+          }
+        },
+        "track_source_sha256": "e20f4e303d3b38e9d20eb4c80780b53d888cef3d33d62e5be09ee816e9198d5c",
+        "truth_evaluation_only": true
+      }
+    },
+    "known256": {
+      "graph_joint": {
+        "all_at_least_3": {
+          "tracks": 1451,
+          "identity": {
+            "correct": 1420,
+            "unresolved_detection_or_drift": 20,
+            "wrong_identity": 11
+          },
+          "correct_fraction_all": 0.9786354238456237,
+          "heldout_evaluated": 566,
+          "heldout_unevaluated": 885,
+          "heldout_passes": 566,
+          "passing_identity": {
+            "correct": 559,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 1
+          },
+          "heldout_observation_error_px": {
+            "n": 616,
+            "mean": 0.2011527363768495,
+            "median": 0.1649409995289219,
+            "p95": 0.4941973015736469,
+            "max": 1.0960101694630595
+          },
+          "correct_3d_error": {
+            "n": 1420,
+            "mean": 0.017248624262221648,
+            "median": 0.007801769517503222,
+            "p95": 0.06169128069371884,
+            "max": 0.2268191631617251
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 597,
+          "identity": {
+            "correct": 589,
+            "unresolved_detection_or_drift": 8
+          },
+          "correct_fraction_all": 0.9865996649916248,
+          "heldout_evaluated": 501,
+          "heldout_unevaluated": 96,
+          "heldout_passes": 501,
+          "passing_identity": {
+            "correct": 495,
+            "unresolved_detection_or_drift": 6
+          },
+          "heldout_observation_error_px": {
+            "n": 551,
+            "mean": 0.1945262639034642,
+            "median": 0.16039529770892968,
+            "p95": 0.47230510898962424,
+            "max": 1.0301614117734474
+          },
+          "correct_3d_error": {
+            "n": 589,
+            "mean": 0.006715266597838542,
+            "median": 0.0067920877418281575,
+            "p95": 0.008172007566485505,
+            "max": 0.01039952676066306
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 1451,
+            "unique_correct_physical_vertices": 569,
+            "unique_physical_vertices_with_any_nearby_observation": 570,
+            "correct_track_unique_visible_observations": 39332,
+            "any_track_unique_visible_observations": 39787,
+            "total_track_observations": 39811,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 82926,
+            "correct_vertex_coverage": 0.7720488466757124,
+            "correct_observation_coverage": 0.47430239008272435
+          },
+          "span_at_least_30": {
+            "tracks": 597,
+            "unique_correct_physical_vertices": 519,
+            "unique_physical_vertices_with_any_nearby_observation": 523,
+            "correct_track_unique_visible_observations": 33966,
+            "any_track_unique_visible_observations": 34364,
+            "total_track_observations": 34373,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 82926,
+            "correct_vertex_coverage": 0.7042062415196744,
+            "correct_observation_coverage": 0.4095940959409594
+          }
+        },
+        "track_source_sha256": "885aee08d097ba156695ae61132909ff45d8847960464560461011e5722a76a8",
+        "truth_evaluation_only": true
+      },
+      "graph_joint_cycle_veto": {
+        "all_at_least_3": {
+          "tracks": 1451,
+          "identity": {
+            "correct": 1420,
+            "unresolved_detection_or_drift": 20,
+            "wrong_identity": 11
+          },
+          "correct_fraction_all": 0.9786354238456237,
+          "heldout_evaluated": 566,
+          "heldout_unevaluated": 885,
+          "heldout_passes": 566,
+          "passing_identity": {
+            "correct": 559,
+            "unresolved_detection_or_drift": 6,
+            "wrong_identity": 1
+          },
+          "heldout_observation_error_px": {
+            "n": 616,
+            "mean": 0.2011527363768495,
+            "median": 0.1649409995289219,
+            "p95": 0.4941973015736469,
+            "max": 1.0960101694630595
+          },
+          "correct_3d_error": {
+            "n": 1420,
+            "mean": 0.017248624262221648,
+            "median": 0.007801769517503222,
+            "p95": 0.06169128069371884,
+            "max": 0.2268191631617251
+          }
+        },
+        "span_at_least_30": {
+          "tracks": 597,
+          "identity": {
+            "correct": 589,
+            "unresolved_detection_or_drift": 8
+          },
+          "correct_fraction_all": 0.9865996649916248,
+          "heldout_evaluated": 501,
+          "heldout_unevaluated": 96,
+          "heldout_passes": 501,
+          "passing_identity": {
+            "correct": 495,
+            "unresolved_detection_or_drift": 6
+          },
+          "heldout_observation_error_px": {
+            "n": 551,
+            "mean": 0.1945262639034642,
+            "median": 0.16039529770892968,
+            "p95": 0.47230510898962424,
+            "max": 1.0301614117734474
+          },
+          "correct_3d_error": {
+            "n": 589,
+            "mean": 0.006715266597838542,
+            "median": 0.0067920877418281575,
+            "p95": 0.008172007566485505,
+            "max": 0.01039952676066306
+          }
+        },
+        "coverage": {
+          "all_at_least_3": {
+            "tracks": 1451,
+            "unique_correct_physical_vertices": 569,
+            "unique_physical_vertices_with_any_nearby_observation": 570,
+            "correct_track_unique_visible_observations": 39332,
+            "any_track_unique_visible_observations": 39787,
+            "total_track_observations": 39811,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 82926,
+            "correct_vertex_coverage": 0.7720488466757124,
+            "correct_observation_coverage": 0.47430239008272435
+          },
+          "span_at_least_30": {
+            "tracks": 597,
+            "unique_correct_physical_vertices": 519,
+            "unique_physical_vertices_with_any_nearby_observation": 523,
+            "correct_track_unique_visible_observations": 33966,
+            "any_track_unique_visible_observations": 34364,
+            "total_track_observations": 34373,
+            "available_unique_visible_physical_vertices": 737,
+            "available_unique_visible_observations": 82926,
+            "correct_vertex_coverage": 0.7042062415196744,
+            "correct_observation_coverage": 0.4095940959409594
+          }
+        },
+        "track_source_sha256": "60682d03fdaf739cc86a15dc3675973aff4e5a660e222b07e37feb398923f176",
+        "truth_evaluation_only": true
+      }
+    }
+  },
+  "baseline": {
+    "known96_original": {
+      "all_at_least_3": {
+        "tracks": 960,
+        "identity": {
+          "unresolved_detection_or_drift": 45,
+          "correct": 878,
+          "wrong_identity": 37
+        },
+        "correct_fraction_all": 0.9145833333333333,
+        "heldout_evaluated": 559,
+        "heldout_unevaluated": 401,
+        "heldout_passes": 557,
+        "passing_identity": {
+          "correct": 509,
+          "unresolved_detection_or_drift": 25,
+          "wrong_identity": 23
+        },
+        "heldout_observation_error_px": {
+          "n": 629,
+          "mean": 0.2510852362886734,
+          "median": 0.13432313167156135,
+          "p95": 0.781644646810093,
+          "max": 3.702994296468468
+        },
+        "correct_3d_error": {
+          "n": 878,
+          "mean": 0.0100378256174176,
+          "median": 0.008286715464390935,
+          "p95": 0.02066758907799668,
+          "max": 0.08864052093817773
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 612,
+        "identity": {
+          "correct": 556,
+          "unresolved_detection_or_drift": 27,
+          "wrong_identity": 29
+        },
+        "correct_fraction_all": 0.9084967320261438,
+        "heldout_evaluated": 495,
+        "heldout_unevaluated": 117,
+        "heldout_passes": 493,
+        "passing_identity": {
+          "correct": 449,
+          "unresolved_detection_or_drift": 21,
+          "wrong_identity": 23
+        },
+        "heldout_observation_error_px": {
+          "n": 565,
+          "mean": 0.25900887257869804,
+          "median": 0.13286045093684826,
+          "p95": 0.8772809614685599,
+          "max": 3.702994296468468
+        },
+        "correct_3d_error": {
+          "n": 556,
+          "mean": 0.008511736740733274,
+          "median": 0.007662860782109503,
+          "p95": 0.015570477356662185,
+          "max": 0.028184565048421702
+        }
+      },
+      "coverage": {
+        "all_at_least_3": {
+          "tracks": 960,
+          "unique_correct_physical_vertices": 548,
+          "unique_physical_vertices_with_any_nearby_observation": 579,
+          "correct_track_unique_visible_observations": 13296,
+          "any_track_unique_visible_observations": 14409,
+          "total_track_observations": 14745,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 31111,
+          "correct_vertex_coverage": 0.7435549525101763,
+          "correct_observation_coverage": 0.4273729549034104
+        },
+        "span_at_least_30": {
+          "tracks": 612,
+          "unique_correct_physical_vertices": 462,
+          "unique_physical_vertices_with_any_nearby_observation": 497,
+          "correct_track_unique_visible_observations": 11638,
+          "any_track_unique_visible_observations": 12693,
+          "total_track_observations": 12973,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 31111,
+          "correct_vertex_coverage": 0.6268656716417911,
+          "correct_observation_coverage": 0.3740799074282408
+        }
+      }
+    },
+    "known96_fixed_filter": {
+      "all_at_least_3": {
+        "tracks": 268,
+        "identity": {
+          "correct": 266,
+          "unresolved_detection_or_drift": 2
+        },
+        "correct_fraction_all": 0.9925373134328358,
+        "heldout_evaluated": 183,
+        "heldout_unevaluated": 85,
+        "heldout_passes": 183,
+        "passing_identity": {
+          "correct": 181,
+          "unresolved_detection_or_drift": 2
+        },
+        "heldout_observation_error_px": {
+          "n": 183,
+          "mean": 0.0584188651468249,
+          "median": 0.05209645506157647,
+          "p95": 0.12037825101316109,
+          "max": 0.28587588405291164
+        },
+        "correct_3d_error": {
+          "n": 266,
+          "mean": 0.007931253913665743,
+          "median": 0.006972323535909469,
+          "p95": 0.015466367814453841,
+          "max": 0.0216025210540142
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 268,
+        "identity": {
+          "correct": 266,
+          "unresolved_detection_or_drift": 2
+        },
+        "correct_fraction_all": 0.9925373134328358,
+        "heldout_evaluated": 183,
+        "heldout_unevaluated": 85,
+        "heldout_passes": 183,
+        "passing_identity": {
+          "correct": 181,
+          "unresolved_detection_or_drift": 2
+        },
+        "heldout_observation_error_px": {
+          "n": 183,
+          "mean": 0.0584188651468249,
+          "median": 0.05209645506157647,
+          "p95": 0.12037825101316109,
+          "max": 0.28587588405291164
+        },
+        "correct_3d_error": {
+          "n": 266,
+          "mean": 0.007931253913665743,
+          "median": 0.006972323535909469,
+          "p95": 0.015466367814453841,
+          "max": 0.0216025210540142
+        }
+      },
+      "coverage": {
+        "all_at_least_3": {
+          "tracks": 268,
+          "unique_correct_physical_vertices": 258,
+          "unique_physical_vertices_with_any_nearby_observation": 259,
+          "correct_track_unique_visible_observations": 3752,
+          "any_track_unique_visible_observations": 3787,
+          "total_track_observations": 3789,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 31111,
+          "correct_vertex_coverage": 0.35006784260515605,
+          "correct_observation_coverage": 0.12060043071582399
+        },
+        "span_at_least_30": {
+          "tracks": 268,
+          "unique_correct_physical_vertices": 258,
+          "unique_physical_vertices_with_any_nearby_observation": 259,
+          "correct_track_unique_visible_observations": 3752,
+          "any_track_unique_visible_observations": 3787,
+          "total_track_observations": 3789,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 31111,
+          "correct_vertex_coverage": 0.35006784260515605,
+          "correct_observation_coverage": 0.12060043071582399
+        }
+      }
+    },
+    "known64_original": {
+      "all_at_least_3": {
+        "tracks": 806,
+        "identity": {
+          "correct": 200,
+          "wrong_identity": 599,
+          "unresolved_detection_or_drift": 7
+        },
+        "correct_fraction_all": 0.24813895781637718,
+        "heldout_evaluated": 400,
+        "heldout_unevaluated": 406,
+        "heldout_passes": 151,
+        "passing_identity": {
+          "correct": 50,
+          "wrong_identity": 100,
+          "unresolved_detection_or_drift": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 477,
+          "mean": 10.370679437344936,
+          "median": 5.579651414965358,
+          "p95": 48.40585199475258,
+          "max": 88.07000047576607
+        },
+        "correct_3d_error": {
+          "n": 200,
+          "mean": 0.009743304189643937,
+          "median": 0.00822559675120823,
+          "p95": 0.02004421180770245,
+          "max": 0.04989268073865304
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 405,
+        "identity": {
+          "correct": 43,
+          "wrong_identity": 357,
+          "unresolved_detection_or_drift": 5
+        },
+        "correct_fraction_all": 0.10617283950617284,
+        "heldout_evaluated": 331,
+        "heldout_unevaluated": 74,
+        "heldout_passes": 111,
+        "passing_identity": {
+          "correct": 27,
+          "wrong_identity": 83,
+          "unresolved_detection_or_drift": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 408,
+          "mean": 11.591017355370031,
+          "median": 6.1253895892328325,
+          "p95": 51.59690102730985,
+          "max": 88.07000047576607
+        },
+        "correct_3d_error": {
+          "n": 43,
+          "mean": 0.008044612979710522,
+          "median": 0.0075027096042520405,
+          "p95": 0.014080973457947772,
+          "max": 0.01805181408370357
+        }
+      },
+      "coverage": {
+        "all_at_least_3": {
+          "tracks": 806,
+          "unique_correct_physical_vertices": 185,
+          "unique_physical_vertices_with_any_nearby_observation": 581,
+          "correct_track_unique_visible_observations": 1031,
+          "any_track_unique_visible_observations": 7657,
+          "total_track_observations": 7772,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 20817,
+          "correct_vertex_coverage": 0.2510176390773406,
+          "correct_observation_coverage": 0.049526829033962626
+        },
+        "span_at_least_30": {
+          "tracks": 405,
+          "unique_correct_physical_vertices": 43,
+          "unique_physical_vertices_with_any_nearby_observation": 534,
+          "correct_track_unique_visible_observations": 380,
+          "any_track_unique_visible_observations": 6011,
+          "total_track_observations": 6109,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 20817,
+          "correct_vertex_coverage": 0.05834464043419267,
+          "correct_observation_coverage": 0.018254311380122016
+        }
+      }
+    },
+    "known256_original": {
+      "all_at_least_3": {
+        "tracks": 1919,
+        "identity": {
+          "unresolved_detection_or_drift": 501,
+          "correct": 1380,
+          "wrong_identity": 38
+        },
+        "correct_fraction_all": 0.7191245440333507,
+        "heldout_evaluated": 670,
+        "heldout_unevaluated": 1249,
+        "heldout_passes": 668,
+        "passing_identity": {
+          "correct": 495,
+          "unresolved_detection_or_drift": 167,
+          "wrong_identity": 6
+        },
+        "heldout_observation_error_px": {
+          "n": 757,
+          "mean": 0.23774282695045437,
+          "median": 0.15528382976608204,
+          "p95": 0.7261032297526366,
+          "max": 4.062264329914184
+        },
+        "correct_3d_error": {
+          "n": 1380,
+          "mean": 0.015415632260248733,
+          "median": 0.011575925438702669,
+          "p95": 0.04157534506119849,
+          "max": 0.11012805330083765
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 648,
+        "identity": {
+          "correct": 492,
+          "unresolved_detection_or_drift": 155,
+          "wrong_identity": 1
+        },
+        "correct_fraction_all": 0.7592592592592593,
+        "heldout_evaluated": 518,
+        "heldout_unevaluated": 130,
+        "heldout_passes": 516,
+        "passing_identity": {
+          "correct": 391,
+          "unresolved_detection_or_drift": 124,
+          "wrong_identity": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 605,
+          "mean": 0.256080589662421,
+          "median": 0.1675719456906722,
+          "p95": 0.777371481453803,
+          "max": 4.062264329914184
+        },
+        "correct_3d_error": {
+          "n": 492,
+          "mean": 0.011186023364648304,
+          "median": 0.01008336247411438,
+          "p95": 0.020175257565158543,
+          "max": 0.033413806610043596
+        }
+      },
+      "coverage": {
+        "all_at_least_3": {
+          "tracks": 1919,
+          "unique_correct_physical_vertices": 539,
+          "unique_physical_vertices_with_any_nearby_observation": 612,
+          "correct_track_unique_visible_observations": 33808,
+          "any_track_unique_visible_observations": 41635,
+          "total_track_observations": 47965,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 82926,
+          "correct_vertex_coverage": 0.7313432835820896,
+          "correct_observation_coverage": 0.40768878277018067
+        },
+        "span_at_least_30": {
+          "tracks": 648,
+          "unique_correct_physical_vertices": 405,
+          "unique_physical_vertices_with_any_nearby_observation": 498,
+          "correct_track_unique_visible_observations": 26045,
+          "any_track_unique_visible_observations": 32440,
+          "total_track_observations": 37068,
+          "available_unique_visible_physical_vertices": 737,
+          "available_unique_visible_observations": 82926,
+          "correct_vertex_coverage": 0.5495251017639078,
+          "correct_observation_coverage": 0.31407519957552515
+        }
+      }
+    }
+  }
+}

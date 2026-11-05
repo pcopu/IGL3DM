@@ -1,0 +1,28 @@
+{
+  "input_track_count": 9195,
+  "candidate_points": 37,
+  "observed_quad_faces_at_least_three_frames": 0,
+  "vertices_used_in_faces": 0,
+  "camera_sha256": "9e75a3fdb438b19958f88c79bfa36f993a24f26c78d8c3964cdc6e5742948222",
+  "camera_refitted": false,
+  "accepted_calibration": false,
+  "selected_training_p95_distribution": {
+    "n": 37,
+    "mean": 0.32867584058053123,
+    "median": 0.31836061244938946,
+    "p95": 0.5727214460397112,
+    "max": 0.8106904699065993
+  },
+  "selected_endpoint_p95_distribution": {
+    "n": 37,
+    "mean": 0.7542978613806955,
+    "median": 0.7340829081325503,
+    "p95": 0.9840196774499398,
+    "max": 0.9981462759388515
+  },
+  "minimum_face_observations": 0,
+  "maximum_face_observations": 0,
+  "selection": "Same predeclared1px midpoint-fit/end-quarter gate and>=30deg experimental yaw span. This is selection-conditioned fit quality, not independent physical accuracy.",
+  "coordinates": "Projection maps nuisance world coordinates to 512-high centered/padded image pixels. Orientation rows are image-right, image-up, and their cross product. No metric camera location or depth translation is identified.",
+  "completion_added": false
+}
