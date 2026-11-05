@@ -380,3 +380,7 @@ Tested one predeclared five-knot positive-speed PCHIP orbit model, with constant
 - Paired split checks, monotone speed, nested constant-model equivalence and integration convergence pass. Portable evaluator/package replay reproduces all numerical fields and camera/selection artifacts exactly after resolving equivalent provenance paths; point/face/PLY output is byte-identical. Seven selector/preview tests, four patch tests and the existing regressions pass; the classical suite now totals 40 tests.
 
 [Camera error and known-control accuracy](docs/experiments/23-camera-motion/camera-diagnostic.png) · [Actual conditional points/faces](docs/experiments/23-camera-motion/experimental-geometry.png) · [Actual six-quad turntable](docs/experiments/23-camera-motion/actual-patch-turntable.gif) · [Model, rejection and reproduction](experiments/camera_motion/README.md).
+
+### Reproduction maintenance
+
+Added a documented optional `classical` dependency extra for OpenCV/scikit-image and a consolidated TESTING.md. The base hull dependencies stay minimal; the extra installs no Torch, neural model or checkpoint. The guide separates unit tests, retained mathematical negative controls, local-video prerequisites and exact-replay limits. Package metadata and every referenced local input/script path were checked. No dependencies were installed and no numerical experiment changed in this maintenance step.

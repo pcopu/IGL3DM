@@ -22,6 +22,8 @@ The first generated lion experiment produced a recognizable, imperfect mesh. Fin
 
 Python 3.10+, NumPy, SciPy and Pillow are required. Blender 4.3.2 was tested for export/rendering. No GPU, model weights, credentials or network are required after dependencies are installed.
 
+The optional classical grid/video experiments additionally use OpenCV and scikit-image: install with `pip install -e '.[classical]'`. This extra does not install neural models, checkpoints or Torch. See [TESTING.md](TESTING.md) for the separate suites and which checks require local experimental inputs.
+
 ```bash
 python -m venv .venv
 . .venv/bin/activate

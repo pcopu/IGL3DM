@@ -9,6 +9,9 @@ description = "One generated multiview atlas to a measured, approximate 3D visua
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24", "scipy>=1.10", "Pillow>=9.5"]
 
+[project.optional-dependencies]
+classical = ["opencv-python-headless>=4.9", "scikit-image>=0.22"]
+
 [project.scripts]
 igl3dm = "igl3dm.cli:main"
 
