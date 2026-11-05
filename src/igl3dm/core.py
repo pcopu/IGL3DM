@@ -37,6 +37,16 @@ class Camera:
         return np.stack([uv[..., 0]*size-0.5, (1-uv[..., 1])*size-0.5], axis=-1)
 
 
+def orbit_cameras(total_views, elevations=(0.0,)):
+    """Band-major equally spaced orbits, with explicit assumed elevations."""
+    if not elevations or total_views < 1 or total_views % len(elevations):
+        raise ValueError("View count must be positive and divisible by elevation-band count")
+    if any(not np.isfinite(e) or not -89 < e < 89 for e in elevations):
+        raise ValueError("Camera elevations must be finite and between -89 and 89 degrees")
+    per_orbit=total_views//len(elevations)
+    return [Camera(i*360/per_orbit,float(e)) for e in elevations for i in range(per_orbit)]
+
+
 def split_atlas(image: Image.Image, rows=4, columns=4, gutter=2):
     """Split equal grid boundaries, trim generated divider lines, then letterbox.
 
@@ -161,8 +171,10 @@ def project_occupancy(occupied, points, cameras, image_size):
             inside = (uv[:, 0]>=0)&(uv[:, 0]<image_size)&(uv[:, 1]>=0)&(uv[:, 1]<image_size)
             raster[uv[inside, 1], uv[inside, 0]] = True
             # Conservative footprint of the voxel rather than center-only holes.
-            radius = max(1, int(np.ceil(image_size/n/2)))
-            raster = ndimage.binary_dilation(raster, iterations=radius)
+            right, up, _ = camera.basis()
+            rx = max(1, int(np.ceil(image_size/n/camera.scale*np.abs(right).sum())))
+            ry = max(1, int(np.ceil(image_size/n/camera.scale*np.abs(up).sum())))
+            raster = ndimage.binary_dilation(raster, structure=np.ones((2*ry+1,2*rx+1),bool))
         result.append(raster)
     return result
 
@@ -201,7 +213,10 @@ def extract_mesh(field):
     size = f.shape[0]
     def intersection(a, b, va, vb):
         ida, idb = int((a[0]*size+a[1])*size+a[2]), int((b[0]*size+b[1])*size+b[2])
-        key = (min(ida,idb),max(ida,idb))
+        # An exactly-zero grid sample is a shared vertex, not a different
+        # vertex for every incident edge. Without this canonicalization, exact
+        # level-set samples create coincident vertices and topological cracks.
+        key = (-1, ida) if va == 0 else ((-1, idb) if vb == 0 else (min(ida,idb),max(ida,idb)))
         if key not in edges:
             t = va/(va-vb)
             pos = a+t*(b-a)
@@ -231,7 +246,17 @@ def extract_mesh(field):
                 if np.dot(normal,out_direction)<0: tri=[tri[0],tri[2],tri[1]]
                 faces.append(tri)
     if not faces: raise ValueError("No surface was extracted")
-    return np.asarray(vertices,dtype=np.float32), np.asarray(faces,dtype=np.int32)
+    # Match the float32 precision used by the portable mesh formats. Distinct
+    # near-zero intersections can round to identical positions; weld those
+    # positions and remove only faces that collapse after that exact weld.
+    v, inverse = np.unique(np.asarray(vertices,dtype=np.float32),axis=0,return_inverse=True)
+    t = inverse[np.asarray(faces,dtype=np.int32)]
+    keep = (t[:,0]!=t[:,1]) & (t[:,1]!=t[:,2]) & (t[:,2]!=t[:,0])
+    t = t[keep]
+    area = np.cross(v[t[:,1]].astype(np.float64)-v[t[:,0]],v[t[:,2]].astype(np.float64)-v[t[:,0]])
+    t = t[np.any(area!=0,axis=1)]
+    used, inverse = np.unique(t,return_inverse=True)
+    return v[used], inverse.reshape(-1,3).astype(np.int32)
 
 
 def mesh_integrity(vertices, faces):

@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 from PIL import Image, ImageDraw
-from igl3dm.core import (Camera, split_atlas, segment, grid_points, silhouette_fields,
+from igl3dm.core import (Camera, orbit_cameras, split_atlas, segment, grid_points, silhouette_fields,
                         carve, extract_mesh, mesh_integrity, mask_metrics, project_occupancy)
 
 
@@ -64,6 +64,32 @@ class GeometryTests(unittest.TestCase):
         integrity=mesh_integrity(vertices,faces)
         self.assertEqual(integrity["boundary_edges"],0)
         self.assertTrue(integrity["watertight_edge_incidence"])
+
+    def test_exact_zero_level_samples_share_vertices(self):
+        x,y,z=np.mgrid[:16,:16,:16]
+        field=9-((x-8)**2+(y-8)**2+(z-8)**2)
+        vertices,faces=extract_mesh(field)
+        integrity=mesh_integrity(vertices,faces)
+        self.assertEqual(integrity["boundary_edges"],0)
+        self.assertTrue(integrity["watertight_edge_incidence"])
+        self.assertEqual(len(vertices),len(np.unique(vertices,axis=0)))
+
+    def test_float32_coincident_intersections_are_welded(self):
+        field=-np.ones((12,12,12),dtype=np.float32)
+        field[3:9,3:9,3:9]=1
+        field[2,4,4]=1e-10
+        vertices,faces=extract_mesh(field)
+        self.assertEqual(len(vertices),len(np.unique(vertices,axis=0)))
+        self.assertTrue(mesh_integrity(vertices,faces)["watertight_edge_incidence"])
+
+    def test_dual_elevation_camera_bands(self):
+        cameras=orbit_cameras(32,[15,-15])
+        self.assertEqual(cameras[15].yaw_degrees,337.5)
+        self.assertEqual(cameras[16].yaw_degrees,0)
+        self.assertEqual(cameras[16].elevation_degrees,-15)
+        self.assertEqual(cameras[31].yaw_degrees,337.5)
+        with self.assertRaises(ValueError):orbit_cameras(31,[15,-15])
+        with self.assertRaises(ValueError):orbit_cameras(16,[float("nan")])
 
     def test_yaw_rotation_convention(self):
         # Animal front is -Y. It appears on the left at yaw +90.

@@ -6,3 +6,6 @@ __pycache__/
 build/
 dist/
 runs/
+experiments/**/outputs/
+experiments/**/models/
+experiments/**/Depth-Anything-3/

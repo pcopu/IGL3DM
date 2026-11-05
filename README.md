@@ -87,4 +87,21 @@ Raw depth/XYZ are generated **from the inferred mesh**. They make that mesh meas
 
 Compare this measured baseline with licensed learned multiview depth/pose and image-to-3D systems, within the available machine's CPU/RAM/GPU constraints. Preserve the same generated input when comparing software methods. Only regenerate when testing a specific input hypothesis, and record the prompt, call count, outcome and limitation. Research candidates are not results until they have actually run and been inspected.
 
-Every meaningful round belongs in [process.md](process.md). Source changes, tests and concise result summaries are committed. Large generated assets and machine-local runtime artifacts stay under ignored `runs/` unless deliberately selected for publication. Never commit credentials, private user data or unrelated diagnostics.
+Every meaningful round belongs in [process.md](process.md). Source changes, tests and concise result summaries are committed. Each recorded test includes selected generated input and output PNG/GIF visuals under `docs/experiments/`. Mesh files, weights, large raw arrays and machine-local runtime artifacts stay under ignored `runs/`; model binaries are not published. Never commit credentials, private user data or unrelated diagnostics.
+
+
+## Multiple elevations and held-out views
+
+For an 8-column×4-row sheet containing sixteen +15° views followed by sixteen −15° views:
+
+```bash
+igl3dm dual.png --rows 4 --columns 8 --elevation-bands=15,-15 \
+  --fixed-misses 4 --output runs/dual --imagegen-calls 1 --render
+# Fit only the upper orbit without changing its source framing or cameras.
+igl3dm dual.png --rows 4 --columns 8 --elevation-bands=15,-15 \
+  --view-range 0:16 --fixed-misses 2 --output runs/upper --render
+PYTHONPATH=src python scripts/validate_cross_views.py \
+  --mesh-run runs/upper --reference-run runs/dual --output runs/upper-heldout
+```
+
+`cameras.json` records every assumed yaw/elevation and original source index. The renderer accepts `--cameras` directly; midpoint generation requires complete uniformly spaced orbits. The combined turntable shows synchronized bands, not a discontinuous jump between elevations. Tolerance selection from voxel footprints remains approximate; use `--fixed-misses` and actual-mesh validation for controlled comparisons.

@@ -11,6 +11,15 @@ optional ``colors`` (N x 3 sRGB floats). The default model coordinates are
 z-up, in [-1, 1], viewed with orthographic scale 2.0. At yaw zero the camera
 is on negative y; positive yaw moves it toward positive x.
 
+``--elevation-bands=15,-15 --views 32`` renders sixteen evenly spaced yaws
+per elevation, in band-major order. ``--views`` is the total source-view
+count. Midpoint frames retain the source index of the preceding yaw within
+their band. If bands are omitted, ``--elevation`` keeps its original meaning.
+``--cameras cameras.json`` overrides generated angles with a ``views`` list
+of yaw/elevation records, optionally carrying ``source_view_index``. Its list
+length must equal ``--views``. Midpoints require a complete uniformly spaced
+yaw orbit within each elevation, and are offset by half that band's step.
+
 Every color frame is an actual Blender render of the unchanged mesh. Numeric
 depth/position maps are exact pixel-center BVH ray intersections with that
 same mesh, not values decoded from generated artwork. They have a binary
@@ -42,6 +51,8 @@ def arguments():
     parser.add_argument("--size", type=int, default=256)
     parser.add_argument("--views", type=int, default=16)
     parser.add_argument("--elevation", type=float, default=0.0)
+    parser.add_argument("--elevation-bands", help="Comma-separated elevations; --views is their total view count")
+    parser.add_argument("--cameras", type=Path, help="Explicit per-view yaw/elevation JSON; overrides elevation bands")
     parser.add_argument("--scale", type=float, default=2.0)
     parser.add_argument("--distance", type=float, default=4.0)
     parser.add_argument("--samples", type=int, default=4)
@@ -52,9 +63,71 @@ def arguments():
     args = parser.parse_args(argv)
     if args.size < 1 or args.views < 1 or args.samples < 1:
         parser.error("size, views and samples must be positive")
-    if not (args.scale > 0 and args.distance > 0 and -89 < args.elevation < 89):
-        parser.error("scale/distance must be positive; elevation must be between -89 and 89")
+    if not (math.isfinite(args.scale) and args.scale > 0 and
+            math.isfinite(args.distance) and args.distance > 0):
+        parser.error("scale and distance must be finite and positive")
+    bands = []
+    if args.cameras is None:
+        try:
+            bands = ([args.elevation] if args.elevation_bands is None else
+                     [float(value.strip()) for value in args.elevation_bands.split(",")])
+        except ValueError:
+            parser.error("elevation-bands must be a nonempty comma-separated list of numbers")
+        if not all(math.isfinite(value) and -89 < value < 89 for value in bands):
+            parser.error("every elevation must be finite and between -89 and 89 degrees")
+        if args.views % len(bands):
+            parser.error("views must be divisible by the number of elevation bands")
+    args.elevation_bands = bands
     return args
+
+
+def camera_views(args):
+    """Resolve source cameras and validate optional uniform-orbit midpoints."""
+    if args.cameras is None:
+        per_band = args.views // len(args.elevation_bands)
+        views = [{"source_index": band * per_band + yaw_index, "elevation_band": band,
+                  "yaw_degrees": yaw_index * 360.0 / per_band, "elevation_degrees": elevation}
+                 for band, elevation in enumerate(args.elevation_bands)
+                 for yaw_index in range(per_band)]
+    else:
+        payload = json.loads(args.cameras.read_text())
+        entries = payload.get("views") if isinstance(payload, dict) else None
+        if not isinstance(entries, list) or len(entries) != args.views:
+            raise ValueError("cameras JSON must contain a views list with length equal to --views")
+        views, bands = [], []
+        for index, entry in enumerate(entries):
+            if not isinstance(entry, dict):
+                raise ValueError(f"camera {index} must be an object")
+            try:
+                yaw, elevation = float(entry["yaw_degrees"]), float(entry["elevation_degrees"])
+            except (KeyError, TypeError, ValueError) as exc:
+                raise ValueError(f"camera {index} requires numeric yaw_degrees and elevation_degrees") from exc
+            if not math.isfinite(yaw) or not math.isfinite(elevation) or not -89 < elevation < 89:
+                raise ValueError(f"camera {index} has invalid angles")
+            if elevation not in bands:
+                bands.append(elevation)
+            view = {"source_index": index, "elevation_band": bands.index(elevation),
+                    "yaw_degrees": yaw % 360, "elevation_degrees": elevation}
+            if "source_view_index" in entry:
+                original = entry["source_view_index"]
+                if not isinstance(original, int) or isinstance(original, bool) or original < 0:
+                    raise ValueError(f"camera {index} source_view_index must be a nonnegative integer")
+                view["source_view_index"] = original
+            views.append(view)
+        args.elevation_bands = bands
+    source_views = [{**view, "unseen_midpoint": False} for view in views]
+    if not args.midpoints:
+        return source_views
+    steps = {}
+    for band in range(len(args.elevation_bands)):
+        yaws = sorted(view["yaw_degrees"] for view in views if view["elevation_band"] == band)
+        step = 360.0 / len(yaws)
+        gaps = np.diff(np.array(yaws + [yaws[0] + 360.0]))
+        if not np.allclose(gaps, step, atol=1e-5, rtol=0):
+            raise ValueError("midpoint generation requires a complete uniformly spaced yaw orbit per elevation")
+        steps[band] = step
+    return source_views + [{**view, "yaw_degrees": (view["yaw_degrees"] + steps[view["elevation_band"]] / 2) % 360,
+                            "unseen_midpoint": True} for view in views]
 
 
 def load_mesh(path):
@@ -213,6 +286,7 @@ def trace_maps(tree, position, right, up, forward, args, bbox_min, bbox_max, ste
 def main():
     args = arguments()
     started = time.monotonic()
+    angles = camera_views(args)
     vertices, faces, colors = load_mesh(args.mesh)
     args.output.mkdir(parents=True, exist_ok=True)
     for directory in ("color", "data"):
@@ -227,19 +301,21 @@ def main():
                              export_yup=True, export_normals=True, export_materials="EXPORT")
     tree = BVHTree.FromPolygons(vertices.tolist(), faces.tolist(), all_triangles=True)
     bbox_min, bbox_max = vertices.min(axis=0), vertices.max(axis=0)
-    angles = [(i * 360.0 / args.views, False) for i in range(args.views)]
-    if args.midpoints:
-        angles += [((i + 0.5) * 360.0 / args.views, True) for i in range(args.views)]
+    view_counts = [sum(view["elevation_band"] == band for view in angles[:args.views])
+                   for band in range(len(args.elevation_bands))]
+    views_per_band = view_counts[0] if len(set(view_counts)) == 1 else None
     records = []
-    for i, (yaw, midpoint) in enumerate(angles):
-        stem = ("midpoint" if midpoint else "view") + f"_{i % args.views:03d}"
-        position, right, up, forward = camera_basis(yaw, args.elevation, args.distance)
+    for specification in angles:
+        source_index = specification["source_index"]
+        yaw, elevation = specification["yaw_degrees"], specification["elevation_degrees"]
+        midpoint = specification["unseen_midpoint"]
+        stem = ("midpoint" if midpoint else "view") + f"_{source_index:03d}"
+        position, right, up, forward = camera_basis(yaw, elevation, args.distance)
         camera.location = tuple(position)
         camera.rotation_euler = Vector(forward.tolist()).to_track_quat("-Z", "Y").to_euler()
         scene.render.filepath = str(args.output / "color" / (stem + ".png"))
         bpy.ops.render.render(write_still=True)
-        record = {"stem": stem, "yaw_degrees": yaw, "elevation_degrees": args.elevation,
-                  "unseen_midpoint": midpoint, "camera_position": position.tolist(),
+        record = {**specification, "stem": stem, "camera_position": position.tolist(),
                   "camera_right": right.tolist(), "camera_up": up.tolist(),
                   "camera_forward": forward.tolist()}
         if not args.skip_data:
@@ -253,6 +329,11 @@ def main():
         "schema_version": 1, "renderer": f"Blender {bpy.app.version_string} Cycles CPU",
         "mesh_source": str(args.mesh.resolve()), "geometry_changed": False,
         "vertices": len(vertices), "triangles": len(faces), "size": args.size,
+        "source_views": args.views, "views_per_band": views_per_band,
+        "view_counts_per_band": view_counts,
+        "elevation_bands": args.elevation_bands,
+        "camera_source": str(args.cameras.resolve()) if args.cameras else "generated elevation bands",
+        "frame_order": "source views, then optional midpoints; explicit camera list order or generated band-major order",
         "orthographic_scale": args.scale, "camera_distance": args.distance,
         "input_coordinates": "right-handed z-up; camera yaw 0 at negative y, positive yaw toward positive x",
         "glb_coordinates": "glTF standard y-up, converted by Blender exporter",

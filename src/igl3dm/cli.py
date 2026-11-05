@@ -12,7 +12,7 @@ import time
 import numpy as np
 from PIL import Image, ImageDraw
 
-from .core import (Camera, split_atlas, segment, grid_points, silhouette_fields,
+from .core import (Camera, orbit_cameras, split_atlas, segment, grid_points, silhouette_fields,
                    carve, project_occupancy, mask_metrics, extract_mesh,
                    mesh_integrity, vertex_colors, save_ply, save_json, sha256)
 
@@ -32,7 +32,21 @@ def run(args):
         raise ValueError(f"Output directory is not empty: {out}. Use a new run directory.")
     out.mkdir(parents=True,exist_ok=True)
     atlas=Image.open(args.atlas)
-    tiles=split_atlas(atlas,args.rows,args.columns,args.gutter)
+    all_tiles=split_atlas(atlas,args.rows,args.columns,args.gutter)
+    elevations=[args.elevation] if args.elevation_bands is None else [float(v) for v in args.elevation_bands.split(",")]
+    all_cameras=orbit_cameras(len(all_tiles),elevations)
+    source_indices=list(range(len(all_tiles)))
+    if args.view_range is not None:
+        bounds=args.view_range.split(":")
+        if len(bounds)!=2:raise ValueError("view-range must be START:END, with end exclusive")
+        start,end=map(int,bounds)
+        if not 0 <= start < end <= len(all_tiles):raise ValueError("view-range is outside the atlas")
+        source_indices=source_indices[start:end]
+    tiles=[all_tiles[i] for i in source_indices]
+    cameras=[all_cameras[i] for i in source_indices]
+    camera_manifest={"views":[{"yaw_degrees":c.yaw_degrees,"elevation_degrees":c.elevation_degrees,
+                               "source_view_index":source_indices[i]} for i,c in enumerate(cameras)]}
+    save_json(out/"cameras.json",camera_manifest)
     view_dir=out/"views";view_dir.mkdir()
     mask_dir=out/"masks";mask_dir.mkdir()
     masks=[];segmentation=[];working_tiles=[]
@@ -42,16 +56,17 @@ def run(args):
         working_tiles.append(tile)
         mask,info=segment(tile,args.background_threshold)
         info["view"]=i
+        info["source_view_index"]=source_indices[i]
         masks.append(mask);segmentation.append(info)
         Image.fromarray((mask*255).astype("uint8")).save(mask_dir/f"mask_{i:02d}.png")
     count=len(masks)
-    cameras=[Camera(i*360/count,args.elevation) for i in range(count)]
-    if args.max_misses>=count:
-        raise ValueError("max-misses must be smaller than the view count")
+    if args.max_misses>=count or (args.fixed_misses is not None and not 0 <= args.fixed_misses < count):
+        raise ValueError("Miss tolerance must be nonnegative and smaller than the view count")
     points=grid_points(args.resolution)
     fields=silhouette_fields(masks,cameras,points)
     candidates=[];best=None
-    for misses in range(args.max_misses+1):
+    miss_values = range(args.max_misses+1) if args.fixed_misses is None else [args.fixed_misses]
+    for misses in miss_values:
         try:
             field,occupied,info=carve(fields,args.resolution,misses,args.smooth_sigma)
             projections=project_occupancy(occupied,points,cameras,args.image_size)
@@ -84,7 +99,7 @@ def run(args):
         "The input is a generated multiview drawing, not calibrated photographic evidence.",
         "Yaw/elevation and orthographic projection are assumptions requested of ImageGen, not recovered measurements.",
         "Silhouettes cannot recover invisible concavities, correct anatomical topology, or exact wireframe vertices.",
-        "Voxel reprojection scores are selection diagnostics. Final mesh renders must be checked separately.",
+        "Voxel reprojection scores are approximate selection diagnostics. They can rank candidates differently from final mesh masks; compare fixed-misses runs before claiming the best fit.",
         "Painted mesh lines and colors are appearance only; they are not vertex IDs or measured depth.",
     ]
     if chosen["allowed_misses"]:
@@ -93,17 +108,17 @@ def run(args):
     if any(s["touches_frame"] for s in segmentation):warnings.append("At least one segmented view touches the frame; generated source may be clipped.")
     report={"schema_version":1,"created_at_utc":datetime.now(timezone.utc).isoformat(),
         "input":{"filename":Path(args.atlas).name,"sha256":sha256(args.atlas),"size":list(atlas.size),
-                 "view_count":count,"imagegen_calls_for_this_input":args.imagegen_calls,
+                 "view_count":count,"atlas_view_count":len(all_tiles),"selected_source_indices":source_indices,"imagegen_calls_for_this_input":args.imagegen_calls,
                  "provenance_note":"Call count is caller-provided experiment provenance, not verified by image pixels."},
         "method":"common-camera silhouette visual hull; marching tetrahedra; approximate visibility-aware vertex color projection",
         "manual_modeling":False,"wireframe_vertices_decoded":False,"learned_depth_model_used":False,
         "config":{"rows":args.rows,"columns":args.columns,"gutter_pixels":args.gutter,
-                  "working_image_size":args.image_size,"resolution":args.resolution,"max_misses":args.max_misses,
+                  "working_image_size":args.image_size,"resolution":args.resolution,"max_misses":args.max_misses,"fixed_misses":args.fixed_misses,
                   "smooth_sigma_voxels":args.smooth_sigma,"background_threshold":args.background_threshold,
                   "cell_alignment":"shared grid; no per-view silhouette translation or scaling"},
         "camera_convention":{"coordinate_system":"right-handed z-up","yaw0_location":[0,-4,0],
                              "yaw_positive":"camera moves from -Y toward +X","orthographic_scale":2.0,
-                             "elevation_degrees":args.elevation,"yaw_degrees":[c.yaw_degrees for c in cameras]},
+                             "elevation_bands_degrees":elevations,"per_view":camera_manifest["views"]},
         "segmentation":segmentation,"candidates":candidates,"selected":chosen,
         "mesh":mesh_integrity(vertices,faces),"color_projection":color_info,"warnings":warnings,
         "elapsed_seconds_before_render":time.monotonic()-started,"render_status":"not_requested"}
@@ -114,10 +129,10 @@ def run(args):
         if not blender:raise ValueError(f"Blender executable not found: {args.blender}")
         script=Path(__file__).resolve().parents[2]/"scripts"/"render_mesh.py"
         if not script.exists():raise ValueError(f"Renderer script missing: {script}")
-        command=[blender,"-b","--threads",str(args.render_threads),"--python",str(script),"--",
+        command=[blender,"-b","--python-exit-code","1","--threads",str(args.render_threads),"--python",str(script),"--",
                  "--mesh",str((out/"mesh.json").resolve()),"--output",str((out/"renders").resolve()),
                  "--size",str(args.render_size),"--views",str(count),"--elevation",str(args.elevation),
-                 "--midpoints","--save-blend"]
+                 "--midpoints","--save-blend","--cameras",str((out/"cameras.json").resolve())]
         with (out/"blender.log").open("w") as log:
             result=subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,check=False)
         report["render_status"]="completed" if result.returncode==0 else "failed"
@@ -139,9 +154,12 @@ def main():
     parser.add_argument("--image-size",type=int,default=192)
     parser.add_argument("--resolution",type=int,default=80)
     parser.add_argument("--max-misses",type=int,default=2)
+    parser.add_argument("--fixed-misses",type=int,default=None,help="Evaluate exactly this tolerance, bypassing approximate voxel-score selection")
     parser.add_argument("--smooth-sigma",type=float,default=0.6)
     parser.add_argument("--background-threshold",type=float,default=32)
     parser.add_argument("--elevation",type=float,default=0)
+    parser.add_argument("--elevation-bands",default=None,help="Comma-separated elevations for band-major full orbits, e.g. 15,-15")
+    parser.add_argument("--view-range",default=None,help="Use source atlas indices START:END (end exclusive), preserving their cameras")
     parser.add_argument("--imagegen-calls",type=int,default=None,help="Caller-attested generation call count; omitted means unknown")
     parser.add_argument("--render",action="store_true")
     parser.add_argument("--render-size",type=int,default=256)

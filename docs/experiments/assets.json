@@ -1,0 +1,80 @@
+{
+  "description": "Public synthetic input/output visuals only; no meshes or weights.",
+  "assets": [
+    {
+      "path": "docs/experiments/01-atlas-baseline/input.png",
+      "bytes": 2370223,
+      "sha256": "d6b6381b4baca46d19120e08795cfb8723e9150ac1dd4c27617a0e73593d64c4"
+    },
+    {
+      "path": "docs/experiments/01-atlas-baseline/reference-vs-mesh.png",
+      "bytes": 327539,
+      "sha256": "49d4944d16b773127415ebb2d1917b6ff8612b6c65e34bbd01364d67b89e15a3"
+    },
+    {
+      "path": "docs/experiments/01-atlas-baseline/silhouettes.png",
+      "bytes": 24310,
+      "sha256": "6494671c9d9006996129dd947b093357697697663d18aa6740705985c818b43c"
+    },
+    {
+      "path": "docs/experiments/01-atlas-baseline/turntable.gif",
+      "bytes": 484099,
+      "sha256": "4a333132ea177d84e0b45bbd3f2f032789328444a8347ed0cd7df06cca3e3277"
+    },
+    {
+      "path": "docs/experiments/02-resolution-control/reference-vs-mesh.png",
+      "bytes": 559760,
+      "sha256": "e09993dfec708d2c67b0bb08f3ca73145938eeb79a2c8dfc251015bc71c3f583"
+    },
+    {
+      "path": "docs/experiments/02-resolution-control/turntable.gif",
+      "bytes": 826903,
+      "sha256": "fdde04a15365e17b5a69e0a6dfa0bafb5cc99a572d2fdda1e91db7f90df2c183"
+    },
+    {
+      "path": "docs/experiments/03-learned-depth/base-balanced-rejected.png",
+      "bytes": 551896,
+      "sha256": "ae79585a1c21df1cd4bb7b80236aa4a6cae883f2bf0baa0093e22a6f3f58c96b"
+    },
+    {
+      "path": "docs/experiments/03-learned-depth/depth-confidence.png",
+      "bytes": 936150,
+      "sha256": "9849ad860e4c1f7381eadd7e8ee8f4eb19f8041d904bf0b1d72d5b7ec690bcdc"
+    },
+    {
+      "path": "docs/experiments/03-learned-depth/small-308-rejected.png",
+      "bytes": 603452,
+      "sha256": "b25b60a151876629a134a2848494fbf99ac5f1ce0004433684fb1afb45fdb9c7"
+    },
+    {
+      "path": "docs/experiments/03-learned-depth/small-504-rejected.png",
+      "bytes": 982081,
+      "sha256": "bff960bd380615b9007be9a845ccf20dcfe57703f49fa229948ae37916917495"
+    },
+    {
+      "path": "docs/experiments/04-dual-elevation/input.png",
+      "bytes": 2320023,
+      "sha256": "c3414f5f93ce44cf151f500f2a92d26b3e9ba7f4a058550b8d1c3178121ef607"
+    },
+    {
+      "path": "docs/experiments/04-dual-elevation/reference-vs-mesh.png",
+      "bytes": 623928,
+      "sha256": "9e649a4abc10bbcd5abb6afd677d1320fc3ad301dbe0f47dc29c35d2cdac6fda"
+    },
+    {
+      "path": "docs/experiments/04-dual-elevation/silhouettes.png",
+      "bytes": 52382,
+      "sha256": "8846f30846f123d510bd197271fb1ead4075ba70e6e4522482eac0ab0e1a454d"
+    },
+    {
+      "path": "docs/experiments/04-dual-elevation/turntable-bands.gif",
+      "bytes": 784160,
+      "sha256": "2f52fa47f54175dfbb1f017ecbdfc51e417cf946bbacc120f4bdb5a5e14dd276"
+    },
+    {
+      "path": "docs/experiments/05-abandoned-generated-depth/input-abandoned.png",
+      "bytes": 1773592,
+      "sha256": "1a465da0896b45b887e5f6082caf3877cfa980d28e53e76296b6395e8d371cff"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "runs": [
+    {
+      "run": "pair01",
+      "model": "depth-anything/DA3-SMALL",
+      "views": [
+        0,
+        1
+      ],
+      "resolution": 308,
+      "reference_strategy": "first",
+      "inference_seconds": 0.9825567790103378,
+      "peak_rss_mib": 739.8515625,
+      "parameters": 34299463,
+      "rotation_step_range_degrees": [
+        13.712905883789062,
+        13.712905883789062
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf"
+    },
+    {
+      "run": "front_quarter",
+      "model": "depth-anything/DA3-SMALL",
+      "views": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "resolution": 308,
+      "reference_strategy": "first",
+      "inference_seconds": 1.3437301979865879,
+      "peak_rss_mib": 841.71875,
+      "parameters": 34299463,
+      "rotation_step_range_degrees": [
+        10.652976989746094,
+        15.58371639251709
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf"
+    },
+    {
+      "run": "full_orbit",
+      "model": "depth-anything/DA3-SMALL",
+      "views": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolution": 308,
+      "reference_strategy": "first",
+      "inference_seconds": 6.398716039999272,
+      "peak_rss_mib": 1156.3828125,
+      "parameters": 34299463,
+      "rotation_step_range_degrees": [
+        2.6377463340759277,
+        127.22077941894531
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf"
+    },
+    {
+      "run": "full_orbit504",
+      "model": "depth-anything/DA3-SMALL",
+      "views": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolution": 504,
+      "reference_strategy": "first",
+      "inference_seconds": 25.85472013099934,
+      "peak_rss_mib": 1985.5703125,
+      "parameters": 34299463,
+      "rotation_step_range_degrees": [
+        1.2896779775619507,
+        63.623802185058594
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf"
+    },
+    {
+      "run": "base_full_orbit",
+      "model": "depth-anything/DA3-BASE",
+      "views": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolution": 308,
+      "reference_strategy": "first",
+      "inference_seconds": 18.13123255300161,
+      "peak_rss_mib": 2011.9765625,
+      "parameters": 135366599,
+      "rotation_step_range_degrees": [
+        3.6540915966033936,
+        124.42365264892578
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "e01067dc1659613083d9145a9a2547ccdbe6ccbbf83c4fe7b3e8a4e2bdae78b5"
+    },
+    {
+      "run": "base_balanced",
+      "model": "depth-anything/DA3-BASE",
+      "views": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolution": 308,
+      "reference_strategy": "saddle_balanced",
+      "inference_seconds": 16.757588890002808,
+      "peak_rss_mib": 1984.43359375,
+      "parameters": 135366599,
+      "rotation_step_range_degrees": [
+        2.3216986656188965,
+        156.53807067871094
+      ],
+      "geometry_status": "not a complete-asset success; full-orbit cases rejected for detached/duplicated surfaces",
+      "checkpoint_sha256": "e01067dc1659613083d9145a9a2547ccdbe6ccbbf83c4fe7b3e8a4e2bdae78b5"
+    }
+  ],
+  "versions": {
+    "torch": "2.6.0+cpu",
+    "torchvision": "0.21.0+cpu",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.10.8",
+    "safetensors": "0.8.0",
+    "einops": "0.8.2",
+    "omegaconf": "2.4.0",
+    "addict": "2.4.0",
+    "opencv-python-headless": "5.0.0.93",
+    "imageio": "2.38.1",
+    "tqdm": "4.70.1"
+  }
+}

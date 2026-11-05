@@ -63,3 +63,59 @@ The 14-of-16 candidate was selected for best mean image-space agreement. It had 
 - If testing a GIF input becomes supported, compare a locked-pose orbit against the static atlas and score the resulting mesh, not the apparent animation smoothness.
 
 No learned-model result is claimed yet. Additional rounds should append actual commands/configuration, source/model versions, input hashes, test results, observed failures and whether another ImageGen call was used.
+
+## Round 3 · Resolution and numerical robustness controls
+
+Reused the original sheet; **no new ImageGen call**. Increased the field from 80³ to 128³ and expanded tolerance comparisons through four contradictory views.
+
+- An early 128³ run exposed exact-zero and float32-coordinate degeneracies in marching tetrahedra. Exact level samples now use one shared vertex; coincident float32 positions are welded and only truly collapsed faces are removed. The repaired mesh has zero boundary/nonmanifold edges.
+- Voxel-footprint rasterization previously left sparse diagonal gaps at some image/voxel resolution ratios. It now uses camera-basis-aware conservative footprints.
+- That proxy can rank tolerances differently from actual mesh masks. At 128³ it selected one allowed miss, whose actual mean IoU was 0.840205. The explicitly evaluated two-miss mesh reached 0.848718. Added `--fixed-misses` so measured comparisons do not silently rely on the proxy winner.
+- Matched comparison: 256×256 working and render images, exactly two misses, same source and cameras. 80³: 53,634 vertices / 107,276 triangles, mean actual IoU 0.846542, worst 0.760403. 128³: 143,776 vertices / 287,584 triangles, mean 0.848718, worst 0.770334.
+- The approximately 2.7× triangle count buys only about 0.0022 mean overlap in this comparison. Extra resolution is not a solution to missing/contradictory geometric evidence.
+- Added an executable end-to-end test for mesh export, real depth maps, GIF generation, caller-attested provenance and refusal to overwrite results. Added exact-level and float32-weld regressions.
+
+[Higher-resolution output comparison](docs/experiments/02-resolution-control/reference-vs-mesh.png) · [Turntable](docs/experiments/02-resolution-control/turntable.gif)
+
+## Round 4 · Software-predicted depth and pose on the original turnaround
+
+Reused the original sheet; **no new ImageGen call**. Ran official Depth Anything 3 Small/Base on CPU, not image-generated depth. Six controls varied view count, input resolution, model size and reference selection.
+
+- Small 16×308²: 6.399 seconds inference, 1156.4 MiB peak process RSS.
+- Small 16×504²: 25.855 seconds, 1985.6 MiB.
+- Base 16×308², first reference: 18.131 seconds, 2012.0 MiB.
+- Base 16×308², automatic reference: 16.758 seconds, 1984.4 MiB.
+- Every full-orbit raw cloud showed detached/duplicated surfaces and severe pose inconsistencies. Increased resolution/model size and automatic reference selection did not repair the orbit.
+- These runs establish practical CPU inference, not successful full-mesh reconstruction. Predicted rotations are not ground-truth errors because the source cameras are uncalibrated.
+- The raw fusion is rejected. Software depth may still be useful as confidence-gated constraints on one shared mesh with an explicit camera model.
+
+Exact revisions, licenses, hashes, setup, controls and measured results: [learned-depth experiment](experiments/learned_depth/README.md). [Research survey](docs/research.md).
+
+![Rejected full-orbit learned-depth cloud](docs/experiments/03-learned-depth/small-308-rejected.png)
+
+## Round 5 · One atlas with above/below camera bands
+
+A second ImageGen call produced a single 1774×887, 8-column×4-row atlas. The first sixteen cells request a full orbit at +15° elevation; the next sixteen request the matching orbit at −15°. It contains part colors, visible wireframe and vertex-like dots. These marks are not decoded 3D vertices.
+
+- Reconstructed upper-only, lower-only and combined views from the same atlas, with no per-view recentering/scaling and no manual geometry.
+- Used 80³ fields, 192×192 masks/renders, and the same 12.5% miss tolerance: 2/16 for each single band, 4/32 combined.
+- All three meshes have zero counted boundary or nonmanifold edges. Combined mesh: 47,684 vertices / 95,372 triangles.
+- Upper-only fitted-band mean IoU: 0.806490. Its held-out lower-band score: 0.782265. Across all 32 views: 0.794378.
+- Lower-only fitted-band mean IoU: 0.806622. Its held-out upper-band score: 0.764792. Across all 32 views: 0.785707.
+- Combined mean IoU: 0.789783; worst view 0.650234. This is below the upper-only mesh's all-view score, so the additional constraints did not improve this controlled result.
+- Visual inspection shows a recognizable but smeared lion, inconsistent rear/front transitions and uncertain camera spacing/elevation. Requested angles are not measured angles. Parts and character design also differ from the original atlas, so this is not a pure same-character comparison to Round 1.
+- Added explicit camera manifests, multiple elevation bands, source-index-preserving subset tests, paired-band turntables and cross-view validation. Blender's Python exit code is explicitly set so render-script errors cannot masquerade as success.
+
+![Above/below reference and actual mesh](docs/experiments/04-dual-elevation/reference-vs-mesh.png)
+
+[Input](docs/experiments/04-dual-elevation/input.png) · [Synchronized actual-mesh turntables](docs/experiments/04-dual-elevation/turntable-bands.gif)
+
+## Clarification · Software depth, not painted depth
+
+A proposed paired RGB/generated-depth sheet was superseded by the clarified objective: run **software depth estimation on the original turnaround**, and associate it with the same actual shared-mesh vertices. Generated grayscale values are not the requested depth source. No generated-depth reconstruction is accepted or claimed. One such input had already been generated; it is preserved as [an abandoned input](docs/experiments/05-abandoned-generated-depth/README.md), not a successful test. Total generation calls through this point: three, of which two supplied reconstruction inputs and one was abandoned.
+
+Next: validate calibration/visibility/confidence for software-predicted depth before allowing it to deform the common mesh. Preserve vertex IDs in that mesh; do not claim identity correspondence for dots invented in separate source drawings.
+
+## Published experiment evidence
+
+Source and output visuals are versioned under [docs/experiments](docs/experiments), with hashes in [assets.json](docs/experiments/assets.json). Images and animated previews are included; mesh files, model weights, raw large arrays, environments and unrelated data are excluded. Machine-readable results and concise failed-experiment records are part of the journal, not just favorable screenshots.

@@ -1,0 +1,12 @@
+# Install official CPU torch==2.6.0 and torchvision==0.21.0 separately.
+numpy>=1.24
+scipy>=1.10
+Pillow>=9.5
+matplotlib>=3.7
+safetensors==0.8.0
+einops==0.8.2
+omegaconf==2.4.0
+addict==2.4.0
+opencv-python-headless==5.0.0.93
+imageio==2.38.1
+tqdm==4.70.1
