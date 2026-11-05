@@ -1,0 +1,16 @@
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "mjpeg",
+            "pix_fmt": "yuvj420p",
+            "r_frame_rate": "12/1",
+            "nb_frames": "64"
+        }
+    ]
+}

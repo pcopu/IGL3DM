@@ -330,3 +330,17 @@ Parameterized, import-safe measurement/reconstruction helpers and fresh-output p
 [Measured frames](docs/experiments/19-video-grid/input-frames.png) · [Software cell IDs](docs/experiments/19-video-grid/software-tagged-cells.png) · [Actual candidate mesh](docs/experiments/19-video-grid/candidate-turntable.gif) · [All versus conditionally supported quads](docs/experiments/19-video-grid/all-vs-supported.gif) · [Reproduction and full numerical record](experiments/video_grid/README.md)
 
 Final source rerun reproduces all three full geometry artifacts byte-for-byte. Verification: 27 main + 27 classical + 2 quad-shape + 5 retained square-tilt tests pass. The endpoint-exclusion fixture corrupts sample 96 and confirms that it cannot alter the fitted point.
+
+## Round 20 · Denser temporal sampling on the same known analytic control
+
+Completed one matched 256-frame control, then stopped it. This is an evaluation fixture, not a manually modeled target or generated-object reconstruction. The shared renderer/tracker source and original 64-frame results remain unchanged. All 64 common-angle PNG pixel arrays match exactly; both encoded videos use MJPEG/yuvj420p. All 256 genuine frames are decoded in order at 30 fps, without interpolation or downsampling.
+
+- Across tracks lasting at least three samples, the 64-frame control has 200 correct / 599 known-wrong / 7 unresolved identities. The 256-frame control has 1,380 correct / 38 known-wrong / 501 unresolved.
+- Require at least 30° nominal angular span: 64 gives 43 correct / 357 wrong / 5 unresolved of 405; 256 gives 492 correct / 1 wrong / 155 unresolved of 648.
+- Among those long-span tracks passing all available held-out residuals ≤3 pixels, 64 gives 27 correct / 83 wrong / 1 unresolved of 111; 256 gives 391 correct / 1 wrong / 124 unresolved of 516. The denser control still has one known false pass and 24.03% unresolved passes. Resolved-only precision would conceal that uncertainty.
+- The true correct long-span subset triangulates at median error 0.01008, p95 0.02018 in a known fixture of height 2.4. Known cameras and vertices are evaluation-only and never supply the real clip's geometry.
+- This is not clean isolation of frame cadence: unchanged reseeding every five frames changes angular seeding from 28.125° to 7.03125°. Playback duration also differs, though the tracker uses adjacent images rather than time-scaled velocity. Nearest-visible-vertex truth association can be ambiguous at silhouettes. No default tracker change is made yet.
+
+Added fresh-directory reproduction and import-safe CLI evaluators. Replaying both evaluators reproduces all reported summary fields exactly; the classical suite now passes 28 tests. This supports improving temporal correspondence, not treating a low residual or denser video as identity proof. Source, input/track previews and compact summaries are retained without videos, models, raw coordinates or render truth.
+
+[Known rendered input](docs/experiments/20-temporal-cadence/known-control-input.png) · [256-frame tracking](docs/experiments/20-temporal-cadence/256-tracking.png) · [64-frame tracking](docs/experiments/20-temporal-cadence/64-tracking.png) · [Controls, uncertainty and reproduction](experiments/cadence/README.md)

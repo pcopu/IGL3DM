@@ -1,0 +1,31 @@
+{
+  "source_sha256": {
+    "render_known_pear.py": "066eafefafa5e7c2bd3f8b8ddf4c556e1f87f86e0fca5783da92d78b919c619c",
+    "video_tracks.py": "806d319094fb4e9dd037d50314fe71d60228a51ee72e6a811c8428b8cb262cb0",
+    "grid_tracks.py": "f57ef57954fd5398287132ee5b17891c8422d515dfa5cb9a79031e9d35a77b2b",
+    "geometry.py": "0d3f73de359429811e3d50e27d4fec11483749c14a07a3f10c2becc1e8c02d10"
+  },
+  "source_unchanged_from_shared": {
+    "render_known_pear.py": true,
+    "video_tracks.py": true,
+    "grid_tracks.py": true,
+    "geometry.py": true
+  },
+  "common_angles_png_byte_identical_count": 0,
+  "common_angles_tested": 64,
+  "all_256_source_frame_indices_in_order": true,
+  "first_timestamp": 0.0,
+  "last_timestamp": 8.5,
+  "frame_count": 256,
+  "versions": {
+    "opencv": "5.0.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pillow": "13.0.0"
+  },
+  "unused_setup": "An initial H264 encode and separate cv2 install were not used for any evaluated tracking; evaluated video is control_video.avi (OpenCV MJPG as in64 control).",
+  "common_angles_pixel_identical_count": 64,
+  "common_angles_max_pixel_difference": 0.0,
+  "evaluator_portability_changes": "Explicit control-directory/output CLI, import safety and fresh-output check; all summary fields reproduce exactly.",
+  "main_checkout_summary_regression_exact": true
+}
