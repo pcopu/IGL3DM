@@ -1,0 +1,32 @@
+{
+  "paired_validation_before_px": {
+    "n": 68,
+    "mean": 23.26436556437051,
+    "median": 9.029113937275145,
+    "p95": 99.67046452811854,
+    "max": 121.46805122034634
+  },
+  "paired_validation_after_px": {
+    "n": 68,
+    "mean": 18.159290120595045,
+    "median": 7.9226938892862755,
+    "p95": 61.09142189540861,
+    "max": 138.1857336214712
+  },
+  "common_validation_tracks": 63,
+  "status": "iteration_limit_or_unconverged",
+  "optimizer_success": false,
+  "optimizer_message": "The maximum number of function evaluations is exceeded.",
+  "function_evaluations": 150,
+  "training_tracks": 235,
+  "validation_tracks": 70,
+  "prior_weight": 1.0,
+  "calibration_training_reprojection_px": {
+    "n": 796,
+    "mean": 9.002255450257968,
+    "median": 1.942411471988096,
+    "p95": 43.44192886554489,
+    "max": 244.54324023846922
+  },
+  "used_for_exported_mesh": false
+}

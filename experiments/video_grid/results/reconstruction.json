@@ -1,0 +1,97 @@
+{
+  "candidate_points_with_at_least_30deg_nominal_span": 1072,
+  "points_passing_train_and_heldout_3px": 335,
+  "points_at_least_90deg_span": 473,
+  "passing_points_at_least_90deg_span": 63,
+  "quad_faces_seen_in_at_least_two_sampled_views": 252,
+  "faces_with_all_corners_conditional_pass": 11,
+  "training_reprojection_px": {
+    "n": 20488,
+    "mean": 8.130780068549631,
+    "median": 1.7593864237589263,
+    "p95": 42.66574895135277,
+    "max": 243.93355586920975
+  },
+  "heldout_observation_px": {
+    "n": 5383,
+    "mean": 9.804904061712797,
+    "median": 2.4581556598433703,
+    "p95": 59.160147762553464,
+    "max": 238.6931975023814
+  },
+  "per_track_heldout_median_px": {
+    "n": 986,
+    "mean": 5.1138974026914585,
+    "median": 2.2823804351573913,
+    "p95": 11.573372704235203,
+    "max": 130.35418123231506
+  },
+  "view_audit": [
+    {
+      "view": 0,
+      "sample": 0,
+      "detected_quads": 218,
+      "tracked_candidate_cells": 96
+    },
+    {
+      "view": 1,
+      "sample": 12,
+      "detected_quads": 273,
+      "tracked_candidate_cells": 159
+    },
+    {
+      "view": 2,
+      "sample": 24,
+      "detected_quads": 286,
+      "tracked_candidate_cells": 129
+    },
+    {
+      "view": 3,
+      "sample": 36,
+      "detected_quads": 259,
+      "tracked_candidate_cells": 110
+    },
+    {
+      "view": 4,
+      "sample": 48,
+      "detected_quads": 226,
+      "tracked_candidate_cells": 108
+    },
+    {
+      "view": 5,
+      "sample": 60,
+      "detected_quads": 230,
+      "tracked_candidate_cells": 101
+    },
+    {
+      "view": 6,
+      "sample": 72,
+      "detected_quads": 248,
+      "tracked_candidate_cells": 85
+    },
+    {
+      "view": 7,
+      "sample": 84,
+      "detected_quads": 237,
+      "tracked_candidate_cells": 107
+    }
+  ],
+  "period_frames_prior": 96,
+  "original_frame_offset": 14,
+  "holdout_centers": [
+    12,
+    36,
+    60,
+    84
+  ],
+  "holdout_radius": 2,
+  "decoded_measurement_samples": 97,
+  "camera_status": "Nominal full-turn level orthographic prior: 360deg in 96 sample intervals. Not calibrated. Intrinsic scale is a gauge.",
+  "holdout": "Blocks with radius 2 centered at [12, 36, 60, 84] excluded from point fits. Samples >= 96 excluded as endpoints. Tracking used all frames; feature selection not held out.",
+  "limitations": [
+    "Grid identity remains unverified; smooth periodic swaps can pass geometric tests.",
+    "Shape/grid warping or varying camera intrinsics can invalidate triangulation.",
+    "Only observed shared quad connectivity is assembled; no hidden faces or learned completion.",
+    "The presentation crossfade was never used for measurement."
+  ]
+}

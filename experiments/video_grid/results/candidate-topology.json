@@ -1,0 +1,23 @@
+{
+  "input_vertices": 1072,
+  "vertices_used_by_faces": 383,
+  "unused_candidate_points": 689,
+  "display_triangles": 504,
+  "face_connected_components_by_shared_vertex": 5,
+  "component_used_vertex_counts_descending": [
+    367,
+    4,
+    4,
+    4,
+    4
+  ],
+  "boundary_edges": 265,
+  "nonmanifold_edges": 1,
+  "zero_area_display_triangles": 0,
+  "watertight_edge_incidence": false,
+  "surface_winding_orientability_checked": false,
+  "self_intersections_checked": false,
+  "notes": "Counts only; no coordinate, winding, connectivity or surface repair.",
+  "observed_quads": 252,
+  "vertex_coordinates_changed": false
+}

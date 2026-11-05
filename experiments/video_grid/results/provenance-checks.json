@@ -1,0 +1,21 @@
+{
+  "verified_tracker": {
+    "sample_count": 97,
+    "reported_fps": 24.002416480396302,
+    "timestamp_source": "decoder_pts",
+    "track_count": 2323,
+    "track_count_at_least_3_samples": 1552,
+    "last_timestamp_seconds": 4.0,
+    "fps_from_median_pts_spacing": 24.00000000000002
+  },
+  "candidate_points_byte_identical": true,
+  "candidate_faces_byte_identical": true,
+  "candidate_mesh_byte_identical": true,
+  "camera_observation_geometry_identical": true,
+  "camera_records_only_terminal_metadata_changes": 89,
+  "terminal_original_frame110_excluded": true,
+  "original_upload_and_audio_published": false,
+  "first_original_frame_used": 14,
+  "last_original_frame_used": 109,
+  "main_checkout_final_source_rerun_byte_identical": true
+}

@@ -4,6 +4,8 @@
 
 This repository now contains a working CPU baseline, regression tests, and an experiment journal in [process.md](process.md). It does **not** claim exact reconstruction or a solved image-to-3D system.
 
+**Current research focus:** classical reconstruction from detected grid cells and temporal corner tracks, with no learned depth or neural shape prior in the pear experiments. The silhouette pipeline below is an outer-envelope control, not square-derived reconstruction. [Video-grid candidates](experiments/video_grid/README.md) now yield a recognizable partial surface, but only 11 of 252 quads pass the stronger conditional checks. [Static-grid experiments](experiments/pear_grid/README.md) and [square-distortion mathematics](experiments/square_shape/README.md) retain their failed controls. Earlier learned-model comparisons remain archived for comparison, not the current target method.
+
 ## What actually runs today
 
 1. Generate one 4×4 atlas of a character at 16 yaw angles, 22.5° apart.
@@ -85,7 +87,7 @@ Raw depth/XYZ are generated **from the inferred mesh**. They make that mesh meas
 
 ## Research direction
 
-Compare this measured baseline with licensed learned multiview depth/pose and image-to-3D systems, within the available machine's CPU/RAM/GPU constraints. Preserve the same generated input when comparing software methods. Only regenerate when testing a specific input hypothesis, and record the prompt, call count, outcome and limitation. Research candidates are not results until they have actually run and been inspected.
+Prioritize identifiable grid geometry, temporal correspondence, camera calibration and independently checked mathematical reconstruction. Preserve the same generated input when comparing software methods. Only regenerate when testing a specific input hypothesis, and record the prompt, call count, outcome and limitation. Known rendered controls measure false correspondence, not just low reprojection error. Research candidates are not results until they have actually run and been inspected.
 
 Every meaningful round belongs in [process.md](process.md). Source changes, tests and concise result summaries are committed. Each recorded test includes selected generated input and output PNG/GIF visuals under `docs/experiments/`. Mesh files, weights, large raw arrays and machine-local runtime artifacts stay under ignored `runs/`; model binaries are not published. Never commit credentials, private user data or unrelated diagnostics.
 

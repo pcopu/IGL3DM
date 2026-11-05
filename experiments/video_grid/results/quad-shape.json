@@ -1,0 +1,39 @@
+{
+  "all_faces": {
+    "faces": 252,
+    "edge_length_ratio": {
+      "median": 1.426351781851407,
+      "p95": 2.2862494002754357,
+      "max": 2.9795589579746156
+    },
+    "edge_length_cv": {
+      "median": 0.15047126796658516,
+      "p95": 0.36051312886958015,
+      "max": 0.4249604295673098
+    },
+    "best_fit_plane_rms_fraction_mean_edge": {
+      "median": 0.019028478704022973,
+      "p95": 0.11961681804424512,
+      "max": 0.23949679750659864
+    }
+  },
+  "conditional_faces": {
+    "faces": 11,
+    "edge_length_ratio": {
+      "median": 1.8626017319855308,
+      "p95": 2.3451424315450544,
+      "max": 2.36737640480866
+    },
+    "edge_length_cv": {
+      "median": 0.25793639485565395,
+      "p95": 0.3949158261451886,
+      "max": 0.4015426039705668
+    },
+    "best_fit_plane_rms_fraction_mean_edge": {
+      "median": 0.01141051372220811,
+      "p95": 0.025043457641331708,
+      "max": 0.026772714124235132
+    }
+  },
+  "notes": "Diagnostic only. Drawn cells are not guaranteed equal physical squares or planar. No acceptance threshold applied; no geometry changed."
+}
