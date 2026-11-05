@@ -1,0 +1,248 @@
+{
+  "baseline": {
+    "all_at_least_3": {
+      "tracks": 960,
+      "identity": {
+        "unresolved_detection_or_drift": 45,
+        "correct": 878,
+        "wrong_identity": 37
+      },
+      "correct_fraction_all": 0.9145833333333333,
+      "heldout_evaluated": 559,
+      "heldout_unevaluated": 401,
+      "heldout_passes": 557,
+      "passing_identity": {
+        "correct": 509,
+        "unresolved_detection_or_drift": 25,
+        "wrong_identity": 23
+      },
+      "heldout_observation_error_px": {
+        "n": 629,
+        "mean": 0.2510852362886734,
+        "median": 0.13432313167156135,
+        "p95": 0.781644646810093,
+        "max": 3.702994296468468
+      },
+      "correct_3d_error": {
+        "n": 878,
+        "mean": 0.0100378256174176,
+        "median": 0.008286715464390935,
+        "p95": 0.02066758907799668,
+        "max": 0.08864052093817773
+      }
+    },
+    "span_at_least_30": {
+      "tracks": 612,
+      "identity": {
+        "correct": 556,
+        "unresolved_detection_or_drift": 27,
+        "wrong_identity": 29
+      },
+      "correct_fraction_all": 0.9084967320261438,
+      "heldout_evaluated": 495,
+      "heldout_unevaluated": 117,
+      "heldout_passes": 493,
+      "passing_identity": {
+        "correct": 449,
+        "unresolved_detection_or_drift": 21,
+        "wrong_identity": 23
+      },
+      "heldout_observation_error_px": {
+        "n": 565,
+        "mean": 0.25900887257869804,
+        "median": 0.13286045093684826,
+        "p95": 0.8772809614685599,
+        "max": 3.702994296468468
+      },
+      "correct_3d_error": {
+        "n": 556,
+        "mean": 0.008511736740733274,
+        "median": 0.007662860782109503,
+        "p95": 0.015570477356662185,
+        "max": 0.028184565048421702
+      }
+    }
+  },
+  "graph_segments": {
+    "all_at_least_3": {
+      "tracks": 553,
+      "identity": {
+        "correct": 544,
+        "wrong_identity": 6,
+        "unresolved_detection_or_drift": 3
+      },
+      "correct_fraction_all": 0.9837251356238698,
+      "heldout_evaluated": 248,
+      "heldout_unevaluated": 305,
+      "heldout_passes": 245,
+      "passing_identity": {
+        "correct": 242,
+        "unresolved_detection_or_drift": 3
+      },
+      "heldout_observation_error_px": {
+        "n": 248,
+        "mean": 0.10859919982887091,
+        "median": 0.05289347679351263,
+        "p95": 0.15081995351047786,
+        "max": 4.181729739400744
+      },
+      "correct_3d_error": {
+        "n": 544,
+        "mean": 0.008588350563220696,
+        "median": 0.007316094072596618,
+        "p95": 0.01780462442179011,
+        "max": 0.03240632761792933
+      }
+    },
+    "span_at_least_30": {
+      "tracks": 272,
+      "identity": {
+        "correct": 266,
+        "wrong_identity": 4,
+        "unresolved_detection_or_drift": 2
+      },
+      "correct_fraction_all": 0.9779411764705882,
+      "heldout_evaluated": 186,
+      "heldout_unevaluated": 86,
+      "heldout_passes": 183,
+      "passing_identity": {
+        "correct": 181,
+        "unresolved_detection_or_drift": 2
+      },
+      "heldout_observation_error_px": {
+        "n": 186,
+        "mean": 0.12274722614649099,
+        "median": 0.0524659011549684,
+        "p95": 0.15035822481491604,
+        "max": 4.181729739400744
+      },
+      "correct_3d_error": {
+        "n": 266,
+        "mean": 0.007931253913665743,
+        "median": 0.006972323535909469,
+        "p95": 0.015466367814453841,
+        "max": 0.0216025210540142
+      }
+    }
+  },
+  "trajectory1": {
+    "all_at_least_3": {
+      "tracks": 539,
+      "identity": {
+        "correct": 519,
+        "unresolved_detection_or_drift": 20
+      },
+      "correct_fraction_all": 0.9628942486085343,
+      "heldout_evaluated": 428,
+      "heldout_unevaluated": 111,
+      "heldout_passes": 428,
+      "passing_identity": {
+        "correct": 414,
+        "unresolved_detection_or_drift": 14
+      },
+      "heldout_observation_error_px": {
+        "n": 489,
+        "mean": 0.1599088963436769,
+        "median": 0.11538831550156968,
+        "p95": 0.49219267068262634,
+        "max": 1.0666498242720088
+      },
+      "correct_3d_error": {
+        "n": 519,
+        "mean": 0.008299411272475165,
+        "median": 0.007490664547792691,
+        "p95": 0.014911758342358264,
+        "max": 0.028184565048421702
+      }
+    },
+    "span_at_least_30": {
+      "tracks": 539,
+      "identity": {
+        "correct": 519,
+        "unresolved_detection_or_drift": 20
+      },
+      "correct_fraction_all": 0.9628942486085343,
+      "heldout_evaluated": 428,
+      "heldout_unevaluated": 111,
+      "heldout_passes": 428,
+      "passing_identity": {
+        "correct": 414,
+        "unresolved_detection_or_drift": 14
+      },
+      "heldout_observation_error_px": {
+        "n": 489,
+        "mean": 0.1599088963436769,
+        "median": 0.11538831550156968,
+        "p95": 0.49219267068262634,
+        "max": 1.0666498242720088
+      },
+      "correct_3d_error": {
+        "n": 519,
+        "mean": 0.008299411272475165,
+        "median": 0.007490664547792691,
+        "p95": 0.014911758342358264,
+        "max": 0.028184565048421702
+      }
+    }
+  },
+  "combined_fixed": {
+    "all_at_least_3": {
+      "tracks": 268,
+      "identity": {
+        "correct": 266,
+        "unresolved_detection_or_drift": 2
+      },
+      "correct_fraction_all": 0.9925373134328358,
+      "heldout_evaluated": 183,
+      "heldout_unevaluated": 85,
+      "heldout_passes": 183,
+      "passing_identity": {
+        "correct": 181,
+        "unresolved_detection_or_drift": 2
+      },
+      "heldout_observation_error_px": {
+        "n": 183,
+        "mean": 0.0584188651468249,
+        "median": 0.05209645506157647,
+        "p95": 0.12037825101316109,
+        "max": 0.28587588405291164
+      },
+      "correct_3d_error": {
+        "n": 266,
+        "mean": 0.007931253913665743,
+        "median": 0.006972323535909469,
+        "p95": 0.015466367814453841,
+        "max": 0.0216025210540142
+      }
+    },
+    "span_at_least_30": {
+      "tracks": 268,
+      "identity": {
+        "correct": 266,
+        "unresolved_detection_or_drift": 2
+      },
+      "correct_fraction_all": 0.9925373134328358,
+      "heldout_evaluated": 183,
+      "heldout_unevaluated": 85,
+      "heldout_passes": 183,
+      "passing_identity": {
+        "correct": 181,
+        "unresolved_detection_or_drift": 2
+      },
+      "heldout_observation_error_px": {
+        "n": 183,
+        "mean": 0.0584188651468249,
+        "median": 0.05209645506157647,
+        "p95": 0.12037825101316109,
+        "max": 0.28587588405291164
+      },
+      "correct_3d_error": {
+        "n": 266,
+        "mean": 0.007931253913665743,
+        "median": 0.006972323535909469,
+        "p95": 0.015466367814453841,
+        "max": 0.0216025210540142
+      }
+    }
+  }
+}

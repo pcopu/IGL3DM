@@ -1,0 +1,26 @@
+{
+  "frames": 96,
+  "actual_timestamps_first_last": [
+    0.0,
+    3.958333333333333
+  ],
+  "source_frame_indices_exact": true,
+  "reported_fps": 24.0,
+  "all_common_angle_pixels_identical_to_64": true,
+  "common_angles_checked": 32,
+  "renderer_hash": "066eafefafa5e7c2bd3f8b8ddf4c556e1f87f86e0fca5783da92d78b919c619c",
+  "unchanged_renderer": true,
+  "distinct_known_surface_vertices_visible_somewhere": 737,
+  "unique_physical_coverage": {
+    "baseline": {
+      "unique_correct_physical_vertices_with_long_track": 462
+    },
+    "graph_segments": {
+      "unique_correct_physical_vertices_with_long_track": 258
+    },
+    "combined_fixed": {
+      "unique_correct_physical_vertices_with_long_track": 258
+    }
+  },
+  "note": "Physical-vertex coverage uses known control truth after selection only. Track counts can exceed distinct vertex counts because tracks split/reseed."
+}

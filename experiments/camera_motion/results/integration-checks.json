@@ -1,0 +1,7 @@
+{
+  "candidate_points_byte_identical": true,
+  "candidate_faces_byte_identical": true,
+  "experimental_ply_byte_identical": true,
+  "no_coordinate_changes_for_turntable": true,
+  "turntable_is_not_calibrated_input_reprojection": true
+}

@@ -1,0 +1,88 @@
+{
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "nfev": 4,
+  "initial_camera": {
+    "period_frames": 95.99999999999999,
+    "elevation_deg": 0.0,
+    "roll_deg": 0.0,
+    "horizontal_center_px": 256.0,
+    "vertical_center_px": 256,
+    "scale_px_per_unit": 256
+  },
+  "estimated_camera": {
+    "period_frames": 94.76967163747065,
+    "elevation_deg": 0.06715502802346424,
+    "roll_deg": -0.0156262619630152,
+    "horizontal_center_px": 256.33087910430595,
+    "vertical_center_px": 256,
+    "scale_px_per_unit": 256
+  },
+  "parameter_vector": [
+    4.551449438639873,
+    0.0011720763482785108,
+    -0.0002727297210337676,
+    256.33087910430595
+  ],
+  "minimum_calibration_samples": 16,
+  "calibration_track_count": 82,
+  "validation_track_count": 15,
+  "calibration_residual_px": {
+    "n": 1526,
+    "mean": 0.18769192807210458,
+    "median": 0.056429780833111676,
+    "p95": 0.16752579360668804,
+    "max": 8.000050211874886
+  },
+  "validation_before": {
+    "endpoint_observation_errors_px": {
+      "n": 152,
+      "mean": 0.08817624570207674,
+      "median": 0.06465696404960225,
+      "p95": 0.2289611863063873,
+      "max": 0.40930323959560017
+    },
+    "per_track_endpoint_median_px": {
+      "n": 15,
+      "mean": 0.08349074133195254,
+      "median": 0.05964651381031195,
+      "p95": 0.19806319364409622,
+      "max": 0.2071392361121225
+    }
+  },
+  "validation_after": {
+    "endpoint_observation_errors_px": {
+      "n": 152,
+      "mean": 0.11853472688828111,
+      "median": 0.09003693620868147,
+      "p95": 0.2944775391420342,
+      "max": 0.5976017933431147
+    },
+    "per_track_endpoint_median_px": {
+      "n": 15,
+      "mean": 0.09750228762509044,
+      "median": 0.08631203135255561,
+      "p95": 0.16664057332377705,
+      "max": 0.19157211963912316
+    }
+  },
+  "all_tracks_conditional": {
+    "endpoint_observation_errors_px": {
+      "n": 1974,
+      "mean": 0.20260321982455887,
+      "median": 0.07763945650214885,
+      "p95": 0.2581887112635701,
+      "max": 18.55550107647934
+    },
+    "per_track_endpoint_median_px": {
+      "n": 272,
+      "mean": 0.16659914182847876,
+      "median": 0.07792466911903842,
+      "p95": 0.18918218810169413,
+      "max": 7.598943211453956
+    }
+  },
+  "assumptions": "One constant-speed rigid orthographic turn, constant elevation/roll/framing. Track identities unverified. Variable speed, perspective or deformation can invalidate this model.",
+  "holdout": "20% deterministic track identities never fit camera parameters. Their middle-half point observations fit point position; endpoint quarters test it. Image graph selection used all frames.",
+  "truth_or_shape_consumed": false
+}

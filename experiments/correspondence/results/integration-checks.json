@@ -1,0 +1,8 @@
+{
+  "real_selected_tracks_byte_identical": true,
+  "real_selection_and_audit_json_byte_identical": true,
+  "matched96_summary_all_fields_exact": true,
+  "patch_evaluation_all_fields_exact": true,
+  "truth_read_by_image_only_selection": false,
+  "candidate_coordinates_changed_by_selection": false
+}

@@ -1,0 +1,14 @@
+{
+  "original_track_count": 2323,
+  "original_tracks_at_least_3": 1552,
+  "graph_supported_segments_at_least_3": 516,
+  "graph_segments_at_least_30deg": 292,
+  "final_conditional_segments": 23,
+  "retained_original_track_ids": 23,
+  "period_frames_prior": 96,
+  "camera_assumptions": "Level orthographic full-turn orbit with fixed image framing. Period is a prior, not recovered calibration.",
+  "selection": "Unique visible graph corner, persistent four-ID cell and two edge neighbors; break gaps. Then>=9observations and>=30degrees prior span, middle-half trajectory fit plus endpoint-quarter prediction p95<=1normalized pixel.",
+  "truth_used": false,
+  "source_coordinates_changed": false,
+  "reprojection_is_not_identity_proof": true
+}

@@ -1,0 +1,241 @@
+{
+  "64": {
+    "whole": {
+      "all_at_least_3": {
+        "tracks": 102,
+        "identity": {
+          "correct": 36,
+          "wrong_identity": 66
+        },
+        "correct_fraction_all": 0.35294117647058826,
+        "heldout_evaluated": 36,
+        "heldout_unevaluated": 66,
+        "heldout_passes": 4,
+        "passing_identity": {
+          "wrong_identity": 2,
+          "correct": 2
+        },
+        "heldout_observation_error_px": {
+          "n": 43,
+          "mean": 9.99823642031228,
+          "median": 7.013591665263444,
+          "p95": 26.043188009676417,
+          "max": 42.639747435698816
+        },
+        "correct_3d_error": {
+          "n": 36,
+          "mean": 0.009989567004252277,
+          "median": 0.007710346833395924,
+          "p95": 0.02190047183908038,
+          "max": 0.025386941554540354
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 37,
+        "identity": {
+          "wrong_identity": 33,
+          "correct": 4
+        },
+        "correct_fraction_all": 0.10810810810810811,
+        "heldout_evaluated": 30,
+        "heldout_unevaluated": 7,
+        "heldout_passes": 3,
+        "passing_identity": {
+          "wrong_identity": 2,
+          "correct": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 37,
+          "mean": 10.196529702095146,
+          "median": 6.918879960935744,
+          "p95": 28.930558828491183,
+          "max": 42.639747435698816
+        },
+        "correct_3d_error": {
+          "n": 4,
+          "mean": 0.009882757769756244,
+          "median": 0.007900871950980944,
+          "p95": 0.016568015818737854,
+          "max": 0.01805181408370357
+        }
+      }
+    },
+    "segments": {
+      "all_at_least_3": {
+        "tracks": 343,
+        "identity": {
+          "correct": 80,
+          "wrong_identity": 262,
+          "unresolved_detection_or_drift": 1
+        },
+        "correct_fraction_all": 0.23323615160349853,
+        "heldout_evaluated": 132,
+        "heldout_unevaluated": 211,
+        "heldout_passes": 16,
+        "passing_identity": {
+          "correct": 6,
+          "wrong_identity": 10
+        },
+        "heldout_observation_error_px": {
+          "n": 138,
+          "mean": 8.31941565524619,
+          "median": 7.431864568348848,
+          "p95": 19.815124726724537,
+          "max": 30.266222495452176
+        },
+        "correct_3d_error": {
+          "n": 80,
+          "mean": 0.008973979672143233,
+          "median": 0.007525235940979464,
+          "p95": 0.02011547183839216,
+          "max": 0.025386941554540354
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 125,
+        "identity": {
+          "wrong_identity": 118,
+          "correct": 7
+        },
+        "correct_fraction_all": 0.056,
+        "heldout_evaluated": 93,
+        "heldout_unevaluated": 32,
+        "heldout_passes": 8,
+        "passing_identity": {
+          "wrong_identity": 7,
+          "correct": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 99,
+          "mean": 8.972556365216283,
+          "median": 7.426273350417884,
+          "p95": 20.88917192524863,
+          "max": 30.266222495452176
+        },
+        "correct_3d_error": {
+          "n": 7,
+          "mean": 0.009913499486076447,
+          "median": 0.008159825650598808,
+          "p95": 0.016914905284322622,
+          "max": 0.01805181408370357
+        }
+      }
+    }
+  },
+  "256": {
+    "whole": {
+      "all_at_least_3": {
+        "tracks": 78,
+        "identity": {
+          "correct": 78
+        },
+        "correct_fraction_all": 1.0,
+        "heldout_evaluated": 19,
+        "heldout_unevaluated": 59,
+        "heldout_passes": 19,
+        "passing_identity": {
+          "correct": 19
+        },
+        "heldout_observation_error_px": {
+          "n": 19,
+          "mean": 0.10194441442618382,
+          "median": 0.0752009406726508,
+          "p95": 0.3302444707312205,
+          "max": 0.40035008116921106
+        },
+        "correct_3d_error": {
+          "n": 78,
+          "mean": 0.011352026060028208,
+          "median": 0.008269683070145865,
+          "p95": 0.024672679809433995,
+          "max": 0.027742445818085174
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 15,
+        "identity": {
+          "correct": 15
+        },
+        "correct_fraction_all": 1.0,
+        "heldout_evaluated": 10,
+        "heldout_unevaluated": 5,
+        "heldout_passes": 10,
+        "passing_identity": {
+          "correct": 10
+        },
+        "heldout_observation_error_px": {
+          "n": 10,
+          "mean": 0.11968430893574075,
+          "median": 0.07578266405025158,
+          "p95": 0.36529727595021577,
+          "max": 0.40035008116921106
+        },
+        "correct_3d_error": {
+          "n": 15,
+          "mean": 0.010597870477280731,
+          "median": 0.007365062880991085,
+          "p95": 0.019201616590884634,
+          "max": 0.020592229634276205
+        }
+      }
+    },
+    "segments": {
+      "all_at_least_3": {
+        "tracks": 861,
+        "identity": {
+          "correct": 853,
+          "unresolved_detection_or_drift": 8
+        },
+        "correct_fraction_all": 0.9907084785133565,
+        "heldout_evaluated": 166,
+        "heldout_unevaluated": 695,
+        "heldout_passes": 166,
+        "passing_identity": {
+          "correct": 165,
+          "unresolved_detection_or_drift": 1
+        },
+        "heldout_observation_error_px": {
+          "n": 166,
+          "mean": 0.05996061539411252,
+          "median": 0.05131343170889652,
+          "p95": 0.13023712297677514,
+          "max": 0.2758319818376301
+        },
+        "correct_3d_error": {
+          "n": 853,
+          "mean": 0.011409939769665547,
+          "median": 0.009714776452318927,
+          "p95": 0.02275803763460545,
+          "max": 0.04217983414924853
+        }
+      },
+      "span_at_least_30": {
+        "tracks": 142,
+        "identity": {
+          "correct": 142
+        },
+        "correct_fraction_all": 1.0,
+        "heldout_evaluated": 85,
+        "heldout_unevaluated": 57,
+        "heldout_passes": 85,
+        "passing_identity": {
+          "correct": 85
+        },
+        "heldout_observation_error_px": {
+          "n": 85,
+          "mean": 0.0671068335402246,
+          "median": 0.060677078010810716,
+          "p95": 0.13408707108516454,
+          "max": 0.1640034202987284
+        },
+        "correct_3d_error": {
+          "n": 142,
+          "mean": 0.010522574164579423,
+          "median": 0.008560461834520154,
+          "p95": 0.021142615394504943,
+          "max": 0.02284215899539947
+        }
+      }
+    }
+  }
+}

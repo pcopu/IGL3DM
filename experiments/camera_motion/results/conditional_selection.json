@@ -1,0 +1,47 @@
+{
+  "real": {
+    "constant": {
+      "selected_count": 18,
+      "selected_with_at_least_16_samples": 3
+    },
+    "variable": {
+      "selected_count": 73,
+      "selected_with_at_least_16_samples": 21
+    },
+    "gate": "All graph-only candidates with at least 9 samples and at least 4 middle-half samples: rank=3, point condition<=20, middle-half training p95<=1px, endpoint quarters p95<=1px, fitted yaw span>=30deg. Calibration min16 eligibility does not restrict this exploratory all-candidate gate. No verification of physical identity.",
+    "min16_only_available_separately": true
+  },
+  "control96": {
+    "constant": {
+      "selected_count": 268,
+      "selected_with_at_least_16_samples": 94,
+      "identity_counts": {
+        "correct": 266,
+        "unresolved_detection_or_drift": 2
+      },
+      "min16_identity_counts": {
+        "correct": 93,
+        "unresolved_detection_or_drift": 1
+      }
+    },
+    "variable": {
+      "selected_count": 257,
+      "selected_with_at_least_16_samples": 94,
+      "identity_counts": {
+        "correct": 255,
+        "unresolved_detection_or_drift": 2
+      },
+      "min16_identity_counts": {
+        "correct": 93,
+        "unresolved_detection_or_drift": 1
+      }
+    },
+    "gate": "All graph-only candidates with at least 9 samples and at least 4 middle-half samples: rank=3, point condition<=20, middle-half training p95<=1px, endpoint quarters p95<=1px, fitted yaw span>=30deg. Calibration min16 eligibility does not restrict this exploratory all-candidate gate. No verification of physical identity.",
+    "min16_only_available_separately": true,
+    "physical_identity_evaluation_method": "Reuse precomputed existing evaluate_selection.py results on these identical graph-only IDs: all observations nearest visible truth vertex within 3px and same physical vertex => correct; all reliable but varying vertex => wrong_identity; otherwise unresolved_detection_or_drift. No refit or new geometry computed.",
+    "added_identity_counts": {},
+    "removed_identity_counts": {
+      "correct": 11
+    }
+  }
+}

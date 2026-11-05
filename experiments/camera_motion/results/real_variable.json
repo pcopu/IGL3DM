@@ -1,0 +1,251 @@
+{
+  "model": "Five PCHIP log-speed knots integrated to monotone yaw; 8 camera parameters total",
+  "knots_fixed_in_advance": 5,
+  "domain_samples": [
+    0.0,
+    96.0
+  ],
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "nfev": 9,
+  "optimizer_cost": 645.8273705302552,
+  "optimizer_optimality": 0.17243013798886653,
+  "initial_parameter_vector": [
+    -2.820055691475046,
+    -2.820055691475046,
+    -2.820055691475046,
+    -2.820055691475046,
+    -2.820055691475046,
+    0.07194449378787658,
+    0.00887382287468388,
+    235.3881137350671
+  ],
+  "parameter_vector": [
+    -3.4196183056184357,
+    -2.69649526153859,
+    -2.713313468642308,
+    -2.838511406927692,
+    -3.377101088922448,
+    0.07625025374037789,
+    0.003707557417166255,
+    244.34270314672847
+  ],
+  "camera": {
+    "log_speed_knots": [
+      -3.4196183056184357,
+      -2.69649526153859,
+      -2.713313468642308,
+      -2.838511406927692,
+      -3.377101088922448
+    ],
+    "knot_samples": [
+      0.0,
+      24.0,
+      48.0,
+      72.0,
+      96.0
+    ],
+    "knot_speed_deg_per_frame": [
+      1.8750000000000007,
+      3.864111235156194,
+      3.799667247301261,
+      3.352530916694467,
+      1.9564387888225359
+    ],
+    "mean_equivalent_period_frames": 109.10745959807983,
+    "elevation_deg": 4.368817726125272,
+    "roll_deg": 0.2124273923060507,
+    "horizontal_center_px": 244.34270314672847,
+    "vertical_center_px": 256,
+    "scale_px_per_unit": 256
+  },
+  "constant_camera": {
+    "period_frames": 105.41793236060873,
+    "elevation_deg": 4.122115853250498,
+    "roll_deg": 0.508432598866034,
+    "horizontal_center_px": 235.3881137350671,
+    "vertical_center_px": 256,
+    "scale_px_per_unit": 256
+  },
+  "fit_input_truth_or_shape": false,
+  "minimum_calibration_samples": 16,
+  "calibration_track_count": 148,
+  "validation_track_count": 35,
+  "calibration_before_px": {
+    "n": 3211,
+    "mean": 1.5776333198373278,
+    "median": 1.1206370891818105,
+    "p95": 4.3810702699478465,
+    "max": 10.719232004142137
+  },
+  "calibration_after_px": {
+    "n": 3211,
+    "mean": 0.5700181596300835,
+    "median": 0.4772169306799,
+    "p95": 1.3859143888635943,
+    "max": 3.1491935639396713
+  },
+  "validation": {
+    "track_count": 35,
+    "endpoint_observation_count": 396,
+    "constant_endpoint_errors_px": {
+      "n": 396,
+      "mean": 2.534981518538903,
+      "median": 1.8462187545019537,
+      "p95": 7.063105230890124,
+      "max": 14.078697793231019
+    },
+    "variable_endpoint_errors_px": {
+      "n": 396,
+      "mean": 1.1328553266595431,
+      "median": 0.8011683063701944,
+      "p95": 3.2128805273038523,
+      "max": 5.111843475214015
+    },
+    "paired_error_change_px": {
+      "n": 396,
+      "mean": -1.4021261918793597,
+      "median": -0.7642839591748516,
+      "p95": 0.5384750585379285,
+      "max": 2.572846689432275
+    },
+    "fraction_observations_improved": 0.7878787878787878,
+    "fraction_tracks_median_improved": 0.8285714285714286,
+    "constant_conditional_pass_1px": 2,
+    "variable_conditional_pass_1px": 9,
+    "constant_condition": {
+      "n": 35,
+      "mean": 5.679361587951923,
+      "median": 5.90737858307163,
+      "p95": 7.381678828282043,
+      "max": 7.381678828282047
+    },
+    "variable_condition": {
+      "n": 35,
+      "mean": 5.607023244855428,
+      "median": 5.372926022636604,
+      "p95": 8.59790071221385,
+      "max": 9.295228111180121
+    }
+  },
+  "all_tracks_conditional": {
+    "track_count": 292,
+    "endpoint_observation_count": 2722,
+    "constant_endpoint_errors_px": {
+      "n": 2722,
+      "mean": 2.4924975249810983,
+      "median": 1.7475934967507163,
+      "p95": 7.168528142747717,
+      "max": 15.334681985888963
+    },
+    "variable_endpoint_errors_px": {
+      "n": 2722,
+      "mean": 0.9961578217493916,
+      "median": 0.6594500191184427,
+      "p95": 3.107117781939313,
+      "max": 5.5520083449576845
+    },
+    "paired_error_change_px": {
+      "n": 2722,
+      "mean": -1.496339703231707,
+      "median": -0.919653968912337,
+      "p95": 0.4179634318308146,
+      "max": 2.952507083694731
+    },
+    "fraction_observations_improved": 0.8659074210139603,
+    "fraction_tracks_median_improved": 0.9212328767123288,
+    "constant_conditional_pass_1px": 26,
+    "variable_conditional_pass_1px": 98,
+    "constant_condition": {
+      "n": 292,
+      "mean": 7.583761502777042,
+      "median": 6.560476022665157,
+      "p95": 15.063675627869491,
+      "max": 15.063675627869582
+    },
+    "variable_condition": {
+      "n": 292,
+      "mean": 8.197778917400942,
+      "median": 7.042373959795418,
+      "p95": 15.500206941151168,
+      "max": 22.933777264873942
+    }
+  },
+  "bounds": {
+    "knot_speed_deg_per_frame": [
+      1.875,
+      5.625
+    ],
+    "elevation_deg": [
+      -30,
+      30
+    ],
+    "roll_deg": [
+      -12,
+      12
+    ],
+    "horizontal_center_px": [
+      224,
+      288
+    ],
+    "active_mask": [
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "minimum_fractional_distance_to_bound": 4.0422741892724436e-16
+  },
+  "regularization": {
+    "form": "1 px * adjacent difference of log knot speeds",
+    "penalty_scale_px": 1.0,
+    "penalty_values": [
+      0.7231230440798457,
+      -0.016818207103717953,
+      -0.12519793828538406,
+      -0.5385896819947562
+    ],
+    "not_tuned_on_heldout": true
+  },
+  "scaled_robust_jacobian_singular_values": [
+    204.48094877126496,
+    94.33466350977885,
+    41.34611158980327,
+    26.74265090324332,
+    17.885063680326578,
+    11.154267435644547,
+    5.50468579759617,
+    4.701907697020102
+  ],
+  "scaled_robust_jacobian_condition": 43.48893299221027,
+  "jacobian_parameter_scaling": [
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.17453292519943295,
+    0.08726646259971647,
+    10.0
+  ],
+  "nested_constant_prediction_max_abs_difference_px": 7.44648787076585e-12,
+  "integration_steps_per_frame": 32,
+  "calibration_temporal_bins": [
+    881,
+    1062,
+    697,
+    571
+  ],
+  "holdout": "Same deterministic sha256(track ID) % 5 == 0 identity holdout as constant baseline. All min16 eligible IDs kept. Fit each held-out point only on middle half of its temporal span; evaluate its endpoint quarters. Graph selection still uses all frames.",
+  "limitations": [
+    "Fixed orthographic camera scale and vertical-center gauges; yaw phase is fixed to zero at start.",
+    "Track identities remain unverified. Segment-level split can share source tracks across train/holdout.",
+    "Five speed knots may absorb systematic tracking error or perspective; heldout graph selection is not independent of calibration image processing.",
+    "PCHIP log speed is C1 and integrated yaw is C2; numerical trapezoid evaluation is used.",
+    "No camera or geometry is accepted from this experiment alone."
+  ]
+}

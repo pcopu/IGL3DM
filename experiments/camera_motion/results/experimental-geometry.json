@@ -1,0 +1,20 @@
+{
+  "experimental_camera_accepted": false,
+  "points": 73,
+  "observed_quad_faces_seen_at_least_three_frames": 6,
+  "vertices_used_by_faces": 20,
+  "endpoint_test_observation_px": {
+    "n": 528,
+    "mean": 0.3682919161595917,
+    "median": 0.3085401528435108,
+    "p95": 0.8352001178538877,
+    "max": 1.1165790718857778
+  },
+  "fit": "Middle half of each segment; endpoint quarters are conditional checks. Camera itself was fitted to calibration track candidates, and selection used all frames.",
+  "camera_status": "Experimental camera only, not accepted calibration",
+  "coordinates": "Projection maps nuisance world coordinates to 512-high centered/padded image pixels. Orientation rows are image-right, image-up, and their cross product. No metric camera location or depth translation is identified.",
+  "world_convention": "Z-up orbit-axis gauge; yaw0 near negativeY viewing direction with fitted elevation/roll. Scale256px/world-unit is a relative gauge, not metric calibration. Exact per-frame projection matrices retained separately.",
+  "no_hidden_faces": true,
+  "winding_validated": false,
+  "prior_results_preserved": true
+}
