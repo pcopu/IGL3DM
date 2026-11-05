@@ -14,9 +14,10 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument("--baseline",type=Path,required=True);p.add_argument("--aligned",type=Path,required=True)
 p.add_argument("--output",type=Path,required=True);p.add_argument("--prior",type=float,default=.2)
 p.add_argument("--grid",type=int,default=24);p.add_argument("--sigma",type=float,default=1.5)
+p.add_argument("--min-views",type=int,default=4)
 p.add_argument("--max-displacement",type=float,default=.03);p.add_argument("--gradient-bound",type=float,default=.25)
 a=p.parse_args()
-if a.grid<4 or a.sigma<=0 or a.prior<0 or a.max_displacement<0 or not 0<a.gradient_bound<1:p.error("Invalid deformation bounds")
+if a.grid<4 or a.sigma<=0 or a.prior<0 or a.max_displacement<0 or not 0<a.gradient_bound<1 or a.min_views<1:p.error("Invalid deformation bounds or minimum view count")
 if a.output.exists() and any(a.output.iterdir()):p.error("Output already exists")
 a.output.mkdir(parents=True,exist_ok=True)
 m=json.loads((a.baseline/"mesh.json").read_text());v=np.asarray(m["vertices"],float);f=np.asarray(m["faces"],int);colors=np.asarray(m["colors"],float)
@@ -25,6 +26,10 @@ n=np.zeros_like(v)
 for k in range(3):np.add.at(n,f[:,k],fn)
 n/=np.maximum(np.linalg.norm(n,axis=1,keepdims=True),1e-14)
 with np.load(a.aligned) as raw:data={k:raw[k] for k in raw.files}
+if int(np.count_nonzero(data["view_gate"])) < a.min_views:
+ failure={"status":"rejected","reason":"Too few accepted depth views for this experiment","accepted_views":np.flatnonzero(data["view_gate"]).tolist(),"required_views":a.min_views,"geometry_changed":False}
+ save_json(a.output/"fit_failure.json",failure)
+ p.exit(2,json.dumps(failure)+"\n")
 if (a.baseline/"cameras.json").exists():
  camera_specs=json.loads((a.baseline/"cameras.json").read_text())["views"]
  cameras=[Camera(c["yaw_degrees"],c["elevation_degrees"]) for c in camera_specs]
@@ -44,6 +49,10 @@ for i in range(len(data["calibrated"])):
  residual=np.where(mask,observed-depth,0)
  target += (-toward[None,:])*residual[:,None]*w[:,None];weight+=w
  records.append({"view":i,"used_vertices":int(mask.sum())})
+if not np.any(weight>0):
+ failure={"status":"rejected","reason":"No accepted fitting pixels constrain visible mesh vertices","geometry_changed":False}
+ save_json(a.output/"fit_failure.json",failure)
+ p.exit(2,json.dumps(failure)+"\n")
 g=a.grid;spacing=2/(g-1)
 index=np.clip(np.rint((v+1)/2*(g-1)).astype(int),0,g-1)
 den=np.zeros((g,g,g));num=np.zeros((g,g,g,3))

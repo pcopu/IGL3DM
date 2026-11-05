@@ -1,0 +1,1650 @@
+[
+  {
+    "model": "DA3-SMALL-308",
+    "representations": [
+      {
+        "representation": "original",
+        "summary_path": "igl3dm-depth-alignment/results/full_orbit/analysis.json",
+        "median_pearson": 0.7337626516819,
+        "median_spearman": 0.7695317230935057,
+        "median_heldout_rmse": 0.1219574511051178,
+        "median_heldout_nrmse_p90": 0.22270254440180695,
+        "median_heldout_skill_vs_constant": 0.5841016998564117,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.8287636637687683,
+            "spearman": 0.8919606559295473,
+            "support": 9805,
+            "heldout_rmse": 0.0814545750617981,
+            "heldout_nrmse_p90": 0.17388473518663666,
+            "heldout_skill_vs_constant": 0.7247037723359009
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.8957151174545288,
+            "spearman": 0.9442927491012046,
+            "support": 11567,
+            "heldout_rmse": 0.122686468064785,
+            "heldout_nrmse_p90": 0.12688410974749145,
+            "heldout_skill_vs_constant": 0.8029626644191558
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.878545343875885,
+            "spearman": 0.9293990813415138,
+            "support": 13094,
+            "heldout_rmse": 0.12122843414545059,
+            "heldout_nrmse_p90": 0.141536702766996,
+            "heldout_skill_vs_constant": 0.7902928203349499
+          },
+          {
+            "view_id": 3,
+            "accepted": true,
+            "pearson": 0.8524904251098633,
+            "spearman": 0.8862682290950733,
+            "support": 12822,
+            "heldout_rmse": 0.08433317393064499,
+            "heldout_nrmse_p90": 0.16402456236958035,
+            "heldout_skill_vs_constant": 0.7529793444316906
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.6783727407455444,
+            "spearman": 0.7268504329682006,
+            "support": 13043,
+            "heldout_rmse": 0.07009150087833405,
+            "heldout_nrmse_p90": 0.22719549426804558,
+            "heldout_skill_vs_constant": 0.49034463244317694
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.4021929204463959,
+            "spearman": 0.42701767044148203,
+            "support": 13357,
+            "heldout_rmse": 0.1510784924030304,
+            "heldout_nrmse_p90": 0.31459402386205443,
+            "heldout_skill_vs_constant": 0.16559386139208
+          },
+          {
+            "view_id": 6,
+            "accepted": false,
+            "pearson": 0.6380622386932373,
+            "spearman": 0.6524184542218643,
+            "support": 12509,
+            "heldout_rmse": 0.1996626853942871,
+            "heldout_nrmse_p90": 0.2556987085695582,
+            "heldout_skill_vs_constant": 0.42992397962297335
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.5782442092895508,
+            "spearman": 0.5662861540990184,
+            "support": 10512,
+            "heldout_rmse": 0.26788973808288574,
+            "heldout_nrmse_p90": 0.2949846536497693,
+            "heldout_skill_vs_constant": 0.34022200177274853
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.6605461239814758,
+            "spearman": 0.7049784095443479,
+            "support": 9582,
+            "heldout_rmse": 0.24489334225654602,
+            "heldout_nrmse_p90": 0.25502793084561476,
+            "heldout_skill_vs_constant": 0.5460351436657195
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": 0.6194730401039124,
+            "spearman": 0.6162150174714935,
+            "support": 10802,
+            "heldout_rmse": 0.23414967954158783,
+            "heldout_nrmse_p90": 0.27538048674824467,
+            "heldout_skill_vs_constant": 0.3848793711560824
+          },
+          {
+            "view_id": 10,
+            "accepted": false,
+            "pearson": 0.48228394985198975,
+            "spearman": 0.4810091957644479,
+            "support": 13214,
+            "heldout_rmse": 0.20978637039661407,
+            "heldout_nrmse_p90": 0.2747062715456282,
+            "heldout_skill_vs_constant": 0.26017270746741716
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.48589420318603516,
+            "spearman": 0.5304115949972914,
+            "support": 12750,
+            "heldout_rmse": 0.12644514441490173,
+            "heldout_nrmse_p90": 0.27476423403194905,
+            "heldout_skill_vs_constant": 0.25531619273518946
+          },
+          {
+            "view_id": 12,
+            "accepted": true,
+            "pearson": 0.7891525626182556,
+            "spearman": 0.8122130132188108,
+            "support": 12543,
+            "heldout_rmse": 0.06241200491786003,
+            "heldout_nrmse_p90": 0.21820959453556832,
+            "heldout_skill_vs_constant": 0.6221682560471038
+          },
+          {
+            "view_id": 13,
+            "accepted": true,
+            "pearson": 0.8970317244529724,
+            "spearman": 0.9193184430613152,
+            "support": 13507,
+            "heldout_rmse": 0.08367009460926056,
+            "heldout_nrmse_p90": 0.15173681342058087,
+            "heldout_skill_vs_constant": 0.8145139752411283
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.9172019362449646,
+            "spearman": 0.9434247834640751,
+            "support": 13389,
+            "heldout_rmse": 0.11054982990026474,
+            "heldout_nrmse_p90": 0.1295010272980741,
+            "heldout_skill_vs_constant": 0.8534471981768383
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.8911970853805542,
+            "spearman": 0.9205452004059618,
+            "support": 11418,
+            "heldout_rmse": 0.11830657720565796,
+            "heldout_nrmse_p90": 0.12134670816436277,
+            "heldout_skill_vs_constant": 0.7991097632487045
+          }
+        ]
+      },
+      {
+        "representation": "triangle_pattern",
+        "summary_path": "igl3dm-depth-alignment/results_pattern/pattern_full_orbit308/analysis.json",
+        "median_pearson": 0.586773157119751,
+        "median_spearman": 0.6211244505391137,
+        "median_heldout_rmse": 0.14658640325069427,
+        "median_heldout_nrmse_p90": 0.26198903179378463,
+        "median_heldout_skill_vs_constant": 0.3647472254732928,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.8305310606956482,
+            "spearman": 0.8993716404133415,
+            "support": 9988,
+            "heldout_rmse": 0.08367690443992615,
+            "heldout_nrmse_p90": 0.18097029740238915,
+            "heldout_skill_vs_constant": 0.7188257988335065
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.8568284511566162,
+            "spearman": 0.9108780620977732,
+            "support": 11838,
+            "heldout_rmse": 0.14583520591259003,
+            "heldout_nrmse_p90": 0.153766009405793,
+            "heldout_skill_vs_constant": 0.719296815238478
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.8191533088684082,
+            "spearman": 0.9132580008935393,
+            "support": 13352,
+            "heldout_rmse": 0.1495392620563507,
+            "heldout_nrmse_p90": 0.17379947999796055,
+            "heldout_skill_vs_constant": 0.6809576480787949
+          },
+          {
+            "view_id": 3,
+            "accepted": true,
+            "pearson": 0.7424883246421814,
+            "spearman": 0.823018567073351,
+            "support": 13084,
+            "heldout_rmse": 0.10757002979516983,
+            "heldout_nrmse_p90": 0.20887631588937433,
+            "heldout_skill_vs_constant": 0.5911089011453263
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.4504399299621582,
+            "spearman": 0.49931110090356484,
+            "support": 13252,
+            "heldout_rmse": 0.0839785486459732,
+            "heldout_nrmse_p90": 0.279742014327353,
+            "heldout_skill_vs_constant": 0.23191180701106606
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.020063770934939384,
+            "spearman": 0.03969219711397126,
+            "support": 13593,
+            "heldout_rmse": 0.1629522144794464,
+            "heldout_nrmse_p90": 0.3405742044627819,
+            "heldout_skill_vs_constant": 0.00042897089555371526
+          },
+          {
+            "view_id": 6,
+            "accepted": false,
+            "pearson": -0.014029022306203842,
+            "spearman": 0.022642952745617055,
+            "support": 12787,
+            "heldout_rmse": 0.2633650302886963,
+            "heldout_nrmse_p90": 0.3388276410804126,
+            "heldout_skill_vs_constant": 0.007679494827865119
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": -0.1686278134584427,
+            "spearman": -0.13218598272878412,
+            "support": 10827,
+            "heldout_rmse": 0.32121914625167847,
+            "heldout_nrmse_p90": 0.3514076878816854,
+            "heldout_skill_vs_constant": 0.08025596016955583
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": -0.3266005516052246,
+            "spearman": -0.2541151457975072,
+            "support": 10051,
+            "heldout_rmse": 0.3339250981807709,
+            "heldout_nrmse_p90": 0.3442888026394969,
+            "heldout_skill_vs_constant": 0.19391547175296708
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": -0.16236954927444458,
+            "spearman": -0.14390671190539417,
+            "support": 11148,
+            "heldout_rmse": 0.30140939354896545,
+            "heldout_nrmse_p90": 0.35076421185870243,
+            "heldout_skill_vs_constant": 0.00202948032131145
+          },
+          {
+            "view_id": 10,
+            "accepted": false,
+            "pearson": -0.060204580426216125,
+            "spearman": -0.11965101619428295,
+            "support": 13637,
+            "heldout_rmse": 0.24711939692497253,
+            "heldout_nrmse_p90": 0.3240187550603807,
+            "heldout_skill_vs_constant": 0.020269266504857608
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.10472113639116287,
+            "spearman": 0.04441832169881167,
+            "support": 13271,
+            "heldout_rmse": 0.14729100465774536,
+            "heldout_nrmse_p90": 0.31028449208496944,
+            "heldout_skill_vs_constant": 0.017531405305511005
+          },
+          {
+            "view_id": 12,
+            "accepted": true,
+            "pearson": 0.7231063842773438,
+            "spearman": 0.7429378001746625,
+            "support": 12727,
+            "heldout_rmse": 0.06877920031547546,
+            "heldout_nrmse_p90": 0.24423604926021628,
+            "heldout_skill_vs_constant": 0.49758264393551954
+          },
+          {
+            "view_id": 13,
+            "accepted": true,
+            "pearson": 0.8658066391944885,
+            "spearman": 0.9387252232644715,
+            "support": 13749,
+            "heldout_rmse": 0.09580950438976288,
+            "heldout_nrmse_p90": 0.17480897256373817,
+            "heldout_skill_vs_constant": 0.7494340529838692
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.8675774931907654,
+            "spearman": 0.9322791403745561,
+            "support": 13778,
+            "heldout_rmse": 0.14289766550064087,
+            "heldout_nrmse_p90": 0.16696862409928143,
+            "heldout_skill_vs_constant": 0.7532947112797433
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.8208720088005066,
+            "spearman": 0.8787668888585092,
+            "support": 11624,
+            "heldout_rmse": 0.1458818018436432,
+            "heldout_nrmse_p90": 0.1519583549914928,
+            "heldout_skill_vs_constant": 0.6821130676619366
+          }
+        ]
+      },
+      {
+        "representation": "contour_lines",
+        "summary_path": "igl3dm-depth-alignment/results_contour/contour_full_orbit308/analysis.json",
+        "median_pearson": 0.6446520388126373,
+        "median_spearman": 0.6939957609154108,
+        "median_heldout_rmse": 0.14047209918498993,
+        "median_heldout_nrmse_p90": 0.25685564082674084,
+        "median_heldout_skill_vs_constant": 0.4713582987894861,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.7422853708267212,
+            "spearman": 0.8223449117987705,
+            "support": 9965,
+            "heldout_rmse": 0.09893989562988281,
+            "heldout_nrmse_p90": 0.20856496244932052,
+            "heldout_skill_vs_constant": 0.6014734925103546
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.8848565816879272,
+            "spearman": 0.9107475206940784,
+            "support": 11847,
+            "heldout_rmse": 0.13304941356182098,
+            "heldout_nrmse_p90": 0.13741901495591533,
+            "heldout_skill_vs_constant": 0.766280990327137
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.8298578262329102,
+            "spearman": 0.8595227830280331,
+            "support": 13397,
+            "heldout_rmse": 0.14625193178653717,
+            "heldout_nrmse_p90": 0.17170817814261555,
+            "heldout_skill_vs_constant": 0.6864731520580671
+          },
+          {
+            "view_id": 3,
+            "accepted": true,
+            "pearson": 0.7294471859931946,
+            "spearman": 0.7014330700021881,
+            "support": 13277,
+            "heldout_rmse": 0.10961812734603882,
+            "heldout_nrmse_p90": 0.20705039091155955,
+            "heldout_skill_vs_constant": 0.5699433926516053
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.309362530708313,
+            "spearman": 0.2805239340204742,
+            "support": 13413,
+            "heldout_rmse": 0.09188894182443619,
+            "heldout_nrmse_p90": 0.28975309705871516,
+            "heldout_skill_vs_constant": 0.12592490320111338
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.14004205167293549,
+            "spearman": 0.15082020708771782,
+            "support": 13651,
+            "heldout_rmse": 0.16532312333583832,
+            "heldout_nrmse_p90": 0.33863830654337784,
+            "heldout_skill_vs_constant": 0.021349890114806147
+          },
+          {
+            "view_id": 6,
+            "accepted": false,
+            "pearson": 0.5346790552139282,
+            "spearman": 0.5547412839457301,
+            "support": 12212,
+            "heldout_rmse": 0.2124738246202469,
+            "heldout_nrmse_p90": 0.29115197860089026,
+            "heldout_skill_vs_constant": 0.29968512556269167
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.4575190246105194,
+            "spearman": 0.5291056487145639,
+            "support": 10673,
+            "heldout_rmse": 0.2816818058490753,
+            "heldout_nrmse_p90": 0.31393606138107416,
+            "heldout_skill_vs_constant": 0.26423104766472727
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.6391404271125793,
+            "spearman": 0.7474060606240847,
+            "support": 9420,
+            "heldout_rmse": 0.24781455099582672,
+            "heldout_nrmse_p90": 0.2614028361971946,
+            "heldout_skill_vs_constant": 0.5178227889567275
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": 0.6400600075721741,
+            "spearman": 0.6843021532034991,
+            "support": 11176,
+            "heldout_rmse": 0.22525939345359802,
+            "heldout_nrmse_p90": 0.2621347845906405,
+            "heldout_skill_vs_constant": 0.4248938086222447
+          },
+          {
+            "view_id": 10,
+            "accepted": false,
+            "pearson": 0.5718327164649963,
+            "spearman": 0.6400969298917164,
+            "support": 13513,
+            "heldout_rmse": 0.19531625509262085,
+            "heldout_nrmse_p90": 0.252308445456287,
+            "heldout_skill_vs_constant": 0.34906308392738794
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.4786868393421173,
+            "spearman": 0.6865584518286336,
+            "support": 13196,
+            "heldout_rmse": 0.1299559473991394,
+            "heldout_nrmse_p90": 0.2903896601361927,
+            "heldout_skill_vs_constant": 0.2197372183838775
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.6492440700531006,
+            "spearman": 0.6780207080069802,
+            "support": 12969,
+            "heldout_rmse": 0.07761827111244202,
+            "heldout_nrmse_p90": 0.27145749046931333,
+            "heldout_skill_vs_constant": 0.4088256122144427
+          },
+          {
+            "view_id": 13,
+            "accepted": true,
+            "pearson": 0.8879972696304321,
+            "spearman": 0.9026999141144367,
+            "support": 13646,
+            "heldout_rmse": 0.08543208241462708,
+            "heldout_nrmse_p90": 0.15710564448595016,
+            "heldout_skill_vs_constant": 0.8033678193920741
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.8105351328849792,
+            "spearman": 0.8955175465518989,
+            "support": 13538,
+            "heldout_rmse": 0.15738630294799805,
+            "heldout_nrmse_p90": 0.183431260446292,
+            "heldout_skill_vs_constant": 0.7032759538266804
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.8377290964126587,
+            "spearman": 0.8578208198053549,
+            "support": 11388,
+            "heldout_rmse": 0.1346922665834427,
+            "heldout_nrmse_p90": 0.1379481529965138,
+            "heldout_skill_vs_constant": 0.7313301624943072
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "DA2-SMALL-518",
+    "representations": [
+      {
+        "representation": "original",
+        "summary_path": "igl3dm-depth-alignment/results_alternatives/small_518/analysis.json",
+        "median_pearson": 0.7220385670661926,
+        "median_spearman": 0.7393934462243379,
+        "median_heldout_rmse": 0.15786125510931015,
+        "median_heldout_nrmse_p90": 0.22633042908527584,
+        "median_heldout_skill_vs_constant": 0.552756465790329,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          6,
+          10,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.795169472694397,
+            "spearman": 0.8377173111047949,
+            "support": 9805,
+            "heldout_rmse": 0.08943650126457214,
+            "heldout_nrmse_p90": 0.19092411109640775,
+            "heldout_skill_vs_constant": 0.6681063843080627
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.8281947374343872,
+            "spearman": 0.8767892599276298,
+            "support": 11567,
+            "heldout_rmse": 0.15605385601520538,
+            "heldout_nrmse_p90": 0.1613931422550749,
+            "heldout_skill_vs_constant": 0.6812103545110952
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.7867981791496277,
+            "spearman": 0.808223641898576,
+            "support": 13094,
+            "heldout_rmse": 0.16038379073143005,
+            "heldout_nrmse_p90": 0.1872513909580213,
+            "heldout_skill_vs_constant": 0.6329499764837729
+          },
+          {
+            "view_id": 3,
+            "accepted": false,
+            "pearson": 0.7073084712028503,
+            "spearman": 0.6078919817318365,
+            "support": 12822,
+            "heldout_rmse": 0.11582149565219879,
+            "heldout_nrmse_p90": 0.22526805587757942,
+            "heldout_skill_vs_constant": 0.5340763918346296
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.32402503490448,
+            "spearman": 0.20977231197409216,
+            "support": 13043,
+            "heldout_rmse": 0.09156440198421478,
+            "heldout_nrmse_p90": 0.2967980326498059,
+            "heldout_skill_vs_constant": 0.13024044254800615
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.6216752529144287,
+            "spearman": 0.655255729088323,
+            "support": 13357,
+            "heldout_rmse": 0.13198384642601013,
+            "heldout_nrmse_p90": 0.274832828098284,
+            "heldout_skill_vs_constant": 0.36318429178045597
+          },
+          {
+            "view_id": 6,
+            "accepted": true,
+            "pearson": 0.7682551145553589,
+            "spearman": 0.8310313867770975,
+            "support": 12509,
+            "heldout_rmse": 0.16916562616825104,
+            "heldout_nrmse_p90": 0.21664254419979923,
+            "heldout_skill_vs_constant": 0.5907740188088102
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.5530456900596619,
+            "spearman": 0.6196440120854004,
+            "support": 10512,
+            "heldout_rmse": 0.2673635184764862,
+            "heldout_nrmse_p90": 0.2944052111170006,
+            "heldout_skill_vs_constant": 0.3428114785309947
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.007885312661528587,
+            "spearman": 0.06217244389958453,
+            "support": 9582,
+            "heldout_rmse": 0.3304426074028015,
+            "heldout_nrmse_p90": 0.3441175397119792,
+            "heldout_skill_vs_constant": 0.17346669675486803
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": 0.353296160697937,
+            "spearman": 0.41760945233808244,
+            "support": 10802,
+            "heldout_rmse": 0.27852365374565125,
+            "heldout_nrmse_p90": 0.3275681584939097,
+            "heldout_skill_vs_constant": 0.12964320582557598
+          },
+          {
+            "view_id": 10,
+            "accepted": true,
+            "pearson": 0.7367686629295349,
+            "spearman": 0.7821115099181561,
+            "support": 13214,
+            "heldout_rmse": 0.15966865420341492,
+            "heldout_nrmse_p90": 0.20907926761879012,
+            "heldout_skill_vs_constant": 0.5714365397460285
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.6556341648101807,
+            "spearman": 0.7088537684366908,
+            "support": 12750,
+            "heldout_rmse": 0.11066851764917374,
+            "heldout_nrmse_p90": 0.240481756923383,
+            "heldout_skill_vs_constant": 0.42955236683976405
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.24234047532081604,
+            "spearman": 0.22760206879650444,
+            "support": 12543,
+            "heldout_rmse": 0.09754793345928192,
+            "heldout_nrmse_p90": 0.34105449802400534,
+            "heldout_skill_vs_constant": 0.07700718249053462
+          },
+          {
+            "view_id": 13,
+            "accepted": true,
+            "pearson": 0.7670968770980835,
+            "spearman": 0.7878261327697694,
+            "support": 13507,
+            "heldout_rmse": 0.1253880113363266,
+            "heldout_nrmse_p90": 0.22739280229297226,
+            "heldout_skill_vs_constant": 0.5834350718461105
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.7589552998542786,
+            "spearman": 0.7699331240119851,
+            "support": 13389,
+            "heldout_rmse": 0.18153062462806702,
+            "heldout_nrmse_p90": 0.212649828557895,
+            "heldout_skill_vs_constant": 0.6048356364271246
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.7742325067520142,
+            "spearman": 0.7878934287921552,
+            "support": 11418,
+            "heldout_rmse": 0.1615757942199707,
+            "heldout_nrmse_p90": 0.16572781675149534,
+            "heldout_skill_vs_constant": 0.6252914094184443
+          }
+        ]
+      },
+      {
+        "representation": "triangle_pattern",
+        "summary_path": "igl3dm-depth-alignment/results_pattern/pattern_small_518/analysis.json",
+        "median_pearson": 0.6203249990940094,
+        "median_spearman": 0.709552346430437,
+        "median_heldout_rmse": 0.16627749055624008,
+        "median_heldout_nrmse_p90": 0.2557175544522629,
+        "median_heldout_skill_vs_constant": 0.3807909326482346,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.7923416495323181,
+            "spearman": 0.8748072956702367,
+            "support": 9988,
+            "heldout_rmse": 0.09237389266490936,
+            "heldout_nrmse_p90": 0.1997795083323923,
+            "heldout_skill_vs_constant": 0.6573405214123931
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.7801175117492676,
+            "spearman": 0.8733332867887622,
+            "support": 11838,
+            "heldout_rmse": 0.17623580992221832,
+            "heldout_nrmse_p90": 0.18581985767126682,
+            "heldout_skill_vs_constant": 0.590068870545146
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.8012092709541321,
+            "spearman": 0.8549544837082934,
+            "support": 13352,
+            "heldout_rmse": 0.15631917119026184,
+            "heldout_nrmse_p90": 0.1816793148032383,
+            "heldout_skill_vs_constant": 0.6513719238551172
+          },
+          {
+            "view_id": 3,
+            "accepted": true,
+            "pearson": 0.7678571343421936,
+            "spearman": 0.7562995812040196,
+            "support": 13084,
+            "heldout_rmse": 0.1020086482167244,
+            "heldout_nrmse_p90": 0.1980773889245621,
+            "heldout_skill_vs_constant": 0.632295399414004
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.45237940549850464,
+            "spearman": 0.42043617028144054,
+            "support": 13252,
+            "heldout_rmse": 0.08308069407939911,
+            "heldout_nrmse_p90": 0.2767511595307871,
+            "heldout_skill_vs_constant": 0.24824800032915895
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.5708556175231934,
+            "spearman": 0.6940924588481053,
+            "support": 13593,
+            "heldout_rmse": 0.14028634130954742,
+            "heldout_nrmse_p90": 0.29320196255767833,
+            "heldout_skill_vs_constant": 0.2591608845111879
+          },
+          {
+            "view_id": 6,
+            "accepted": false,
+            "pearson": 0.49095743894577026,
+            "spearman": 0.5623762556593894,
+            "support": 12787,
+            "heldout_rmse": 0.22741952538490295,
+            "heldout_nrmse_p90": 0.2925825848531453,
+            "heldout_skill_vs_constant": 0.26006896048879236
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.4096086323261261,
+            "spearman": 0.4620530230595247,
+            "support": 10827,
+            "heldout_rmse": 0.29381874203681946,
+            "heldout_nrmse_p90": 0.3214321624358174,
+            "heldout_skill_vs_constant": 0.23047430602105656
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.013528930023312569,
+            "spearman": 0.18817754779959286,
+            "support": 10051,
+            "heldout_rmse": 0.33391913771629333,
+            "heldout_nrmse_p90": 0.3442826571859526,
+            "heldout_skill_vs_constant": 0.19394424823812495
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": 0.24636781215667725,
+            "spearman": 0.44571259698213983,
+            "support": 11148,
+            "heldout_rmse": 0.29075998067855835,
+            "heldout_nrmse_p90": 0.33837099189875636,
+            "heldout_skill_vs_constant": 0.07130435574511662
+          },
+          {
+            "view_id": 10,
+            "accepted": false,
+            "pearson": 0.4959348440170288,
+            "spearman": 0.6595695016332832,
+            "support": 13637,
+            "heldout_rmse": 0.21150057017803192,
+            "heldout_nrmse_p90": 0.27731595454019703,
+            "heldout_skill_vs_constant": 0.2823442878520347
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.6697943806648254,
+            "spearman": 0.7250122340127685,
+            "support": 13271,
+            "heldout_rmse": 0.1114036813378334,
+            "heldout_nrmse_p90": 0.2346839493737387,
+            "heldout_skill_vs_constant": 0.43796247517052955
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.5631387233734131,
+            "spearman": 0.629515283950558,
+            "support": 12727,
+            "heldout_rmse": 0.0798032134771347,
+            "heldout_nrmse_p90": 0.28338249773950264,
+            "heldout_skill_vs_constant": 0.32361939012593965
+          },
+          {
+            "view_id": 13,
+            "accepted": true,
+            "pearson": 0.8523632287979126,
+            "spearman": 0.8792013489996614,
+            "support": 13749,
+            "heldout_rmse": 0.09973184764385223,
+            "heldout_nrmse_p90": 0.18196547335827656,
+            "heldout_skill_vs_constant": 0.7284982765560521
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.766834557056427,
+            "spearman": 0.8513974037157628,
+            "support": 13778,
+            "heldout_rmse": 0.1779172718524933,
+            "heldout_nrmse_p90": 0.20788724560776947,
+            "heldout_skill_vs_constant": 0.6175590281051608
+          },
+          {
+            "view_id": 15,
+            "accepted": false,
+            "pearson": 0.685481607913971,
+            "spearman": 0.8222083529722319,
+            "support": 11624,
+            "heldout_rmse": 0.18354018032550812,
+            "heldout_nrmse_p90": 0.1911853536536332,
+            "heldout_skill_vs_constant": 0.49680913782082625
+          }
+        ]
+      },
+      {
+        "representation": "contour_lines",
+        "summary_path": "igl3dm-depth-alignment/results_contour/contour_small_518/analysis.json",
+        "median_pearson": 0.6995758414268494,
+        "median_spearman": 0.7525982185696068,
+        "median_heldout_rmse": 0.15418442338705063,
+        "median_heldout_nrmse_p90": 0.23404961068938485,
+        "median_heldout_skill_vs_constant": 0.5257629346525069,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          6,
+          10,
+          11,
+          14,
+          15
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": true,
+            "pearson": 0.7897239923477173,
+            "spearman": 0.8893402960278594,
+            "support": 9965,
+            "heldout_rmse": 0.08843755722045898,
+            "heldout_nrmse_p90": 0.18642606891151528,
+            "heldout_skill_vs_constant": 0.6815891971131478
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.8291556239128113,
+            "spearman": 0.900546394611924,
+            "support": 11847,
+            "heldout_rmse": 0.1574941724538803,
+            "heldout_nrmse_p90": 0.1626665872514581,
+            "heldout_skill_vs_constant": 0.6725107220374507
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.7403630018234253,
+            "spearman": 0.7849950068572308,
+            "support": 13397,
+            "heldout_rmse": 0.1742408722639084,
+            "heldout_nrmse_p90": 0.2045688037685802,
+            "heldout_skill_vs_constant": 0.554988138579988
+          },
+          {
+            "view_id": 3,
+            "accepted": false,
+            "pearson": 0.6371703743934631,
+            "spearman": 0.5322481324944821,
+            "support": 13277,
+            "heldout_rmse": 0.1259431093931198,
+            "heldout_nrmse_p90": 0.23788556385519272,
+            "heldout_skill_vs_constant": 0.43231203133546614
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.48231443762779236,
+            "spearman": 0.38878635478445034,
+            "support": 13413,
+            "heldout_rmse": 0.08746790885925293,
+            "heldout_nrmse_p90": 0.27581226839722045,
+            "heldout_skill_vs_constant": 0.20800993469243
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.6255961060523987,
+            "spearman": 0.6983369795966036,
+            "support": 13651,
+            "heldout_rmse": 0.1337157040834427,
+            "heldout_nrmse_p90": 0.2738955003716441,
+            "heldout_skill_vs_constant": 0.35978613242331203
+          },
+          {
+            "view_id": 6,
+            "accepted": true,
+            "pearson": 0.791487991809845,
+            "spearman": 0.8364582617074918,
+            "support": 12212,
+            "heldout_rmse": 0.1534365564584732,
+            "heldout_nrmse_p90": 0.21025346102013312,
+            "heldout_skill_vs_constant": 0.6347920977167483
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.6382213830947876,
+            "spearman": 0.706067081666693,
+            "support": 10673,
+            "heldout_rmse": 0.24539029598236084,
+            "heldout_nrmse_p90": 0.273488956056731,
+            "heldout_skill_vs_constant": 0.4416087117884464
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.6474433541297913,
+            "spearman": 0.745010973292503,
+            "support": 9420,
+            "heldout_rmse": 0.24154415726661682,
+            "heldout_nrmse_p90": 0.25478862125984747,
+            "heldout_skill_vs_constant": 0.541914919447948
+          },
+          {
+            "view_id": 9,
+            "accepted": false,
+            "pearson": 0.6305655241012573,
+            "spearman": 0.6722030707834549,
+            "support": 11176,
+            "heldout_rmse": 0.23543955385684967,
+            "heldout_nrmse_p90": 0.2739814566139062,
+            "heldout_skill_vs_constant": 0.37173759192254674
+          },
+          {
+            "view_id": 10,
+            "accepted": true,
+            "pearson": 0.7593536376953125,
+            "spearman": 0.8406200521404263,
+            "support": 13513,
+            "heldout_rmse": 0.15493229031562805,
+            "heldout_nrmse_p90": 0.20014066572176015,
+            "heldout_skill_vs_constant": 0.5904131485046853
+          },
+          {
+            "view_id": 11,
+            "accepted": true,
+            "pearson": 0.7099252343177795,
+            "spearman": 0.7601854638467107,
+            "support": 13196,
+            "heldout_rmse": 0.10302582383155823,
+            "heldout_nrmse_p90": 0.23021365752357695,
+            "heldout_skill_vs_constant": 0.5096109498570658
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.3414321839809418,
+            "spearman": 0.27867952111884364,
+            "support": 12969,
+            "heldout_rmse": 0.09391338378190994,
+            "heldout_nrmse_p90": 0.32844704110952866,
+            "heldout_skill_vs_constant": 0.1345486531970047
+          },
+          {
+            "view_id": 13,
+            "accepted": false,
+            "pearson": 0.6892264485359192,
+            "spearman": 0.67071481358007,
+            "support": 13646,
+            "heldout_rmse": 0.13807030022144318,
+            "heldout_nrmse_p90": 0.25390489014867523,
+            "heldout_skill_vs_constant": 0.4864140327880683
+          },
+          {
+            "view_id": 14,
+            "accepted": true,
+            "pearson": 0.7328812479972839,
+            "spearman": 0.7739052586462415,
+            "support": 13538,
+            "heldout_rmse": 0.1896277368068695,
+            "heldout_nrmse_p90": 0.22100814446066916,
+            "heldout_skill_vs_constant": 0.5692526656721844
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.7568608522415161,
+            "spearman": 0.8328390222997324,
+            "support": 11388,
+            "heldout_rmse": 0.16444812715053558,
+            "heldout_nrmse_p90": 0.16842329540945505,
+            "heldout_skill_vs_constant": 0.5995102053449699
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "ZIPDEPTH-NPU-384",
+    "representations": [
+      {
+        "representation": "original",
+        "summary_path": "igl3dm-depth-alignment/results_alternatives/npu_384/analysis.json",
+        "median_pearson": 0.7031659781932831,
+        "median_spearman": 0.756959852080217,
+        "median_heldout_rmse": 0.16792858392000198,
+        "median_heldout_nrmse_p90": 0.2349599349202261,
+        "median_heldout_skill_vs_constant": 0.5217145559274896,
+        "candidate_constraint_views": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          9,
+          10,
+          15
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": false,
+            "pearson": 0.6870197653770447,
+            "spearman": 0.7626060414810674,
+            "support": 9805,
+            "heldout_rmse": 0.10922549664974213,
+            "heldout_nrmse_p90": 0.2331685672187217,
+            "heldout_skill_vs_constant": 0.5049861480955009
+          },
+          {
+            "view_id": 1,
+            "accepted": true,
+            "pearson": 0.7429270148277283,
+            "spearman": 0.7899671901601815,
+            "support": 11567,
+            "heldout_rmse": 0.1864292174577713,
+            "heldout_nrmse_p90": 0.1928077779169562,
+            "heldout_skill_vs_constant": 0.5450295910143945
+          },
+          {
+            "view_id": 2,
+            "accepted": true,
+            "pearson": 0.7642054557800293,
+            "spearman": 0.8381700258237312,
+            "support": 13094,
+            "heldout_rmse": 0.17115506529808044,
+            "heldout_nrmse_p90": 0.1998270766666444,
+            "heldout_skill_vs_constant": 0.5819927432749267
+          },
+          {
+            "view_id": 3,
+            "accepted": true,
+            "pearson": 0.7569873929023743,
+            "spearman": 0.7513136626793666,
+            "support": 12822,
+            "heldout_rmse": 0.10770446062088013,
+            "heldout_nrmse_p90": 0.20948075585439369,
+            "heldout_skill_vs_constant": 0.5970939775277813
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.5658266544342041,
+            "spearman": 0.5756814903061368,
+            "support": 13043,
+            "heldout_rmse": 0.07874974608421326,
+            "heldout_nrmse_p90": 0.2552604418635923,
+            "heldout_skill_vs_constant": 0.356654589139063
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.5285249352455139,
+            "spearman": 0.5729136232863622,
+            "support": 13357,
+            "heldout_rmse": 0.14107246696949005,
+            "heldout_nrmse_p90": 0.2937582599228296,
+            "heldout_skill_vs_constant": 0.27246024793981194
+          },
+          {
+            "view_id": 6,
+            "accepted": true,
+            "pearson": 0.8099046349525452,
+            "spearman": 0.8870995640680144,
+            "support": 12509,
+            "heldout_rmse": 0.1520845592021942,
+            "heldout_nrmse_p90": 0.19476761671604895,
+            "heldout_skill_vs_constant": 0.6692428781737892
+          },
+          {
+            "view_id": 7,
+            "accepted": true,
+            "pearson": 0.7526508569717407,
+            "spearman": 0.8178771206720625,
+            "support": 10512,
+            "heldout_rmse": 0.21500523388385773,
+            "heldout_nrmse_p90": 0.23675130262173052,
+            "heldout_skill_vs_constant": 0.5750050810285159
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.43038466572761536,
+            "spearman": 0.46147657818980786,
+            "support": 9582,
+            "heldout_rmse": 0.2953587770462036,
+            "heldout_nrmse_p90": 0.3075818112208035,
+            "heldout_skill_vs_constant": 0.3396593412142189
+          },
+          {
+            "view_id": 9,
+            "accepted": true,
+            "pearson": 0.7747069001197815,
+            "spearman": 0.7999122235253032,
+            "support": 10802,
+            "heldout_rmse": 0.17795483767986298,
+            "heldout_nrmse_p90": 0.20929044154758966,
+            "heldout_skill_vs_constant": 0.6447020073128382
+          },
+          {
+            "view_id": 10,
+            "accepted": true,
+            "pearson": 0.7460399866104126,
+            "spearman": 0.8309970676121207,
+            "support": 13214,
+            "heldout_rmse": 0.16570086777210236,
+            "heldout_nrmse_p90": 0.2169781930613165,
+            "heldout_skill_vs_constant": 0.5384429637594782
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.5881810784339905,
+            "spearman": 0.6829156471786149,
+            "support": 12750,
+            "heldout_rmse": 0.11698079109191895,
+            "heldout_nrmse_p90": 0.2541982739594591,
+            "heldout_skill_vs_constant": 0.3626225345584343
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.5289175510406494,
+            "spearman": 0.4565545166531588,
+            "support": 12543,
+            "heldout_rmse": 0.0861881673336029,
+            "heldout_nrmse_p90": 0.3013376204206397,
+            "heldout_skill_vs_constant": 0.27946104209841705
+          },
+          {
+            "view_id": 13,
+            "accepted": false,
+            "pearson": 0.495602548122406,
+            "spearman": 0.5185118475519407,
+            "support": 13507,
+            "heldout_rmse": 0.1701563000679016,
+            "heldout_nrmse_p90": 0.3085806807834293,
+            "heldout_skill_vs_constant": 0.23287393231369025
+          },
+          {
+            "view_id": 14,
+            "accepted": false,
+            "pearson": 0.6503125429153442,
+            "spearman": 0.6793048604098022,
+            "support": 13389,
+            "heldout_rmse": 0.2122286856174469,
+            "heldout_nrmse_p90": 0.24861035819208946,
+            "heldout_skill_vs_constant": 0.459885126135971
+          },
+          {
+            "view_id": 15,
+            "accepted": true,
+            "pearson": 0.7193121910095215,
+            "spearman": 0.8078367554222102,
+            "support": 11418,
+            "heldout_rmse": 0.17891168594360352,
+            "heldout_nrmse_p90": 0.18350918988766327,
+            "heldout_skill_vs_constant": 0.5405709339725435
+          }
+        ]
+      },
+      {
+        "representation": "triangle_pattern",
+        "summary_path": "igl3dm-depth-alignment/results_pattern/pattern_npu_384/analysis.json",
+        "median_pearson": 0.5105430781841278,
+        "median_spearman": 0.5989283638717432,
+        "median_heldout_rmse": 0.19736967235803604,
+        "median_heldout_nrmse_p90": 0.26729515627125555,
+        "median_heldout_skill_vs_constant": 0.29045395473647123,
+        "candidate_constraint_views": [
+          9
+        ],
+        "negative_correlation_views": [],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": false,
+            "pearson": 0.46122628450393677,
+            "spearman": 0.4185555181372913,
+            "support": 9988,
+            "heldout_rmse": 0.13843287527561188,
+            "heldout_nrmse_p90": 0.29939251190728483,
+            "heldout_skill_vs_constant": 0.23043955375639846
+          },
+          {
+            "view_id": 1,
+            "accepted": false,
+            "pearson": 0.4125448167324066,
+            "spearman": 0.39309468177333806,
+            "support": 11838,
+            "heldout_rmse": 0.2484389841556549,
+            "heldout_nrmse_p90": 0.26194958162119714,
+            "heldout_skill_vs_constant": 0.18536686443397543
+          },
+          {
+            "view_id": 2,
+            "accepted": false,
+            "pearson": 0.5089490413665771,
+            "spearman": 0.7012120911467752,
+            "support": 13352,
+            "heldout_rmse": 0.22497868537902832,
+            "heldout_nrmse_p90": 0.2614776747712279,
+            "heldout_skill_vs_constant": 0.27786129751426125
+          },
+          {
+            "view_id": 3,
+            "accepted": false,
+            "pearson": 0.6272345781326294,
+            "spearman": 0.7223921744889858,
+            "support": 13084,
+            "heldout_rmse": 0.12755371630191803,
+            "heldout_nrmse_p90": 0.24768004982312836,
+            "heldout_skill_vs_constant": 0.4250748443886959
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.5813895463943481,
+            "spearman": 0.6377597178037911,
+            "support": 13252,
+            "heldout_rmse": 0.07685363292694092,
+            "heldout_nrmse_p90": 0.25600811671550994,
+            "heldout_skill_vs_constant": 0.35671538724524754
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.49400749802589417,
+            "spearman": 0.5389473750395841,
+            "support": 13593,
+            "heldout_rmse": 0.14279183745384216,
+            "heldout_nrmse_p90": 0.2984385121734884,
+            "heldout_skill_vs_constant": 0.23246199129777334
+          },
+          {
+            "view_id": 6,
+            "accepted": false,
+            "pearson": 0.5121371150016785,
+            "spearman": 0.5410802066587852,
+            "support": 12787,
+            "heldout_rmse": 0.2199060171842575,
+            "heldout_nrmse_p90": 0.28291621321271765,
+            "heldout_skill_vs_constant": 0.3081531400692983
+          },
+          {
+            "view_id": 7,
+            "accepted": false,
+            "pearson": 0.36919263005256653,
+            "spearman": 0.3887294324930677,
+            "support": 10827,
+            "heldout_rmse": 0.29985877871513367,
+            "heldout_nrmse_p90": 0.32803984864822006,
+            "heldout_skill_vs_constant": 0.1985108069337268
+          },
+          {
+            "view_id": 8,
+            "accepted": false,
+            "pearson": 0.08543939888477325,
+            "spearman": 0.17212673717379104,
+            "support": 10051,
+            "heldout_rmse": 0.33278459310531616,
+            "heldout_nrmse_p90": 0.343112900831062,
+            "heldout_skill_vs_constant": 0.19941235422161463
+          },
+          {
+            "view_id": 9,
+            "accepted": true,
+            "pearson": 0.7549713850021362,
+            "spearman": 0.7967246874941754,
+            "support": 11148,
+            "heldout_rmse": 0.19733881950378418,
+            "heldout_nrmse_p90": 0.22965241619494037,
+            "heldout_skill_vs_constant": 0.5722114091123387
+          },
+          {
+            "view_id": 10,
+            "accepted": false,
+            "pearson": 0.6163908839225769,
+            "spearman": 0.6536856788581629,
+            "support": 13637,
+            "heldout_rmse": 0.1974005252122879,
+            "heldout_nrmse_p90": 0.25882821511971416,
+            "heldout_skill_vs_constant": 0.3748421792407173
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.5335607528686523,
+            "spearman": 0.6291178051942028,
+            "support": 13271,
+            "heldout_rmse": 0.12405627965927124,
+            "heldout_nrmse_p90": 0.2613380213779657,
+            "heldout_skill_vs_constant": 0.3030466119586812
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.635124921798706,
+            "spearman": 0.7118213090961248,
+            "support": 12727,
+            "heldout_rmse": 0.07709354907274246,
+            "heldout_nrmse_p90": 0.2737604357510778,
+            "heldout_skill_vs_constant": 0.36877169018957157
+          },
+          {
+            "view_id": 13,
+            "accepted": false,
+            "pearson": 0.4831698536872864,
+            "spearman": 0.5687389225492836,
+            "support": 13749,
+            "heldout_rmse": 0.1690513789653778,
+            "heldout_nrmse_p90": 0.30844223707912627,
+            "heldout_skill_vs_constant": 0.21991433674373528
+          },
+          {
+            "view_id": 14,
+            "accepted": false,
+            "pearson": 0.5498877763748169,
+            "spearman": 0.6840311810856115,
+            "support": 13778,
+            "heldout_rmse": 0.23333559930324554,
+            "heldout_nrmse_p90": 0.27264073092131397,
+            "heldout_skill_vs_constant": 0.3422055608524558
+          },
+          {
+            "view_id": 15,
+            "accepted": false,
+            "pearson": 0.20488448441028595,
+            "spearman": 0.23908851608596535,
+            "support": 11624,
+            "heldout_rmse": 0.2472805380821228,
+            "heldout_nrmse_p90": 0.2575807490275248,
+            "heldout_skill_vs_constant": 0.0866224940743009
+          }
+        ]
+      },
+      {
+        "representation": "contour_lines",
+        "summary_path": "igl3dm-depth-alignment/results_contour/contour_npu_384/analysis.json",
+        "median_pearson": 0.6094980239868164,
+        "median_spearman": 0.7206094343892177,
+        "median_heldout_rmse": 0.16399207711219788,
+        "median_heldout_nrmse_p90": 0.2403991852906615,
+        "median_heldout_skill_vs_constant": 0.379924302857405,
+        "candidate_constraint_views": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "negative_correlation_views": [
+          13
+        ],
+        "per_view": [
+          {
+            "view_id": 0,
+            "accepted": false,
+            "pearson": 0.5632636547088623,
+            "spearman": 0.6954453179744253,
+            "support": 9965,
+            "heldout_rmse": 0.1248234286904335,
+            "heldout_nrmse_p90": 0.26312736183797547,
+            "heldout_skill_vs_constant": 0.36568273403755724
+          },
+          {
+            "view_id": 1,
+            "accepted": false,
+            "pearson": 0.6667433977127075,
+            "spearman": 0.8087986969427242,
+            "support": 11847,
+            "heldout_rmse": 0.2073303759098053,
+            "heldout_nrmse_p90": 0.21413950851220223,
+            "heldout_skill_vs_constant": 0.43246326379888
+          },
+          {
+            "view_id": 2,
+            "accepted": false,
+            "pearson": 0.6212617754936218,
+            "spearman": 0.8329829288503303,
+            "support": 13397,
+            "heldout_rmse": 0.20937402546405792,
+            "heldout_nrmse_p90": 0.24581714595942433,
+            "heldout_skill_vs_constant": 0.35743492077129324
+          },
+          {
+            "view_id": 3,
+            "accepted": false,
+            "pearson": 0.3914200961589813,
+            "spearman": 0.37450721481212085,
+            "support": 13277,
+            "heldout_rmse": 0.1510259509086609,
+            "heldout_nrmse_p90": 0.2852628751330171,
+            "heldout_skill_vs_constant": 0.1836732554167264
+          },
+          {
+            "view_id": 4,
+            "accepted": false,
+            "pearson": 0.6375377774238586,
+            "spearman": 0.6568999620887878,
+            "support": 13413,
+            "heldout_rmse": 0.07451922446489334,
+            "heldout_nrmse_p90": 0.23498122462189872,
+            "heldout_skill_vs_constant": 0.4251442241378257
+          },
+          {
+            "view_id": 5,
+            "accepted": false,
+            "pearson": 0.5501965880393982,
+            "spearman": 0.5550097501572214,
+            "support": 13651,
+            "heldout_rmse": 0.14071007072925568,
+            "heldout_nrmse_p90": 0.28822235573518623,
+            "heldout_skill_vs_constant": 0.29105815876142704
+          },
+          {
+            "view_id": 6,
+            "accepted": true,
+            "pearson": 0.7853947877883911,
+            "spearman": 0.7924366960875634,
+            "support": 12212,
+            "heldout_rmse": 0.1528892070055008,
+            "heldout_nrmse_p90": 0.20950343039163638,
+            "heldout_skill_vs_constant": 0.6373930398668488
+          },
+          {
+            "view_id": 7,
+            "accepted": true,
+            "pearson": 0.7646885514259338,
+            "spearman": 0.7660379570247962,
+            "support": 10673,
+            "heldout_rmse": 0.20542693138122559,
+            "heldout_nrmse_p90": 0.2289495466170658,
+            "heldout_skill_vs_constant": 0.6086740729982494
+          },
+          {
+            "view_id": 8,
+            "accepted": true,
+            "pearson": 0.7310502529144287,
+            "spearman": 0.7459860507188288,
+            "support": 9420,
+            "heldout_rmse": 0.2142334133386612,
+            "heldout_nrmse_p90": 0.22598036164500696,
+            "heldout_skill_vs_constant": 0.6396475421162189
+          },
+          {
+            "view_id": 9,
+            "accepted": true,
+            "pearson": 0.79313725233078,
+            "spearman": 0.7841965816489097,
+            "support": 11176,
+            "heldout_rmse": 0.17509494721889496,
+            "heldout_nrmse_p90": 0.20375832309780853,
+            "heldout_skill_vs_constant": 0.6525202905835155
+          },
+          {
+            "view_id": 10,
+            "accepted": true,
+            "pearson": 0.8058379888534546,
+            "spearman": 0.8267210950269096,
+            "support": 13513,
+            "heldout_rmse": 0.14104905724525452,
+            "heldout_nrmse_p90": 0.18220638292367877,
+            "heldout_skill_vs_constant": 0.6605291404298954
+          },
+          {
+            "view_id": 11,
+            "accepted": false,
+            "pearson": 0.4087141752243042,
+            "spearman": 0.4484951955034764,
+            "support": 13196,
+            "heldout_rmse": 0.1370653659105301,
+            "heldout_nrmse_p90": 0.30627582515292645,
+            "heldout_skill_vs_constant": 0.13203136460451048
+          },
+          {
+            "view_id": 12,
+            "accepted": false,
+            "pearson": 0.16793599724769592,
+            "spearman": 0.10935050577883436,
+            "support": 12969,
+            "heldout_rmse": 0.09841315448284149,
+            "heldout_nrmse_p90": 0.34418426953082004,
+            "heldout_skill_vs_constant": 0.049627227103832494
+          },
+          {
+            "view_id": 13,
+            "accepted": false,
+            "pearson": -0.09855432063341141,
+            "spearman": -0.15805752670662757,
+            "support": 13646,
+            "heldout_rmse": 0.18981949985027313,
+            "heldout_nrmse_p90": 0.3490692725391418,
+            "heldout_skill_vs_constant": 0.029279368650921844
+          },
+          {
+            "view_id": 14,
+            "accepted": false,
+            "pearson": 0.34367629885673523,
+            "spearman": 0.38031292096651304,
+            "support": 13538,
+            "heldout_rmse": 0.26550137996673584,
+            "heldout_nrmse_p90": 0.30943768209371825,
+            "heldout_skill_vs_constant": 0.15559180341692513
+          },
+          {
+            "view_id": 15,
+            "accepted": false,
+            "pearson": 0.597734272480011,
+            "spearman": 0.74577355080401,
+            "support": 11388,
+            "heldout_rmse": 0.20226003229618073,
+            "heldout_nrmse_p90": 0.2071492193873527,
+            "heldout_skill_vs_constant": 0.3941658716772528
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,868 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-05T17:21:13.375379+00:00",
+  "input": {
+    "filename": "exec-e5a90272-ef56-4321-a301-6f96ea39f52e.png",
+    "sha256": "8f4ac1a97a3429dee4c32f9b0497cecbe1d5cbbbc40b2366ae1ca01e5087afa0",
+    "size": [
+      1261,
+      1247
+    ],
+    "view_count": 16,
+    "atlas_view_count": 16,
+    "selected_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "imagegen_calls_for_this_input": 1,
+    "provenance_note": "Call count is caller-provided experiment provenance, not verified by image pixels."
+  },
+  "method": "common-camera silhouette visual hull; marching tetrahedra; approximate visibility-aware vertex color projection",
+  "manual_modeling": false,
+  "wireframe_vertices_decoded": false,
+  "learned_depth_model_used": false,
+  "config": {
+    "rows": 4,
+    "columns": 4,
+    "gutter_pixels": 2,
+    "working_image_size": 192,
+    "resolution": 80,
+    "max_misses": 2,
+    "fixed_misses": 2,
+    "smooth_sigma_voxels": 0.6,
+    "background_threshold": 32,
+    "cell_alignment": "shared grid; no per-view silhouette translation or scaling"
+  },
+  "camera_convention": {
+    "coordinate_system": "right-handed z-up",
+    "yaw0_location": [
+      0,
+      -4,
+      0
+    ],
+    "yaw_positive": "camera moves from -Y toward +X",
+    "orthographic_scale": 2.0,
+    "elevation_bands_degrees": [
+      0
+    ],
+    "per_view": [
+      {
+        "yaw_degrees": 0.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 0
+      },
+      {
+        "yaw_degrees": 22.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 1
+      },
+      {
+        "yaw_degrees": 45.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 2
+      },
+      {
+        "yaw_degrees": 67.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 3
+      },
+      {
+        "yaw_degrees": 90.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 4
+      },
+      {
+        "yaw_degrees": 112.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 5
+      },
+      {
+        "yaw_degrees": 135.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 6
+      },
+      {
+        "yaw_degrees": 157.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 7
+      },
+      {
+        "yaw_degrees": 180.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 8
+      },
+      {
+        "yaw_degrees": 202.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 9
+      },
+      {
+        "yaw_degrees": 225.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 10
+      },
+      {
+        "yaw_degrees": 247.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 11
+      },
+      {
+        "yaw_degrees": 270.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 12
+      },
+      {
+        "yaw_degrees": 292.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 13
+      },
+      {
+        "yaw_degrees": 315.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 14
+      },
+      {
+        "yaw_degrees": 337.5,
+        "elevation_degrees": 0.0,
+        "source_view_index": 15
+      }
+    ]
+  },
+  "segmentation": [
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.3126356336805556,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        51,
+        6,
+        141,
+        185
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 0,
+      "source_view_index": 0
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4007975260416667,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        34,
+        6,
+        169,
+        185
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 1,
+      "source_view_index": 1
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4555392795138889,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        18,
+        6,
+        180,
+        185
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 2,
+      "source_view_index": 2
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4453125,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        3,
+        8,
+        185,
+        185
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 3,
+      "source_view_index": 3
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4354112413194444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        1,
+        9,
+        187,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 4,
+      "source_view_index": 4
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4333224826388889,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        9,
+        9,
+        177,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 5,
+      "source_view_index": 5
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.3941243489583333,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        28,
+        8,
+        158,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 6,
+      "source_view_index": 6
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.3306749131944444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        43,
+        8,
+        135,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 7,
+      "source_view_index": 7
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.29443359375,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        55,
+        8,
+        137,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 8,
+      "source_view_index": 8
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.3639051649305556,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        36,
+        8,
+        149,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 9,
+      "source_view_index": 9
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4248318142361111,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        20,
+        7,
+        163,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 10,
+      "source_view_index": 10
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4251302083333333,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        10,
+        7,
+        173,
+        183
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 11,
+      "source_view_index": 11
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4150390625,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        6,
+        7,
+        186,
+        184
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 12,
+      "source_view_index": 12
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.430908203125,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        11,
+        8,
+        180,
+        184
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 13,
+      "source_view_index": 13
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.45654296875,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        17,
+        8,
+        176,
+        185
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 14,
+      "source_view_index": 14
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "foreground_fraction": 0.4242350260416667,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        26,
+        7,
+        165,
+        186
+      ],
+      "connected_components": 1,
+      "threshold": 32,
+      "view": 15,
+      "source_view_index": 15
+    }
+  ],
+  "candidates": [
+    {
+      "allowed_misses": 2,
+      "minimum_supporting_views": 14,
+      "voxel_count": 63175,
+      "component_count_before_cleanup": 5,
+      "removed_component_voxels": 11,
+      "boundary_voxel_hits": 0,
+      "smoothing_sigma_voxels": 0.6,
+      "voxel_reprojection": {
+        "per_view": [
+          {
+            "iou": 0.8362369337979094,
+            "precision": 0.851706433101782,
+            "recall": 0.9787418655097614
+          },
+          {
+            "iou": 0.8452909270216963,
+            "precision": 0.9044384356657653,
+            "recall": 0.9281895093062605
+          },
+          {
+            "iou": 0.8188121956383655,
+            "precision": 0.880521402550091,
+            "recall": 0.9211576252009765
+          },
+          {
+            "iou": 0.8276118609841641,
+            "precision": 0.8663773920783266,
+            "recall": 0.9487085769980507
+          },
+          {
+            "iou": 0.8849330675021362,
+            "precision": 0.911731909149598,
+            "recall": 0.9678524702510747
+          },
+          {
+            "iou": 0.8709623430962343,
+            "precision": 0.8889141946136765,
+            "recall": 0.9773381745336172
+          },
+          {
+            "iou": 0.8095265324794144,
+            "precision": 0.827120822622108,
+            "recall": 0.9743960355151765
+          },
+          {
+            "iou": 0.7949139177290051,
+            "precision": 0.799801652892562,
+            "recall": 0.9923707957342084
+          },
+          {
+            "iou": 0.7926657263751763,
+            "precision": 0.8031590823617901,
+            "recall": 0.9837847798046803
+          },
+          {
+            "iou": 0.826653883029722,
+            "precision": 0.8529314779397217,
+            "recall": 0.9640700708162505
+          },
+          {
+            "iou": 0.8576540310857654,
+            "precision": 0.8733276401935668,
+            "recall": 0.9795032245705894
+          },
+          {
+            "iou": 0.8224557222553215,
+            "precision": 0.844737427681353,
+            "recall": 0.9689254721796835
+          },
+          {
+            "iou": 0.8622478386167147,
+            "precision": 0.8794826572604351,
+            "recall": 0.9777777777777777
+          },
+          {
+            "iou": 0.8664137045923777,
+            "precision": 0.8840744747480499,
+            "recall": 0.9774630154233553
+          },
+          {
+            "iou": 0.8529861338574081,
+            "precision": 0.9130485595745924,
+            "recall": 0.9284016636957814
+          },
+          {
+            "iou": 0.8014873806874744,
+            "precision": 0.9049256198347108,
+            "recall": 0.8751838352835859
+          }
+        ],
+        "mean_iou": 0.8356782624218053,
+        "worst_iou": 0.7926657263751763
+      }
+    }
+  ],
+  "selected": {
+    "allowed_misses": 2,
+    "minimum_supporting_views": 14,
+    "voxel_count": 63175,
+    "component_count_before_cleanup": 5,
+    "removed_component_voxels": 11,
+    "boundary_voxel_hits": 0,
+    "smoothing_sigma_voxels": 0.6,
+    "voxel_reprojection": {
+      "per_view": [
+        {
+          "iou": 0.8362369337979094,
+          "precision": 0.851706433101782,
+          "recall": 0.9787418655097614
+        },
+        {
+          "iou": 0.8452909270216963,
+          "precision": 0.9044384356657653,
+          "recall": 0.9281895093062605
+        },
+        {
+          "iou": 0.8188121956383655,
+          "precision": 0.880521402550091,
+          "recall": 0.9211576252009765
+        },
+        {
+          "iou": 0.8276118609841641,
+          "precision": 0.8663773920783266,
+          "recall": 0.9487085769980507
+        },
+        {
+          "iou": 0.8849330675021362,
+          "precision": 0.911731909149598,
+          "recall": 0.9678524702510747
+        },
+        {
+          "iou": 0.8709623430962343,
+          "precision": 0.8889141946136765,
+          "recall": 0.9773381745336172
+        },
+        {
+          "iou": 0.8095265324794144,
+          "precision": 0.827120822622108,
+          "recall": 0.9743960355151765
+        },
+        {
+          "iou": 0.7949139177290051,
+          "precision": 0.799801652892562,
+          "recall": 0.9923707957342084
+        },
+        {
+          "iou": 0.7926657263751763,
+          "precision": 0.8031590823617901,
+          "recall": 0.9837847798046803
+        },
+        {
+          "iou": 0.826653883029722,
+          "precision": 0.8529314779397217,
+          "recall": 0.9640700708162505
+        },
+        {
+          "iou": 0.8576540310857654,
+          "precision": 0.8733276401935668,
+          "recall": 0.9795032245705894
+        },
+        {
+          "iou": 0.8224557222553215,
+          "precision": 0.844737427681353,
+          "recall": 0.9689254721796835
+        },
+        {
+          "iou": 0.8622478386167147,
+          "precision": 0.8794826572604351,
+          "recall": 0.9777777777777777
+        },
+        {
+          "iou": 0.8664137045923777,
+          "precision": 0.8840744747480499,
+          "recall": 0.9774630154233553
+        },
+        {
+          "iou": 0.8529861338574081,
+          "precision": 0.9130485595745924,
+          "recall": 0.9284016636957814
+        },
+        {
+          "iou": 0.8014873806874744,
+          "precision": 0.9049256198347108,
+          "recall": 0.8751838352835859
+        }
+      ],
+      "mean_iou": 0.8356782624218053,
+      "worst_iou": 0.7926657263751763
+    }
+  },
+  "mesh": {
+    "vertices": 55334,
+    "triangles": 110680,
+    "edges": 166020,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "watertight_edge_incidence": true,
+    "euler_characteristic": -6,
+    "signed_volume": 0.9845888018608093,
+    "self_intersections_checked": false,
+    "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+  },
+  "color_projection": {
+    "unobserved_vertices": 6559,
+    "method": "front-facing point-z-buffer projection; unobserved vertices gray"
+  },
+  "warnings": [
+    "The input is a generated multiview drawing, not calibrated photographic evidence.",
+    "Yaw/elevation and orthographic projection are assumptions requested of ImageGen, not recovered measurements.",
+    "Silhouettes cannot recover invisible concavities, correct anatomical topology, or exact wireframe vertices.",
+    "Voxel reprojection scores are approximate selection diagnostics. They can rank candidates differently from final mesh masks; compare fixed-misses runs before claiming the best fit.",
+    "Painted mesh lines and colors are appearance only; they are not vertex IDs or measured depth.",
+    "Selected relaxed hull tolerates 2 contradictory views per voxel."
+  ],
+  "elapsed_seconds_before_render": 7.336848025006475,
+  "render_status": "completed",
+  "render_exit_code": 0,
+  "elapsed_seconds_total": 15.408108033996541,
+  "actual_mesh_reprojection": {
+    "per_view": [
+      {
+        "iou": 0.8563097737345463,
+        "precision": 0.8918131022754879,
+        "recall": 0.9555748373101952
+      },
+      {
+        "iou": 0.8498967475477542,
+        "precision": 0.9480958894248074,
+        "recall": 0.8913705583756345
+      },
+      {
+        "iou": 0.8215801951811215,
+        "precision": 0.9172668513388735,
+        "recall": 0.8873340082177098
+      },
+      {
+        "iou": 0.8314011815851076,
+        "precision": 0.9071945508727118,
+        "recall": 0.9086866471734892
+      },
+      {
+        "iou": 0.8933922282576255,
+        "precision": 0.9551981619758759,
+        "recall": 0.9324652669615601
+      },
+      {
+        "iou": 0.8965599191967203,
+        "precision": 0.9462594845425472,
+        "recall": 0.9446600726180042
+      },
+      {
+        "iou": 0.8273191233863705,
+        "precision": 0.8663313423451745,
+        "recall": 0.948379103861243
+      },
+      {
+        "iou": 0.8351833637768723,
+        "precision": 0.8532873959230548,
+        "recall": 0.9752255947497949
+      },
+      {
+        "iou": 0.8204142476070925,
+        "precision": 0.8467892137015143,
+        "recall": 0.9634236226276027
+      },
+      {
+        "iou": 0.8484971567831032,
+        "precision": 0.9023108487509899,
+        "recall": 0.934327245620574
+      },
+      {
+        "iou": 0.8851403249630724,
+        "precision": 0.9221914435210834,
+        "recall": 0.9565800395887875
+      },
+      {
+        "iou": 0.8356673335238639,
+        "precision": 0.8891321534999695,
+        "recall": 0.9328739152628892
+      },
+      {
+        "iou": 0.8791868932038835,
+        "precision": 0.9246920671389367,
+        "recall": 0.9469934640522876
+      },
+      {
+        "iou": 0.9024623475974182,
+        "precision": 0.9468865617357497,
+        "recall": 0.9505823103556814
+      },
+      {
+        "iou": 0.845785170566676,
+        "precision": 0.9430996541967934,
+        "recall": 0.8912655971479501
+      },
+      {
+        "iou": 0.7680717488789238,
+        "precision": 0.9220499569336779,
+        "recall": 0.8214080184154997
+      }
+    ],
+    "mean_iou": 0.8498042347368845,
+    "worst_iou": 0.7680717488789238
+  },
+  "actual_mesh_reprojection_by_elevation": {
+    "0.0": {
+      "per_view": [
+        {
+          "iou": 0.8563097737345463,
+          "precision": 0.8918131022754879,
+          "recall": 0.9555748373101952
+        },
+        {
+          "iou": 0.8498967475477542,
+          "precision": 0.9480958894248074,
+          "recall": 0.8913705583756345
+        },
+        {
+          "iou": 0.8215801951811215,
+          "precision": 0.9172668513388735,
+          "recall": 0.8873340082177098
+        },
+        {
+          "iou": 0.8314011815851076,
+          "precision": 0.9071945508727118,
+          "recall": 0.9086866471734892
+        },
+        {
+          "iou": 0.8933922282576255,
+          "precision": 0.9551981619758759,
+          "recall": 0.9324652669615601
+        },
+        {
+          "iou": 0.8965599191967203,
+          "precision": 0.9462594845425472,
+          "recall": 0.9446600726180042
+        },
+        {
+          "iou": 0.8273191233863705,
+          "precision": 0.8663313423451745,
+          "recall": 0.948379103861243
+        },
+        {
+          "iou": 0.8351833637768723,
+          "precision": 0.8532873959230548,
+          "recall": 0.9752255947497949
+        },
+        {
+          "iou": 0.8204142476070925,
+          "precision": 0.8467892137015143,
+          "recall": 0.9634236226276027
+        },
+        {
+          "iou": 0.8484971567831032,
+          "precision": 0.9023108487509899,
+          "recall": 0.934327245620574
+        },
+        {
+          "iou": 0.8851403249630724,
+          "precision": 0.9221914435210834,
+          "recall": 0.9565800395887875
+        },
+        {
+          "iou": 0.8356673335238639,
+          "precision": 0.8891321534999695,
+          "recall": 0.9328739152628892
+        },
+        {
+          "iou": 0.8791868932038835,
+          "precision": 0.9246920671389367,
+          "recall": 0.9469934640522876
+        },
+        {
+          "iou": 0.9024623475974182,
+          "precision": 0.9468865617357497,
+          "recall": 0.9505823103556814
+        },
+        {
+          "iou": 0.845785170566676,
+          "precision": 0.9430996541967934,
+          "recall": 0.8912655971479501
+        },
+        {
+          "iou": 0.7680717488789238,
+          "precision": 0.9220499569336779,
+          "recall": 0.8214080184154997
+        }
+      ],
+      "mean_iou": 0.8498042347368845,
+      "worst_iou": 0.7680717488789238
+    }
+  },
+  "render_validation": {
+    "frames": 32,
+    "unseen_yaw_frames": 16,
+    "geometry_changed_by_renderer": false,
+    "comparison": "pixel-center mesh ray masks against segmented inputs; no 3D ground truth",
+    "elapsed_seconds": 6.787
+  }
+}

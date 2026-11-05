@@ -49,3 +49,5 @@ Baseline silhouette IoU: 0.848219. All runs preserve 54,160 vertices / 108,324 f
 The residuals have different model-dependent calibrations/support; do not rank models by their raw magnitudes alone. All fits improve agreement with their own priors but slightly worsen silhouettes. DA3's maximum applied movement was 0.01345 normalized units, with mean 0.00579. Visual changes are modest, not a fidelity breakthrough. The baseline is itself approximate; calibration agreement cannot prove hidden anatomy or correct camera geometry.
 
 A synthetic sphere regression verifies unchanged vertex/face identity, bounded nonzero movement, orientation preservation and edge closure. No new image-generation call was used for these refinements.
+
+The fitter now rejects fewer than four accepted views by default (`--min-views`) and rejects an empty visible fitting support. It records `fit_failure.json` without exporting modified geometry. This deliberately rejects the coarse-pattern ZipDepth and dense-contour DA3 trials rather than extrapolating from inadequate coverage. View count alone does not prove useful angular coverage.

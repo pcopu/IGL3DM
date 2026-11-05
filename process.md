@@ -168,3 +168,36 @@ A fourth generation call supplied one new16-view atlas referencing the original 
 [Input](docs/experiments/08-coarse-pattern/input.png) · [Actual hull turntable](docs/experiments/08-coarse-pattern/turntable.gif) · [Feature matches](docs/experiments/08-coarse-pattern/sift-matches.png) · [Paired TripoSR comparison](docs/experiments/08-coarse-pattern/triposr-original-vs-pattern.gif)
 
 The regression suite now includes a synthetic shared-vertex-warp check. Fifteen tests pass; optional learned-model runners are isolated from the baseline package. All model weights and meshes remain excluded from Git.
+
+
+## Round 9 · Surface contour curves and fixed-vertex controls
+
+A fifth generation call supplied a gray-clay lion with sparse black, red and blue surface-wrapping contours. It is a new drawing, so material, shape and framing changed alongside the line pattern. The goal remains our own reconstruction; TripoSR below is only a comparison.
+
+- Same 80³ field, 192px masks and 14-of-16 tolerance: 55,334 vertices / 110,680 triangles, zero boundary/nonmanifold edges. Actual mean silhouette IoU 0.849804, worst 0.768072. This is only a small change from the original 0.848219.
+- Repeated all three software-depth estimators. Median normalized spatial-assessment residuals for original → coarse triangles → contours: DA3 0.223 → 0.262 → 0.257; V2 0.226 → 0.256 → 0.234; ZipDepth 0.235 → 0.267 → 0.240. Contours recover some of the coarse-pattern loss, but none beats the original on this diagnostic.
+- DA3 inferred a 174.27° jump between adjacent views 8 and 9. Its raw full-orbit cloud is rejected, regardless of improved self-reprojection statistics.
+- Matched bounded shared-vertex fits also ran on coarse and contour inputs. Pattern DA3/V2 achieved silhouette IoU 0.846810/0.846512, slightly below their 0.847176 baseline. Pattern ZipDepth accepted only one view and was explicitly rejected before geometry export.
+- Contour DA3/V2/ZipDepth field fits achieved IoU 0.849974/0.848945/0.848526. Their own spatial-assessment depth RMSE changed 0.079383→0.072158, 0.144994→0.141381, and 0.176179→0.172157. These remain small changes and are not ground-truth accuracy gains.
+- The TripoSR contour comparison looks cleaner than its colored-wireframe controls: one watertight component, 17,013 vertices / 34,030 triangles. It still has rough facial details and is not part of the target reconstruction pipeline. No further TripoSR run was made for the dense-contour experiment.
+
+[Input](docs/experiments/09-contours/input.png) · [Actual hull](docs/experiments/09-contours/turntable.gif) · [DA3 shared-vertex fit](docs/experiments/09-contours/da3-depth-fit.png) · [Comparison-only learned meshes](docs/experiments/09-contours/triposr-comparison-only.gif)
+
+Full records: [contour software controls](experiments/contours/sparse-depth-control.md), [field-fit metrics](experiments/depth_fit/pattern-contour-field-results.json). All previous results remain intact.
+
+## Round 10 · Dense high-contrast geometry contours
+
+A sixth generation call supplied one white lion turnaround with many high-contrast black surface contours. The input has no useful texture requirement. The same automatic reconstruction and three depth estimators were run; no hand modeling or additional learned image-to-mesh inference was used.
+
+- Baseline: 59,778 vertices / 119,560 triangles, zero boundary/nonmanifold edges; actual source-mask IoU 0.857248, worst 0.773716. This drawing has the strongest baseline outline agreement so far. Different source shapes mean it is not a controlled ground-truth geometry ranking.
+- DA3 failed differently: all sixteen inferred cameras collapsed into a maximum pairwise rotation of only 12.87°. The resulting thin stacked slab is rejected. Its apparently favorable 1.26% self-depth disagreement is an example of misleading self-consistency.
+- Fixed-camera calibration independently confirms weak DA3 depth: only views 8 and 12 pass, median normalized spatial-assessment residual 0.299. This fails the four-view minimum for downstream fitting. V2 accepts eight views with median residual 0.235; ZipDepth accepts five with 0.240. Those are candidates, not verified depth measurements.
+- White interiors were checked explicitly: saved masks reproduce the threshold-and-hole-fill algorithm exactly. Of 248,762 foreground pixels, 49,320 are enclosed background-colored interiors; 46,937 remain in broad calibration support. The dense test did not accidentally use only black line pixels.
+- Added geometry-only clay rendering with fixed white area lights, neutral gray rough material and flat existing triangle normals. It changes neither vertices nor faces. Numeric depth, XYZ, face IDs and mask arrays were identical between material modes in cube/sphere tests; default color renders pass pixel regression.
+- Added a four-view minimum and explicit no-visible-support rejection to shared-vertex fitting. Sixteen regression tests pass, including rejection without writing geometry.
+
+[Input](docs/experiments/10-dense-contours/input.png) · [Actual geometry-only turntable](docs/experiments/10-dense-contours/clay-turntable.gif) · [Software-depth maps](docs/experiments/10-dense-contours/software-depth-comparison.png) · [Rejected DA3 slab](docs/experiments/10-dense-contours/da3-collapsed-cloud.png)
+
+[Detailed depth experiment](experiments/contours/dense-depth-control.md) · [Mask validation](experiments/depth_fit/dense-mask-validation.json)
+
+Next controlled step: optimize one shared signed-distance volume directly against silhouettes and accepted software-depth fitting pixels, then evaluate the extracted actual mesh and a silhouettes-only ablation. No claim that these dense drawn curves identify exact vertices or measured surface depth.

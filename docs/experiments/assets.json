@@ -132,6 +132,11 @@
       "sha256": "bdffb63cfe6531cc3373dfbae95bc6fa181e2ae0672cdb6b73ca1838a512f7f8"
     },
     {
+      "path": "docs/experiments/08-coarse-pattern/da3-depth-fit.png",
+      "bytes": 325559,
+      "sha256": "50b19ad7c5b593f996004c75bd5bbc727046e260f21e5ebef4fb4c020ab9345a"
+    },
+    {
       "path": "docs/experiments/08-coarse-pattern/input.png",
       "bytes": 2118765,
       "sha256": "069592cb2617e453896e46047abd91329bbb9bd487cedac870eac3556041e8ec"
@@ -165,6 +170,76 @@
       "path": "docs/experiments/08-coarse-pattern/turntable.gif",
       "bytes": 490776,
       "sha256": "b9db44ac678a1e11738d5644643e1e7be1da8ee1291b83a5b181de23e71d1589"
+    },
+    {
+      "path": "docs/experiments/08-coarse-pattern/v2-depth-fit.png",
+      "bytes": 325640,
+      "sha256": "8a5894b37ab1e3ad7be6c96e6af29c5b8fdf4b7e959c8d35ea880b74d3309cb1"
+    },
+    {
+      "path": "docs/experiments/09-contours/da3-depth-fit.png",
+      "bytes": 284535,
+      "sha256": "3ffa5d810c305284a4231da31a1deb93b8c4f19c32aedb73f69c11cbcc79fdcc"
+    },
+    {
+      "path": "docs/experiments/09-contours/input.png",
+      "bytes": 1789584,
+      "sha256": "8f4ac1a97a3429dee4c32f9b0497cecbe1d5cbbbc40b2366ae1ca01e5087afa0"
+    },
+    {
+      "path": "docs/experiments/09-contours/reference-vs-mesh.png",
+      "bytes": 284351,
+      "sha256": "543a0e5ab8eafdeb92889b3380af907f8410e8e486ceddd938618b332cf74317"
+    },
+    {
+      "path": "docs/experiments/09-contours/triposr-comparison-only.gif",
+      "bytes": 2545935,
+      "sha256": "2e66b74f4f96be6811d5e07fd459a51eb8c1a3d3d011af4dd8b6312e2f81c424"
+    },
+    {
+      "path": "docs/experiments/09-contours/turntable.gif",
+      "bytes": 433624,
+      "sha256": "5fe581ad2ce667170056d0cdab9e3e83480d60975e8014183e5f372e19c0b343"
+    },
+    {
+      "path": "docs/experiments/09-contours/v2-depth-fit.png",
+      "bytes": 284589,
+      "sha256": "950f5437fc30c1c114386043ae9ca7cbbb4ab1e353cf1905e2daf57b5d24302c"
+    },
+    {
+      "path": "docs/experiments/09-contours/zipdepth-fit.png",
+      "bytes": 284152,
+      "sha256": "03897ec304a33dfcefe27f0ebb54e9bba26b4169c5b4890ac600ffb9070c29cd"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/clay-contact.png",
+      "bytes": 515685,
+      "sha256": "704fe69dc4b02ef0f82e4e2a5119ca76451f8b110f2460922aa78c7063193167"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/clay-turntable.gif",
+      "bytes": 506040,
+      "sha256": "57a05d0081baee7bb751b50d0eaf79781063aeee30954633ebb290ce2cdb1d85"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/da3-collapsed-cloud.png",
+      "bytes": 709789,
+      "sha256": "cfeb7dcf098577a90f7ce752bcd78ceb7300e92374e0c36eaca4913e93412ae7"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/input.png",
+      "bytes": 2710313,
+      "sha256": "fba0fd146aee3487aea3fa9f50edacf00d2961813034e1ff177a85b5ccab57ec"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/reference-vs-mesh.png",
+      "bytes": 373433,
+      "sha256": "5860e72d8dc8d9e22260fa0c0dcf74c9823719928e024526c35f1f2be4ddabc8"
+    },
+    {
+      "path": "docs/experiments/10-dense-contours/software-depth-comparison.png",
+      "bytes": 523851,
+      "sha256": "df1bff9ddbc5034f57dfabf3cf190ad1b10710946011944d6ea5093df09c0887"
     }
   ]
 }

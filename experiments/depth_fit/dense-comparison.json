@@ -1,0 +1,238 @@
+[
+  {
+    "model": "DA3-SMALL-308",
+    "representations": [
+      {
+        "representation": "original",
+        "median_pearson": 0.7337626516819,
+        "median_spearman": 0.7695317230935057,
+        "median_heldout_rmse": 0.1219574511051178,
+        "median_heldout_nrmse_p90": 0.22270254440180695,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "triangle_pattern",
+        "median_pearson": 0.586773157119751,
+        "median_spearman": 0.6211244505391137,
+        "median_heldout_rmse": 0.14658640325069427,
+        "median_heldout_nrmse_p90": 0.26198903179378463,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "representation": "contour",
+        "median_pearson": 0.6446520388126373,
+        "median_spearman": 0.6939957609154108,
+        "median_heldout_rmse": 0.14047209918498993,
+        "median_heldout_nrmse_p90": 0.25685564082674084,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "dense_contour",
+        "median_pearson": 0.3774581253528595,
+        "median_spearman": 0.4166029624091463,
+        "median_heldout_rmse": 0.21756809204816818,
+        "median_heldout_nrmse_p90": 0.2986650891430957,
+        "candidate_constraint_views": [
+          8,
+          12
+        ],
+        "negative_correlation_views": [
+          2,
+          3,
+          14
+        ]
+      }
+    ],
+    "white_interior_support": {
+      "broad_mask": 46937,
+      "valid_mask": 2911,
+      "valid_foreground_total": 11138
+    }
+  },
+  {
+    "model": "DA2-SMALL-518",
+    "representations": [
+      {
+        "representation": "original",
+        "median_pearson": 0.7220385670661926,
+        "median_spearman": 0.7393934462243379,
+        "median_heldout_rmse": 0.15786125510931015,
+        "median_heldout_nrmse_p90": 0.22633042908527584,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          6,
+          10,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "triangle_pattern",
+        "median_pearson": 0.6203249990940094,
+        "median_spearman": 0.709552346430437,
+        "median_heldout_rmse": 0.16627749055624008,
+        "median_heldout_nrmse_p90": 0.2557175544522629,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "contour",
+        "median_pearson": 0.6995758414268494,
+        "median_spearman": 0.7525982185696068,
+        "median_heldout_rmse": 0.15418442338705063,
+        "median_heldout_nrmse_p90": 0.23404961068938485,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          6,
+          10,
+          11,
+          14,
+          15
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "dense_contour",
+        "median_pearson": 0.7077580690383911,
+        "median_spearman": 0.6942783495209444,
+        "median_heldout_rmse": 0.16956691443920135,
+        "median_heldout_nrmse_p90": 0.23528916678357664,
+        "candidate_constraint_views": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          13,
+          14,
+          15
+        ],
+        "negative_correlation_views": []
+      }
+    ],
+    "white_interior_support": {
+      "broad_mask": 46937,
+      "valid_mask": 21375,
+      "valid_foreground_total": 99285
+    }
+  },
+  {
+    "model": "ZIPDEPTH-NPU-384",
+    "representations": [
+      {
+        "representation": "original",
+        "median_pearson": 0.7031659781932831,
+        "median_spearman": 0.756959852080217,
+        "median_heldout_rmse": 0.16792858392000198,
+        "median_heldout_nrmse_p90": 0.2349599349202261,
+        "candidate_constraint_views": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          9,
+          10,
+          15
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "triangle_pattern",
+        "median_pearson": 0.5105430781841278,
+        "median_spearman": 0.5989283638717432,
+        "median_heldout_rmse": 0.19736967235803604,
+        "median_heldout_nrmse_p90": 0.26729515627125555,
+        "candidate_constraint_views": [
+          9
+        ],
+        "negative_correlation_views": []
+      },
+      {
+        "representation": "contour",
+        "median_pearson": 0.6094980239868164,
+        "median_spearman": 0.7206094343892177,
+        "median_heldout_rmse": 0.16399207711219788,
+        "median_heldout_nrmse_p90": 0.2403991852906615,
+        "candidate_constraint_views": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "negative_correlation_views": [
+          13
+        ]
+      },
+      {
+        "representation": "dense_contour",
+        "median_pearson": 0.6312315762042999,
+        "median_spearman": 0.6672389085999523,
+        "median_heldout_rmse": 0.1694028601050377,
+        "median_heldout_nrmse_p90": 0.24023786529212632,
+        "candidate_constraint_views": [
+          2,
+          3,
+          6,
+          9,
+          10
+        ],
+        "negative_correlation_views": []
+      }
+    ],
+    "white_interior_support": {
+      "broad_mask": 46937,
+      "valid_mask": 14915,
+      "valid_foreground_total": 63475
+    }
+  }
+]

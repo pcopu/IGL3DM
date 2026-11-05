@@ -1,0 +1,101 @@
+{
+  "method": "Reproduced saved masks exactly using border RGB distance threshold32, binary fill holes and small-component removal; no mask changes.",
+  "views": [
+    {
+      "view_id": 0,
+      "foreground_pixels": 11898,
+      "filled_background_color_interior_pixels": 1830,
+      "interior_fraction_of_foreground": 0.15380736258194655
+    },
+    {
+      "view_id": 1,
+      "foreground_pixels": 15243,
+      "filled_background_color_interior_pixels": 2421,
+      "interior_fraction_of_foreground": 0.15882700255855148
+    },
+    {
+      "view_id": 2,
+      "foreground_pixels": 17283,
+      "filled_background_color_interior_pixels": 3245,
+      "interior_fraction_of_foreground": 0.1877567551929642
+    },
+    {
+      "view_id": 3,
+      "foreground_pixels": 16869,
+      "filled_background_color_interior_pixels": 3191,
+      "interior_fraction_of_foreground": 0.18916355444898927
+    },
+    {
+      "view_id": 4,
+      "foreground_pixels": 16493,
+      "filled_background_color_interior_pixels": 3485,
+      "interior_fraction_of_foreground": 0.21130176438489057
+    },
+    {
+      "view_id": 5,
+      "foreground_pixels": 16608,
+      "filled_background_color_interior_pixels": 3604,
+      "interior_fraction_of_foreground": 0.2170038535645472
+    },
+    {
+      "view_id": 6,
+      "foreground_pixels": 15568,
+      "filled_background_color_interior_pixels": 3494,
+      "interior_fraction_of_foreground": 0.22443473792394655
+    },
+    {
+      "view_id": 7,
+      "foreground_pixels": 12940,
+      "filled_background_color_interior_pixels": 2629,
+      "interior_fraction_of_foreground": 0.20316846986089646
+    },
+    {
+      "view_id": 8,
+      "foreground_pixels": 11794,
+      "filled_background_color_interior_pixels": 2270,
+      "interior_fraction_of_foreground": 0.19247074783788368
+    },
+    {
+      "view_id": 9,
+      "foreground_pixels": 14010,
+      "filled_background_color_interior_pixels": 2756,
+      "interior_fraction_of_foreground": 0.19671663097787295
+    },
+    {
+      "view_id": 10,
+      "foreground_pixels": 16608,
+      "filled_background_color_interior_pixels": 3853,
+      "interior_fraction_of_foreground": 0.2319966281310212
+    },
+    {
+      "view_id": 11,
+      "foreground_pixels": 16263,
+      "filled_background_color_interior_pixels": 3561,
+      "interior_fraction_of_foreground": 0.21896329090573696
+    },
+    {
+      "view_id": 12,
+      "foreground_pixels": 15912,
+      "filled_background_color_interior_pixels": 3521,
+      "interior_fraction_of_foreground": 0.22127953745600804
+    },
+    {
+      "view_id": 13,
+      "foreground_pixels": 16603,
+      "filled_background_color_interior_pixels": 3247,
+      "interior_fraction_of_foreground": 0.19556706619285671
+    },
+    {
+      "view_id": 14,
+      "foreground_pixels": 18026,
+      "filled_background_color_interior_pixels": 3460,
+      "interior_fraction_of_foreground": 0.1919449683790081
+    },
+    {
+      "view_id": 15,
+      "foreground_pixels": 16644,
+      "filled_background_color_interior_pixels": 2753,
+      "interior_fraction_of_foreground": 0.16540495073299688
+    }
+  ]
+}

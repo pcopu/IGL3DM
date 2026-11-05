@@ -20,6 +20,12 @@ of yaw/elevation records, optionally carrying ``source_view_index``. Its list
 length must equal ``--views``. Midpoints require a complete uniformly spaced
 yaw orbit within each elevation, and are offset by half that band's step.
 
+``--material clay`` replaces projected colors with a neutral gray rough
+material under a fixed world-space lighting rig. It preserves triangle
+geometry and flat face normals. Clay uses at least 32 samples to reduce
+sampling noise without denoising. The default ``vertex-color``
+mode keeps the existing unlit source-color appearance.
+
 Every color frame is an actual Blender render of the unchanged mesh. Numeric
 depth/position maps are exact pixel-center BVH ray intersections with that
 same mesh, not values decoded from generated artwork. They have a binary
@@ -44,6 +50,15 @@ from mathutils.bvhtree import BVHTree
 import numpy as np
 
 
+CLAY_GRAY_SRGB = 0.55
+CLAY_WORLD_STRENGTH = 0.25
+CLAY_LIGHTS = (
+    {"name": "ClayKey", "location": (-3.0, -4.0, 6.0), "energy_watts": 450.0, "size": 4.0},
+    {"name": "ClayFill", "location": (4.0, -1.0, 2.5), "energy_watts": 180.0, "size": 5.0},
+    {"name": "ClayRim", "location": (0.0, 4.0, 5.0), "energy_watts": 300.0, "size": 3.0},
+)
+
+
 def arguments():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mesh", type=Path, required=True)
@@ -56,6 +71,8 @@ def arguments():
     parser.add_argument("--scale", type=float, default=2.0)
     parser.add_argument("--distance", type=float, default=4.0)
     parser.add_argument("--samples", type=int, default=4)
+    parser.add_argument("--material", choices=("vertex-color", "clay"), default="vertex-color",
+                        help="Unlit source colors (default) or neutral-gray lit geometry inspection")
     parser.add_argument("--midpoints", action="store_true", help="Also render unseen yaw midpoints")
     parser.add_argument("--skip-data", action="store_true", help="Skip numeric depth/position outputs")
     parser.add_argument("--save-blend", action="store_true")
@@ -157,6 +174,24 @@ def srgb_to_linear(rgb):
     return np.where(rgb <= 0.04045, rgb / 12.92, ((rgb + 0.055) / 1.055) ** 2.4)
 
 
+def add_clay_lighting(scene):
+    world = bpy.data.worlds.new("ClayNeutralEnvironment")
+    world.use_nodes = True
+    world.node_tree.nodes["Background"].inputs["Color"].default_value = (1., 1., 1., 1.)
+    world.node_tree.nodes["Background"].inputs["Strength"].default_value = CLAY_WORLD_STRENGTH
+    scene.world = world
+    for specification in CLAY_LIGHTS:
+        light_data = bpy.data.lights.new(specification["name"], type="AREA")
+        light_data.color = (1., 1., 1.)
+        light_data.energy = specification["energy_watts"]
+        light_data.shape = "DISK"
+        light_data.size = specification["size"]
+        light = bpy.data.objects.new(specification["name"], light_data)
+        bpy.context.collection.objects.link(light)
+        light.location = specification["location"]
+        light.rotation_euler = (-light.location).to_track_quat("-Z", "Y").to_euler()
+
+
 def create_scene(vertices, faces, colors, args):
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
@@ -167,21 +202,32 @@ def create_scene(vertices, faces, colors, args):
     bpy.context.collection.objects.link(obj)
     bpy.context.view_layer.objects.active = obj
     obj.select_set(True)
-    color_attr = mesh.color_attributes.new(name="Col", type="FLOAT_COLOR", domain="POINT")
-    rgba = np.column_stack([srgb_to_linear(colors), np.ones(len(colors))]).astype(np.float32)
-    color_attr.data.foreach_set("color", rgba.ravel())
-    mesh.color_attributes.active_color = color_attr
-    material = bpy.data.materials.new("ReferenceVertexColors")
+    material = bpy.data.materials.new("NeutralGrayClay" if args.material == "clay" else "ReferenceVertexColors")
     material.use_nodes = True
     nodes = material.node_tree.nodes
     nodes.clear()
-    color = nodes.new("ShaderNodeVertexColor")
-    color.layer_name = "Col"
     output = nodes.new("ShaderNodeOutputMaterial")
-    # Direct color-to-surface is Blender's implicit unlit emission. Unlike an
-    # explicit Emission shader, the glTF exporter recognizes this graph as
-    # KHR_materials_unlit and preserves vertex colors in external viewers.
-    material.node_tree.links.new(color.outputs["Color"], output.inputs["Surface"])
+    if args.material == "clay":
+        # Do not create a color attribute in clay mode: an external glTF
+        # viewer must not multiply the neutral base color by source colors.
+        shader = nodes.new("ShaderNodeBsdfPrincipled")
+        gray = float(srgb_to_linear(np.array(CLAY_GRAY_SRGB)))
+        shader.inputs["Base Color"].default_value = (gray, gray, gray, 1.)
+        shader.inputs["Metallic"].default_value = 0.
+        shader.inputs["Roughness"].default_value = .9
+        shader.inputs["Specular IOR Level"].default_value = .15
+        material.diffuse_color = (gray, gray, gray, 1.)
+        material.node_tree.links.new(shader.outputs["BSDF"], output.inputs["Surface"])
+    else:
+        color_attr = mesh.color_attributes.new(name="Col", type="FLOAT_COLOR", domain="POINT")
+        rgba = np.column_stack([srgb_to_linear(colors), np.ones(len(colors))]).astype(np.float32)
+        color_attr.data.foreach_set("color", rgba.ravel())
+        mesh.color_attributes.active_color = color_attr
+        color = nodes.new("ShaderNodeVertexColor")
+        color.layer_name = "Col"
+        # Direct color-to-surface is implicit unlit emission. This exports as
+        # KHR_materials_unlit, preserving colors in external glTF viewers.
+        material.node_tree.links.new(color.outputs["Color"], output.inputs["Surface"])
     mesh.materials.append(material)
 
     camera_data = bpy.data.cameras.new("OrthographicCamera")
@@ -192,12 +238,14 @@ def create_scene(vertices, faces, colors, args):
     camera = bpy.data.objects.new("OrthographicCamera", camera_data)
     bpy.context.collection.objects.link(camera)
     scene = bpy.context.scene
+    if args.material == "clay":
+        add_clay_lighting(scene)
     scene.camera = camera
     scene.render.engine = "CYCLES"
     scene.cycles.device = "CPU"
     # This environment's Blender build has no OpenImageDenoise.
     scene.cycles.use_denoising = False
-    scene.cycles.samples = args.samples
+    scene.cycles.samples = max(args.samples, 32) if args.material == "clay" else args.samples
     scene.render.resolution_x = args.size
     scene.render.resolution_y = args.size
     scene.render.resolution_percentage = 100
@@ -337,8 +385,17 @@ def main():
         "orthographic_scale": args.scale, "camera_distance": args.distance,
         "input_coordinates": "right-handed z-up; camera yaw 0 at negative y, positive yaw toward positive x",
         "glb_coordinates": "glTF standard y-up, converted by Blender exporter",
-        "input_colors": "sRGB [0,1], converted to linear before vertex storage",
-        "material": "unlit emission from vertex color, transparent background",
+        "input_colors": "ignored for clay inspection" if args.material == "clay" else "sRGB [0,1], converted to linear before vertex storage",
+        "material_mode": args.material,
+        "material": ("neutral gray rough Principled BSDF, fixed world-space area lights, transparent background" if args.material == "clay" else
+                     "unlit emission from vertex color, transparent background"),
+        "shading": "flat triangle face normals; no smoothing, modifiers, remeshing, or geometry changes",
+        "render_samples_requested": args.samples, "render_samples_effective": scene.cycles.samples,
+        "clay_settings": ({"base_gray_srgb": CLAY_GRAY_SRGB, "roughness": .9, "metallic": 0., "specular_ior_level": .15,
+                           "world_strength": CLAY_WORLD_STRENGTH, "world_color": [1., 1., 1.],
+                           "lights_world_space": CLAY_LIGHTS,
+                           "glb_lighting": "inspection lights excluded; GLB uses matching neutral gray material under viewer lighting"}
+                          if args.material == "clay" else None),
         "numeric_maps": "Exact BVH pixel-center intersections of the unchanged mesh; no antialiasing; NaN background",
         "depth_definition": "Positive distance along the unit camera-forward ray, from orthographic image-plane ray origin",
         "position_definition": "World-space XYZ per visible surface pixel, not a vertex-ID map",

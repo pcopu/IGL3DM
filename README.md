@@ -116,3 +116,10 @@ PYTHONPATH=src python scripts/validate_cross_views.py \
 - [Feature correspondence probe](experiments/features/README.md): tests drawn patterns without treating them as exact vertices.
 
 These runners require their own explicitly documented official source/checkpoints and dependencies. They do not silently download or execute models as part of the baseline CLI. Selected output visuals and failures are versioned in `docs/experiments`; model binaries are not.
+
+
+## Geometry-only review
+
+Pass `--material clay` to `scripts/render_mesh.py` for neutral gray shading under a fixed light rig. This is a display-only material change; exact depth/XYZ/mask outputs and mesh geometry remain unchanged. The GLB carries a rough gray material but requires viewer lighting. Default vertex-color rendering remains available.
+
+Contour and high-contrast input controls, rejected camera collapse, and fixed-vertex comparisons are recorded in [Rounds 9–10](process.md#round-9--surface-contour-curves-and-fixed-vertex-controls). TripoSR is a comparison only, not the target pipeline.
