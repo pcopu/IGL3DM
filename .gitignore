@@ -38,3 +38,9 @@ experiments/marker_consistency/controls/known_pear*/
 *.mp4
 *.avi
 *.mov
+# Experimental correspondence coordinates and candidate surface records stay local.
+**/candidate_points.json
+**/candidate_faces.json
+**/camera_adjusted_candidates.json
+**/tracks.json
+**/graph_evidence.json

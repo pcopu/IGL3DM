@@ -346,3 +346,14 @@ Completed one matched 256-frame control, then stopped it. This is an evaluation 
 Added fresh-directory reproduction and import-safe CLI evaluators. Replaying both evaluators reproduces all reported summary fields exactly; the classical suite now passes 28 tests. This supports improving temporal correspondence, not treating a low residual or denser video as identity proof. Source, input/track previews and compact summaries are retained without videos, models, raw coordinates or render truth.
 
 [Known rendered input](docs/experiments/20-temporal-cadence/known-control-input.png) · [256-frame tracking](docs/experiments/20-temporal-cadence/256-tracking.png) · [64-frame tracking](docs/experiments/20-temporal-cadence/64-tracking.png) · [Controls, uncertainty and reproduction](experiments/cadence/README.md)
+
+## Round 21 · Local patch uniqueness still permits wrong vertex identities
+
+Added a classical image-only rejection control: compare each 31×31 patch with its accepted location and alternatives 6–32 pixels away, in both temporal directions. Retain whole tracks only if their worst normalized-correlation margin meets one of three predeclared thresholds −0.05, 0, +0.05. No coordinates or identities are repaired, and no camera/truth data enters scoring.
+
+- On the 64-frame known control, the strongest gate retains four long-span tracks, all known-wrong; two still pass the existing held-out geometry test. An annotated read-only crop sequence shows candidates switching to the next known vertex every frame despite positive margins of 0.0643 and 0.1056. Local distinctiveness is not physical identity.
+- On the 256-frame control, the same strongest threshold retains 60 correct / 0 known-wrong / 7 unresolved long tracks, rejecting 432 of 492 originally correct long tracks. This is substantial coverage loss, not an error-free decoder.
+- On the actual clip, the three gates retain 399 / 230 / 122 of 1,552 tracks lasting at least three samples. Only coverage is known; no target identity accuracy is inferred.
+- Whole-track minima penalize longer tracks and denser cadence. Patch/search sizes are fixed, alternatives are bounded translations, and both development controls show the same analytic object. Failed and unresolved results are retained.
+
+Four synthetic tests pass. The separate path-parameterized evaluator reproduces all independent numeric fields exactly; scoring and truth evaluation stay separate. [Known-wrong high-margin sequences](docs/experiments/21-patch-ambiguity/known-wrong-high-margin.png) · [Source, thresholds and complete counts](experiments/patch_ambiguity/README.md).

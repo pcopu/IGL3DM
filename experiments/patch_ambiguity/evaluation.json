@@ -1,0 +1,321 @@
+{
+  "method": "Symmetric alternative-patch ambiguity rejection; whole original tracks retained or rejected, never corrected.",
+  "truth_policy": "Scores and selections generated in separate script that does not read truth or cameras. This script joins existing validation classifications only.",
+  "cautions": [
+    "Image-only rejection does not prove retained identities.",
+    "At most three fixed thresholds, used unchanged for both controls. No threshold selected for final use after truth comparison.",
+    "Whole-track minimum penalizes longer tracks and denser cadence through more opportunities to fail.",
+    "The two cadences show the same analytic pear and are not independent object tests.",
+    "NCC uses rounded integer centers and translation-only 31px patches; local shear, rotation, lighting, occlusion and grid repetition can reject true identities.",
+    "Unresolved labels remain unresolved and are never counted as correct or false passes.",
+    "The 3px heldout diagnostic and labels are those of the original intact tracks; no refitting or threshold tuning."
+  ],
+  "controls": {
+    "known64": {
+      "score_sha256": "79920cf1d3661f47ae5da3d6167cb42361be7591c1f04472b130a852db46ab17",
+      "parameters": {
+        "patch_radius_px": 15,
+        "alternative_min_radius_px": 6,
+        "alternative_max_radius_px": 32,
+        "bilateral_test": true,
+        "track_aggregation": "minimum_all_steps_both_directions",
+        "thresholds": [
+          -0.05,
+          0.0,
+          0.05
+        ]
+      },
+      "groups": {
+        "all_at_least_3_frames": {
+          "baseline": {
+            "retained_tracks": 806,
+            "baseline_tracks": 806,
+            "coverage_fraction": 1.0,
+            "correct": 200,
+            "wrong_identity": 599,
+            "unresolved_detection_or_drift": 7,
+            "correct_fraction_all": 0.24813895781637718,
+            "correct_fraction_resolved": 0.2503128911138924,
+            "heldout_evaluated_tracks": 400,
+            "existing_3px_heldout_passes": 151,
+            "existing_3px_heldout_correct_passes": 50,
+            "existing_3px_heldout_false_passes_wrong_identity": 100,
+            "existing_3px_heldout_unresolved_passes": 1,
+            "wrong_fraction_among_all_heldout_passes": 0.6622516556291391
+          },
+          "thresholds": {
+            "-0.05": {
+              "retained_tracks": 161,
+              "baseline_tracks": 806,
+              "coverage_fraction": 0.19975186104218362,
+              "correct": 77,
+              "wrong_identity": 81,
+              "unresolved_detection_or_drift": 3,
+              "correct_fraction_all": 0.4782608695652174,
+              "correct_fraction_resolved": 0.4873417721518987,
+              "heldout_evaluated_tracks": 52,
+              "existing_3px_heldout_passes": 40,
+              "existing_3px_heldout_correct_passes": 20,
+              "existing_3px_heldout_false_passes_wrong_identity": 20,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 0.5
+            },
+            "0.0": {
+              "retained_tracks": 60,
+              "baseline_tracks": 806,
+              "coverage_fraction": 0.07444168734491315,
+              "correct": 24,
+              "wrong_identity": 34,
+              "unresolved_detection_or_drift": 2,
+              "correct_fraction_all": 0.4,
+              "correct_fraction_resolved": 0.41379310344827586,
+              "heldout_evaluated_tracks": 15,
+              "existing_3px_heldout_passes": 15,
+              "existing_3px_heldout_correct_passes": 6,
+              "existing_3px_heldout_false_passes_wrong_identity": 9,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 0.6
+            },
+            "0.05": {
+              "retained_tracks": 11,
+              "baseline_tracks": 806,
+              "coverage_fraction": 0.013647642679900745,
+              "correct": 1,
+              "wrong_identity": 9,
+              "unresolved_detection_or_drift": 1,
+              "correct_fraction_all": 0.09090909090909091,
+              "correct_fraction_resolved": 0.1,
+              "heldout_evaluated_tracks": 5,
+              "existing_3px_heldout_passes": 5,
+              "existing_3px_heldout_correct_passes": 0,
+              "existing_3px_heldout_false_passes_wrong_identity": 5,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 1.0
+            }
+          }
+        },
+        "span_at_least_30_degrees": {
+          "baseline": {
+            "retained_tracks": 405,
+            "baseline_tracks": 405,
+            "coverage_fraction": 1.0,
+            "correct": 43,
+            "wrong_identity": 357,
+            "unresolved_detection_or_drift": 5,
+            "correct_fraction_all": 0.10617283950617284,
+            "correct_fraction_resolved": 0.1075,
+            "heldout_evaluated_tracks": 331,
+            "existing_3px_heldout_passes": 111,
+            "existing_3px_heldout_correct_passes": 27,
+            "existing_3px_heldout_false_passes_wrong_identity": 83,
+            "existing_3px_heldout_unresolved_passes": 1,
+            "wrong_fraction_among_all_heldout_passes": 0.7477477477477478
+          },
+          "thresholds": {
+            "-0.05": {
+              "retained_tracks": 33,
+              "baseline_tracks": 405,
+              "coverage_fraction": 0.08148148148148149,
+              "correct": 9,
+              "wrong_identity": 23,
+              "unresolved_detection_or_drift": 1,
+              "correct_fraction_all": 0.2727272727272727,
+              "correct_fraction_resolved": 0.28125,
+              "heldout_evaluated_tracks": 26,
+              "existing_3px_heldout_passes": 17,
+              "existing_3px_heldout_correct_passes": 7,
+              "existing_3px_heldout_false_passes_wrong_identity": 10,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 0.5882352941176471
+            },
+            "0.0": {
+              "retained_tracks": 8,
+              "baseline_tracks": 405,
+              "coverage_fraction": 0.019753086419753086,
+              "correct": 2,
+              "wrong_identity": 5,
+              "unresolved_detection_or_drift": 1,
+              "correct_fraction_all": 0.25,
+              "correct_fraction_resolved": 0.2857142857142857,
+              "heldout_evaluated_tracks": 4,
+              "existing_3px_heldout_passes": 4,
+              "existing_3px_heldout_correct_passes": 1,
+              "existing_3px_heldout_false_passes_wrong_identity": 3,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 0.75
+            },
+            "0.05": {
+              "retained_tracks": 4,
+              "baseline_tracks": 405,
+              "coverage_fraction": 0.009876543209876543,
+              "correct": 0,
+              "wrong_identity": 4,
+              "unresolved_detection_or_drift": 0,
+              "correct_fraction_all": 0.0,
+              "correct_fraction_resolved": 0.0,
+              "heldout_evaluated_tracks": 2,
+              "existing_3px_heldout_passes": 2,
+              "existing_3px_heldout_correct_passes": 0,
+              "existing_3px_heldout_false_passes_wrong_identity": 2,
+              "existing_3px_heldout_unresolved_passes": 0,
+              "wrong_fraction_among_all_heldout_passes": 1.0
+            }
+          }
+        }
+      }
+    },
+    "known256": {
+      "score_sha256": "92c3d55032bb160e3232399f3b95d05c8ab7a969cd9d2f849ec2ca9d61c9096a",
+      "parameters": {
+        "patch_radius_px": 15,
+        "alternative_min_radius_px": 6,
+        "alternative_max_radius_px": 32,
+        "bilateral_test": true,
+        "track_aggregation": "minimum_all_steps_both_directions",
+        "thresholds": [
+          -0.05,
+          0.0,
+          0.05
+        ]
+      },
+      "groups": {
+        "all_at_least_3_frames": {
+          "baseline": {
+            "retained_tracks": 1919,
+            "baseline_tracks": 1919,
+            "coverage_fraction": 1.0,
+            "correct": 1380,
+            "wrong_identity": 38,
+            "unresolved_detection_or_drift": 501,
+            "correct_fraction_all": 0.7191245440333507,
+            "correct_fraction_resolved": 0.9732016925246827,
+            "heldout_evaluated_tracks": 670,
+            "existing_3px_heldout_passes": 668,
+            "existing_3px_heldout_correct_passes": 495,
+            "existing_3px_heldout_false_passes_wrong_identity": 6,
+            "existing_3px_heldout_unresolved_passes": 167,
+            "wrong_fraction_among_all_heldout_passes": 0.008982035928143712
+          },
+          "thresholds": {
+            "-0.05": {
+              "retained_tracks": 1125,
+              "baseline_tracks": 1919,
+              "coverage_fraction": 0.5862428348097968,
+              "correct": 815,
+              "wrong_identity": 31,
+              "unresolved_detection_or_drift": 279,
+              "correct_fraction_all": 0.7244444444444444,
+              "correct_fraction_resolved": 0.9633569739952719,
+              "heldout_evaluated_tracks": 177,
+              "existing_3px_heldout_passes": 177,
+              "existing_3px_heldout_correct_passes": 135,
+              "existing_3px_heldout_false_passes_wrong_identity": 4,
+              "existing_3px_heldout_unresolved_passes": 38,
+              "wrong_fraction_among_all_heldout_passes": 0.022598870056497175
+            },
+            "0.0": {
+              "retained_tracks": 1010,
+              "baseline_tracks": 1919,
+              "coverage_fraction": 0.5263157894736842,
+              "correct": 737,
+              "wrong_identity": 28,
+              "unresolved_detection_or_drift": 245,
+              "correct_fraction_all": 0.7297029702970297,
+              "correct_fraction_resolved": 0.9633986928104575,
+              "heldout_evaluated_tracks": 155,
+              "existing_3px_heldout_passes": 155,
+              "existing_3px_heldout_correct_passes": 119,
+              "existing_3px_heldout_false_passes_wrong_identity": 4,
+              "existing_3px_heldout_unresolved_passes": 32,
+              "wrong_fraction_among_all_heldout_passes": 0.025806451612903226
+            },
+            "0.05": {
+              "retained_tracks": 883,
+              "baseline_tracks": 1919,
+              "coverage_fraction": 0.4601354872329338,
+              "correct": 652,
+              "wrong_identity": 23,
+              "unresolved_detection_or_drift": 208,
+              "correct_fraction_all": 0.7383918459796149,
+              "correct_fraction_resolved": 0.965925925925926,
+              "heldout_evaluated_tracks": 123,
+              "existing_3px_heldout_passes": 123,
+              "existing_3px_heldout_correct_passes": 96,
+              "existing_3px_heldout_false_passes_wrong_identity": 2,
+              "existing_3px_heldout_unresolved_passes": 25,
+              "wrong_fraction_among_all_heldout_passes": 0.016260162601626018
+            }
+          }
+        },
+        "span_at_least_30_degrees": {
+          "baseline": {
+            "retained_tracks": 648,
+            "baseline_tracks": 648,
+            "coverage_fraction": 1.0,
+            "correct": 492,
+            "wrong_identity": 1,
+            "unresolved_detection_or_drift": 155,
+            "correct_fraction_all": 0.7592592592592593,
+            "correct_fraction_resolved": 0.9979716024340771,
+            "heldout_evaluated_tracks": 518,
+            "existing_3px_heldout_passes": 516,
+            "existing_3px_heldout_correct_passes": 391,
+            "existing_3px_heldout_false_passes_wrong_identity": 1,
+            "existing_3px_heldout_unresolved_passes": 124,
+            "wrong_fraction_among_all_heldout_passes": 0.001937984496124031
+          },
+          "thresholds": {
+            "-0.05": {
+              "retained_tracks": 121,
+              "baseline_tracks": 648,
+              "coverage_fraction": 0.1867283950617284,
+              "correct": 101,
+              "wrong_identity": 0,
+              "unresolved_detection_or_drift": 20,
+              "correct_fraction_all": 0.8347107438016529,
+              "correct_fraction_resolved": 1.0,
+              "heldout_evaluated_tracks": 68,
+              "existing_3px_heldout_passes": 68,
+              "existing_3px_heldout_correct_passes": 59,
+              "existing_3px_heldout_false_passes_wrong_identity": 0,
+              "existing_3px_heldout_unresolved_passes": 9,
+              "wrong_fraction_among_all_heldout_passes": 0.0
+            },
+            "0.0": {
+              "retained_tracks": 95,
+              "baseline_tracks": 648,
+              "coverage_fraction": 0.14660493827160495,
+              "correct": 83,
+              "wrong_identity": 0,
+              "unresolved_detection_or_drift": 12,
+              "correct_fraction_all": 0.8736842105263158,
+              "correct_fraction_resolved": 1.0,
+              "heldout_evaluated_tracks": 56,
+              "existing_3px_heldout_passes": 56,
+              "existing_3px_heldout_correct_passes": 51,
+              "existing_3px_heldout_false_passes_wrong_identity": 0,
+              "existing_3px_heldout_unresolved_passes": 5,
+              "wrong_fraction_among_all_heldout_passes": 0.0
+            },
+            "0.05": {
+              "retained_tracks": 67,
+              "baseline_tracks": 648,
+              "coverage_fraction": 0.10339506172839506,
+              "correct": 60,
+              "wrong_identity": 0,
+              "unresolved_detection_or_drift": 7,
+              "correct_fraction_all": 0.8955223880597015,
+              "correct_fraction_resolved": 1.0,
+              "heldout_evaluated_tracks": 36,
+              "existing_3px_heldout_passes": 36,
+              "existing_3px_heldout_correct_passes": 34,
+              "existing_3px_heldout_false_passes_wrong_identity": 0,
+              "existing_3px_heldout_unresolved_passes": 2,
+              "wrong_fraction_among_all_heldout_passes": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

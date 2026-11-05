@@ -1,0 +1,44 @@
+{
+  "source": "Uploaded clean 97-frame clip tracking_verified97",
+  "truth_available": false,
+  "camera_truth_available": false,
+  "identity_claim": "No correct/wrong identity counts can be established for this clip. Retained points are image-only candidates.",
+  "parameters": {
+    "patch_radius_px": 15,
+    "alternative_min_radius_px": 6,
+    "alternative_max_radius_px": 32,
+    "bilateral_test": true,
+    "track_aggregation": "minimum_all_steps_both_directions",
+    "thresholds": [
+      -0.05,
+      0.0,
+      0.05
+    ]
+  },
+  "groups": {
+    "at_least_3_samples": {
+      "baseline_tracks": 1552,
+      "thresholds": {
+        "-0.05": 399,
+        "0.0": 230,
+        "0.05": 122
+      }
+    },
+    "at_least_10_sample_intervals": {
+      "baseline_tracks": 1019,
+      "thresholds": {
+        "-0.05": 175,
+        "0.0": 83,
+        "0.05": 41
+      }
+    },
+    "at_least_20_sample_intervals": {
+      "baseline_tracks": 625,
+      "thresholds": {
+        "-0.05": 68,
+        "0.0": 19,
+        "0.05": 9
+      }
+    }
+  }
+}

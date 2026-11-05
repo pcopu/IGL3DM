@@ -1,0 +1,33 @@
+[
+  {
+    "candidate_track": "t001057",
+    "minimum_ncc_margin": 0.06428247690200806,
+    "nearest_known_vertex_ids": [
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664
+    ],
+    "nearest_distance_max_px": 1.3290670213127995,
+    "first_mapped_vertex": 658
+  },
+  {
+    "candidate_track": "t001064",
+    "minimum_ncc_margin": 0.10563594102859497,
+    "nearest_known_vertex_ids": [
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600
+    ],
+    "nearest_distance_max_px": 1.6827304835708212,
+    "first_mapped_vertex": 593
+  }
+]
