@@ -53,3 +53,5 @@ The period/offset/holdout arguments describe this specific clip; do not silently
 ## Verification
 
 The final source was rerun from the verified 97-frame tracker output in a fresh directory in the main checkout. Full point JSON, face JSON and PLY match the independent run byte-for-byte. The main suite passes 27 tests; classical marker/grid/video helpers pass 27; quad-shape audit passes 2; the retained square-tilt suite passes 5. The synthetic 97-sample fixture deliberately corrupts endpoint 96 and verifies that it is excluded, preserving the true point and original-frame offset. Empty candidate outputs remain valid negative results.
+
+GLB read-back independently confirms all 504 candidate / 22 qualified display triangles. After the standard glTF Y-up axis conversion, two-way nearest-position maximum errors are 3.04e-8 / 2.20e-8 world units, consistent with float32 export. Flat-normal vertex splits and omission of unused loose points do not change the displayed surface. This checks export fidelity only, not correspondence or true shape.

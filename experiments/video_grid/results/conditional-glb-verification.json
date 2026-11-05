@@ -1,0 +1,8 @@
+{
+  "glb_triangle_count": 22,
+  "source_display_triangle_count": 22,
+  "exported_position_max_distance_from_source": 2.1904773564802063e-08,
+  "source_used_position_max_distance_from_export": 2.1904773564802063e-08,
+  "axis_conversion": "glTF Y-up: (x,y,z) becomes (x,z,-y)",
+  "note": "Exporter may split vertices for flat normals and omit unused loose points; visible surface coordinates are preserved to float32 precision."
+}

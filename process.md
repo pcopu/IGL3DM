@@ -331,6 +331,8 @@ Parameterized, import-safe measurement/reconstruction helpers and fresh-output p
 
 Final source rerun reproduces all three full geometry artifacts byte-for-byte. Verification: 27 main + 27 classical + 2 quad-shape + 5 retained square-tilt tests pass. The endpoint-exclusion fixture corrupts sample 96 and confirms that it cannot alter the fitted point.
 
+GLB export read-back preserves the 504 / 22 display triangles and surface positions within 3.04e-8 / 2.20e-8 world units after standard axis conversion. This verifies file fidelity, not inferred geometry correctness. Compact checks are retained with the video results.
+
 ## Round 20 · Denser temporal sampling on the same known analytic control
 
 Completed one matched 256-frame control, then stopped it. This is an evaluation fixture, not a manually modeled target or generated-object reconstruction. The shared renderer/tracker source and original 64-frame results remain unchanged. All 64 common-angle PNG pixel arrays match exactly; both encoded videos use MJPEG/yuvj420p. All 256 genuine frames are decoded in order at 30 fps, without interpolation or downsampling.
