@@ -290,6 +290,96 @@
       "path": "docs/experiments/12-smoothing-control/clay-turntable.gif",
       "bytes": 1740914,
       "sha256": "706e6329192fa1732e74f5973f72f10539d90e31f7d7d00cc2df034dcbe6da26"
+    },
+    {
+      "path": "docs/experiments/13-isovalue-control/clay-comparison.png",
+      "bytes": 615349,
+      "sha256": "fb16f55beb89e1e5c81a83d2ce8588a08d196a4b7341c0b0258f60b32ae3e3a0"
+    },
+    {
+      "path": "docs/experiments/13-isovalue-control/clay-midpoints.png",
+      "bytes": 622481,
+      "sha256": "09618010846380f0e6af9f1ff6c02ae87d7ecd834d0f6a693e6d36a6fb86b699"
+    },
+    {
+      "path": "docs/experiments/13-isovalue-control/clay-turntable.gif",
+      "bytes": 1942427,
+      "sha256": "1bfbb44fcf34d6a04f7e45e06610cea7c8f66d8e1155019c8e9a780b94f88f13"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/clay-contact.png",
+      "bytes": 245447,
+      "sha256": "4003eefc98f814b9e762649524af51436d04ded0c82812bbddd2200754a42820"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/clay-turntable.gif",
+      "bytes": 242705,
+      "sha256": "47859961946ea234a7dd5572a1366a1ef51e7082eae48770c9b5c8c9c4557d05"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/control-comparison.png",
+      "bytes": 70775,
+      "sha256": "0058cde48fb9d3644aced630880a0fe2fc9098acdf9cfc4553433b82d241dc25"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/heldout-corner-diagnostic.png",
+      "bytes": 896947,
+      "sha256": "1ac6ac01365043dbdb18d4a3f8e5115c2bc95ef08e184e3472acf4573abca8e1"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/identity-failures.png",
+      "bytes": 1301364,
+      "sha256": "867219d676845de2739a25971928a034a227ba52c87c72de17fcaa0892e45781"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/input.png",
+      "bytes": 1989133,
+      "sha256": "b1732858f38c9121fa1211ee32dd910b27e8cea54a7a0741ae2b577b37e44b2e"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/known-ellipsoid.png",
+      "bytes": 96656,
+      "sha256": "63a6266a267da0d4dbc399e928d53ae7ecc97de8382e299070910558394b2fc1"
+    },
+    {
+      "path": "docs/experiments/14-marker-audit/reference-vs-mesh.png",
+      "bytes": 338580,
+      "sha256": "33508a752c128c3ce2a65dd799ef20d17a6a75a8a8b6cae6eee79936e28a1c2d"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/clay-contact.png",
+      "bytes": 256949,
+      "sha256": "805336dbb3b18800b4879432787d9538e209dbf860af8bc408dee9da3f2b0782"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/clay-turntable.gif",
+      "bytes": 250332,
+      "sha256": "c49b6e77a23aa7c30858f7a07d8ff6478d0436462ec37ae1ab7ff83ff63660c8"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/exploratory-adjacent-candidates.png",
+      "bytes": 2932959,
+      "sha256": "6e4b3e2ad0de066d592f6856820cf17e50a8b038c683772c17ac4551ad3b230e"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/input.png",
+      "bytes": 2624845,
+      "sha256": "7fe9abcb46ff7cc0a9916f0467301c4e7c8d3b84eed661fbe089a3a2bc87a405"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/junction-candidates.png",
+      "bytes": 840350,
+      "sha256": "07bb2bfd185dc5a2cd7003a72200a7712840317140ab47184ccc59b186b454c8"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/reference-vs-mesh.png",
+      "bytes": 386636,
+      "sha256": "ae8e4a8c549b9b39818d604d8cb87e1b87a806893e19621cd784c49cdac3c65b"
+    },
+    {
+      "path": "docs/experiments/15-dense-quad-grid/strict-adjacent-candidates.png",
+      "bytes": 2947156,
+      "sha256": "94c63248ad126f423840454b56a86898c4e7e131ca7cca19663e423450fcc039"
     }
   ]
 }

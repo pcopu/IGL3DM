@@ -1,0 +1,500 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-05T18:00:30.319080+00:00",
+  "input": {
+    "filename": "exec-1e7e7009-60be-4ac1-9233-78338b3c9ce6.png",
+    "sha256": "b1732858f38c9121fa1211ee32dd910b27e8cea54a7a0741ae2b577b37e44b2e",
+    "size": [
+      1774,
+      887
+    ],
+    "view_count": 8,
+    "atlas_view_count": 8,
+    "selected_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "imagegen_calls_for_this_input": 1,
+    "provenance_note": "Call count is caller-provided experiment provenance, not verified by image pixels."
+  },
+  "method": "common-camera silhouette visual hull; marching tetrahedra; approximate visibility-aware vertex color projection",
+  "manual_modeling": false,
+  "wireframe_vertices_decoded": false,
+  "learned_depth_model_used": false,
+  "config": {
+    "rows": 2,
+    "columns": 4,
+    "gutter_pixels": 2,
+    "working_image_size": 192,
+    "resolution": 80,
+    "max_misses": 2,
+    "fixed_misses": 1,
+    "smooth_sigma_voxels": 0.6,
+    "background_threshold": 32,
+    "cell_alignment": "shared grid; no per-view silhouette translation or scaling"
+  },
+  "camera_convention": {
+    "coordinate_system": "right-handed z-up",
+    "yaw0_location": [
+      0,
+      -4,
+      0
+    ],
+    "yaw_positive": "camera moves from -Y toward +X",
+    "orthographic_scale": 2.0,
+    "elevation_bands_degrees": [
+      0
+    ],
+    "per_view": [
+      {
+        "yaw_degrees": 0.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 0
+      },
+      {
+        "yaw_degrees": 45.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 1
+      },
+      {
+        "yaw_degrees": 90.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 2
+      },
+      {
+        "yaw_degrees": 135.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 3
+      },
+      {
+        "yaw_degrees": 180.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 4
+      },
+      {
+        "yaw_degrees": 225.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 5
+      },
+      {
+        "yaw_degrees": 270.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 6
+      },
+      {
+        "yaw_degrees": 315.0,
+        "elevation_degrees": 0.0,
+        "source_view_index": 7
+      }
+    ]
+  },
+  "segmentation": [
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        253.0,
+        253.0
+      ],
+      "foreground_fraction": 0.2966037326388889,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        7,
+        140,
+        180
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 0,
+      "source_view_index": 0
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        253.0,
+        253.0
+      ],
+      "foreground_fraction": 0.4280870225694444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        7,
+        183,
+        180
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 1,
+      "source_view_index": 1
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        253.0,
+        253.0
+      ],
+      "foreground_fraction": 0.4283311631944444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        7,
+        187,
+        179
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 2,
+      "source_view_index": 2
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        254.0,
+        254.0
+      ],
+      "foreground_fraction": 0.4082573784722222,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        7,
+        168,
+        180
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 3,
+      "source_view_index": 3
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        253.0,
+        253.0
+      ],
+      "foreground_fraction": 0.31103515625,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        6,
+        140,
+        179
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 4,
+      "source_view_index": 4
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        253.0,
+        253.0,
+        253.0
+      ],
+      "foreground_fraction": 0.3909776475694444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        6,
+        165,
+        180
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 5,
+      "source_view_index": 5
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        254.0,
+        254.0,
+        253.0
+      ],
+      "foreground_fraction": 0.4326985677083333,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        6,
+        6,
+        180,
+        179
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 6,
+      "source_view_index": 6
+    },
+    {
+      "mode": "border-color-distance",
+      "background_rgb": [
+        254.0,
+        254.0,
+        254.0
+      ],
+      "foreground_fraction": 0.4571397569444444,
+      "touches_frame": false,
+      "bbox_xyxy": [
+        8,
+        6,
+        174,
+        180
+      ],
+      "connected_components": 2,
+      "threshold": 32,
+      "view": 7,
+      "source_view_index": 7
+    }
+  ],
+  "candidates": [
+    {
+      "allowed_misses": 1,
+      "minimum_supporting_views": 7,
+      "voxel_count": 63904,
+      "component_count_before_cleanup": 5,
+      "removed_component_voxels": 92,
+      "boundary_voxel_hits": 0,
+      "smoothing_sigma_voxels": 0.6,
+      "voxel_reprojection": {
+        "per_view": [
+          {
+            "iou": 0.8622969098438993,
+            "precision": 0.8697084103140814,
+            "recall": 0.9902140113407719
+          },
+          {
+            "iou": 0.8644480070761236,
+            "precision": 0.8713847868487044,
+            "recall": 0.9908751029719283
+          },
+          {
+            "iou": 0.8901098901098901,
+            "precision": 0.8939583570372056,
+            "recall": 0.9951868271057631
+          },
+          {
+            "iou": 0.8252679261960004,
+            "precision": 0.8303596242565727,
+            "recall": 0.992624584717608
+          },
+          {
+            "iou": 0.9060707456978967,
+            "precision": 0.9128340958343366,
+            "recall": 0.9918890633176347
+          },
+          {
+            "iou": 0.7875255510745263,
+            "precision": 0.7944602351892103,
+            "recall": 0.9890376743217928
+          },
+          {
+            "iou": 0.8974518686296715,
+            "precision": 0.9026654516459733,
+            "recall": 0.9936054165883017
+          },
+          {
+            "iou": 0.8937812567949555,
+            "precision": 0.9141554542421884,
+            "recall": 0.9756705435556611
+          }
+        ],
+        "mean_iou": 0.8658690194278704,
+        "worst_iou": 0.7875255510745263
+      }
+    }
+  ],
+  "selected": {
+    "allowed_misses": 1,
+    "minimum_supporting_views": 7,
+    "voxel_count": 63904,
+    "component_count_before_cleanup": 5,
+    "removed_component_voxels": 92,
+    "boundary_voxel_hits": 0,
+    "smoothing_sigma_voxels": 0.6,
+    "voxel_reprojection": {
+      "per_view": [
+        {
+          "iou": 0.8622969098438993,
+          "precision": 0.8697084103140814,
+          "recall": 0.9902140113407719
+        },
+        {
+          "iou": 0.8644480070761236,
+          "precision": 0.8713847868487044,
+          "recall": 0.9908751029719283
+        },
+        {
+          "iou": 0.8901098901098901,
+          "precision": 0.8939583570372056,
+          "recall": 0.9951868271057631
+        },
+        {
+          "iou": 0.8252679261960004,
+          "precision": 0.8303596242565727,
+          "recall": 0.992624584717608
+        },
+        {
+          "iou": 0.9060707456978967,
+          "precision": 0.9128340958343366,
+          "recall": 0.9918890633176347
+        },
+        {
+          "iou": 0.7875255510745263,
+          "precision": 0.7944602351892103,
+          "recall": 0.9890376743217928
+        },
+        {
+          "iou": 0.8974518686296715,
+          "precision": 0.9026654516459733,
+          "recall": 0.9936054165883017
+        },
+        {
+          "iou": 0.8937812567949555,
+          "precision": 0.9141554542421884,
+          "recall": 0.9756705435556611
+        }
+      ],
+      "mean_iou": 0.8658690194278704,
+      "worst_iou": 0.7875255510745263
+    }
+  },
+  "mesh": {
+    "vertices": 59834,
+    "triangles": 119696,
+    "edges": 179544,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "watertight_edge_incidence": true,
+    "euler_characteristic": -14,
+    "signed_volume": 0.9958042502403259,
+    "self_intersections_checked": false,
+    "notes": "Edge incidence is not a complete self-intersection or animation-readiness test."
+  },
+  "color_projection": {
+    "unobserved_vertices": 11443,
+    "method": "front-facing point-z-buffer projection; unobserved vertices gray"
+  },
+  "warnings": [
+    "The input is a generated multiview drawing, not calibrated photographic evidence.",
+    "Yaw/elevation and orthographic projection are assumptions requested of ImageGen, not recovered measurements.",
+    "Silhouettes cannot recover invisible concavities, correct anatomical topology, or exact wireframe vertices.",
+    "Voxel reprojection scores are approximate selection diagnostics. They can rank candidates differently from final mesh masks; compare fixed-misses runs before claiming the best fit.",
+    "Painted mesh lines and colors are appearance only; they are not vertex IDs or measured depth.",
+    "Selected relaxed hull tolerates 1 contradictory views per voxel."
+  ],
+  "elapsed_seconds_before_render": 7.263204834016506,
+  "render_status": "completed",
+  "render_exit_code": 0,
+  "elapsed_seconds_total": 12.388924707018305,
+  "actual_mesh_reprojection": {
+    "per_view": [
+      {
+        "iou": 0.9037130801687764,
+        "precision": 0.9212043010752688,
+        "recall": 0.97942198646424
+      },
+      {
+        "iou": 0.9150613478750519,
+        "precision": 0.9340513068731849,
+        "recall": 0.978265002217857
+      },
+      {
+        "iou": 0.9502345130048121,
+        "precision": 0.9613606951377334,
+        "recall": 0.9879670677644079
+      },
+      {
+        "iou": 0.876779781680114,
+        "precision": 0.8911064214651794,
+        "recall": 0.9819933554817276
+      },
+      {
+        "iou": 0.9530575995940117,
+        "precision": 0.9692903225806452,
+        "recall": 0.9827315541601256
+      },
+      {
+        "iou": 0.8364791073124407,
+        "precision": 0.8526742497579864,
+        "recall": 0.977797821411226
+      },
+      {
+        "iou": 0.9562283421484589,
+        "precision": 0.9693104085782954,
+        "recall": 0.9860823772804213
+      },
+      {
+        "iou": 0.9181390546122075,
+        "precision": 0.9650286403376545,
+        "recall": 0.9497389033942559
+      }
+    ],
+    "mean_iou": 0.9137116032994841,
+    "worst_iou": 0.8364791073124407
+  },
+  "actual_mesh_reprojection_by_elevation": {
+    "0.0": {
+      "per_view": [
+        {
+          "iou": 0.9037130801687764,
+          "precision": 0.9212043010752688,
+          "recall": 0.97942198646424
+        },
+        {
+          "iou": 0.9150613478750519,
+          "precision": 0.9340513068731849,
+          "recall": 0.978265002217857
+        },
+        {
+          "iou": 0.9502345130048121,
+          "precision": 0.9613606951377334,
+          "recall": 0.9879670677644079
+        },
+        {
+          "iou": 0.876779781680114,
+          "precision": 0.8911064214651794,
+          "recall": 0.9819933554817276
+        },
+        {
+          "iou": 0.9530575995940117,
+          "precision": 0.9692903225806452,
+          "recall": 0.9827315541601256
+        },
+        {
+          "iou": 0.8364791073124407,
+          "precision": 0.8526742497579864,
+          "recall": 0.977797821411226
+        },
+        {
+          "iou": 0.9562283421484589,
+          "precision": 0.9693104085782954,
+          "recall": 0.9860823772804213
+        },
+        {
+          "iou": 0.9181390546122075,
+          "precision": 0.9650286403376545,
+          "recall": 0.9497389033942559
+        }
+      ],
+      "mean_iou": 0.9137116032994841,
+      "worst_iou": 0.8364791073124407
+    }
+  },
+  "render_validation": {
+    "frames": 16,
+    "unseen_yaw_frames": 8,
+    "geometry_changed_by_renderer": false,
+    "comparison": "pixel-center mesh ray masks against segmented inputs; no 3D ground truth",
+    "elapsed_seconds": 3.821
+  }
+}

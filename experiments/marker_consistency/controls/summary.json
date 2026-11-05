@@ -1,0 +1,340 @@
+{
+  "exact": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 2.0626220732882633e-14,
+      "median": 0.0,
+      "p95": 5.684341886080802e-14,
+      "max": 8.526512829121202e-14
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 2.9789310688437375e-14,
+      "median": 2.842170943040401e-14,
+      "p95": 6.776183921349996e-14,
+      "max": 1.1718571004216928e-13
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 2.834600604862892e-14,
+      "median": 2.842170943040401e-14,
+      "p95": 8.160783248625998e-14,
+      "max": 1.2710574864626038e-13
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 2.4696810359057466e-16,
+      "median": 2.3055512673781017e-16,
+      "p95": 4.623063392524287e-16,
+      "max": 6.77599954797753e-16
+    },
+    "gate": {
+      "pass": true,
+      "reasons": [],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "noise_0p4px": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 0.3202099168976458,
+      "median": 0.2977942987331234,
+      "p95": 0.6945016898164368,
+      "max": 1.1614348128475054
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 0.7148078092073549,
+      "median": 0.6818218919242083,
+      "p95": 1.3781809562102452,
+      "max": 2.40911578978055
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 0.4538805276318803,
+      "median": 0.3870504845747007,
+      "p95": 1.086350936676021,
+      "max": 1.9354981786770225
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 0.7637039387423978,
+      "median": 0.6954261898337748,
+      "p95": 1.5442289425525866,
+      "max": 2.649027172487247
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 0.00328592122925788,
+      "median": 0.002942141377635754,
+      "p95": 0.006368994794449504,
+      "max": 0.012928161667607803
+    },
+    "gate": {
+      "pass": true,
+      "reasons": [],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "swapped_heldout": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 0.3202099168976458,
+      "median": 0.2977942987331234,
+      "p95": 0.6945016898164368,
+      "max": 1.1614348128475054
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 21.203084419984386,
+      "median": 0.8479215170473022,
+      "p95": 86.50889993020571,
+      "max": 88.68073256830367
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 10.778629150525406,
+      "median": 0.4545967403994382,
+      "p95": 84.04579147288587,
+      "max": 85.70719622675006
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 11.842333923985203,
+      "median": 0.8396291179351802,
+      "p95": 76.50386527175408,
+      "max": 88.82468149393739
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 0.00328592122925788,
+      "median": 0.002942141377635754,
+      "p95": 0.006368994794449504,
+      "max": 0.012928161667607803
+    },
+    "gate": {
+      "pass": false,
+      "reasons": [
+        "heldout_reprojection_px_over_limit",
+        "three_view_loop_px_over_limit",
+        "known_camera_epipolar_px_over_limit"
+      ],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "warped_heldout": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 0.3202099168976458,
+      "median": 0.2977942987331234,
+      "p95": 0.6945016898164368,
+      "max": 1.1614348128475054
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 7.716422849583524,
+      "median": 8.2376518235025,
+      "p95": 12.235220666022034,
+      "max": 13.258904257352913
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 4.217676230129957,
+      "median": 1.1161520254635064,
+      "p95": 11.965725951745291,
+      "max": 13.294716715344762
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 4.173916912375807,
+      "median": 3.855006515223659,
+      "p95": 11.264635015073683,
+      "max": 13.258904257352913
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 0.00328592122925788,
+      "median": 0.002942141377635754,
+      "p95": 0.006368994794449504,
+      "max": 0.012928161667607803
+    },
+    "gate": {
+      "pass": false,
+      "reasons": [
+        "heldout_reprojection_px_over_limit",
+        "three_view_loop_px_over_limit",
+        "known_camera_epipolar_px_over_limit"
+      ],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "horizontal_swap_heldout": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 0.3202099168976458,
+      "median": 0.2977942987331234,
+      "p95": 0.6945016898164368,
+      "max": 1.1614348128475054
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 33.49111039141674,
+      "median": 0.7715296067813306,
+      "p95": 254.19695618738263,
+      "max": 272.93809632634037
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 0.45112454926335666,
+      "median": 0.3851916265454065,
+      "p95": 1.085328955207498,
+      "max": 1.9354981786770225
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 30.549949507003955,
+      "median": 0.8083936744515683,
+      "p95": 253.88600552018056,
+      "max": 385.9928367629086
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 0.00328592122925788,
+      "median": 0.002942141377635754,
+      "p95": 0.006368994794449504,
+      "max": 0.012928161667607803
+    },
+    "gate": {
+      "pass": false,
+      "reasons": [
+        "heldout_reprojection_px_over_limit",
+        "three_view_loop_px_over_limit"
+      ],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "consistent_wrong_identity": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 0.3202099168976458,
+      "median": 0.2977942987331234,
+      "p95": 0.6945016898164368,
+      "max": 1.1614348128475054
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 0.7148078092073549,
+      "median": 0.6818218919242083,
+      "p95": 1.3781809562102452,
+      "max": 2.40911578978055
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 0.4538805276318803,
+      "median": 0.3870504845747007,
+      "p95": 1.086350936676021,
+      "max": 1.9354981786770225
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 0.7637039387423978,
+      "median": 0.6954261898337748,
+      "p95": 1.5442289425525866,
+      "max": 2.649027172487247
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 0.2539606951954179,
+      "median": 0.24318132244943255,
+      "p95": 0.521775020082509,
+      "max": 0.5241446208055608
+    },
+    "gate": {
+      "pass": false,
+      "reasons": [
+        "identity_or_corner_orientation_not_defensible"
+      ],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  },
+  "wrong_requested_camera": {
+    "input_corner_tracks": 256,
+    "fit_eligible_corner_tracks": 256,
+    "heldout_predicted_observations": 256,
+    "training_reprojection_px": {
+      "n": 704,
+      "mean": 2.0889850592143726e-14,
+      "median": 0.0,
+      "p95": 5.684341886080802e-14,
+      "max": 1.1368683772161603e-13
+    },
+    "heldout_reprojection_px": {
+      "n": 256,
+      "mean": 13.5878620680554,
+      "median": 14.700254315312549,
+      "p95": 23.477152737172446,
+      "max": 24.95998945501219
+    },
+    "known_camera_epipolar_px": {
+      "n": 1344,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "three_view_loop_px": {
+      "n": 2496,
+      "mean": 10.439795110535478,
+      "median": 9.790171076102226,
+      "p95": 25.361394061559054,
+      "max": 35.29875560396772
+    },
+    "ground_truth_3d_error": {
+      "n": 256,
+      "mean": 2.4649658846112104e-16,
+      "median": 2.3055512673781017e-16,
+      "p95": 4.613190423717512e-16,
+      "max": 6.77599954797753e-16
+    },
+    "gate": {
+      "pass": false,
+      "reasons": [
+        "heldout_reprojection_px_over_limit",
+        "three_view_loop_px_over_limit"
+      ],
+      "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+      "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+    }
+  }
+}

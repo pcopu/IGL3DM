@@ -1,0 +1,757 @@
+{
+  "input_corner_tracks": 12,
+  "fit_eligible_corner_tracks": 12,
+  "heldout_predicted_observations": 12,
+  "training_reprojection_px": {
+    "n": 24,
+    "mean": 0.6734310409620566,
+    "median": 0.5772266065388862,
+    "p95": 3.2036076662908646,
+    "max": 3.4633596392334027
+  },
+  "heldout_reprojection_px": {
+    "n": 12,
+    "mean": 14.657226621846435,
+    "median": 11.763627288444974,
+    "p95": 28.62255037240226,
+    "max": 29.88596701107863
+  },
+  "known_camera_epipolar_px": {
+    "n": 36,
+    "mean": 3.078541901540771,
+    "median": 1.1544532130778293,
+    "p95": 8.658399098083464,
+    "max": 17.31679819616687
+  },
+  "three_view_loop_px": {
+    "n": 36,
+    "mean": 12.966270218268932,
+    "median": 10.917268941984482,
+    "p95": 27.9725610936097,
+    "max": 29.88596701107863
+  },
+  "ground_truth_3d_error": null,
+  "tracks": [
+    {
+      "track": "06:0",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.0,
+        0.0
+      ],
+      "heldout_px": [
+        18.512260051560112
+      ],
+      "loop_px": [
+        18.48524277770512,
+        13.077411653419714,
+        18.512260051560112
+      ]
+    },
+    {
+      "track": "06:1",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        3.463359639233346,
+        3.4633596392334027
+      ],
+      "heldout_px": [
+        29.88596701107863
+      ],
+      "loop_px": [
+        29.123706824892135,
+        18.804928799810533,
+        29.88596701107863
+      ]
+    },
+    {
+      "track": "06:2",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.0,
+        0.0
+      ],
+      "heldout_px": [
+        7.220663639230889
+      ],
+      "loop_px": [
+        6.012057612555219,
+        4.55389314880281,
+        7.220663639230889
+      ]
+    },
+    {
+      "track": "06:3",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.5772266065388862,
+        0.5772266065388862
+      ],
+      "heldout_px": [
+        7.54337333084318
+      ],
+      "loop_px": [
+        7.341918428504158,
+        5.472713961378951,
+        7.54337333084318
+      ]
+    },
+    {
+      "track": "09:0",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.5772266065388862,
+        0.5772266065388862
+      ],
+      "heldout_px": [
+        8.365178639951335
+      ],
+      "loop_px": [
+        8.365178639951282,
+        5.786946460812857,
+        8.365178639951335
+      ]
+    },
+    {
+      "track": "09:1",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.0,
+        2.842170943040401e-14
+      ],
+      "heldout_px": [
+        12.587095943554978
+      ],
+      "loop_px": [
+        12.54732691159235,
+        8.881683488552909,
+        12.587095943554978
+      ]
+    },
+    {
+      "track": "09:2",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.5772266065388862,
+        0.5772266065389431
+      ],
+      "heldout_px": [
+        19.05387102578
+      ],
+      "loop_px": [
+        18.112564499841984,
+        12.716137876469968,
+        19.05387102578
+      ]
+    },
+    {
+      "track": "09:3",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        1.1368683772161603e-13,
+        1.1718571004216928e-13
+      ],
+      "heldout_px": [
+        7.7879627593156755
+      ],
+      "loop_px": [
+        6.682755216694618,
+        4.999513284860882,
+        7.7879627593156755
+      ]
+    },
+    {
+      "track": "11:0",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.0,
+        0.0
+      ],
+      "heldout_px": [
+        10.94015863333497
+      ],
+      "loop_px": [
+        10.894379250633992,
+        7.7142948417836825,
+        10.94015863333497
+      ]
+    },
+    {
+      "track": "11:1",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.5772266065388862,
+        0.5772266065389431
+      ],
+      "heldout_px": [
+        24.05187696081552
+      ],
+      "loop_px": [
+        23.885062528934213,
+        17.04149522819646,
+        24.05187696081552
+      ]
+    },
+    {
+      "track": "11:2",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        1.731679819616545,
+        1.7316798196168293
+      ],
+      "heldout_px": [
+        27.58884584984887
+      ],
+      "loop_px": [
+        27.588845849848887,
+        19.159279479507006,
+        27.58884584984887
+      ]
+    },
+    {
+      "track": "11:3",
+      "training_views": [
+        2,
+        3
+      ],
+      "heldout_views": [
+        1
+      ],
+      "condition": 2.6131259297527527,
+      "train_px": [
+        0.5772266065387726,
+        0.5772266065389999
+      ],
+      "heldout_px": [
+        2.349465616843076
+      ],
+      "loop_px": [
+        1.5878519096754644,
+        2.063819721099053,
+        2.349465616843076
+      ]
+    }
+  ],
+  "pairwise": [
+    {
+      "track": "06:0",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "06:0",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "06:0",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 0.0
+    },
+    {
+      "track": "06:1",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 10.390078917700123
+    },
+    {
+      "track": "06:1",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 17.31679819616687
+    },
+    {
+      "track": "06:1",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 6.926719278466749
+    },
+    {
+      "track": "06:2",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 4.617812852311204
+    },
+    {
+      "track": "06:2",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 4.617812852311204
+    },
+    {
+      "track": "06:2",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 0.0
+    },
+    {
+      "track": "06:3",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 2.308906426155545
+    },
+    {
+      "track": "06:3",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "06:3",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "09:0",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "09:0",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 2.308906426155545
+    },
+    {
+      "track": "09:0",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "09:1",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "09:1",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "09:1",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 0.0
+    },
+    {
+      "track": "09:2",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 6.926719278466749
+    },
+    {
+      "track": "09:2",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 8.081172491544578
+    },
+    {
+      "track": "09:2",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130778293
+    },
+    {
+      "track": "09:3",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 4.617812852311147
+    },
+    {
+      "track": "09:3",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 4.617812852311147
+    },
+    {
+      "track": "09:3",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 0.0
+    },
+    {
+      "track": "11:0",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "11:0",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "11:0",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 0.0
+    },
+    {
+      "track": "11:1",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 3.4633596392333743
+    },
+    {
+      "track": "11:1",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 2.308906426155545
+    },
+    {
+      "track": "11:1",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130778293
+    },
+    {
+      "track": "11:2",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 3.4633596392333743
+    },
+    {
+      "track": "11:2",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 6.926719278466749
+    },
+    {
+      "track": "11:2",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 3.4633596392333743
+    },
+    {
+      "track": "11:3",
+      "view_a": 1,
+      "view_b": 2,
+      "yaw_gap": 45.0,
+      "epipolar_px": 2.308906426155545
+    },
+    {
+      "track": "11:3",
+      "view_a": 1,
+      "view_b": 3,
+      "yaw_gap": 90.0,
+      "epipolar_px": 1.1544532130777725
+    },
+    {
+      "track": "11:3",
+      "view_a": 2,
+      "view_b": 3,
+      "yaw_gap": 45.0,
+      "epipolar_px": 1.1544532130777725
+    }
+  ],
+  "gate": {
+    "pass": false,
+    "reasons": [
+      "identity_or_corner_orientation_not_defensible",
+      "no_connected_eight_view_marker_graph",
+      "insufficient_independent_surface_coverage",
+      "heldout_reprojection_px_over_limit",
+      "three_view_loop_px_over_limit",
+      "known_camera_epipolar_px_over_limit"
+    ],
+    "threshold_units": "512px cell; heldout and loop p95 <=3px, epipolar p95 <=2px",
+    "scope": "Gate for sparse marker constraints only. No claim of dense surface or original 3D truth."
+  },
+  "scope": "Exploratory 12 manually annotated candidate corner tracks from 3 labels in views 1,2,3. Not globally authenticated correspondences. View 1 held out; view 5 has no eligible track.",
+  "coordinate_uncertainty": "Estimated +/-3 native pixels (~3.5 normalized pixels), not independently measured; corners on curved borders can be ambiguous.",
+  "conditioning_caveat": "Fixed requested 45-degree cameras, equal scale, common grid center. Actual cameras are not calibrated; high error does not identify whether cameras, framing, or surface geometry caused it.",
+  "annotation_perturbation_heldout_median_px": {
+    "trials": 300,
+    "native_bound_px": 3.0,
+    "min": 7.079719633542789,
+    "max": 18.26153018008568,
+    "median": 13.320254222915981
+  },
+  "adjacent_pair_epipolar_px": {
+    "n": 24,
+    "mean": 2.453213077790302,
+    "median": 1.154453213077801,
+    "p95": 6.926719278466749,
+    "max": 10.390078917700123
+  },
+  "wide_90deg_pair_epipolar_px": {
+    "n": 12,
+    "mean": 4.329199549041708,
+    "median": 2.308906426155545,
+    "p95": 12.237204058624602,
+    "max": 17.31679819616687
+  },
+  "source_sha256": "b1732858f38c9121fa1211ee32dd910b27e8cea54a7a0741ae2b577b37e44b2e",
+  "inventory": {
+    "readable_label_instances": 101,
+    "unique_requested_labels_seen": 21,
+    "missing_requested_ids": [
+      13,
+      14,
+      15
+    ],
+    "per_view_ids": {
+      "0": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        12,
+        16,
+        17
+      ],
+      "1": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        23,
+        24
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        18,
+        19,
+        23,
+        24
+      ],
+      "3": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        23,
+        24
+      ],
+      "4": [
+        10,
+        11,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "5": [
+        8,
+        9,
+        10,
+        11,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "6": [
+        1,
+        5,
+        6,
+        7,
+        11,
+        12,
+        16,
+        17,
+        18,
+        18,
+        19,
+        23,
+        24
+      ],
+      "7": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        16,
+        17,
+        18,
+        18,
+        19,
+        23,
+        24
+      ]
+    },
+    "duplicate_id_instances": [
+      {
+        "view": 6,
+        "id": 18,
+        "count": 2
+      },
+      {
+        "view": 7,
+        "id": 18,
+        "count": 2
+      }
+    ],
+    "confirmed_global_corner_tracks": 0,
+    "candidate_local_corner_tracks": 12,
+    "candidate_local_label_tracks": 3,
+    "views_with_candidate_tracks": [
+      1,
+      2,
+      3
+    ],
+    "heldout_views_with_evaluable_tracks": [
+      1
+    ],
+    "full_orbit_loop_closure": "Not evaluable: globally stable unique patch identity is contradicted; no admissible full-orbit graph."
+  },
+  "public_record_note": "Raw inferred3D point coordinates are retained locally with model artifacts, not published.2D tracks and all residual statistics are preserved."
+}

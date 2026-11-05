@@ -41,6 +41,18 @@ class VolumeTests(unittest.TestCase):
         self.assertLess(abs(float(radius.detach())-.55),.015)
         self.assertLess(losses[-1],losses[0]*.05)
 
+    def test_negative_isovalue_expands_a_known_sphere(self):
+        n=24;axis=(np.arange(n)+.5)*2/n-1
+        xyz=np.meshgrid(axis,axis,axis,indexing='ij')
+        sdf=.55-np.sqrt(sum(x*x for x in xyz))
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            zero=self.module.export(sdf,root/'zero')
+            expanded=self.module.export(sdf+.04,root/'expanded')
+            self.assertTrue(zero['watertight'])
+            self.assertTrue(expanded['watertight'])
+            self.assertGreater(expanded['volume'],zero['volume'])
+
     def test_input_guards_reject_unsupported_depth_and_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);base=root/'base';base.mkdir();(base/'masks').mkdir()

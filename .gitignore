@@ -27,3 +27,7 @@ experiments/**/numba-cache/
 *.npz
 *.npy
 volume-runs/
+experiments/marker_consistency/generated/
+experiments/marker_consistency/controls/metrics.json
+experiments/marker_consistency/results/*.png
+experiments/marker_consistency/controls/*.png

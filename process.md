@@ -230,3 +230,52 @@ Reused original input/DA3 targets and the same shared-volume optimization. A sin
 - Clay inspection confirms smoother appearance but lost thin geometry. Reject sigma1 as default; do not escalate arbitrary smoothing. Original models/results remain unchanged. The reusable optional flag defaults to zero.
 
 [Actual four-way geometry comparison](docs/experiments/12-smoothing-control/clay-comparison.png) · [Turntables](docs/experiments/12-smoothing-control/clay-turntable.gif) · [Exact results](experiments/volume/records/presmooth-actual_mesh_metrics.json)
+
+## Round 13 · Calibrate global mesh extraction, not anatomy
+
+Held the original optimized fields fixed and tested five global marching-cubes levels each:0,−0.002,−0.004,−0.008,−0.012. All ten actual meshes were evaluated without cleanup. No retraining, new input or manual shape edits.
+
+- For the sigma1 field, level−0.008 restores the visible tail connection: actual IoU0.855118, assessment-depth MAE0.027098 and coverage99.9792%. Level0 had IoU0.824367. Nine components remain, including small islands; the model is not a clean production asset.
+- For the unsmoothed field,−0.002 improves both evidence scores slightly (IoU0.854434, MAE0.027141), but increases components5→10. Level−0.008 maximizes its tested outline fit0.857566 while worsening depth MAE0.027992. No universal winner across outline, depth and topology.
+- The density at field value−0.008 is still about14.3 inverse world units under the current sigmoid, so soft opacity can include regions excluded by the zero isosurface. The learned field need not remain an exact distance function; threshold offsets are not uniform physical displacements.
+- Clay comparison confirms recovery of the tail connection but thicker legs/body and rough anatomy. Selecting a threshold using these same source constraints is additional model fitting, not independent accuracy validation. Default extraction is unchanged pending stronger evidence.
+
+[Full ten-case table and limits](experiments/volume/isovalue-control.md) · [Actual mesh comparison](docs/experiments/13-isovalue-control/clay-comparison.png) · [Synchronized turntables](docs/experiments/13-isovalue-control/clay-turntable.gif)
+
+## Round 14 · Sparse labeled patches fail identity; exploratory mesh retained
+
+One new eight-view generation used colored numbered surface patches. The design was subsequently rejected in favor of a dense black quad grid. It is retained as a failed input experiment, not successful identified geometry.
+
+- The visual inventory found IDs05/06/07 reused on opposite flanks, two separate hind-leg regions both labeled18 in views6/7, a side-mane ID changing04→12→04, and no IDs13–15. Printed identifiers do not establish stable physical vertices.
+- An explicitly manual **2D annotation diagnostic**, not automatic detection or animal modeling, marked12 candidate corners across three patches in views1–3. Under requested45° camera spacing, views2/3 fit with median0.58px residual while held-out view1 reaches median11.76px/p95 28.62px at512px cells. Camera assumptions and ±3 native-pixel annotation uncertainty limit interpretation. No full-orbit closure was established.
+- Independent analytic-ellipsoid controls validate the mathematics: same-height swaps can pass epipolar checks but fail held-out prediction; globally wrong yet consistently permuted IDs can pass reprojection and still fail identity. Six tests pass. These primitive fixtures do not supply the lion's geometry.
+- Exploratory reconstruction was requested despite the failed marker gate. A separate7-of-8 silhouette hull with assumed45° yaws gives59,834 vertices /119,696 triangles, zero counted boundary/nonmanifold edges, mean source IoU0.913712 and worst0.836479. No marker coordinates were used to build this mesh.
+- Only eight views and a different source drawing make this score easier to fit; it is not evidence that marker-derived geometry beats sixteen-view reconstruction. Clay views remain coarse, with unsupported facial and interior detail.
+
+[Source](docs/experiments/14-marker-audit/input.png) · [Identity failures](docs/experiments/14-marker-audit/identity-failures.png) · [Conditional held-out diagnostic](docs/experiments/14-marker-audit/heldout-corner-diagnostic.png) · [Exploratory actual hull](docs/experiments/14-marker-audit/clay-turntable.gif) · [Protocol and full controls](experiments/marker_consistency/README.md)
+
+## Round 15 · White lion with dense connected black quad grid
+
+A separate new eight-view atlas replaces colors, numbers and sparse patches with a dense connected black square/quad pattern across white surfaces, including mane, face, legs and tail. Input instructions are not proof that intersections stay physically identical across views.
+
+- Ran the same automatic80³,192px,7-of-8 hull immediately, without waiting for the separate tracking diagnostic and without manual geometry.
+- Result:63,558 vertices /127,164 triangles, zero counted boundary/nonmanifold edges, mean source IoU0.908310, worst0.868098. Assumed45° camera spacing and common orthographic scale are recorded, not recovered measurements.
+- Actual clay review is recognizable but coarse. The drawn grid is not decoded into the mesh's vertices. A high silhouette score with eight views does not establish correct concavities, mesh topology or surface correspondence.
+- The separate automatic grid-junction diagnostic is now complete; it does not validate a connected grid. This exploratory mesh uses silhouettes only.
+
+[Input](docs/experiments/15-dense-quad-grid/input.png) · [Actual clay turntable](docs/experiments/15-dense-quad-grid/clay-turntable.gif) · [Source/mesh comparison](docs/experiments/15-dense-quad-grid/reference-vs-mesh.png) · [Machine report](experiments/quad_grid/exploratory-hull.json)
+
+### Dense-grid tracking result
+
+Black-line skeletonization detected5,119 junction candidates, including T-junctions/artifacts. Local SIFT context matching, mutual ratio tests and neighborhood support propagate adjacent candidates and stop when matches become ambiguous. Missing observations are not filled in, and a reappearing point is not automatically assigned an old identity. This is not yet full quad-edge graph isomorphism.
+
+- Strict ratio0.72:52 mutual matches,39 supported tracks, all two-view; no independent three-view cycle, no evaluable held-out prediction, no full orbit.
+- Exploratory ratio0.85:171 mutual matches,151 supported edges,145 tracks (139 two-view, six three-view). None spans four views. Edges3→4,4→5,7→0 have no supported connection.
+- Two descriptor cycles exist across views5/6/7, but conditional middle-view prediction error is about60.5px. Six fitting/held-out observations have median85.53px/p95 90.83px under the assumed cameras. Descriptor cycles do not prove physical identity; camera/source inconsistencies and false tracks remain unresolved.
+- Ten marker/grid regression tests pass. No dense marker-derived model is claimed, and the requested exploratory hull was not blocked by these results.
+
+[Detected junctions](docs/experiments/15-dense-quad-grid/junction-candidates.png) · [Exploratory adjacent candidates](docs/experiments/15-dense-quad-grid/exploratory-adjacent-candidates.png) · [Procedure and exact results](experiments/quad_grid/tracking.md)
+
+### Video preparation, not a video result
+
+Added a local clip decoder and timestamped forward/backward junction-track harness for future supplied video. It stops tracks at ambiguity/occlusion and requires explicit projection matrices for any3D triangulation; duration is not treated as a calibrated360° orbit. Synthetic decode/translation/full-occlusion and camera-DLT tests pass, bringing this separate marker/grid/video suite to13 tests. No real turntable clip has been tested, and no video-derived mesh is claimed. [Harness and limits](experiments/marker_consistency/VIDEO.md).
