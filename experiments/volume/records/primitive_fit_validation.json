@@ -1,0 +1,8 @@
+{
+  "start_radius": 0.43,
+  "target_radius": 0.55,
+  "fitted_radius": 0.546370804309845,
+  "initial_loss": 0.08729546517133713,
+  "final_loss": 4.0470200474373996e-05,
+  "passed": true
+}

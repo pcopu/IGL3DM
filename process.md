@@ -201,3 +201,32 @@ A sixth generation call supplied one white lion turnaround with many high-contra
 [Detailed depth experiment](experiments/contours/dense-depth-control.md) · [Mask validation](experiments/depth_fit/dense-mask-validation.json)
 
 Next controlled step: optimize one shared signed-distance volume directly against silhouettes and accepted software-depth fitting pixels, then evaluate the extracted actual mesh and a silhouettes-only ablation. No claim that these dense drawn curves identify exact vertices or measured surface depth.
+
+## Round 11 · Our shared differentiable volume, with matched ablations
+
+Reused the original and dense-contour atlases. **No new generation and no learned image-to-mesh model.** Implemented one shared signed-distance field optimized automatically against silhouettes and accepted software-depth fitting pixels. No anatomical primitives or manual edits enter the animal. Independent sphere tests are numerical fixtures only.
+
+- 64³ SDF, 24³ bounded control field, 64² differentiable rays, 112 samples/ray, four views/minibatch, 240 iterations on four CPU threads. Optimization takes approximately25 seconds. Extracted actual meshes are evaluated separately at192² with Blender.
+- Original atlas + DA3: baseline IoU0.848219 → cleaned shared-volume0.852145. Spatial-assessment software-depth MAE0.041694 →0.027221 (34.7% lower). One watertight component,10,744 vertices /21,496 triangles; automatic cleanup removes100 small-component faces, with raw geometry retained locally.
+- Original silhouette-only control: higher IoU0.855169 but worse depth MAE0.047066. Unconstrained64³ optimization:177 components and worse actual IoU0.843178, despite improved soft-render metrics. Both are recorded rather than hidden.
+- Dense atlas + V2: baseline IoU0.857248 →0.855622, while estimated-depth MAE0.111215 →0.093925 (15.55% lower). Dense silhouette-only: IoU0.864213 but depth MAE0.115404. Depth and outlines disagree; no overall quality breakthrough is claimed.
+- Dense DA3's two-view support is rejected before optimization. The dense V2 result is one watertight component,12,515 vertices /25,046 triangles; one eight-face degenerate island is removed automatically.
+- Geometry-only source-angle and unseen-midpoint comparisons show recognizable but coarse/lumpy animals, weak faces and imperfect legs. Dense contours have not yielded detailed surface recovery. Self-intersections remain unchecked; these are not production assets.
+- Input masks, cameras, finite values, train/assessment separation, support and overwrite behavior are validated. Nineteen tests pass with optional volume dependencies installed, including analytic sphere rays/gradients, radius convergence and insufficient-view rejection.
+
+These assessment residuals measure fit to software priors calibrated against the original hull, with gates informed by assessment pixels. They are not blind validation, true depth, or anatomical accuracy. Missing mesh rays are explicitly included in coverage accounting. Methods are compared with both benefits and failures visible.
+
+[Full reproducible method and numeric controls](experiments/volume/README.md) · [Original synchronized clay turntables](docs/experiments/11-shared-volume/clay-turntable.gif) · [Dense synchronized clay turntables](docs/experiments/11-shared-volume/dense-clay-turntable.gif)
+
+
+## Round 12 · Generic smoothing is not a free improvement
+
+Reused original input/DA3 targets and the same shared-volume optimization. A single bounded control applies Gaussian sigma1 voxel to the initial64³ SDF (0.03125 world units). No per-part editing or new image generation.
+
+- Smoothing alone: actual IoU0.837015, depth-assessment MAE0.039922. The tail tip becomes a detached252-face component.
+- Smoothing plus identical240-step optimization: actual IoU0.824367, MAE0.026394, coverage99.6458%. Previous preferred was0.852145/0.027221/99.9833%.
+- Automatic largest-component cleanup deletes428 faces, including the meaningful tail tip, lowering IoU further to0.813528. A single watertight result is not automatically a better model.
+- The soft density renderer reports IoU0.861331 while the extracted actual mesh reaches only0.824367. This mismatch is retained as a diagnostic, not represented as progress.
+- Clay inspection confirms smoother appearance but lost thin geometry. Reject sigma1 as default; do not escalate arbitrary smoothing. Original models/results remain unchanged. The reusable optional flag defaults to zero.
+
+[Actual four-way geometry comparison](docs/experiments/12-smoothing-control/clay-comparison.png) · [Turntables](docs/experiments/12-smoothing-control/clay-turntable.gif) · [Exact results](experiments/volume/records/presmooth-actual_mesh_metrics.json)

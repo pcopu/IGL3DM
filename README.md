@@ -123,3 +123,7 @@ These runners require their own explicitly documented official source/checkpoint
 Pass `--material clay` to `scripts/render_mesh.py` for neutral gray shading under a fixed light rig. This is a display-only material change; exact depth/XYZ/mask outputs and mesh geometry remain unchanged. The GLB carries a rough gray material but requires viewer lighting. Default vertex-color rendering remains available.
 
 Contour and high-contrast input controls, rejected camera collapse, and fixed-vertex comparisons are recorded in [Rounds 9–10](process.md#round-9--surface-contour-curves-and-fixed-vertex-controls). TripoSR is a comparison only, not the target pipeline.
+
+## In-house shared-volume optimization
+
+The [optional shared-SDF experiment](experiments/volume/README.md) optimizes one volume from the turnaround's silhouettes and gated software depth, without a learned image-to-mesh prior or manual animal modeling. It includes matched no-depth and failed unconstrained controls, actual-mesh evaluation and geometry-only previews. The original source improves both measured constraints modestly; the dense-contour source shows a depth/outline tradeoff. Neither is a production-quality reconstruction.

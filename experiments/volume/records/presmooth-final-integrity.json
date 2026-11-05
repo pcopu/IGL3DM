@@ -1,0 +1,10 @@
+{
+  "vertices": 9444,
+  "faces": 18868,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 6,
+  "volume": 0.833325987614923,
+  "degenerate_faces": 0,
+  "self_intersections_checked": false
+}

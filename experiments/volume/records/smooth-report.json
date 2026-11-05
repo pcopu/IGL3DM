@@ -1,0 +1,37 @@
+{
+  "config": {
+    "iterations": 240,
+    "size": 64,
+    "grid": 64,
+    "control": 24,
+    "depth_weight": 4,
+    "name": "smooth"
+  },
+  "before": {
+    "soft_render_iou": 0.845984697341919,
+    "depth_train_mae": 0.041251372545957565,
+    "depth_heldout_mae": 0.042429227381944656
+  },
+  "after": {
+    "soft_render_iou": 0.8619951605796814,
+    "depth_train_mae": 0.021578704938292503,
+    "depth_heldout_mae": 0.02857155166566372
+  },
+  "seconds": 24.65439200401306,
+  "integrity": {
+    "vertices": 10802,
+    "faces": 21596,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 5,
+    "volume": 0.8795939546414662,
+    "degenerate_faces": 0,
+    "self_intersections_checked": false
+  },
+  "caveats": [
+    "Not ground-truth 3D accuracy",
+    "Depth affine calibration and view gating used baseline and heldout statistics; heldout is not blind validation",
+    "Soft ray-render metrics must be checked on extracted mesh",
+    "Shared 64-cubed SDF, no anatomical edits; displacement bounded to 0.1 world units"
+  ]
+}

@@ -14,3 +14,16 @@ experiments/**/Depth-Anything-V2/
 experiments/**/package/
 experiments/**/hf-cache/
 experiments/**/numba-cache/
+# Keep reconstructed models, checkpoints and raw numeric arrays out of public Git.
+*.glb
+*.gltf
+*.ply
+*.obj
+*.stl
+*.blend
+*.safetensors
+*.pth
+*.pt
+*.npz
+*.npy
+volume-runs/

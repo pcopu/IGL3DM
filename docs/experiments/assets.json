@@ -240,6 +240,56 @@
       "path": "docs/experiments/10-dense-contours/software-depth-comparison.png",
       "bytes": 523851,
       "sha256": "df1bff9ddbc5034f57dfabf3cf190ad1b10710946011944d6ea5093df09c0887"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/clay-comparison.png",
+      "bytes": 766214,
+      "sha256": "e77b8b957e409588f0fd28bfc04fe8c2f92269f9300054ae875fa2ee033fc026"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/clay-midpoints.png",
+      "bytes": 776909,
+      "sha256": "4724a15b969ace4bfd1394688409613d10dc181c15bea720b3ffe847894569d7"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/clay-turntable.gif",
+      "bytes": 2469401,
+      "sha256": "6fbf74dbc94fbb9bbc9e3cc58f007129154046e837005aa0b280e9a9e0e51176"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/dense-clay-comparison.png",
+      "bytes": 489215,
+      "sha256": "b3653d61ad6b9aa9f5a3d7d9333b15e2f3485dda6745352bc9d2ea60b69e86f5"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/dense-clay-midpoints.png",
+      "bytes": 496040,
+      "sha256": "05ab861d1cf78384f335e5260e0d85f82db2fd453d9996e5b1879514686b1c21"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/dense-clay-turntable.gif",
+      "bytes": 1617492,
+      "sha256": "59364057cca65159563ce82db34cbf30d67f9ddd3725309164e2efcbffc96127"
+    },
+    {
+      "path": "docs/experiments/11-shared-volume/unconstrained-failure.png",
+      "bytes": 173503,
+      "sha256": "3b28c06ccf306938b45b29521b9f902124201f17be1ecf9b1eff52575a70c32c"
+    },
+    {
+      "path": "docs/experiments/12-smoothing-control/clay-comparison.png",
+      "bytes": 566744,
+      "sha256": "9cc86ae84fb36d4dc8e3b120447780a435fd5d1ed25743b4e651de345136b256"
+    },
+    {
+      "path": "docs/experiments/12-smoothing-control/clay-midpoints.png",
+      "bytes": 573421,
+      "sha256": "945bcff824a180abf58ea827ec5d0aae2f359ffe2f5fd45a4b99d4daa8376e30"
+    },
+    {
+      "path": "docs/experiments/12-smoothing-control/clay-turntable.gif",
+      "bytes": 1740914,
+      "sha256": "706e6329192fa1732e74f5973f72f10539d90e31f7d7d00cc2df034dcbe6da26"
     }
   ]
 }

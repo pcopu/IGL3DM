@@ -1,0 +1,19 @@
+{
+  "rule": "Keep component with largest triangle count, no anatomical selection",
+  "raw_component_face_counts": [
+    21496,
+    68,
+    16,
+    8,
+    8
+  ],
+  "discarded_faces": 100,
+  "discarded_volume": 0.0001313571061036728,
+  "vertices": 10744,
+  "faces": 21496,
+  "components": 1,
+  "watertight": true,
+  "winding_consistent": true,
+  "degenerate_faces": 0,
+  "self_intersections_checked": false
+}

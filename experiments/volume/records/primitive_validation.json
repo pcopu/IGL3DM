@@ -1,0 +1,7 @@
+{
+  "silhouette_iou": 0.9642857313156128,
+  "interior_depth_mae": 0.006931687239557505,
+  "radius_gradient_positive": true,
+  "radius_gradient": 7339.39306640625,
+  "max_rotation_difference": 0.016146808862686157
+}

@@ -1,0 +1,51 @@
+{
+  "config": {
+    "source_run": "igl3dm/runs/lion-002",
+    "depth_prior": "igl3dm-depth-alignment/results/full_orbit/aligned_depths.npz",
+    "output_root": "igl3dm-volume-experiment",
+    "initial_sigma": 1.0,
+    "iterations": 240,
+    "size": 64,
+    "grid": 64,
+    "control": 24,
+    "depth_weight": 4,
+    "name": "presmooth_sigma1"
+  },
+  "initial_smoothing": {
+    "sigma_voxels": 1.0,
+    "sigma_world_units": 0.03125,
+    "world_cube_side": 2.0,
+    "method": "Gaussian initial SDF, nearest boundary extension"
+  },
+  "input_hashes": {
+    "source_field_sha256": "6a5cc6cbd1cb67df8ed70ebbef817c9f7bd131b545383a8e0e4ca7fb13e52aad",
+    "depth_prior_sha256": "441e68ae2fc5c5e20d7ea62e2b5434f27baaca74dd7aa68ec7cc05be0c86347e"
+  },
+  "before": {
+    "soft_render_iou": 0.8415420055389404,
+    "depth_train_mae": 0.03967028856277466,
+    "depth_heldout_mae": 0.04055923968553543
+  },
+  "after": {
+    "soft_render_iou": 0.8613308072090149,
+    "depth_train_mae": 0.020763657987117767,
+    "depth_heldout_mae": 0.02815522439777851
+  },
+  "seconds": 25.576937913894653,
+  "integrity": {
+    "vertices": 9444,
+    "faces": 18868,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 6,
+    "volume": 0.833325987614923,
+    "degenerate_faces": 0,
+    "self_intersections_checked": false
+  },
+  "caveats": [
+    "Not ground-truth 3D accuracy",
+    "Depth affine calibration and view gating used baseline and heldout statistics; heldout is not blind validation",
+    "Soft ray-render metrics must be checked on extracted mesh",
+    "Shared 64-cubed SDF, no anatomical edits; displacement bounded to 0.1 world units"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "config": {
+    "source_run": "igl3dm/runs/lion-dense-contour-001",
+    "depth_prior": "igl3dm-depth-alignment/results_dense/dense_small_518/aligned_depths.npz",
+    "output_root": "igl3dm-volume-experiment",
+    "iterations": 240,
+    "size": 64,
+    "grid": 64,
+    "control": 24,
+    "depth_weight": 4,
+    "name": "dense_v2_depth"
+  },
+  "before": {
+    "soft_render_iou": 0.852949857711792,
+    "depth_train_mae": 0.11018665134906769,
+    "depth_heldout_mae": 0.11138768494129181
+  },
+  "after": {
+    "soft_render_iou": 0.8630627393722534,
+    "depth_train_mae": 0.08035840094089508,
+    "depth_heldout_mae": 0.09418082982301712
+  },
+  "seconds": 33.048980474472046,
+  "integrity": {
+    "vertices": 12521,
+    "faces": 25054,
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 2,
+    "volume": 0.9927838961019706,
+    "degenerate_faces": 6,
+    "self_intersections_checked": false
+  },
+  "caveats": [
+    "Not ground-truth 3D accuracy",
+    "Depth affine calibration and view gating used baseline and heldout statistics; heldout is not blind validation",
+    "Soft ray-render metrics must be checked on extracted mesh",
+    "Shared 64-cubed SDF, no anatomical edits; displacement bounded to 0.1 world units"
+  ]
+}
