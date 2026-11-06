@@ -91,3 +91,7 @@ OPENBLAS_NUM_THREADS=1 python experiments/surface_completion/support_sensitivity
 ```
 
 The complete 35 cases plus distortion case are recorded in `results/support_sensitivity.json`, seed 814. These 36 follow-up cases add to the earlier 109 configurations. Nothing in this follow-up uses the parent's repeatedly reused real-frame checks as a pristine final test set. Real-video work remains blocked pending the approved input snapshot.
+
+## Renderer-ready known dimple control
+
+A reproducible all-quad evaluation mesh and matched shaded/undented full-rotation renderer are now available. See [DIMPLE_CONTROL.md](DIMPLE_CONTROL.md) for exact paths, parameters, commands and validation. The paired 24-view run verifies dimple-center visibility of 7/24 frames versus 13/24 without the recess. This is a known-geometry control, never real reconstruction geometry.

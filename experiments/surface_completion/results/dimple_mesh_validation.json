@@ -1,0 +1,32 @@
+{
+  "parameters": {
+    "resolution": 24,
+    "axes": [
+      0.72,
+      0.62,
+      1.2
+    ],
+    "taper": 0.22,
+    "asymmetry": 0.06,
+    "dent_depth": 0.19,
+    "dent_width_radians": 0.24,
+    "dent_direction": [
+      1,
+      0,
+      0
+    ],
+    "dent_enabled": true
+  },
+  "vertices": 3458,
+  "quads": 3456,
+  "boundary_edges": 0,
+  "nonmanifold_edges": 0,
+  "inconsistent_edge_winding": 0,
+  "euler": 2,
+  "minimum_radius": 0.53,
+  "center_dent_depth": 0.19,
+  "equatorial_chord_half_angle_radians": 0.12,
+  "center_recession_below_chord": 0.03613532622583282,
+  "dent_vertices_within_20deg": 61,
+  "status": "EVALUATION ONLY; radial synthetic mesh, never inferred real geometry"
+}
