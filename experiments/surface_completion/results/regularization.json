@@ -1,0 +1,521 @@
+[
+  {
+    "missing_cap_degrees": 0,
+    "selected_by_visible_holdout": {
+      "degree": 16,
+      "regularization": 1e-05,
+      "validation_rmse": 0.00402748836038801,
+      "full_radial_p95": 0.008557990267281018,
+      "full_radial_max": 0.05654164008785645,
+      "hidden_p95": null
+    },
+    "choices": [
+      {
+        "degree": 4,
+        "regularization": 1e-08,
+        "validation_rmse": 0.03544003155072709,
+        "full_radial_p95": 0.02357262086306139,
+        "full_radial_max": 0.13004121028979487,
+        "hidden_p95": null
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-07,
+        "validation_rmse": 0.03537752497453017,
+        "full_radial_p95": 0.02359234437551297,
+        "full_radial_max": 0.13005000250664267,
+        "hidden_p95": null
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-06,
+        "validation_rmse": 0.03476227119386228,
+        "full_radial_p95": 0.02358797049532599,
+        "full_radial_max": 0.13013770900568622,
+        "hidden_p95": null
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-05,
+        "validation_rmse": 0.02945329737033188,
+        "full_radial_p95": 0.02396322539431822,
+        "full_radial_max": 0.13099403345184135,
+        "hidden_p95": null
+      },
+      {
+        "degree": 4,
+        "regularization": 0.0001,
+        "validation_rmse": 0.008771849656330506,
+        "full_radial_p95": 0.03570639505036219,
+        "full_radial_max": 0.13805129046850984,
+        "hidden_p95": null
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-08,
+        "validation_rmse": 0.1670914462512304,
+        "full_radial_p95": 0.010566030545560073,
+        "full_radial_max": 0.0577106550502271,
+        "hidden_p95": null
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-07,
+        "validation_rmse": 0.12321199082314489,
+        "full_radial_p95": 0.010539712123294048,
+        "full_radial_max": 0.05792027070050754,
+        "hidden_p95": null
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-06,
+        "validation_rmse": 0.026706520483992385,
+        "full_radial_p95": 0.010265928855554163,
+        "full_radial_max": 0.05993518261371389,
+        "hidden_p95": null
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-05,
+        "validation_rmse": 0.006548460915519277,
+        "full_radial_p95": 0.01161149701226391,
+        "full_radial_max": 0.07463708128800273,
+        "hidden_p95": null
+      },
+      {
+        "degree": 8,
+        "regularization": 0.0001,
+        "validation_rmse": 0.005282499595654017,
+        "full_radial_p95": 0.032154799371683196,
+        "full_radial_max": 0.11624075624357766,
+        "hidden_p95": null
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-08,
+        "validation_rmse": 0.04314460399236328,
+        "full_radial_p95": 0.005010472919378339,
+        "full_radial_max": 0.018943602408954652,
+        "hidden_p95": null
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-07,
+        "validation_rmse": 0.03477558181437927,
+        "full_radial_p95": 0.004938392739706088,
+        "full_radial_max": 0.019714915841936742,
+        "hidden_p95": null
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-06,
+        "validation_rmse": 0.006338716786438324,
+        "full_radial_p95": 0.0043937835087172195,
+        "full_radial_max": 0.02643409527710494,
+        "hidden_p95": null
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-05,
+        "validation_rmse": 0.004112294490229963,
+        "full_radial_p95": 0.008563278202971064,
+        "full_radial_max": 0.058809841825047005,
+        "hidden_p95": null
+      },
+      {
+        "degree": 12,
+        "regularization": 0.0001,
+        "validation_rmse": 0.0049725706517324995,
+        "full_radial_p95": 0.03251930958607527,
+        "full_radial_max": 0.11350426774029765,
+        "hidden_p95": null
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-08,
+        "validation_rmse": 0.023551052538069762,
+        "full_radial_p95": 0.004655050953716933,
+        "full_radial_max": 0.009704677692526698,
+        "hidden_p95": null
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-07,
+        "validation_rmse": 0.01233823907199661,
+        "full_radial_p95": 0.004524199357243713,
+        "full_radial_max": 0.009452094180599335,
+        "hidden_p95": null
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-06,
+        "validation_rmse": 0.005003339388073309,
+        "full_radial_p95": 0.004221360543371716,
+        "full_radial_max": 0.018037604619479675,
+        "hidden_p95": null
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-05,
+        "validation_rmse": 0.00402748836038801,
+        "full_radial_p95": 0.008557990267281018,
+        "full_radial_max": 0.05654164008785645,
+        "hidden_p95": null
+      },
+      {
+        "degree": 16,
+        "regularization": 0.0001,
+        "validation_rmse": 0.0049888261566780395,
+        "full_radial_p95": 0.03258070623027892,
+        "full_radial_max": 0.11321280308081427,
+        "hidden_p95": null
+      }
+    ]
+  },
+  {
+    "missing_cap_degrees": 35,
+    "selected_by_visible_holdout": {
+      "degree": 8,
+      "regularization": 1e-05,
+      "validation_rmse": 0.0036350252242691944,
+      "full_radial_p95": 0.009968637994517554,
+      "full_radial_max": 0.18549809536480066,
+      "hidden_p95": 0.1340192573687699
+    },
+    "choices": [
+      {
+        "degree": 4,
+        "regularization": 1e-08,
+        "validation_rmse": 0.006444735203116828,
+        "full_radial_p95": 0.01581573647064985,
+        "full_radial_max": 0.18844742567083528,
+        "hidden_p95": 0.13731364351548986
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-07,
+        "validation_rmse": 0.006428886653169213,
+        "full_radial_p95": 0.015839488695561704,
+        "full_radial_max": 0.18844362879072574,
+        "hidden_p95": 0.1373100110154835
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-06,
+        "validation_rmse": 0.006276912121831039,
+        "full_radial_p95": 0.016142891963737444,
+        "full_radial_max": 0.18840716645401712,
+        "hidden_p95": 0.13727511597479491
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-05,
+        "validation_rmse": 0.0052390602545315775,
+        "full_radial_p95": 0.01894966745375745,
+        "full_radial_max": 0.18817271311021577,
+        "hidden_p95": 0.137049845415908
+      },
+      {
+        "degree": 4,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004959632359015266,
+        "full_radial_p95": 0.04055039063491894,
+        "full_radial_max": 0.19060209992222343,
+        "hidden_p95": 0.13936813918874402
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-08,
+        "validation_rmse": 0.006667522030368727,
+        "full_radial_p95": 0.0056222495832986275,
+        "full_radial_max": 0.17074179576369986,
+        "hidden_p95": 0.12004088828354953
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-07,
+        "validation_rmse": 0.004629559015025375,
+        "full_radial_p95": 0.005359547888495769,
+        "full_radial_max": 0.17351579274138784,
+        "hidden_p95": 0.12256802394984777
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-06,
+        "validation_rmse": 0.004325876544360554,
+        "full_radial_p95": 0.004931779692856769,
+        "full_radial_max": 0.18098693595806492,
+        "hidden_p95": 0.12982824467183107
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-05,
+        "validation_rmse": 0.0036350252242691944,
+        "full_radial_p95": 0.009968637994517554,
+        "full_radial_max": 0.18549809536480066,
+        "hidden_p95": 0.1340192573687699
+      },
+      {
+        "degree": 8,
+        "regularization": 0.0001,
+        "validation_rmse": 0.0047021067986858,
+        "full_radial_p95": 0.038488084778257464,
+        "full_radial_max": 0.19071705525300464,
+        "hidden_p95": 0.13935067788763017
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-08,
+        "validation_rmse": 0.017406061618205085,
+        "full_radial_p95": 0.009764534984068235,
+        "full_radial_max": 0.15420208828564297,
+        "hidden_p95": 0.11320294310897984
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-07,
+        "validation_rmse": 0.009667030652606682,
+        "full_radial_p95": 0.007680912206708551,
+        "full_radial_max": 0.1752363149588657,
+        "hidden_p95": 0.12400072419472466
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-06,
+        "validation_rmse": 0.005006121021085247,
+        "full_radial_p95": 0.006264967860419052,
+        "full_radial_max": 0.18161689622618304,
+        "hidden_p95": 0.12970485045208469
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-05,
+        "validation_rmse": 0.003641287548799781,
+        "full_radial_p95": 0.009617195783147736,
+        "full_radial_max": 0.18543257932609392,
+        "hidden_p95": 0.1341207163401913
+      },
+      {
+        "degree": 12,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004705455828413609,
+        "full_radial_p95": 0.03847167328546186,
+        "full_radial_max": 0.19063485045299822,
+        "hidden_p95": 0.13932923467571987
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-08,
+        "validation_rmse": 0.03020985631535451,
+        "full_radial_p95": 0.012916918559084917,
+        "full_radial_max": 0.13568611248048368,
+        "hidden_p95": 0.08375312281720622
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-07,
+        "validation_rmse": 0.010917214418971612,
+        "full_radial_p95": 0.008150629501509382,
+        "full_radial_max": 0.17180171149318313,
+        "hidden_p95": 0.12040694726807483
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-06,
+        "validation_rmse": 0.005074006997289221,
+        "full_radial_p95": 0.006270368273859711,
+        "full_radial_max": 0.18201710636091695,
+        "hidden_p95": 0.13041727802972505
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-05,
+        "validation_rmse": 0.0036646283768796487,
+        "full_radial_p95": 0.009846861466447698,
+        "full_radial_max": 0.18554240030595348,
+        "hidden_p95": 0.13422754812618853
+      },
+      {
+        "degree": 16,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004709167074933693,
+        "full_radial_p95": 0.038512384917874176,
+        "full_radial_max": 0.19067440576727135,
+        "hidden_p95": 0.13934487993812644
+      }
+    ]
+  },
+  {
+    "missing_cap_degrees": 65,
+    "selected_by_visible_holdout": {
+      "degree": 8,
+      "regularization": 1e-05,
+      "validation_rmse": 0.003584988163138945,
+      "full_radial_p95": 0.03710458663621716,
+      "full_radial_max": 0.2243503506536788,
+      "hidden_p95": 0.10340466480097402
+    },
+    "choices": [
+      {
+        "degree": 4,
+        "regularization": 1e-08,
+        "validation_rmse": 0.0073725962453855655,
+        "full_radial_p95": 0.014947718007194993,
+        "full_radial_max": 0.173870676504279,
+        "hidden_p95": 0.05535331652776923
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-07,
+        "validation_rmse": 0.007292734599064605,
+        "full_radial_p95": 0.01443887641683858,
+        "full_radial_max": 0.17544348914727703,
+        "hidden_p95": 0.056775734806094616
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-06,
+        "validation_rmse": 0.006741108963970191,
+        "full_radial_p95": 0.015431111699725275,
+        "full_radial_max": 0.18733283318493688,
+        "hidden_p95": 0.06760423912396035
+      },
+      {
+        "degree": 4,
+        "regularization": 1e-05,
+        "validation_rmse": 0.004740033407505556,
+        "full_radial_p95": 0.028923547907177855,
+        "full_radial_max": 0.21749611246328382,
+        "hidden_p95": 0.0949339840923842
+      },
+      {
+        "degree": 4,
+        "regularization": 0.0001,
+        "validation_rmse": 0.0037553982723567,
+        "full_radial_p95": 0.05616219906585729,
+        "full_radial_max": 0.24452212123163974,
+        "hidden_p95": 0.12203298496599785
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-08,
+        "validation_rmse": 0.010444798145962142,
+        "full_radial_p95": 0.08741288676736078,
+        "full_radial_max": 0.23083905527420578,
+        "hidden_p95": 0.13294202028076146
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-07,
+        "validation_rmse": 0.008370700017751583,
+        "full_radial_p95": 0.05414636838713088,
+        "full_radial_max": 0.22396297567363577,
+        "hidden_p95": 0.10487393228693498
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-06,
+        "validation_rmse": 0.004985418314173243,
+        "full_radial_p95": 0.034043245198412425,
+        "full_radial_max": 0.21822445082251962,
+        "hidden_p95": 0.09790986262164347
+      },
+      {
+        "degree": 8,
+        "regularization": 1e-05,
+        "validation_rmse": 0.003584988163138945,
+        "full_radial_p95": 0.03710458663621716,
+        "full_radial_max": 0.2243503506536788,
+        "hidden_p95": 0.10340466480097402
+      },
+      {
+        "degree": 8,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004025726767659064,
+        "full_radial_p95": 0.05770644879986289,
+        "full_radial_max": 0.2449037910569114,
+        "hidden_p95": 0.12324894478664504
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-08,
+        "validation_rmse": 0.04209040451168719,
+        "full_radial_p95": 0.04986690754768544,
+        "full_radial_max": 0.19872071346417675,
+        "hidden_p95": 0.08415320587820882
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-07,
+        "validation_rmse": 0.013145286440812014,
+        "full_radial_p95": 0.036736062958519194,
+        "full_radial_max": 0.2175012709741443,
+        "hidden_p95": 0.09708584861564624
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-06,
+        "validation_rmse": 0.005055720629221611,
+        "full_radial_p95": 0.033061111410345734,
+        "full_radial_max": 0.22015706735906482,
+        "hidden_p95": 0.09993704922806651
+      },
+      {
+        "degree": 12,
+        "regularization": 1e-05,
+        "validation_rmse": 0.003677505218810656,
+        "full_radial_p95": 0.03761385941577458,
+        "full_radial_max": 0.22501793304469375,
+        "hidden_p95": 0.1042896644537509
+      },
+      {
+        "degree": 12,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004082302048686707,
+        "full_radial_p95": 0.05780440368435055,
+        "full_radial_max": 0.24480018810954285,
+        "hidden_p95": 0.12353420874904518
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-08,
+        "validation_rmse": 0.02063049613955305,
+        "full_radial_p95": 0.07701351327457609,
+        "full_radial_max": 0.26213210070920556,
+        "hidden_p95": 0.13656542248934433
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-07,
+        "validation_rmse": 0.012655084333400008,
+        "full_radial_p95": 0.037944303423254,
+        "full_radial_max": 0.22474919498777646,
+        "hidden_p95": 0.10059993801672046
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-06,
+        "validation_rmse": 0.005596187796761647,
+        "full_radial_p95": 0.03252358383010612,
+        "full_radial_max": 0.21984189628016437,
+        "hidden_p95": 0.09859575326670475
+      },
+      {
+        "degree": 16,
+        "regularization": 1e-05,
+        "validation_rmse": 0.0036858223336997185,
+        "full_radial_p95": 0.03782865272095595,
+        "full_radial_max": 0.22527980680137938,
+        "hidden_p95": 0.10415291926720523
+      },
+      {
+        "degree": 16,
+        "regularization": 0.0001,
+        "validation_rmse": 0.004081796735426296,
+        "full_radial_p95": 0.057817109387824195,
+        "full_radial_max": 0.24487373947921864,
+        "hidden_p95": 0.12354232636874615
+      }
+    ]
+  }
+]

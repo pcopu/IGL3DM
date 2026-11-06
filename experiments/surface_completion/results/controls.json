@@ -1,0 +1,1249 @@
+{
+  "seed": 812,
+  "noise_relative_sigma": 0.005,
+  "units": "characteristic radius ~1; absolute radial error, not pixels",
+  "rows": [
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 0,
+      "method": "convex",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0031990316512751082,
+        "p95": 0.008385234872513692,
+        "max": 0.01456995241502157
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.150751362046207
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l4",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0006564335913284425,
+        "p95": 0.0018679084467461415,
+        "max": 0.0027293983768574837
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.183455075171227
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l8",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0008078661092621453,
+        "p95": 0.0021405398654271712,
+        "max": 0.002874140224088828
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.183459093470417
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l12",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.000809235227875682,
+        "p95": 0.0021228612414128656,
+        "max": 0.002920871712543738
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.183459305241492
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 35,
+      "method": "convex",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.003738253942446479,
+        "p95": 0.09497405446678003,
+        "max": 0.1859072232934157
+      },
+      "hidden_radial_error": {
+        "median": 0.10791462507784721,
+        "p95": 0.17828601529231752,
+        "max": 0.1859072232934157
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.0425499265855045
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l4",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0004800394105297645,
+        "p95": 0.0013378164481036015,
+        "max": 0.001701135669972209
+      },
+      "hidden_radial_error": {
+        "median": 0.0008547269274175595,
+        "p95": 0.0014634482052793656,
+        "max": 0.001641976638437126
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.181044356352138
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l8",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0005531822915574303,
+        "p95": 0.001480672851231074,
+        "max": 0.002014670399932861
+      },
+      "hidden_radial_error": {
+        "median": 0.0007195293885740028,
+        "p95": 0.0011876540163170968,
+        "max": 0.001373154536397525
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.181161076894667
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l12",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0005379906101695697,
+        "p95": 0.0015574329372891604,
+        "max": 0.002059776581485706
+      },
+      "hidden_radial_error": {
+        "median": 0.0006960408865828716,
+        "p95": 0.0011228401954979205,
+        "max": 0.0013113231434113137
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.181198301636197
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 65,
+      "method": "convex",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005001764349022497,
+        "p95": 0.534969604643982,
+        "max": 0.5807044165756381
+      },
+      "hidden_radial_error": {
+        "median": 0.41434003448970913,
+        "p95": 0.5683386405423633,
+        "max": 0.5807044165756381
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 3.283018292915534
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l4",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.0006987480726858286,
+        "p95": 0.0018111876462121035,
+        "max": 0.0028538306349883413
+      },
+      "hidden_radial_error": {
+        "median": 0.0008715402209082956,
+        "p95": 0.0017134403641479556,
+        "max": 0.0019074143436587088
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.180510773932237
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l8",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.0006422137259219918,
+        "p95": 0.0021768431983453518,
+        "max": 0.0035353041435244315
+      },
+      "hidden_radial_error": {
+        "median": 0.0005061290495803616,
+        "p95": 0.0017744612754535202,
+        "max": 0.0022733784348927255
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.180845504805795
+      }
+    },
+    {
+      "control": "sphere",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l12",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.000648487941318665,
+        "p95": 0.0022357285041292307,
+        "max": 0.003404654184392397
+      },
+      "hidden_radial_error": {
+        "median": 0.0004970466529740092,
+        "p95": 0.0017788562938228277,
+        "max": 0.002494073294440402
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 4.18077619088384
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 0,
+      "method": "convex",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0021107147860915942,
+        "p95": 0.009785526517955945,
+        "max": 0.02413714692255664
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.214308135540635
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l4",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0025406395017308903,
+        "p95": 0.03011617267811678,
+        "max": 0.06848123175048815
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.204043113798217
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l8",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0027646679726657797,
+        "p95": 0.029070232816844288,
+        "max": 0.062303577113905106
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.204395369016066
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l12",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0027585179782141367,
+        "p95": 0.029136368991649453,
+        "max": 0.06224987409180294
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.2043944555672983
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 35,
+      "method": "convex",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.002672086837577081,
+        "p95": 0.0386209395120935,
+        "max": 0.0733375960308692
+      },
+      "hidden_radial_error": {
+        "median": 0.04188247464937711,
+        "p95": 0.07096620361934906,
+        "max": 0.0733375960308692
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.1911251589509875
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l4",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0028263384322075313,
+        "p95": 0.02818632497790191,
+        "max": 0.06549609889780128
+      },
+      "hidden_radial_error": {
+        "median": 0.0029534091152222386,
+        "p95": 0.004518599480056334,
+        "max": 0.00468762405512424
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.2082953098884452
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l8",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.003280202389669473,
+        "p95": 0.027184077253232297,
+        "max": 0.058636687947565935
+      },
+      "hidden_radial_error": {
+        "median": 0.00324275011282682,
+        "p95": 0.00444005599885956,
+        "max": 0.004990758692370534
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.208812579714247
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l12",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0032986611958943923,
+        "p95": 0.027272547522162294,
+        "max": 0.058508675314783654
+      },
+      "hidden_radial_error": {
+        "median": 0.0032468565833206897,
+        "p95": 0.004455124071431449,
+        "max": 0.004996169745310253
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.2088252843275895
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 65,
+      "method": "convex",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.0038043120100464956,
+        "p95": 0.3048660775769669,
+        "max": 0.32384942964440816
+      },
+      "hidden_radial_error": {
+        "median": 0.2287270210061073,
+        "p95": 0.3187985136400323,
+        "max": 0.32384942964440816
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 1.8927834734916777
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l4",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005722006607713048,
+        "p95": 0.04734554529277693,
+        "max": 0.05853103069214005
+      },
+      "hidden_radial_error": {
+        "median": 0.027068456960944065,
+        "p95": 0.05301564553559378,
+        "max": 0.05692291056482601
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.274391328437322
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l8",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005135646032380259,
+        "p95": 0.04918561046856246,
+        "max": 0.05669907963498366
+      },
+      "hidden_radial_error": {
+        "median": 0.0328631597054283,
+        "p95": 0.05443311516884266,
+        "max": 0.05669907963498366
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.2826726163213507
+      }
+    },
+    {
+      "control": "ellipsoid",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l12",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.0051256396498187695,
+        "p95": 0.049222172768300404,
+        "max": 0.056598525166396074
+      },
+      "hidden_radial_error": {
+        "median": 0.03294413892076209,
+        "p95": 0.054546169963914905,
+        "max": 0.056598525166396074
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.282863826329739
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 0,
+      "method": "convex",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0019407903977735064,
+        "p95": 0.009495232075296955,
+        "max": 0.026494513923007723
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3749591198822184
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l4",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.002760204535087185,
+        "p95": 0.027726732470193166,
+        "max": 0.08190715502963797
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.362159741174635
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l8",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0029183789475996647,
+        "p95": 0.026874413613196396,
+        "max": 0.07411843056598277
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3626830072747755
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l12",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0029257484815147783,
+        "p95": 0.026840976981466452,
+        "max": 0.0738316579923235
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.36268380208891
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 35,
+      "method": "convex",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0025303144583882498,
+        "p95": 0.04181630375642309,
+        "max": 0.08192122664134704
+      },
+      "hidden_radial_error": {
+        "median": 0.046757627193690754,
+        "p95": 0.0787435087615227,
+        "max": 0.08192122664134704
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3443227080329696
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l4",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0028212855221900757,
+        "p95": 0.02699896257192852,
+        "max": 0.07960633474028289
+      },
+      "hidden_radial_error": {
+        "median": 0.00302479726087429,
+        "p95": 0.0036876211164615313,
+        "max": 0.0037695004785246455
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3629025714422744
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l8",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0030401448682824683,
+        "p95": 0.02589346606983217,
+        "max": 0.07181929106175078
+      },
+      "hidden_radial_error": {
+        "median": 0.0028533681321462057,
+        "p95": 0.004100443400529219,
+        "max": 0.0041600720949946934
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3635837033574147
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l12",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0030681915082995115,
+        "p95": 0.025924929695643667,
+        "max": 0.07159669966505233
+      },
+      "hidden_radial_error": {
+        "median": 0.002848850681908155,
+        "p95": 0.0041338776987896175,
+        "max": 0.004232296153459658
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3636058139114406
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 65,
+      "method": "convex",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.004048856241664289,
+        "p95": 0.32386024324360135,
+        "max": 0.39094736590596946
+      },
+      "hidden_radial_error": {
+        "median": 0.23548657243106652,
+        "p95": 0.3656823002343114,
+        "max": 0.39094736590596946
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.0226768282934366
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l4",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005405331176744799,
+        "p95": 0.04413935710905961,
+        "max": 0.07333224504483593
+      },
+      "hidden_radial_error": {
+        "median": 0.02407476856813906,
+        "p95": 0.049044886978163456,
+        "max": 0.052728857063178425
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.4243216073912186
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l8",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005136007375207752,
+        "p95": 0.046914492733269586,
+        "max": 0.06371460831289277
+      },
+      "hidden_radial_error": {
+        "median": 0.029414677465215644,
+        "p95": 0.051412203202878405,
+        "max": 0.053874652778252874
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.4331059903878987
+      }
+    },
+    {
+      "control": "pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l12",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005176752015236763,
+        "p95": 0.04704798823844736,
+        "max": 0.06389340244404962
+      },
+      "hidden_radial_error": {
+        "median": 0.029452853880027607,
+        "p95": 0.051435298482699496,
+        "max": 0.053891170853255344
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.4332547230616455
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 0,
+      "method": "convex",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0025242702055013333,
+        "p95": 0.012056108397650978,
+        "max": 0.15050010149239046
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.363208870148971
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l4",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.005063679344560534,
+        "p95": 0.03569972769073354,
+        "max": 0.13808521932602025
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.340328116244798
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l8",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.0039234409460287,
+        "p95": 0.032354335895215636,
+        "max": 0.11688325875665684
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.341072829155743
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 0,
+      "method": "harmonic_l12",
+      "observed_points": 600,
+      "radial_error": {
+        "median": 0.004029607586427897,
+        "p95": 0.03236674869306183,
+        "max": 0.11399186923186155
+      },
+      "hidden_radial_error": null,
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.341069426813061
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 35,
+      "method": "convex",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0026283297602657796,
+        "p95": 0.025439785054847147,
+        "max": 0.11175088795904242
+      },
+      "hidden_radial_error": {
+        "median": 0.027061657059235467,
+        "p95": 0.06366521717217816,
+        "max": 0.11175088795904242
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.343221960835694
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l4",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.002693132296815115,
+        "p95": 0.0403313313368962,
+        "max": 0.1916182230515424
+      },
+      "hidden_radial_error": {
+        "median": 0.010872591777319751,
+        "p95": 0.14040288936252684,
+        "max": 0.1916182230515424
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3605529949425983
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l8",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.003087425348073325,
+        "p95": 0.03816150592241038,
+        "max": 0.19105337884135376
+      },
+      "hidden_radial_error": {
+        "median": 0.011123534486068842,
+        "p95": 0.13990397494591422,
+        "max": 0.19105337884135376
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3611948909738327
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 35,
+      "method": "harmonic_l12",
+      "observed_points": 546,
+      "radial_error": {
+        "median": 0.0031059602201555236,
+        "p95": 0.038281273059226684,
+        "max": 0.19106261311369832
+      },
+      "hidden_radial_error": {
+        "median": 0.011054097221499748,
+        "p95": 0.13987161740001355,
+        "max": 0.19106261311369832
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.3611972879687166
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 65,
+      "method": "convex",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.00352144904409879,
+        "p95": 0.29466723244301696,
+        "max": 0.38963381857696777
+      },
+      "hidden_radial_error": {
+        "median": 0.22199449523089088,
+        "p95": 0.3616780125433786,
+        "max": 0.38963381857696777
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.025982335378201
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l4",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.006062660239609774,
+        "p95": 0.0539784903593524,
+        "max": 0.23953165911699825
+      },
+      "hidden_radial_error": {
+        "median": 0.024631075139528336,
+        "p95": 0.11722304275604746,
+        "max": 0.23953165911699825
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.4277230365082936
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l8",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005602067275650435,
+        "p95": 0.05490690946714755,
+        "max": 0.23927046355448978
+      },
+      "hidden_radial_error": {
+        "median": 0.029723628579441774,
+        "p95": 0.11793168931843823,
+        "max": 0.23927046355448978
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.43582149946967
+      }
+    },
+    {
+      "control": "dented_pear",
+      "missing_cap_degrees": 65,
+      "method": "harmonic_l12",
+      "observed_points": 429,
+      "radial_error": {
+        "median": 0.005644185907056565,
+        "p95": 0.054890037410020076,
+        "max": 0.2393064380161578
+      },
+      "hidden_radial_error": {
+        "median": 0.029757912847200862,
+        "p95": 0.11827339859269624,
+        "max": 0.2393064380161578
+      },
+      "topology": {
+        "connected_components": 1,
+        "inconsistent_edge_winding": 0,
+        "vertices": 4096,
+        "triangles": 8188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "euler": 2,
+        "degenerate_triangles": 0,
+        "signed_volume": 2.436094357092031
+      }
+    },
+    {
+      "control": "pear_depth_scale_1.3",
+      "method": "harmonic_l8",
+      "radial_error": {
+        "median": 0.073114842517433,
+        "p95": 0.19749335103394167,
+        "max": 0.21938984584270615
+      },
+      "warning": "Injected wrong depth scale, not an actual fitted camera test"
+    }
+  ]
+}
