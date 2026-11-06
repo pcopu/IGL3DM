@@ -67,3 +67,27 @@ Four unit tests pass: exact constant-radius recovery with translation, closed co
 4. Compare regions across camera hypotheses. A closed texture-free model may be an honest approximate deliverable, but cannot be called geometrically validated based on current controls.
 
 Original audio, raw model files, arrays and video bytes are excluded from this branch's commit. The repository's existing ignore policy remains unchanged. Source, metrics and diagnostic figures are committed on `cloud/automatic-surface-completion`; main is untouched.
+
+## Follow-up: measured dent coverage and center sensitivity
+
+The parent's later silhouette-hull and camera-plus-point results motivated a distinct follow-up, `support_sensitivity.py`. No real input was available for this test. We used 900 nominal noisy observations of the analytic dented pear, 4,096 exact held-out surface points, degree 12 and lambda 1e-6 fixed in advance of this run. Five missing front-cap sizes and seven centers (origin; ±0.2 along each axis) give 35 completion cases. The error is predicted radius minus exact radius along each ray from the assumed center through a known test point. It does not use approximate nearest-neighbor surface distance. Center variants are sensitivity cases, not a ground-truth-tuned choice for the real object.
+
+The evaluation region is the same fixed 20° dimple cap for all cases, unlike the earlier table whose hidden region changes with missing-cap size. Units remain control radius units. These numbers therefore should not be compared directly to the earlier hidden-region p95 values.
+
+| Missing measured cap | Origin-center dimple p95 | Range across seven centers |
+| --- | ---: | ---: |
+| 0° | 0.02015 | 0.00767–0.03834 |
+| 10° | 0.06040 | 0.04929–0.08017 |
+| 20° | 0.13358 | 0.13358–0.14873 |
+| 35° | 0.17238 | 0.17108–0.19275 |
+| 65° | 0.19354 | 0.17410–0.23476 |
+
+Measured points in the concavity materially improve this completion on the control; smoothness and center changes do not restore an entirely unobserved dent. Center sensitivity can be substantial even with full coverage. This motivates checking multiple justified interior centers when applying the method to measured geometry. No claim is made that every arbitrary center preserves radial uniqueness on a real shape.
+
+A separate fully covered control with 30% y-axis stretching has nearest-observation angular p95 **4.24°**, zero queries more than 20° from observations, but radial p95 error **0.19979**. Thus the CLI angular-support indicator cannot certify accuracy, even when all regions look well supported. Independent camera/geometry controls remain necessary. This is a deliberately injected distortion, not an evaluated real camera fit.
+
+```sh
+OPENBLAS_NUM_THREADS=1 python experiments/surface_completion/support_sensitivity.py
+```
+
+The complete 35 cases plus distortion case are recorded in `results/support_sensitivity.json`, seed 814. These 36 follow-up cases add to the earlier 109 configurations. Nothing in this follow-up uses the parent's repeatedly reused real-frame checks as a pristine final test set. Real-video work remains blocked pending the approved input snapshot.

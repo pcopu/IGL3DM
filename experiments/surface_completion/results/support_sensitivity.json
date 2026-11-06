@@ -1,0 +1,572 @@
+{
+  "seed": 814,
+  "description": "Completion sensitivity to measured dent coverage and interior-center assumptions.\n\nIndependent analytic control only. Error compares radial predictions along rays\nthrough exact held-out surface points, never nearest sampled-neighbor distance.\n",
+  "rows": [
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.003951983127759129,
+      "dent_radial_p95": 0.02015484302145081,
+      "dent_radial_max": 0.02697519503190271,
+      "dent_nearest_observation_angle_p95": 3.8106798928803136,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.005973108607167987,
+      "dent_radial_p95": 0.03833751111423517,
+      "dent_radial_max": 0.049494116897174756,
+      "dent_nearest_observation_angle_p95": 2.990796514734294,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0030932058800924866,
+      "dent_radial_p95": 0.007668054291849445,
+      "dent_radial_max": 0.009025253426360402,
+      "dent_nearest_observation_angle_p95": 5.456130027826416,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        -0.0,
+        -0.2,
+        -0.0
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004836914334464815,
+      "dent_radial_p95": 0.030379305111104645,
+      "dent_radial_max": 0.0438774219606366,
+      "dent_nearest_observation_angle_p95": 3.9769552508627117,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.00490988201694198,
+      "dent_radial_p95": 0.030059994237287863,
+      "dent_radial_max": 0.0451180557878309,
+      "dent_nearest_observation_angle_p95": 3.9194579210655696,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        -0.0,
+        -0.0,
+        -0.2
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0046512851839605185,
+      "dent_radial_p95": 0.02999676811041731,
+      "dent_radial_max": 0.04285155877869651,
+      "dent_nearest_observation_angle_p95": 4.127074611445668,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "observed_points": 900,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.005627300976536631,
+      "dent_radial_p95": 0.03668163719059998,
+      "dent_radial_max": 0.052421037605058673,
+      "dent_nearest_observation_angle_p95": 3.9352372570917735,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0036925444301323385,
+      "dent_radial_p95": 0.06039798057520267,
+      "dent_radial_max": 0.06996820845344154,
+      "dent_nearest_observation_angle_p95": 8.943446580226459,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004361829643421022,
+      "dent_radial_p95": 0.07593546319938478,
+      "dent_radial_max": 0.08835316868999399,
+      "dent_nearest_observation_angle_p95": 6.998899994807432,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0035393304580347007,
+      "dent_radial_p95": 0.04928868023485453,
+      "dent_radial_max": 0.058057944047238796,
+      "dent_nearest_observation_angle_p95": 12.503908970600305,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        -0.0,
+        -0.2,
+        -0.0
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0038607077520943223,
+      "dent_radial_p95": 0.06589944909435153,
+      "dent_radial_max": 0.08111096239431181,
+      "dent_nearest_observation_angle_p95": 7.997715349001933,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.003885893931431572,
+      "dent_radial_p95": 0.07228640705577757,
+      "dent_radial_max": 0.09071285180788513,
+      "dent_nearest_observation_angle_p95": 7.529659384936108,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        -0.0,
+        -0.0,
+        -0.2
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.003854840863186215,
+      "dent_radial_p95": 0.0691661803790814,
+      "dent_radial_max": 0.08400395202714805,
+      "dent_nearest_observation_angle_p95": 8.396900335499492,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 10,
+      "center": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "observed_points": 892,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004158054222778013,
+      "dent_radial_p95": 0.0801679810049229,
+      "dent_radial_max": 0.09938996359093655,
+      "dent_nearest_observation_angle_p95": 7.466754403463694,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004507882169973054,
+      "dent_radial_p95": 0.13357731855343002,
+      "dent_radial_max": 0.1495177325097221,
+      "dent_nearest_observation_angle_p95": 16.570130741190972,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004509171425923747,
+      "dent_radial_p95": 0.13538566186728734,
+      "dent_radial_max": 0.15160515626070115,
+      "dent_nearest_observation_angle_p95": 13.333338409256259,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0044764519337243125,
+      "dent_radial_p95": 0.13630184381024474,
+      "dent_radial_max": 0.15241332201053692,
+      "dent_nearest_observation_angle_p95": 21.949190001670946,
+      "dent_fraction_over_20deg": 0.10569105691056911
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        -0.0,
+        -0.2,
+        -0.0
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004895943557113813,
+      "dent_radial_p95": 0.1399023985318173,
+      "dent_radial_max": 0.15710875857701578,
+      "dent_nearest_observation_angle_p95": 15.400108750685671,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004434518544739197,
+      "dent_radial_p95": 0.1415164675025979,
+      "dent_radial_max": 0.15756742673921087,
+      "dent_nearest_observation_angle_p95": 15.599606124717535,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        -0.0,
+        -0.0,
+        -0.2
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.004452396820157967,
+      "dent_radial_p95": 0.13501939962281773,
+      "dent_radial_max": 0.15184622652207058,
+      "dent_nearest_observation_angle_p95": 15.88964083302086,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 20,
+      "center": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "observed_points": 875,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0043576714916841175,
+      "dent_radial_p95": 0.14873308651507874,
+      "dent_radial_max": 0.1700757600094357,
+      "dent_nearest_observation_angle_p95": 14.894159075278194,
+      "dent_fraction_over_20deg": 0.0
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.0068612548525902595,
+      "dent_radial_p95": 0.17238273580105107,
+      "dent_radial_max": 0.18946175142344635,
+      "dent_nearest_observation_angle_p95": 31.40351310927869,
+      "dent_fraction_over_20deg": 0.7560975609756098
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.006268242242097419,
+      "dent_radial_p95": 0.17108089520666525,
+      "dent_radial_max": 0.18818611695787069,
+      "dent_nearest_observation_angle_p95": 25.51531364233597,
+      "dent_fraction_over_20deg": 0.36585365853658536
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.009688811774332118,
+      "dent_radial_p95": 0.1794034373860694,
+      "dent_radial_max": 0.19660475188986443,
+      "dent_nearest_observation_angle_p95": 41.09161053480543,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        -0.0,
+        -0.2,
+        -0.0
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.007627238070390757,
+      "dent_radial_p95": 0.1814134911256364,
+      "dent_radial_max": 0.1987899601587595,
+      "dent_nearest_observation_angle_p95": 29.687709868824292,
+      "dent_fraction_over_20deg": 0.6341463414634146
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.006575192843554567,
+      "dent_radial_p95": 0.17582990854931477,
+      "dent_radial_max": 0.19429592572764898,
+      "dent_nearest_observation_angle_p95": 30.103599858116315,
+      "dent_fraction_over_20deg": 0.6260162601626016
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        -0.0,
+        -0.0,
+        -0.2
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.007593325782933924,
+      "dent_radial_p95": 0.1728351572028129,
+      "dent_radial_max": 0.19080294462903813,
+      "dent_nearest_observation_angle_p95": 30.34205219165626,
+      "dent_fraction_over_20deg": 0.6422764227642277
+    },
+    {
+      "missing_cap_degrees": 35,
+      "center": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "observed_points": 818,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.007334571881999791,
+      "dent_radial_p95": 0.19275142764014838,
+      "dent_radial_max": 0.2131798595832176,
+      "dent_nearest_observation_angle_p95": 29.54734786054504,
+      "dent_fraction_over_20deg": 0.5934959349593496
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.02633005506165151,
+      "dent_radial_p95": 0.19354153184638137,
+      "dent_radial_max": 0.21089825996013722,
+      "dent_nearest_observation_angle_p95": 61.46032394047095,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.014568691235904652,
+      "dent_radial_p95": 0.1740956223760331,
+      "dent_radial_max": 0.19131191986360252,
+      "dent_nearest_observation_angle_p95": 49.5041580385931,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.059379197820727425,
+      "dent_radial_p95": 0.23476338845783123,
+      "dent_radial_max": 0.2540442352029066,
+      "dent_nearest_observation_angle_p95": 72.3537380802341,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        -0.0,
+        -0.2,
+        -0.0
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.020090005552431872,
+      "dent_radial_p95": 0.19300769435809273,
+      "dent_radial_max": 0.21019917190266102,
+      "dent_nearest_observation_angle_p95": 58.783396546900086,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.018815104834465995,
+      "dent_radial_p95": 0.1884644513985914,
+      "dent_radial_max": 0.20751834174501804,
+      "dent_nearest_observation_angle_p95": 59.616318134202004,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        -0.0,
+        -0.0,
+        -0.2
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.02540959318115321,
+      "dent_radial_p95": 0.19242783800544994,
+      "dent_radial_max": 0.20990540622930476,
+      "dent_nearest_observation_angle_p95": 60.07675700619614,
+      "dent_fraction_over_20deg": 1.0
+    },
+    {
+      "missing_cap_degrees": 65,
+      "center": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "observed_points": 640,
+      "degree": 12,
+      "regularization": 1e-06,
+      "all_radial_p95": 0.027739914907000757,
+      "dent_radial_p95": 0.21548390621355548,
+      "dent_radial_max": 0.23638920729696067,
+      "dent_nearest_observation_angle_p95": 59.47883673754432,
+      "dent_fraction_over_20deg": 1.0
+    }
+  ],
+  "distortion": {
+    "condition": "all directions observed, y stretched 30 percent",
+    "all_radial_p95": 0.19979041031556774,
+    "nearest_observation_angle_p95": 4.239260105116278,
+    "fraction_over_20deg": 0.0
+  }
+}
