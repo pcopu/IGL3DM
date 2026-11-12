@@ -1,0 +1,7 @@
+{
+  "final_source_replay_passed": true,
+  "point_values_identical_after_documented_field_rename": true,
+  "face_json_byte_identical": true,
+  "ply_byte_identical": true,
+  "source_sha256": "444bf4a3219a45ec5fe6f300672e22af7a8b38c023df86da3a06119678c62346"
+}

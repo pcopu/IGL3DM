@@ -1,0 +1,76 @@
+{
+  "constant": {
+    "control": "random known 3D point segments projected by explicit cameras; truth never supplied to fitter",
+    "noise_standard_deviation_px": 0.15,
+    "track_count": 100,
+    "camera_training_tracks": 74,
+    "camera_heldout_tracks": 26,
+    "constant_true_yaw_rms_deg": 1.999543952531217e-11,
+    "bspline_true_yaw_rms_deg": 0.04223655239282461,
+    "bspline_endpoint_errors_px": {
+      "n": 694,
+      "mean": 0.20311039141462478,
+      "median": 0.1906683065285909,
+      "p95": 0.39462310815595986,
+      "max": 0.5776885215476458
+    },
+    "constant_endpoint_errors_px": {
+      "n": 694,
+      "mean": 0.2031083793926023,
+      "median": 0.18975848637032738,
+      "p95": 0.3931115981369357,
+      "max": 0.5735859247248689
+    },
+    "optimizer_message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "optimizer_optimality": 3.211443547575889e-05,
+    "optimizer_cost": 80.24869984457825,
+    "bounds_active": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "limitations": "Mathematical camera fixture only; not image detection or periodic identity validation."
+  },
+  "variable": {
+    "control": "random known 3D point segments projected by explicit cameras; truth never supplied to fitter",
+    "noise_standard_deviation_px": 0.15,
+    "track_count": 100,
+    "camera_training_tracks": 74,
+    "camera_heldout_tracks": 26,
+    "constant_true_yaw_rms_deg": 69.04676171273461,
+    "bspline_true_yaw_rms_deg": 0.022809976539148756,
+    "bspline_endpoint_errors_px": {
+      "n": 672,
+      "mean": 0.20268415220234384,
+      "median": 0.19155032051349302,
+      "p95": 0.37940691320267733,
+      "max": 0.546861318104281
+    },
+    "constant_endpoint_errors_px": {
+      "n": 672,
+      "mean": 11.359478280205836,
+      "median": 6.98880073435479,
+      "p95": 40.397027986245206,
+      "max": 81.8939746364704
+    },
+    "optimizer_message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "optimizer_optimality": 5.3046617239251813e-08,
+    "optimizer_cost": 85.77799155219144,
+    "bounds_active": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "limitations": "Mathematical camera fixture only; not image detection or periodic identity validation."
+  }
+}

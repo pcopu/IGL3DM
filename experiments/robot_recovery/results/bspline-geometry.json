@@ -1,0 +1,28 @@
+{
+  "input_track_count": 18382,
+  "candidate_points": 230,
+  "observed_quad_faces_at_least_three_frames": 30,
+  "vertices_used_in_faces": 79,
+  "camera_sha256": "766f5a56906356b7521c65f861c4205ca15bfd096a55485bb50f137053b19a3f",
+  "camera_refitted": false,
+  "accepted_calibration": false,
+  "selected_training_p95_distribution": {
+    "n": 230,
+    "mean": 0.38219817827214575,
+    "median": 0.37070863889751793,
+    "p95": 0.5914509558038205,
+    "max": 0.7876997307644977
+  },
+  "selected_endpoint_p95_distribution": {
+    "n": 230,
+    "mean": 0.6657581958884917,
+    "median": 0.6589404417753724,
+    "p95": 0.9733652252788109,
+    "max": 0.9951612423896264
+  },
+  "minimum_face_observations": 4,
+  "maximum_face_observations": 40,
+  "selection": "Same predeclared1px midpoint-fit/end-quarter gate and>=30deg experimental yaw span. This is selection-conditioned fit quality, not independent physical accuracy.",
+  "coordinates": "Uniform512square, native scale0.4,x offset112; relative256pixel/unit gauge.",
+  "completion_added": false
+}

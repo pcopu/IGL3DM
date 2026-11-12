@@ -1,0 +1,253 @@
+{
+  "original_graph": {
+    "input_track_count": 18382,
+    "candidate_points": 199,
+    "observed_quad_faces_at_least_three_frames": 16,
+    "vertices_used_in_faces": 46,
+    "camera_sha256": "705d537d8c3ee0883178dcd3ae8c6be7e1f4432afd03b24ecab5601fc45b9c38",
+    "camera_refitted": false,
+    "accepted_calibration": false,
+    "selected_training_p95_distribution": {
+      "n": 199,
+      "mean": 0.3808126119588464,
+      "median": 0.3625661386267969,
+      "p95": 0.6372700161410243,
+      "max": 0.8540025043007411
+    },
+    "selected_endpoint_p95_distribution": {
+      "n": 199,
+      "mean": 0.6820334925931081,
+      "median": 0.7055868898770196,
+      "p95": 0.9628272076211222,
+      "max": 0.9987369720950894
+    },
+    "minimum_face_observations": 6,
+    "maximum_face_observations": 30,
+    "selection": "Same predeclared1px midpoint-fit/end-quarter gate and>=30deg experimental yaw span. This is selection-conditioned fit quality, not independent physical accuracy.",
+    "coordinates": "Uniform native to512square: scale0.4,x_offset112; Z-up relative world with256pixel/unit gauge, not physical units.",
+    "completion_added": false
+  },
+  "smooth_camera": {
+    "input_track_count": 18382,
+    "candidate_points": 230,
+    "observed_quad_faces_at_least_three_frames": 30,
+    "vertices_used_in_faces": 79,
+    "camera_sha256": "766f5a56906356b7521c65f861c4205ca15bfd096a55485bb50f137053b19a3f",
+    "camera_refitted": false,
+    "accepted_calibration": false,
+    "selected_training_p95_distribution": {
+      "n": 230,
+      "mean": 0.38219817827214575,
+      "median": 0.37070863889751793,
+      "p95": 0.5914509558038205,
+      "max": 0.7876997307644977
+    },
+    "selected_endpoint_p95_distribution": {
+      "n": 230,
+      "mean": 0.6657581958884917,
+      "median": 0.6589404417753724,
+      "p95": 0.9733652252788109,
+      "max": 0.9951612423896264
+    },
+    "minimum_face_observations": 4,
+    "maximum_face_observations": 40,
+    "selection": "Same predeclared1px midpoint-fit/end-quarter gate and>=30deg experimental yaw span. This is selection-conditioned fit quality, not independent physical accuracy.",
+    "coordinates": "Uniform512square, native scale0.4,x offset112; relative256pixel/unit gauge.",
+    "completion_added": false
+  },
+  "historical_uniform": {
+    "candidate_points_with_at_least_30deg_nominal_span": 1277,
+    "points_passing_train_and_heldout_3px": 404,
+    "points_at_least_90deg_span": 458,
+    "passing_points_at_least_90deg_span": 22,
+    "quad_faces_seen_in_at_least_two_sampled_views": 66,
+    "faces_with_all_corners_conditional_pass": 3,
+    "training_reprojection_px": {
+      "n": 53581,
+      "mean": 12.169495674898108,
+      "median": 2.380541208926072,
+      "p95": 62.96882231892506,
+      "max": 205.13064519501594
+    },
+    "heldout_observation_px": {
+      "n": 12589,
+      "mean": 12.87945119225891,
+      "median": 3.38313232087048,
+      "p95": 65.04938427101933,
+      "max": 157.24029435485195
+    },
+    "per_track_heldout_median_px": {
+      "n": 1153,
+      "mean": 6.268839648167092,
+      "median": 2.4639142230853364,
+      "p95": 37.468034289972785,
+      "max": 101.81712042388321
+    },
+    "view_audit": [
+      {
+        "view": 0,
+        "sample": 0,
+        "detected_quads": 214,
+        "tracked_candidate_cells": 69
+      },
+      {
+        "view": 1,
+        "sample": 24,
+        "detected_quads": 193,
+        "tracked_candidate_cells": 55
+      },
+      {
+        "view": 2,
+        "sample": 48,
+        "detected_quads": 157,
+        "tracked_candidate_cells": 42
+      },
+      {
+        "view": 3,
+        "sample": 72,
+        "detected_quads": 220,
+        "tracked_candidate_cells": 36
+      },
+      {
+        "view": 4,
+        "sample": 96,
+        "detected_quads": 223,
+        "tracked_candidate_cells": 50
+      },
+      {
+        "view": 5,
+        "sample": 120,
+        "detected_quads": 167,
+        "tracked_candidate_cells": 31
+      },
+      {
+        "view": 6,
+        "sample": 144,
+        "detected_quads": 194,
+        "tracked_candidate_cells": 27
+      },
+      {
+        "view": 7,
+        "sample": 168,
+        "detected_quads": 210,
+        "tracked_candidate_cells": 37
+      }
+    ],
+    "period_frames_prior": 192,
+    "original_frame_offset": 0,
+    "holdout_centers": [
+      24,
+      72,
+      120,
+      168
+    ],
+    "holdout_radius": 4,
+    "decoded_measurement_samples": 193,
+    "camera_status": "Nominal full-turn level orthographic prior: 360deg in 192 sample intervals. Not calibrated. Intrinsic scale is a gauge.",
+    "holdout": "Blocks with radius 4 centered at [24, 72, 120, 168] excluded from point fits. Samples >= 192 excluded as endpoints. Tracking used all frames; feature selection not held out.",
+    "limitations": [
+      "Grid identity remains unverified; smooth periodic swaps can pass geometric tests.",
+      "Shape/grid warping or varying camera intrinsics can invalidate triangulation.",
+      "Only observed shared quad connectivity is assembled; no hidden faces or learned completion.",
+      "The presentation crossfade was never used for measurement."
+    ]
+  },
+  "historical_fixed_camera": {
+    "candidate_points_with_at_least_30deg_nominal_span": 1174,
+    "points_passing_train_and_heldout_3px": 752,
+    "points_at_least_90deg_span": 440,
+    "passing_points_at_least_90deg_span": 190,
+    "quad_faces_seen_in_at_least_two_sampled_views": 63,
+    "faces_with_all_corners_conditional_pass": 33,
+    "training_reprojection_px": {
+      "n": 50731,
+      "mean": 11.582293303367146,
+      "median": 1.0042795819288723,
+      "p95": 69.74945641873974,
+      "max": 228.3969374632806
+    },
+    "heldout_observation_px": {
+      "n": 11869,
+      "mean": 12.2186156417116,
+      "median": 1.10603276500776,
+      "p95": 76.08321698916971,
+      "max": 205.5647314918345
+    },
+    "per_track_heldout_median_px": {
+      "n": 1044,
+      "mean": 4.751131231303646,
+      "median": 0.7477784213489791,
+      "p95": 33.194139065733786,
+      "max": 102.9620501560858
+    },
+    "view_audit": [
+      {
+        "view": 0,
+        "sample": 0,
+        "detected_quads": 214,
+        "tracked_candidate_cells": 38
+      },
+      {
+        "view": 1,
+        "sample": 24,
+        "detected_quads": 193,
+        "tracked_candidate_cells": 49
+      },
+      {
+        "view": 2,
+        "sample": 48,
+        "detected_quads": 157,
+        "tracked_candidate_cells": 44
+      },
+      {
+        "view": 3,
+        "sample": 72,
+        "detected_quads": 220,
+        "tracked_candidate_cells": 38
+      },
+      {
+        "view": 4,
+        "sample": 96,
+        "detected_quads": 223,
+        "tracked_candidate_cells": 53
+      },
+      {
+        "view": 5,
+        "sample": 120,
+        "detected_quads": 167,
+        "tracked_candidate_cells": 34
+      },
+      {
+        "view": 6,
+        "sample": 144,
+        "detected_quads": 194,
+        "tracked_candidate_cells": 27
+      },
+      {
+        "view": 7,
+        "sample": 168,
+        "detected_quads": 210,
+        "tracked_candidate_cells": 17
+      }
+    ],
+    "period_frames_prior": 192,
+    "original_frame_offset": 0,
+    "holdout_centers": [
+      24,
+      72,
+      120,
+      168
+    ],
+    "holdout_radius": 4,
+    "decoded_measurement_samples": 193,
+    "camera_status": "Frozen supplied experimental camera; not accepted calibration.",
+    "holdout": "Blocks with radius 4 centered at [24, 72, 120, 168] excluded from point fits. Samples >= 192 excluded as endpoints. Tracking used all frames; feature selection not held out.",
+    "limitations": [
+      "Grid identity remains unverified; smooth periodic swaps can pass geometric tests.",
+      "Shape/grid warping or varying camera intrinsics can invalidate triangulation.",
+      "Only observed shared quad connectivity is assembled; no hidden faces or learned completion.",
+      "The presentation crossfade was never used for measurement."
+    ]
+  },
+  "decision": "Keep sparse baseline and explicit alternatives. Smooth camera increases conditional coverage but does not improve p95; historical fixed camera raises qualified cells while retaining severe outliers. No validated full mesh."
+}

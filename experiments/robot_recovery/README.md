@@ -34,3 +34,32 @@ Each meaningful experiment will append a dated log entry with intent, exact inpu
 ## Public reproduction bundle
 
 The owner subsequently authorized the relevant video, raw tracking/evidence and actual models for this public experiment. [Robot reproducibility bundle](artifacts/robot-reproducibility.zip) includes the silent input video, measured data, model files and preserved comparisons. [GLB](artifacts/robot-grid-candidates.glb) and [PLY](artifacts/robot-grid-candidates.ply) are the exact sparse baseline geometry. [Hashes and sizes](results/public-artifacts.json) verify file integrity, not reconstruction accuracy. Credentials, unrelated private data and target reference-generator geometry are excluded. This authorization does not change the privacy policy for earlier experiments.
+
+## Recovery checkpoint outcomes
+
+| Experiment | Points | Observed quads | Meaning |
+| --- | ---: | ---: | --- |
+| Original strict graph, PCHIP camera | 199 | 16 | Frozen 1-pixel midpoint/endpoint gate |
+| No cycle veto, same cameras | 201 | 16 | Veto is not the main target coverage bottleneck |
+| Subpixel image refinement, same cameras | 169 | 12 | Mixed known-control results; not adopted |
+| Smooth B-spline camera, same strict gate | 230 | 30 | Better numerical objective; heldout p95 slightly worse |
+| Historical uniform-speed replay | 1,277 candidates | 66 total / 3 qualified | Severe outliers; not a complete asset |
+| Historical frozen PCHIP camera | 1,174 candidates | 63 total / 33 qualified | 752 points pass its different 3-pixel block gate |
+| All-frame observed cells on those same 752 points | 752 | 81 | 25 surface components and 4 nonmanifold quad edges remain (5 in display triangles) |
+
+The 81-quads result uses unchanged 3D points, at least three actual observations per face, at least 15 degrees fitted angular separation and globally unique node-to-track assignments. It is not a hidden surface completion. Different gates and model assumptions preclude ranking by face count alone.
+
+[Method comparison](../../docs/experiments/25-kling-robot/recovery-method-comparison.png) · [Observed-cell recovery](../../docs/experiments/25-kling-robot/observed-cell-recovery.png) · [Followup evidence/model bundle](artifacts/robot-recovery-followup.zip) · [Dense observed-cell PLY](artifacts/robot-dense-observed-cells.ply)
+
+### Reproduction entry points
+
+The preceding reproducibility bundle contains the exact silent input, original tracks, camera reports and original geometry. Regenerate the input frame manifest with the repository's existing video ingestion and shared normalization scripts when necessary. All output folders must be fresh.
+
+- `refine_junctions.py --input GRAPH_OUTPUT --images NORMALIZED_VIDEO --output FRESH_OUTPUT` preserves IDs/edges and uses image pixels only.
+- `fit_bspline_orbit.py --tracks TRACKS --manifest VIDEO_MANIFEST --baseline CONSTANT_REPORT --output NEW_REPORT` fits the declared smooth-camera alternative with the unchanged fragment holdout.
+- `run_camera_controls.py --output FRESH_OUTPUT` runs independent projected-coordinate fixtures, not an image-detection benchmark.
+- `reconstruct_explicit_camera.py` has the historical input/measurement/output/period/holdout arguments plus `--cameras PROJECTIONS_JSON`. It never refits supplied cameras.
+- `assemble_observed_cells.py --tracking LK_VIDEO_OUTPUT --points CANDIDATE_POINTS --measurement MEASUREMENT_MANIFEST --cameras PROJECTIONS_JSON --output FRESH_OUTPUT` adds only observed connectivity to already qualified point records.
+- `python -m unittest discover -s experiments/robot_recovery -p 'test_*.py' -v` checks the new invariants. Existing core/classical/video suites remain separate.
+
+See [LOG.md](LOG.md) for each change, failed trial, exact settings, control result and interpretation. No new generation was used during these recovery experiments.

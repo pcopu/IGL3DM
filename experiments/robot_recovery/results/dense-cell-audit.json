@@ -1,0 +1,10 @@
+{
+  "identical_point_records": true,
+  "faces": 81,
+  "source_observation_count": 1502,
+  "boundary_quad_edges": 200,
+  "nonmanifold_quad_edges": 4,
+  "all_faces_meet_declared_count_and_span": true,
+  "coordinate_or_camera_change": false,
+  "interpretation": "Topology contains contradictions; not a valid manifold character mesh."
+}

@@ -1,11 +1,27 @@
 {
+  "robot-lk-explicit-all-candidates.ply": {
+    "bytes": 72918,
+    "sha256": "7872bc400fef350d9bae2d146c0f9cb21c0845f2691ee9672e22f8a57881131b"
+  },
+  "robot-dense-observed-cells.ply": {
+    "bytes": 47448,
+    "sha256": "0c9da4f6dfd3fb05bb84cc14d7b05113d009556e5cd2714e418b0bcdcc44c451"
+  },
   "robot-grid-candidates.ply": {
     "bytes": 12534,
     "sha256": "df63a3eced7f0fe99dec046215e78ff846d2f26f04fcfc00dd53d23606253b16"
   },
+  "robot-bspline-conditional.ply": {
+    "bytes": 14646,
+    "sha256": "a939fa0233b364118628733171ad3098757016f45fe972195c2dc80de44961f4"
+  },
   "robot-grid-candidates.glb": {
     "bytes": 3648,
     "sha256": "cb5ff3120b95b675eb477e63de97fcc94bf9d4ff3a6007e917d2a8bcb1c90167"
+  },
+  "robot-recovery-followup.zip": {
+    "bytes": 3279542,
+    "sha256": "c6ca8f92d4bfa5a8332154a157ce1ee0d8a2c3d578b42585c794700f6ac18fd4"
   },
   "robot-reproducibility.zip": {
     "bytes": 8874844,
