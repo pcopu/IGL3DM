@@ -396,3 +396,10 @@ A new image-only tracker re-detects junctions each frame, compares classical Roo
 - The portable fixed-gate CLI reproduces all three control summaries exactly and selected track/audit files byte-for-byte. A short detector/assignment replay reproduces three frame graphs and three pair audits exactly. Source-hash, one-to-one, no-gap and all-detections-accounted-for checks pass. Seven added tests bring the classical suite to 47, with 27 core and 2 quad-shape tests passing.
 
 [Control improvement](docs/experiments/24-joint-tracking/control96_improvement.png) · [Actual retained observations](docs/experiments/24-joint-tracking/real_selected_overlay.png) · [38-point output](docs/experiments/24-joint-tracking/real-38-points.png) · [Method, negative results and reproduction](experiments/joint_tracking/README.md).
+
+
+## Round 25 · Kling robot: actual grid math and an incremental recovery ledger
+
+The existing 193-frame robot turnaround yields 199 conditional 3D points and 16 observed quads under the strict graph/trajectory gate, not a silhouette reconstruction. A single declared near-pause camera extension reduces paired heldout p95 from 10.20 to 2.23 pixels, but step-size termination with high optimality, uncalibrated motion and repeated-grid ambiguity prevent acceptance as a solved reconstruction. The geometry forms seven disconnected patches; missing surfaces are not completed.
+
+Preserved the result, failures, exact runtime versions and selected synthetic visuals. Reviewed the earlier apparent success: 252 permissive pear quads included only 11 stronger-check quads, so density and confidence must remain separate. The [robot recovery experiment](experiments/robot_recovery/README.md) declares historical replay, solver and topology comparisons. Every subsequent meaningful change is recorded in its [incremental log](experiments/robot_recovery/LOG.md). Raw video, inferred coordinates, model binaries, credentials and machine-local data remain unpublished.

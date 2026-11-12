@@ -1,0 +1,238 @@
+{
+  "input_video": "robot-character-kling-v4-turnaround-silent.mp4",
+  "input_sha256": "6221cf0d33e922184af898e1c16dddd1f29d65bd33d9dc01d8b06aaf1184d864",
+  "frames": 193,
+  "fps": 24,
+  "native_size": [
+    720,
+    1280
+  ],
+  "analysis_size": [
+    512,
+    512
+  ],
+  "native_to_analysis": {
+    "scale": 0.4,
+    "x_offset": 112,
+    "y_offset": 0
+  },
+  "detected_observations": 47192,
+  "graph_track_fragments": 18382,
+  "length_counts": {
+    "1": 18382,
+    "3": 2381,
+    "9": 964,
+    "16": 601,
+    "24": 384
+  },
+  "median_length_frames": 1.0,
+  "max_length_frames": 78,
+  "complete_loop_tracks": 0,
+  "adjacent_matches_before_cycle_veto": 28857,
+  "cycle_conflicts": 31,
+  "camera_training_tracks": 462,
+  "camera_heldout_tracks": 139,
+  "heldout_endpoint_observations": 2204,
+  "constant_endpoint_errors_px": {
+    "n": 2204,
+    "mean": 3.2248456819176234,
+    "median": 2.1273028243290426,
+    "p95": 10.19876429160783,
+    "max": 25.233157487857994
+  },
+  "variable_endpoint_errors_px": {
+    "n": 2204,
+    "mean": 0.7813571771504096,
+    "median": 0.5466725288970868,
+    "p95": 2.2319303894047935,
+    "max": 5.366630666831935
+  },
+  "temporal_heldout_bins": [
+    {
+      "sample_interval_half_open": [
+        0,
+        48
+      ],
+      "endpoint_observations": 591,
+      "constant": {
+        "median": 3.6879032765416597,
+        "p95": 12.427802908281276,
+        "fraction_at_most1px": 0.11844331641285956
+      },
+      "variable": {
+        "median": 0.6620062301782108,
+        "p95": 2.6693716384140247,
+        "fraction_at_most1px": 0.6598984771573604
+      }
+    },
+    {
+      "sample_interval_half_open": [
+        48,
+        96
+      ],
+      "endpoint_observations": 486,
+      "constant": {
+        "median": 1.3950092528189124,
+        "p95": 9.28791309429485,
+        "fraction_at_most1px": 0.4012345679012346
+      },
+      "variable": {
+        "median": 0.4498445559569323,
+        "p95": 1.9370942839879768,
+        "fraction_at_most1px": 0.7510288065843621
+      }
+    },
+    {
+      "sample_interval_half_open": [
+        96,
+        144
+      ],
+      "endpoint_observations": 374,
+      "constant": {
+        "median": 0.7828386342550746,
+        "p95": 3.7788317866986083,
+        "fraction_at_most1px": 0.5748663101604278
+      },
+      "variable": {
+        "median": 0.4560103720490809,
+        "p95": 2.1550988890490475,
+        "fraction_at_most1px": 0.820855614973262
+      }
+    },
+    {
+      "sample_interval_half_open": [
+        144,
+        193
+      ],
+      "endpoint_observations": 753,
+      "constant": {
+        "median": 2.3249463116238505,
+        "p95": 10.084273453792829,
+        "fraction_at_most1px": 0.18326693227091634
+      },
+      "variable": {
+        "median": 0.6190904932984176,
+        "p95": 2.168244548352451,
+        "fraction_at_most1px": 0.6905710491367862
+      }
+    }
+  ],
+  "camera_total_sweep_deg": 345.91832671527067,
+  "constant_period_bound_frames": [
+    64,
+    192
+  ],
+  "constant_period_fitted_frames": 191.99999999999983,
+  "variable_speed_bounds_deg_per_frame": [
+    0.01,
+    5.625
+  ],
+  "variable_speed_knots_deg_per_frame": [
+    0.6196515284542448,
+    2.4447512360680013,
+    2.444756220737749,
+    2.110187660535313,
+    0.0532807261511282
+  ],
+  "scaled_robust_camera_jacobian_condition": 53.007111578607045,
+  "geometry": {
+    "input_track_count": 18382,
+    "candidate_points": 199,
+    "observed_quad_faces_at_least_three_frames": 16,
+    "vertices_used_in_faces": 46,
+    "camera_sha256": "705d537d8c3ee0883178dcd3ae8c6be7e1f4432afd03b24ecab5601fc45b9c38",
+    "camera_refitted": false,
+    "accepted_calibration": false,
+    "selected_training_p95_distribution": {
+      "n": 199,
+      "mean": 0.3808126119588464,
+      "median": 0.3625661386267969,
+      "p95": 0.6372700161410243,
+      "max": 0.8540025043007411
+    },
+    "selected_endpoint_p95_distribution": {
+      "n": 199,
+      "mean": 0.6820334925931081,
+      "median": 0.7055868898770196,
+      "p95": 0.9628272076211222,
+      "max": 0.9987369720950894
+    },
+    "minimum_face_observations": 6,
+    "maximum_face_observations": 30,
+    "selection": "Same predeclared1px midpoint-fit/end-quarter gate and>=30deg experimental yaw span. This is selection-conditioned fit quality, not independent physical accuracy.",
+    "coordinates": "Uniform native to512square: scale0.4,x_offset112; Z-up relative world with256pixel/unit gauge, not physical units.",
+    "completion_added": false
+  },
+  "selected_geometry_track_partition": {
+    "camera_training": 118,
+    "camera_heldout": 41,
+    "shorter_than16_samples": 40
+  },
+  "optimizer": {
+    "success_flag": true,
+    "termination": "`xtol` termination condition is satisfied.",
+    "optimality": 219.67845944410703,
+    "warning": "Terminated on step size, not a verified stationary optimum. No further trials or heldout tuning."
+  },
+  "quad_shape": {
+    "all_faces": {
+      "faces": 16,
+      "edge_length_ratio": {
+        "median": 1.457100828224436,
+        "p95": 2.1586063252406795,
+        "max": 2.228148854816112
+      },
+      "edge_length_cv": {
+        "median": 0.1571577776182248,
+        "p95": 0.35523906205718714,
+        "max": 0.364655003935752
+      },
+      "best_fit_plane_rms_fraction_mean_edge": {
+        "median": 0.01759482194453852,
+        "p95": 0.031466412690211394,
+        "max": 0.03236442304155535
+      }
+    },
+    "conditional_faces": {
+      "faces": 16,
+      "edge_length_ratio": {
+        "median": 1.457100828224436,
+        "p95": 2.1586063252406795,
+        "max": 2.228148854816112
+      },
+      "edge_length_cv": {
+        "median": 0.1571577776182248,
+        "p95": 0.35523906205718714,
+        "max": 0.364655003935752
+      },
+      "best_fit_plane_rms_fraction_mean_edge": {
+        "median": 0.01759482194453852,
+        "p95": 0.031466412690211394,
+        "max": 0.03236442304155535
+      }
+    },
+    "notes": "Diagnostic only. Drawn cells are not guaranteed equal physical squares or planar. No acceptance threshold applied; no geometry changed."
+  },
+  "test_results": {
+    "marker_consistency": {
+      "passed": 47
+    },
+    "video_grid": {
+      "passed": 2
+    },
+    "structural_validation": "both graph variants passed"
+  },
+  "caveats": [
+    "No physical ground truth; counts are candidates, never identity accuracy.",
+    "Optimizer terminated on step size with optimality 219.68; convergence to a stationary optimum was not established.",
+    "Hash-ID holdout splits fragments, not proven physical points.",
+    "Constant baseline hit restricted192-frame bound; variable comparison is not against every constant model.",
+    "Total inferred sweep345.92deg does not verify full360degree closure.",
+    "Near endpoint holds make depth ill-conditioned; all geometry still gated at condition <= 20 and span>=30deg.",
+    "1 analysis pixel is2.5native pixels.",
+    "Selected geometry is conditional on camera and selection; no hidden or completed surfaces.",
+    "Reference render geometry and silhouette mesh were not reconstruction inputs."
+  ],
+  "publication_policy": "Compact metrics and selected synthetic visuals only. Raw video, tracks, point coordinates, models, credentials and runtime paths stay local.",
+  "historical_source_commit": "b7bc5788bf5f49eb5b6134e9e6963ce6b8321f57"
+}
