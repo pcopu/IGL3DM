@@ -63,3 +63,18 @@ The preceding reproducibility bundle contains the exact silent input, original t
 - `python -m unittest discover -s experiments/robot_recovery -p 'test_*.py' -v` checks the new invariants. Existing core/classical/video suites remain separate.
 
 See [LOG.md](LOG.md) for each change, failed trial, exact settings, control result and interpretation. No new generation was used during these recovery experiments.
+
+## Physical-identity checkpoint
+
+The independent known 96-view render provides a real physical-cell score, using truth only after reconstruction. Known control camera parameters are declared acquisition metadata, not recovered target calibration.
+
+- Historical eight-frame cells: 97 distinct correct physical faces.
+- All-frame cells: 242/270 faces have correct full-track identities, covering 218 distinct physical faces. Seven faces use identity-switching tracks; 21 remain unresolved.
+- Blanket nonmanifold quarantine loses 35 distinct correct faces and still retains wrong identities, so it is not an accepted solution.
+- Seven cell-supported fragment joins preserve all 218 correct physical faces, halve duplicate correct faces and reduce overused edges from 30 to 8. Wrong underlying point identities remain.
+- Robot joins use only actual images and frozen cameras: two pairs qualify, giving 78 observed faces and one remaining overused edge, versus 81 and four before. No hidden completion. The optional final quarantine retains 75 faces, without proving physical identity.
+- A 48-view alternate-frame stress test fails: 32/34 accepted points change identity, two are unresolved and no faces survive. This is the same shape at a harder cadence, not an independent scene.
+
+[Physical-identity evidence](../../docs/experiments/25-kling-robot/physical-identity-audit.png) · [Compact independent scores](results/physical-face-control-summary.json) · [Full audit bundle](artifacts/robot-physical-identity-audit.zip) · [Joined observed robot PLY](artifacts/robot-joined-observed-cells.ply)
+
+Additional entry points are `run_face_control.py --images KNOWN_RENDER --output FRESH_OUTPUT [--stride 2]`, `score_physical_faces.py --points POINTS --faces FACES --truth CONTROL_TRUTH --output NEW_JSON`, `audit_cell_conflicts.py --points POINTS --faces FACES --output FRESH_OUTPUT` and `join_cell_fragments.py --points POINTS --faces FACES --cameras CAMERAS --output FRESH_OUTPUT --holdout-centers CENTERS --holdout-radius RADIUS`. The control runner never reads truth. The scorer never edits algorithm outputs. Join thresholds are frozen in source and all proposals/rejections are logged. Tests now total 85 passing and four optional skips across the four installed-tool suites; no CI success is implied.

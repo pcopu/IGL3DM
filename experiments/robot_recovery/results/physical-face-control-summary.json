@@ -1,0 +1,1025 @@
+{
+  "control96_eight_frames": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 519,
+    "point_identity_counts": {
+      "correct": 498,
+      "unresolved": 18,
+      "wrong_identity": 3
+    },
+    "faces": 106,
+    "face_identity_counts": {
+      "correct": 97,
+      "unresolved": 7,
+      "wrong_track_identity": 2
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 104,
+      "unresolved": 2
+    },
+    "strict_correct_face_fraction_all": 0.9150943396226415,
+    "unique_correct_physical_faces": 97,
+    "duplicate_correct_physical_faces": 0,
+    "unique_locally_correct_physical_faces": 104,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 97,
+    "strict_geometric_visibility_coverage": 0.1377840909090909,
+    "known_correct_point_3d_error": {
+      "n": 498,
+      "median": 0.0073261412966727085,
+      "p95": 0.01563196747186288,
+      "max": 0.02893516908356702
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ]
+  },
+  "control96_all_frames": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 519,
+    "point_identity_counts": {
+      "correct": 498,
+      "unresolved": 18,
+      "wrong_identity": 3
+    },
+    "faces": 270,
+    "face_identity_counts": {
+      "correct": 242,
+      "unresolved": 21,
+      "wrong_track_identity": 7
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 250,
+      "unresolved": 20
+    },
+    "strict_correct_face_fraction_all": 0.8962962962962963,
+    "unique_correct_physical_faces": 218,
+    "duplicate_correct_physical_faces": 24,
+    "unique_locally_correct_physical_faces": 223,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 218,
+    "strict_geometric_visibility_coverage": 0.3096590909090909,
+    "known_correct_point_3d_error": {
+      "n": 498,
+      "median": 0.0073261412966727085,
+      "p95": 0.01563196747186288,
+      "max": 0.02893516908356702
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ],
+    "input_sha256": {
+      "points": "8b1d3029f336ab18e52e755aea39ae09d8dee4d67499ef8c8426b1b598159810",
+      "faces": "affea9783c8418e318e28c73496ba019e960498dd191dfbc0eb37ec633ab863a",
+      "truth": "573e357d3a96b164e1242f85f6d42c97b679eb3b2ca21a552910d66f4babc83e"
+    }
+  },
+  "control96_quarantine": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 519,
+    "point_identity_counts": {
+      "correct": 498,
+      "unresolved": 18,
+      "wrong_identity": 3
+    },
+    "faces": 207,
+    "face_identity_counts": {
+      "correct": 192,
+      "unresolved": 13,
+      "wrong_track_identity": 2
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 195,
+      "unresolved": 12
+    },
+    "strict_correct_face_fraction_all": 0.927536231884058,
+    "unique_correct_physical_faces": 183,
+    "duplicate_correct_physical_faces": 9,
+    "unique_locally_correct_physical_faces": 185,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 183,
+    "strict_geometric_visibility_coverage": 0.2599431818181818,
+    "known_correct_point_3d_error": {
+      "n": 498,
+      "median": 0.0073261412966727085,
+      "p95": 0.01563196747186288,
+      "max": 0.02893516908356702
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ],
+    "input_sha256": {
+      "points": "8b1d3029f336ab18e52e755aea39ae09d8dee4d67499ef8c8426b1b598159810",
+      "faces": "95a9c9795e120784f2cfb091203d096f85c9d9c163b239cdd5d573ac16955a49",
+      "truth": "573e357d3a96b164e1242f85f6d42c97b679eb3b2ca21a552910d66f4babc83e"
+    }
+  },
+  "control96_joined": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 512,
+    "point_identity_counts": {
+      "correct": 491,
+      "unresolved": 18,
+      "wrong_identity": 3
+    },
+    "faces": 252,
+    "face_identity_counts": {
+      "correct": 230,
+      "unresolved": 18,
+      "wrong_track_identity": 4
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 235,
+      "unresolved": 17
+    },
+    "strict_correct_face_fraction_all": 0.9126984126984127,
+    "unique_correct_physical_faces": 218,
+    "duplicate_correct_physical_faces": 12,
+    "unique_locally_correct_physical_faces": 223,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 218,
+    "strict_geometric_visibility_coverage": 0.3096590909090909,
+    "known_correct_point_3d_error": {
+      "n": 491,
+      "median": 0.007328904636795736,
+      "p95": 0.01565507718854482,
+      "max": 0.02893516908356702
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ],
+    "input_sha256": {
+      "points": "dd09275eb3a13e1099c4a8e9331c654dab2d47e47b831191a3cb29eb67f6071a",
+      "faces": "1cb212a655125a21de0a8bbc74b0fae9508317dc68125a47f01882e312ce1420",
+      "truth": "573e357d3a96b164e1242f85f6d42c97b679eb3b2ca21a552910d66f4babc83e"
+    }
+  },
+  "control48_all_frames": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 34,
+    "point_identity_counts": {
+      "unresolved": 2,
+      "wrong_identity": 32
+    },
+    "faces": 0,
+    "face_identity_counts": {},
+    "source_cell_identity_counts": {},
+    "strict_correct_face_fraction_all": null,
+    "unique_correct_physical_faces": 0,
+    "duplicate_correct_physical_faces": 0,
+    "unique_locally_correct_physical_faces": 0,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 702,
+    "strict_covered_visible_faces": 0,
+    "strict_geometric_visibility_coverage": 0.0,
+    "known_correct_point_3d_error": {
+      "n": 0,
+      "median": null,
+      "p95": null,
+      "max": null
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ]
+  },
+  "control48_joined": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 34,
+    "point_identity_counts": {
+      "unresolved": 2,
+      "wrong_identity": 32
+    },
+    "faces": 0,
+    "face_identity_counts": {},
+    "source_cell_identity_counts": {},
+    "strict_correct_face_fraction_all": null,
+    "unique_correct_physical_faces": 0,
+    "duplicate_correct_physical_faces": 0,
+    "unique_locally_correct_physical_faces": 0,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 702,
+    "strict_covered_visible_faces": 0,
+    "strict_geometric_visibility_coverage": 0.0,
+    "known_correct_point_3d_error": {
+      "n": 0,
+      "median": null,
+      "p95": null,
+      "max": null
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ]
+  },
+  "robot_original_topology": {
+    "before": {
+      "faces": 81,
+      "used_vertices": 204,
+      "isolated_vertices": 548,
+      "boundary_edges": 200,
+      "nonmanifold_edges": 4,
+      "surface_components": 25,
+      "component_vertices": [
+        21,
+        19,
+        18,
+        13,
+        12,
+        11,
+        10,
+        10,
+        9,
+        8,
+        8,
+        7,
+        6,
+        6,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "after_quarantine": {
+      "faces": 71,
+      "used_vertices": 191,
+      "isolated_vertices": 561,
+      "boundary_edges": 188,
+      "nonmanifold_edges": 0,
+      "surface_components": 26,
+      "component_vertices": [
+        21,
+        19,
+        18,
+        11,
+        10,
+        10,
+        8,
+        8,
+        8,
+        7,
+        6,
+        6,
+        6,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "policy": "Quarantine every face incident to an edge of multiplicity greater than two; never choose a winner or alter points.",
+    "removed_face_indices": [
+      0,
+      20,
+      25,
+      27,
+      34,
+      36,
+      43,
+      64,
+      65,
+      78
+    ],
+    "limitations": [
+      "Edge multiplicity rejection does not validate physical identities.",
+      "Bow-tie vertices, winding, self intersections and overlapping duplicate fragments may remain.",
+      "Original observations and original output are preserved."
+    ],
+    "input_sha256": {
+      "points": "e8b7217b256935210f08436003162a880ed2abb6fe8a6e2d7008c87a131951b5",
+      "faces": "f60112a38b0b58765e98cddb6ad4f11c2b9a38150ee0aa7daa5d76a268465f99"
+    }
+  },
+  "robot_joined_topology": {
+    "before": {
+      "faces": 78,
+      "used_vertices": 202,
+      "isolated_vertices": 548,
+      "boundary_edges": 199,
+      "nonmanifold_edges": 1,
+      "surface_components": 25,
+      "component_vertices": [
+        21,
+        19,
+        18,
+        13,
+        11,
+        11,
+        10,
+        10,
+        8,
+        8,
+        8,
+        7,
+        6,
+        6,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "after_quarantine": {
+      "faces": 75,
+      "used_vertices": 197,
+      "isolated_vertices": 553,
+      "boundary_edges": 194,
+      "nonmanifold_edges": 0,
+      "surface_components": 25,
+      "component_vertices": [
+        21,
+        19,
+        18,
+        11,
+        11,
+        10,
+        10,
+        8,
+        8,
+        8,
+        8,
+        7,
+        6,
+        6,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "policy": "Quarantine every face incident to an edge of multiplicity greater than two; never choose a winner or alter points.",
+    "removed_face_indices": [
+      33,
+      35,
+      42
+    ],
+    "limitations": [
+      "Edge multiplicity rejection does not validate physical identities.",
+      "Bow-tie vertices, winding, self intersections and overlapping duplicate fragments may remain.",
+      "Original observations and original output are preserved."
+    ],
+    "input_sha256": {
+      "points": "1ad4906c5439e9576fdb8a28761a5de8e2d82f0d7bd16df5827219daa1afe151",
+      "faces": "ee0bc7cce0db44fee47d844403209a77323bc299b5d6a122bc750c3a6ff55b63"
+    }
+  },
+  "control96_original_topology": {
+    "before": {
+      "faces": 270,
+      "used_vertices": 352,
+      "isolated_vertices": 167,
+      "boundary_edges": 196,
+      "nonmanifold_edges": 30,
+      "surface_components": 2,
+      "component_vertices": [
+        348,
+        4
+      ]
+    },
+    "after_quarantine": {
+      "faces": 207,
+      "used_vertices": 326,
+      "isolated_vertices": 193,
+      "boundary_edges": 234,
+      "nonmanifold_edges": 0,
+      "surface_components": 5,
+      "component_vertices": [
+        304,
+        10,
+        4,
+        4,
+        4
+      ]
+    },
+    "policy": "Quarantine every face incident to an edge of multiplicity greater than two; never choose a winner or alter points.",
+    "removed_face_indices": [
+      34,
+      36,
+      49,
+      54,
+      55,
+      60,
+      61,
+      62,
+      64,
+      65,
+      67,
+      70,
+      81,
+      82,
+      83,
+      84,
+      110,
+      116,
+      117,
+      118,
+      119,
+      120,
+      125,
+      126,
+      128,
+      129,
+      132,
+      133,
+      134,
+      135,
+      137,
+      138,
+      139,
+      142,
+      143,
+      144,
+      145,
+      148,
+      149,
+      150,
+      151,
+      153,
+      154,
+      155,
+      161,
+      162,
+      168,
+      169,
+      170,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      189,
+      190,
+      191,
+      194,
+      208,
+      209,
+      211,
+      224
+    ],
+    "limitations": [
+      "Edge multiplicity rejection does not validate physical identities.",
+      "Bow-tie vertices, winding, self intersections and overlapping duplicate fragments may remain.",
+      "Original observations and original output are preserved."
+    ],
+    "input_sha256": {
+      "points": "8b1d3029f336ab18e52e755aea39ae09d8dee4d67499ef8c8426b1b598159810",
+      "faces": "affea9783c8418e318e28c73496ba019e960498dd191dfbc0eb37ec633ab863a"
+    }
+  },
+  "control96_joined_topology": {
+    "before": {
+      "faces": 252,
+      "used_vertices": 345,
+      "isolated_vertices": 167,
+      "boundary_edges": 196,
+      "nonmanifold_edges": 8,
+      "surface_components": 2,
+      "component_vertices": [
+        341,
+        4
+      ]
+    },
+    "after_quarantine": {
+      "faces": 236,
+      "used_vertices": 341,
+      "isolated_vertices": 171,
+      "boundary_edges": 214,
+      "nonmanifold_edges": 0,
+      "surface_components": 2,
+      "component_vertices": [
+        337,
+        4
+      ]
+    },
+    "policy": "Quarantine every face incident to an edge of multiplicity greater than two; never choose a winner or alter points.",
+    "removed_face_indices": [
+      118,
+      122,
+      125,
+      127,
+      128,
+      129,
+      130,
+      131,
+      134,
+      135,
+      138,
+      144,
+      145,
+      146,
+      149,
+      156
+    ],
+    "limitations": [
+      "Edge multiplicity rejection does not validate physical identities.",
+      "Bow-tie vertices, winding, self intersections and overlapping duplicate fragments may remain.",
+      "Original observations and original output are preserved."
+    ],
+    "input_sha256": {
+      "points": "dd09275eb3a13e1099c4a8e9331c654dab2d47e47b831191a3cb29eb67f6071a",
+      "faces": "1cb212a655125a21de0a8bbc74b0fae9508317dc68125a47f01882e312ce1420"
+    }
+  },
+  "robot_joins": {
+    "input_points": 752,
+    "output_points": 750,
+    "joined_pairs": [
+      [
+        9,
+        272
+      ],
+      [
+        584,
+        727
+      ]
+    ],
+    "candidate_rows": [
+      {
+        "point_pair": [
+          9,
+          272
+        ],
+        "support_face_pairs": [
+          [
+            20,
+            27
+          ]
+        ],
+        "gap_samples": 4,
+        "maximum_projection_difference_px": 1.1986696976303486,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          295,
+          458
+        ],
+        "support_face_pairs": [
+          [
+            36,
+            43
+          ]
+        ],
+        "gap_samples": 1,
+        "maximum_projection_difference_px": 4.513610999282474,
+        "reason": "projection_disagreement"
+      },
+      {
+        "point_pair": [
+          584,
+          727
+        ],
+        "support_face_pairs": [
+          [
+            63,
+            76
+          ],
+          [
+            64,
+            78
+          ]
+        ],
+        "gap_samples": 5,
+        "maximum_projection_difference_px": 2.488429900799397,
+        "reason": "joined_conditional"
+      }
+    ],
+    "settings": {
+      "three_shared_corners": true,
+      "cyclic_order_required": true,
+      "maximum_gap_samples": 5,
+      "maximum_projection_difference_px": 3,
+      "overlapping_observations_allowed": false,
+      "ambiguous_components": "reject all",
+      "geometry_gate": "unchanged robust five iterations, train and block holdout p95 <=3px, condition<=20",
+      "holdout_centers": [
+        24,
+        72,
+        120,
+        168
+      ],
+      "holdout_radius": 4
+    },
+    "truth_used": false,
+    "input_sha256": {
+      "points": "e8b7217b256935210f08436003162a880ed2abb6fe8a6e2d7008c87a131951b5",
+      "faces": "f60112a38b0b58765e98cddb6ad4f11c2b9a38150ee0aa7daa5d76a268465f99",
+      "cameras": "705d537d8c3ee0883178dcd3ae8c6be7e1f4432afd03b24ecab5601fc45b9c38"
+    },
+    "limitations": [
+      "Joined identities are hypotheses supported by images and cameras, not physical proof.",
+      "Does not correct coherent periodic phase swaps.",
+      "Refits only union of observed coordinates; no synthetic observations or completion."
+    ]
+  },
+  "control96_joins": {
+    "input_points": 519,
+    "output_points": 512,
+    "joined_pairs": [
+      [
+        124,
+        180
+      ],
+      [
+        226,
+        303
+      ],
+      [
+        231,
+        307
+      ],
+      [
+        232,
+        341
+      ],
+      [
+        268,
+        363
+      ],
+      [
+        271,
+        344
+      ],
+      [
+        381,
+        430
+      ]
+    ],
+    "candidate_rows": [
+      {
+        "point_pair": [
+          124,
+          180
+        ],
+        "support_face_pairs": [
+          [
+            55,
+            81
+          ],
+          [
+            65,
+            82
+          ],
+          [
+            49,
+            83
+          ],
+          [
+            60,
+            84
+          ]
+        ],
+        "gap_samples": 3,
+        "maximum_projection_difference_px": 0.9881789470197704,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          226,
+          303
+        ],
+        "support_face_pairs": [
+          [
+            126,
+            148
+          ],
+          [
+            116,
+            161
+          ],
+          [
+            117,
+            162
+          ]
+        ],
+        "gap_samples": 2,
+        "maximum_projection_difference_px": 0.2505783545778753,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          228,
+          304
+        ],
+        "support_face_pairs": [
+          [
+            132,
+            149
+          ],
+          [
+            135,
+            150
+          ]
+        ],
+        "gap_samples": 2,
+        "maximum_projection_difference_px": 3.3422764294574554,
+        "reason": "projection_disagreement"
+      },
+      {
+        "point_pair": [
+          231,
+          307
+        ],
+        "support_face_pairs": [
+          [
+            118,
+            155
+          ]
+        ],
+        "gap_samples": 1,
+        "maximum_projection_difference_px": 0.6799177981565168,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          232,
+          341
+        ],
+        "support_face_pairs": [
+          [
+            137,
+            174
+          ]
+        ],
+        "gap_samples": 1,
+        "maximum_projection_difference_px": 2.1034544656908536,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          268,
+          363
+        ],
+        "support_face_pairs": [
+          [
+            153,
+            189
+          ],
+          [
+            144,
+            190
+          ],
+          [
+            145,
+            191
+          ],
+          [
+            154,
+            194
+          ]
+        ],
+        "gap_samples": 2,
+        "maximum_projection_difference_px": 0.6913347891167048,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          271,
+          344
+        ],
+        "support_face_pairs": [
+          [
+            133,
+            175
+          ],
+          [
+            143,
+            176
+          ]
+        ],
+        "gap_samples": 3,
+        "maximum_projection_difference_px": 1.706741142694355,
+        "reason": "joined_conditional"
+      },
+      {
+        "point_pair": [
+          381,
+          430
+        ],
+        "support_face_pairs": [
+          [
+            208,
+            224
+          ]
+        ],
+        "gap_samples": 5,
+        "maximum_projection_difference_px": 0.8102703703751576,
+        "reason": "joined_conditional"
+      }
+    ],
+    "settings": {
+      "three_shared_corners": true,
+      "cyclic_order_required": true,
+      "maximum_gap_samples": 5,
+      "maximum_projection_difference_px": 3,
+      "overlapping_observations_allowed": false,
+      "ambiguous_components": "reject all",
+      "geometry_gate": "unchanged robust five iterations, train and block holdout p95 <=3px, condition<=20",
+      "holdout_centers": [
+        12,
+        36,
+        60,
+        84
+      ],
+      "holdout_radius": 2
+    },
+    "truth_used": false,
+    "input_sha256": {
+      "points": "8b1d3029f336ab18e52e755aea39ae09d8dee4d67499ef8c8426b1b598159810",
+      "faces": "affea9783c8418e318e28c73496ba019e960498dd191dfbc0eb37ec633ab863a",
+      "cameras": "7af045c50bbf89961754c49d472fb98b8860994687408193528224accb4d7909"
+    },
+    "limitations": [
+      "Joined identities are hypotheses supported by images and cameras, not physical proof.",
+      "Does not correct coherent periodic phase swaps.",
+      "Refits only union of observed coordinates; no synthetic observations or completion."
+    ]
+  },
+  "control48_joins": {
+    "input_points": 34,
+    "output_points": 34,
+    "joined_pairs": [],
+    "candidate_rows": [],
+    "settings": {
+      "three_shared_corners": true,
+      "cyclic_order_required": true,
+      "maximum_gap_samples": 5,
+      "maximum_projection_difference_px": 3,
+      "overlapping_observations_allowed": false,
+      "ambiguous_components": "reject all",
+      "geometry_gate": "unchanged robust five iterations, train and block holdout p95 <=3px, condition<=20",
+      "holdout_centers": [
+        6,
+        18,
+        30,
+        42
+      ],
+      "holdout_radius": 1
+    },
+    "truth_used": false,
+    "input_sha256": {
+      "points": "8ec44f87a2a990ba4c5be568e9aeef2d873350297928b44a8222c14d28899778",
+      "faces": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "cameras": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137"
+    },
+    "limitations": [
+      "Joined identities are hypotheses supported by images and cameras, not physical proof.",
+      "Does not correct coherent periodic phase swaps.",
+      "Refits only union of observed coordinates; no synthetic observations or completion."
+    ]
+  },
+  "control96_join_identity_check": [
+    {
+      "pair": [
+        124,
+        180
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 263
+    },
+    {
+      "pair": [
+        226,
+        303
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 335
+    },
+    {
+      "pair": [
+        231,
+        307
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 304
+    },
+    {
+      "pair": [
+        232,
+        341
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 305
+    },
+    {
+      "pair": [
+        268,
+        363
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 307
+    },
+    {
+      "pair": [
+        271,
+        344
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 242
+    },
+    {
+      "pair": [
+        381,
+        430
+      ],
+      "both_correct_same_physical_vertex": true,
+      "physical_id": 280
+    }
+  ],
+  "source_video_unchanged": true,
+  "target_reference_geometry_used": false,
+  "limitations": [
+    "Only one synthetic shape; 48-view cadence test reuses its images.",
+    "Truth isolated to evaluator; known control cameras are acquisition metadata, not solved calibration.",
+    "Fragment joins remove duplicates, not underlying periodic swaps.",
+    "Target geometry remains experimental and incomplete."
+  ]
+}

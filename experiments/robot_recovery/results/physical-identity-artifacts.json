@@ -1,0 +1,23 @@
+{
+  "archive": {
+    "file": "robot-physical-identity-audit.zip",
+    "bytes": 10831669,
+    "sha256": "ef9906e7644255d0c07f711f511f862711b1ddb5313a1e44a099ebab1a218e02",
+    "stored_members": 107,
+    "logical_evidence_members": 120,
+    "byte_identical_aliases": 17,
+    "verified_logical_member_hashes": 120
+  },
+  "models": [
+    {
+      "file": "robot-joined-observed-cells.ply",
+      "bytes": 47278,
+      "sha256": "a3af8b8510a19e5aefd739ca546f90c7287ff8f96bc212809877e1562f3954b8"
+    },
+    {
+      "file": "robot-joined-quarantined-cells.ply",
+      "bytes": 47251,
+      "sha256": "5f13abca842a8edb02a3466dd957c7cf93f1856dcd6cf939bb44a478ba421897"
+    }
+  ]
+}
