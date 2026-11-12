@@ -9,7 +9,7 @@ from mathutils.bvhtree import BVHTree
 from bpy_extras.object_utils import world_to_camera_view
 import os
 NV=int(os.environ.get('CONTROL_VIEWS','96'));SHAPE=os.environ.get('CONTROL_SHAPE','bent_ovoid')
-if SHAPE not in ['bent_ovoid','squat_barrel']:raise ValueError('Unknown declared control shape')
+if SHAPE not in ['bent_ovoid','squat_barrel','warped_waist']:raise ValueError('Unknown declared control shape')
 OUT=Path(os.environ['CONTROL_OUTPUT'])
 if OUT.exists():raise ValueError('Refusing existing control output')
 OUT.mkdir(parents=True)
@@ -26,6 +26,11 @@ for j in range(NT+1):
    z=.85*math.sin(lat);rr=.76*math.cos(lat)*(1+.12*math.sin(lat))
    x=rr*math.sin(phi)*(1+.06*math.cos(2*phi)*math.cos(lat))+.10*math.sin(lat)
    y=-.78*rr*math.cos(phi)+.08*math.cos(lat)**2*math.cos(phi)*math.sin(lat)
+  if SHAPE=='warped_waist':
+   rr=math.cos(lat)*(.62+.13*math.sin(lat)**2+.06*math.sin(3*phi)*math.cos(lat))
+   x=rr*math.sin(phi)+.12*math.sin(lat)
+   y=-.88*rr*math.cos(phi)+.08*math.sin(lat)*math.cos(lat)
+   z=math.sin(lat)+.10*math.sin(2*phi)*math.cos(lat)**2
   vertices.append((x,y,z))
 faces=[]
 for j in range(NT):

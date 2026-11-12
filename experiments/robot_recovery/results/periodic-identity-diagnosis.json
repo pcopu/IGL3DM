@@ -1,0 +1,352 @@
+{
+  "orbit": {
+    "point_identity_counts": {
+      "wrong_identity": 32,
+      "unresolved": 57,
+      "correct": 206
+    },
+    "diagnostic_class_counts": {
+      "coherent_ring_walk": 8,
+      "correct": 206,
+      "majority_endpoint_contamination": 24,
+      "unresolved": 57
+    },
+    "wrong_only_after_heldout_added": 0,
+    "class_metrics": {
+      "coherent_ring_walk": {
+        "dominant_xyz_error": {
+          "n": 8,
+          "median": 0.29796139740716243,
+          "p95": 0.451248687051605,
+          "min": 0.22072578044853672,
+          "max": 0.4739431622687881
+        },
+        "nearest_truth_xyz_error": {
+          "n": 8,
+          "median": 0.10319393523311274,
+          "p95": 0.1240961682030688,
+          "min": 0.08339757470541907,
+          "max": 0.12787883283725268
+        },
+        "train_p95_px": {
+          "n": 8,
+          "median": 1.1354166499389653,
+          "p95": 1.3766231097090482,
+          "min": 0.7481322203660636,
+          "max": 1.388733116068742
+        }
+      },
+      "correct": {
+        "dominant_xyz_error": {
+          "n": 206,
+          "median": 0.007122142201118996,
+          "p95": 0.008221216870798291,
+          "min": 0.004217255948788988,
+          "max": 0.009015338576153177
+        },
+        "nearest_truth_xyz_error": {
+          "n": 206,
+          "median": 0.007122142201118996,
+          "p95": 0.008221216870798291,
+          "min": 0.004217255948788988,
+          "max": 0.009015338576153177
+        },
+        "train_p95_px": {
+          "n": 206,
+          "median": 0.4969318400641944,
+          "p95": 1.0152640474658825,
+          "min": 0.16269847907545817,
+          "max": 1.1355667225515127
+        }
+      },
+      "majority_endpoint_contamination": {
+        "dominant_xyz_error": {
+          "n": 24,
+          "median": 0.007119800430956458,
+          "p95": 0.008514808662465567,
+          "min": 0.005483803211799357,
+          "max": 0.008839821334012022
+        },
+        "nearest_truth_xyz_error": {
+          "n": 24,
+          "median": 0.007119800430956458,
+          "p95": 0.008514808662465567,
+          "min": 0.005483803211799357,
+          "max": 0.008839821334012022
+        },
+        "train_p95_px": {
+          "n": 24,
+          "median": 1.106727658842858,
+          "p95": 1.4552114775974314,
+          "min": 0.47260962625629466,
+          "max": 1.4875566232083937
+        }
+      },
+      "unresolved": {
+        "dominant_xyz_error": {
+          "n": 57,
+          "median": 0.007629527837821163,
+          "p95": 0.009174621357030937,
+          "min": 0.0055350953650175816,
+          "max": 0.009833278819956628
+        },
+        "nearest_truth_xyz_error": {
+          "n": 57,
+          "median": 0.007629527837821163,
+          "p95": 0.009174621357030937,
+          "min": 0.0055350953650175816,
+          "max": 0.009833278819956628
+        },
+        "train_p95_px": {
+          "n": 57,
+          "median": 0.9032763963334413,
+          "p95": 1.3227877740651206,
+          "min": 0.24745707002175266,
+          "max": 1.4509219514446057
+        }
+      }
+    },
+    "face_identity_counts": {
+      "wrong_track_identity": 44,
+      "correct": 30,
+      "unresolved": 66
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 135,
+      "unresolved": 5
+    }
+  },
+  "bent": {
+    "point_identity_counts": {
+      "wrong_identity": 29,
+      "unresolved": 27,
+      "correct": 162
+    },
+    "diagnostic_class_counts": {
+      "coherent_ring_walk": 16,
+      "correct": 162,
+      "majority_endpoint_contamination": 13,
+      "unresolved": 27
+    },
+    "wrong_only_after_heldout_added": 0,
+    "class_metrics": {
+      "coherent_ring_walk": {
+        "dominant_xyz_error": {
+          "n": 16,
+          "median": 0.4505378396248362,
+          "p95": 0.6078789131502397,
+          "min": 0.3839823195401368,
+          "max": 0.60802644397183
+        },
+        "nearest_truth_xyz_error": {
+          "n": 16,
+          "median": 0.12905296964931548,
+          "p95": 0.18790673582296386,
+          "min": 0.05790073342761669,
+          "max": 0.18811787273047317
+        },
+        "train_p95_px": {
+          "n": 16,
+          "median": 1.0922347756158708,
+          "p95": 1.4268879220755413,
+          "min": 0.40100041808742076,
+          "max": 1.433689272281355
+        }
+      },
+      "correct": {
+        "dominant_xyz_error": {
+          "n": 162,
+          "median": 0.006540028829336325,
+          "p95": 0.008552339090442996,
+          "min": 0.003909160854873093,
+          "max": 0.010482587601124964
+        },
+        "nearest_truth_xyz_error": {
+          "n": 162,
+          "median": 0.006540028829336325,
+          "p95": 0.008552339090442996,
+          "min": 0.003909160854873093,
+          "max": 0.010482587601124964
+        },
+        "train_p95_px": {
+          "n": 162,
+          "median": 0.5393965217164292,
+          "p95": 1.1089278505525746,
+          "min": 0.19438170167691293,
+          "max": 1.4358098162350692
+        }
+      },
+      "majority_endpoint_contamination": {
+        "dominant_xyz_error": {
+          "n": 13,
+          "median": 0.007563563859656079,
+          "p95": 0.008512709890046169,
+          "min": 0.0042286238647509635,
+          "max": 0.008685401544799217
+        },
+        "nearest_truth_xyz_error": {
+          "n": 13,
+          "median": 0.007563563859656079,
+          "p95": 0.008512709890046169,
+          "min": 0.0042286238647509635,
+          "max": 0.008685401544799217
+        },
+        "train_p95_px": {
+          "n": 13,
+          "median": 1.0428146584552112,
+          "p95": 1.340542612529828,
+          "min": 0.66805960766807,
+          "max": 1.3411502018360957
+        }
+      },
+      "unresolved": {
+        "dominant_xyz_error": {
+          "n": 27,
+          "median": 0.006391310701656728,
+          "p95": 0.00840659704437152,
+          "min": 0.004491651570387934,
+          "max": 0.008808937406179636
+        },
+        "nearest_truth_xyz_error": {
+          "n": 27,
+          "median": 0.006391310701656728,
+          "p95": 0.00840659704437152,
+          "min": 0.004491651570387934,
+          "max": 0.008808937406179636
+        },
+        "train_p95_px": {
+          "n": 27,
+          "median": 0.7888092504873123,
+          "p95": 1.3359623232363491,
+          "min": 0.18573868001518304,
+          "max": 1.356056695189558
+        }
+      }
+    },
+    "face_identity_counts": {
+      "unresolved": 32,
+      "correct": 46,
+      "wrong_track_identity": 12
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 88,
+      "unresolved": 2
+    }
+  },
+  "barrel": {
+    "point_identity_counts": {
+      "wrong_identity": 29,
+      "correct": 237,
+      "unresolved": 50
+    },
+    "diagnostic_class_counts": {
+      "coherent_ring_walk": 1,
+      "correct": 237,
+      "majority_endpoint_contamination": 28,
+      "unresolved": 50
+    },
+    "wrong_only_after_heldout_added": 0,
+    "class_metrics": {
+      "coherent_ring_walk": {
+        "dominant_xyz_error": {
+          "n": 1,
+          "median": 0.40799547216108456,
+          "p95": 0.40799547216108456,
+          "min": 0.40799547216108456,
+          "max": 0.40799547216108456
+        },
+        "nearest_truth_xyz_error": {
+          "n": 1,
+          "median": 0.09994285697288828,
+          "p95": 0.09994285697288828,
+          "min": 0.09994285697288828,
+          "max": 0.09994285697288828
+        },
+        "train_p95_px": {
+          "n": 1,
+          "median": 1.0489543526625194,
+          "p95": 1.0489543526625194,
+          "min": 1.0489543526625194,
+          "max": 1.0489543526625194
+        }
+      },
+      "correct": {
+        "dominant_xyz_error": {
+          "n": 237,
+          "median": 0.007019004011695259,
+          "p95": 0.008723453190085634,
+          "min": 0.003881397024659305,
+          "max": 0.010297145306351743
+        },
+        "nearest_truth_xyz_error": {
+          "n": 237,
+          "median": 0.007019004011695259,
+          "p95": 0.008723453190085634,
+          "min": 0.003881397024659305,
+          "max": 0.010297145306351743
+        },
+        "train_p95_px": {
+          "n": 237,
+          "median": 0.6248393987820087,
+          "p95": 1.091149144510827,
+          "min": 0.19290061117196977,
+          "max": 1.4210677419465518
+        }
+      },
+      "majority_endpoint_contamination": {
+        "dominant_xyz_error": {
+          "n": 28,
+          "median": 0.0073069370204306185,
+          "p95": 0.00941459280163771,
+          "min": 0.005359480369804325,
+          "max": 0.009779803238506916
+        },
+        "nearest_truth_xyz_error": {
+          "n": 28,
+          "median": 0.0073069370204306185,
+          "p95": 0.00941459280163771,
+          "min": 0.005359480369804325,
+          "max": 0.009779803238506916
+        },
+        "train_p95_px": {
+          "n": 28,
+          "median": 1.1430638707254515,
+          "p95": 1.4637544945286776,
+          "min": 0.6552639240781581,
+          "max": 1.489802160456673
+        }
+      },
+      "unresolved": {
+        "dominant_xyz_error": {
+          "n": 50,
+          "median": 0.007537312235071043,
+          "p95": 0.009612580305770927,
+          "min": 0.005053884772212496,
+          "max": 0.01081614207900547
+        },
+        "nearest_truth_xyz_error": {
+          "n": 50,
+          "median": 0.007537312235071043,
+          "p95": 0.009612580305770927,
+          "min": 0.005053884772212496,
+          "max": 0.01081614207900547
+        },
+        "train_p95_px": {
+          "n": 50,
+          "median": 0.9523411366244997,
+          "p95": 1.3750068144852572,
+          "min": 0.3526689279623624,
+          "max": 1.4854952547943898
+        }
+      }
+    },
+    "face_identity_counts": {
+      "correct": 66,
+      "wrong_track_identity": 41,
+      "unresolved": 57
+    },
+    "source_cell_identity_counts": {
+      "correct_same_cell": 164
+    }
+  }
+}

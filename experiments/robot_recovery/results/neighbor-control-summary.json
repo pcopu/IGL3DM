@@ -1,0 +1,590 @@
+{
+  "pear": {
+    "original": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 295,
+      "point_identity_counts": {
+        "wrong_identity": 32,
+        "unresolved": 57,
+        "correct": 206
+      },
+      "faces": 140,
+      "face_identity_counts": {
+        "wrong_track_identity": 44,
+        "correct": 30,
+        "unresolved": 66
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 135,
+        "unresolved": 5
+      },
+      "strict_correct_face_fraction_all": 0.21428571428571427,
+      "unique_correct_physical_faces": 30,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 135,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 30,
+      "strict_geometric_visibility_coverage": 0.042735042735042736,
+      "known_correct_point_3d_error": {
+        "n": 206,
+        "median": 0.007122142201118996,
+        "p95": 0.008221216870798291,
+        "max": 0.009015338576153177
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control"
+    },
+    "frozen": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 51,
+      "point_identity_counts": {
+        "correct": 47,
+        "unresolved": 4
+      },
+      "faces": 7,
+      "face_identity_counts": {
+        "unresolved": 1,
+        "correct": 6
+      },
+      "source_cell_identity_counts": {
+        "unresolved": 1,
+        "correct_same_cell": 6
+      },
+      "strict_correct_face_fraction_all": 0.8571428571428571,
+      "unique_correct_physical_faces": 6,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 6,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 6,
+      "strict_geometric_visibility_coverage": 0.008547008547008548,
+      "known_correct_point_3d_error": {
+        "n": 47,
+        "median": 0.007387357311896453,
+        "p95": 0.008179126980330876,
+        "max": 0.009001490098842551
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 295,
+      "transition_counts": {
+        "wrong_identity -> correct": 8,
+        "correct -> correct": 30,
+        "unresolved -> correct": 9,
+        "unresolved -> unresolved": 4
+      }
+    },
+    "refit": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 51,
+      "point_identity_counts": {
+        "correct": 47,
+        "unresolved": 4
+      },
+      "faces": 7,
+      "face_identity_counts": {
+        "unresolved": 1,
+        "correct": 6
+      },
+      "source_cell_identity_counts": {
+        "unresolved": 1,
+        "correct_same_cell": 6
+      },
+      "strict_correct_face_fraction_all": 0.8571428571428571,
+      "unique_correct_physical_faces": 6,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 6,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 6,
+      "strict_geometric_visibility_coverage": 0.008547008547008548,
+      "known_correct_point_3d_error": {
+        "n": 47,
+        "median": 0.007215150387910903,
+        "p95": 0.008114885509780893,
+        "max": 0.00818050730569967
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 295,
+      "transition_counts": {
+        "wrong_identity -> correct": 8,
+        "correct -> correct": 30,
+        "unresolved -> correct": 9,
+        "unresolved -> unresolved": 4
+      }
+    }
+  },
+  "bent": {
+    "original": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 218,
+      "point_identity_counts": {
+        "wrong_identity": 29,
+        "unresolved": 27,
+        "correct": 162
+      },
+      "faces": 90,
+      "face_identity_counts": {
+        "unresolved": 32,
+        "correct": 46,
+        "wrong_track_identity": 12
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 88,
+        "unresolved": 2
+      },
+      "strict_correct_face_fraction_all": 0.5111111111111111,
+      "unique_correct_physical_faces": 46,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 88,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 46,
+      "strict_geometric_visibility_coverage": 0.06534090909090909,
+      "known_correct_point_3d_error": {
+        "n": 162,
+        "median": 0.006540028829336325,
+        "p95": 0.008552339090442996,
+        "max": 0.010482587601124962
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control"
+    },
+    "frozen": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 67,
+      "point_identity_counts": {
+        "wrong_identity": 4,
+        "correct": 62,
+        "unresolved": 1
+      },
+      "faces": 18,
+      "face_identity_counts": {
+        "correct": 18
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 18
+      },
+      "strict_correct_face_fraction_all": 1.0,
+      "unique_correct_physical_faces": 18,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 18,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 18,
+      "strict_geometric_visibility_coverage": 0.02556818181818182,
+      "known_correct_point_3d_error": {
+        "n": 62,
+        "median": 0.006523360100626851,
+        "p95": 0.008500866915305457,
+        "max": 0.008773852886502268
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 218,
+      "transition_counts": {
+        "wrong_identity -> wrong_identity": 4,
+        "unresolved -> correct": 6,
+        "wrong_identity -> correct": 3,
+        "correct -> correct": 53,
+        "unresolved -> unresolved": 1
+      }
+    },
+    "refit": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 67,
+      "point_identity_counts": {
+        "wrong_identity": 4,
+        "correct": 62,
+        "unresolved": 1
+      },
+      "faces": 18,
+      "face_identity_counts": {
+        "correct": 18
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 18
+      },
+      "strict_correct_face_fraction_all": 1.0,
+      "unique_correct_physical_faces": 18,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 18,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 18,
+      "strict_geometric_visibility_coverage": 0.02556818181818182,
+      "known_correct_point_3d_error": {
+        "n": 62,
+        "median": 0.006458468061404496,
+        "p95": 0.008262202449828695,
+        "max": 0.008766792530739573
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 218,
+      "transition_counts": {
+        "wrong_identity -> wrong_identity": 4,
+        "unresolved -> correct": 6,
+        "wrong_identity -> correct": 3,
+        "correct -> correct": 53,
+        "unresolved -> unresolved": 1
+      }
+    }
+  },
+  "barrel": {
+    "original": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 316,
+      "point_identity_counts": {
+        "wrong_identity": 29,
+        "correct": 237,
+        "unresolved": 50
+      },
+      "faces": 164,
+      "face_identity_counts": {
+        "correct": 66,
+        "wrong_track_identity": 41,
+        "unresolved": 57
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 164
+      },
+      "strict_correct_face_fraction_all": 0.4024390243902439,
+      "unique_correct_physical_faces": 66,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 164,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 66,
+      "strict_geometric_visibility_coverage": 0.09375,
+      "known_correct_point_3d_error": {
+        "n": 237,
+        "median": 0.007019004011695259,
+        "p95": 0.008723453190085634,
+        "max": 0.010297145306351743
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control"
+    },
+    "frozen": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 130,
+      "point_identity_counts": {
+        "correct": 130
+      },
+      "faces": 52,
+      "face_identity_counts": {
+        "correct": 52
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 52
+      },
+      "strict_correct_face_fraction_all": 1.0,
+      "unique_correct_physical_faces": 52,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 52,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 52,
+      "strict_geometric_visibility_coverage": 0.07386363636363637,
+      "known_correct_point_3d_error": {
+        "n": 130,
+        "median": 0.007224261470089654,
+        "p95": 0.008472361476217903,
+        "max": 0.008791873718822046
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 316,
+      "transition_counts": {
+        "wrong_identity -> correct": 16,
+        "correct -> correct": 88,
+        "unresolved -> correct": 26
+      }
+    },
+    "refit": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 130,
+      "point_identity_counts": {
+        "correct": 130
+      },
+      "faces": 52,
+      "face_identity_counts": {
+        "correct": 52
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 52
+      },
+      "strict_correct_face_fraction_all": 1.0,
+      "unique_correct_physical_faces": 52,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 52,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 52,
+      "strict_geometric_visibility_coverage": 0.07386363636363637,
+      "known_correct_point_3d_error": {
+        "n": 130,
+        "median": 0.007003331932465979,
+        "p95": 0.008033132593875596,
+        "max": 0.00844013543431169
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "Development control",
+      "original_points": 316,
+      "transition_counts": {
+        "wrong_identity -> correct": 16,
+        "correct -> correct": 88,
+        "unresolved -> correct": 26
+      }
+    }
+  },
+  "waist": {
+    "original": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 259,
+      "point_identity_counts": {
+        "unresolved": 61,
+        "wrong_identity": 9,
+        "correct": 189
+      },
+      "faces": 82,
+      "face_identity_counts": {
+        "unresolved": 45,
+        "correct": 25,
+        "wrong_track_identity": 12
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 82
+      },
+      "strict_correct_face_fraction_all": 0.3048780487804878,
+      "unique_correct_physical_faces": 25,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 82,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 703,
+      "strict_covered_visible_faces": 25,
+      "strict_geometric_visibility_coverage": 0.03556187766714083,
+      "known_correct_point_3d_error": {
+        "n": 189,
+        "median": 0.006344582564002336,
+        "p95": 0.00807778484684946,
+        "max": 0.010301262342301028
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "New frozen-rule fourth-shape comparison"
+    },
+    "frozen": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 73,
+      "point_identity_counts": {
+        "correct": 72,
+        "unresolved": 1
+      },
+      "faces": 17,
+      "face_identity_counts": {
+        "correct": 16,
+        "unresolved": 1
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 17
+      },
+      "strict_correct_face_fraction_all": 0.9411764705882353,
+      "unique_correct_physical_faces": 16,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 17,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 703,
+      "strict_covered_visible_faces": 16,
+      "strict_geometric_visibility_coverage": 0.02275960170697013,
+      "known_correct_point_3d_error": {
+        "n": 72,
+        "median": 0.006411514787101563,
+        "p95": 0.007997467309814696,
+        "max": 0.008476507380362687
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "New frozen-rule fourth-shape comparison",
+      "original_points": 259,
+      "transition_counts": {
+        "unresolved -> correct": 21,
+        "wrong_identity -> correct": 5,
+        "correct -> correct": 46,
+        "unresolved -> unresolved": 1
+      }
+    },
+    "refit": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 73,
+      "point_identity_counts": {
+        "correct": 72,
+        "unresolved": 1
+      },
+      "faces": 17,
+      "face_identity_counts": {
+        "correct": 16,
+        "unresolved": 1
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 17
+      },
+      "strict_correct_face_fraction_all": 0.9411764705882353,
+      "unique_correct_physical_faces": 16,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 17,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 703,
+      "strict_covered_visible_faces": 16,
+      "strict_geometric_visibility_coverage": 0.02275960170697013,
+      "known_correct_point_3d_error": {
+        "n": 72,
+        "median": 0.006120048168469909,
+        "p95": 0.007854979886240504,
+        "max": 0.008449991737136694
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ],
+      "control_role": "New frozen-rule fourth-shape comparison",
+      "original_points": 259,
+      "transition_counts": {
+        "unresolved -> correct": 21,
+        "wrong_identity -> correct": 5,
+        "correct -> correct": 46,
+        "unresolved -> unresolved": 1
+      }
+    }
+  }
+}

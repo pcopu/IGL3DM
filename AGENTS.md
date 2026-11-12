@@ -214,3 +214,27 @@ Important regression fixtures prove that modifying all withheld-image detections
 Keep artifacts under `experiments/robot_recovery/artifacts/` and compact metrics under its `results/`. The evidence ZIPs retain source snapshots, input hashes, all predictions, failures, evaluation rows and actual candidate models. Repeated identical bytes use `ALIASES.json`; after extraction, `python restore_aliases.py` recreates every logical file. Verify all entries in `MANIFEST.json`. Never deduplicate approximately or discard an inconvenient failure.
 
 Use small, coherent commits: first the method and measured result, then the complete reproducibility bundle or documentation followup when appropriate. Preserve the old checkpoints. Include clear source links in the log, verify changed blobs and untouched files, and never claim a commit, attachment, test or calibration succeeded without checking its outcome.
+
+## Endpoint-support continuation (2026-11-12)
+
+Read log entries 27–29 before using the new `trim_orbit_neighborhoods.py`. Most wrong broad-view tracks on the three development controls have accurate XYZ but follow another line after their original vertex disappears. The remaining class walks around a periodic ring and has wrong geometry. `diagnose_periodic_identities.py --base "$WORK" --output NEW.json` classifies frozen outputs using synthetic truth **for evaluation only**; never feed its classes into target selection.
+
+The image-only endpoint rule detects closed cells in calibration images only. Repeated mapped cell edges need three observations spanning 30 degrees. Each retained endpoint must have two distinct stable neighbors present in that image. Between the first and last supported endpoints retain only actual source observations. Require nine calibration samples, 90 degrees and 90-percent calibration-hit density. It does not require continuous stable-neighbor support inside that interval; interior slips and coherent neighboring aliases may survive. Do not loosen these gates silently.
+
+```sh
+python experiments/robot_recovery/trim_orbit_neighborhoods.py \
+  --images "$WORK/grid_input" \
+  --cameras "$WORK/grid_variable_projections.json" \
+  --source "$WORK/recovery_robot_hypotheses_resolvable" \
+  --output "$WORK/new_robot_neighbors_frozen"
+```
+
+The primary variant keeps parent XYZ exactly. Use a separate new output plus `--refit` for the optional calibration-only refit. Preserve source snapshots, all decisions, original and retained fit metrics, original full withheld-prediction rows, actual frame edges and source hashes. The refit never creates new withheld matches. Assemble cells with `assemble_observed_cells.py` and the explicit point-gate label; that program does not refit geometry itself. Use the normalized measurement manifest for `grid_input` (scale 1, padding 0), not the native-video transform again.
+
+For the independent fourth control, use `CONTROL_SHAPE=warped_waist` with the existing render/run-control commands. `evaluate_neighbor_checkpoint.py --root "$WORK" --output NEW.json --tag final_` is evaluation-only and runs after every declared variant exists. The first three shapes are development evidence; the fourth was blind to the frozen endpoint rule, not a permanent untouched test set for later tuning.
+
+This rule trades coverage for fewer identity failures. Pear retains 47 correct / 0 wrong / 4 unresolved points; bent 62 / 4 / 1; barrel 130 / 0 / 0. The fourth control changes 189 / 9 / 61 to 72 / 0 / 1, with correct faces falling 25 to 16. Four coherent ring walks remain on bent, though none belongs to a retained face. The robot retains 57 points / 20 quads rather than 198 / 49: 36 surface vertices, 21 isolated points, three components and 26 boundary edges. These are sparse candidates with unknown physical accuracy, not a finished character. Keep both larger and conservative outputs.
+
+Final metadata/validation changes reproduced XYZ, associations and retained intervals across all ten frozen/refit variants. Dedicated tests prevent heldout or removed coordinates from influencing refits, require source/camera ordering, preserve all prediction rows and distinguish inherited from retained fit statistics. Continue research on visibility and coherent aliases without choosing individual outputs from evaluation truth, and report discarded correct coverage as prominently as reduced errors.
+
+Latest endpoint checkpoint: 29 recovery + 47 classical + 2 video-grid + 23 core tests pass (101 total), with the same four optional core skips. No remote CI check was observed at the preceding checkpoint; check the new exact commit rather than assuming CI ran.

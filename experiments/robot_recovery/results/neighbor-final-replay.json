@@ -1,0 +1,62 @@
+[
+  {
+    "case": "pear",
+    "variant": "frozen",
+    "points": 51,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "pear",
+    "variant": "refit",
+    "points": 51,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "bent",
+    "variant": "frozen",
+    "points": 67,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "bent",
+    "variant": "refit",
+    "points": 67,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "barrel",
+    "variant": "frozen",
+    "points": 130,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "barrel",
+    "variant": "refit",
+    "points": 130,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "waist",
+    "variant": "frozen",
+    "points": 73,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "waist",
+    "variant": "refit",
+    "points": 73,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "robot",
+    "variant": "frozen",
+    "points": 57,
+    "geometry_association_intervals_identical": true
+  },
+  {
+    "case": "robot",
+    "variant": "refit",
+    "points": 57,
+    "geometry_association_intervals_identical": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "frozen": {
+    "points": 57,
+    "quads": 20,
+    "surface_vertices": 36,
+    "isolated_points": 21,
+    "surface_components": 3,
+    "boundary_edges": 26,
+    "overused_quad_edges": 0,
+    "physical_accuracy": "Unknown; target truth unavailable",
+    "camera": "Frozen experimental PCHIP"
+  },
+  "refit": {
+    "points": 57,
+    "quads": 20,
+    "surface_vertices": 36,
+    "isolated_points": 21,
+    "surface_components": 3,
+    "boundary_edges": 26,
+    "overused_quad_edges": 0,
+    "physical_accuracy": "Unknown; target truth unavailable",
+    "camera": "Frozen experimental PCHIP"
+  }
+}
