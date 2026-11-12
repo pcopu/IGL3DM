@@ -1,0 +1,48 @@
+{
+  "change": "Central finite differences only; declared before execution.",
+  "decision": "Rejected as convergence fix; original baseline retained.",
+  "original": {
+    "optimizer_success": true,
+    "optimizer_message": "`xtol` termination condition is satisfied.",
+    "nfev": 32,
+    "optimizer_cost": 1917.1785861900612,
+    "optimizer_optimality": 219.67845944410703,
+    "calibration_after_px": {
+      "n": 15034,
+      "mean": 0.42871431365961266,
+      "median": 0.36046761726940435,
+      "p95": 1.041695709623534,
+      "max": 3.1672445965396103
+    },
+    "scaled_robust_jacobian_condition": 53.007111578607045,
+    "heldout_endpoint_errors_px": {
+      "n": 2204,
+      "mean": 0.7813571771504096,
+      "median": 0.5466725288970868,
+      "p95": 2.2319303894047935,
+      "max": 5.366630666831935
+    }
+  },
+  "central": {
+    "optimizer_success": true,
+    "optimizer_message": "`xtol` termination condition is satisfied.",
+    "nfev": 24,
+    "optimizer_cost": 1916.9417352394012,
+    "optimizer_optimality": 930.1758465598281,
+    "calibration_after_px": {
+      "n": 15034,
+      "mean": 0.4286187693307288,
+      "median": 0.3595623894394343,
+      "p95": 1.0418013188239836,
+      "max": 3.1842533341918133
+    },
+    "scaled_robust_jacobian_condition": 53.577010924071764,
+    "heldout_endpoint_errors_px": {
+      "n": 2204,
+      "mean": 0.7800665358047532,
+      "median": 0.5441509781891036,
+      "p95": 2.2218472994803027,
+      "max": 5.32914343203396
+    }
+  }
+}

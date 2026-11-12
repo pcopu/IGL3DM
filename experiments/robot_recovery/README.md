@@ -30,3 +30,7 @@ The robot's 199 points / 16 quads therefore do not by themselves establish impro
 3. **Topology/association ablation:** Compare original and cycle-veto graph outputs on fixed explicit cameras and the same geometric thresholds. Any dense diagnostic output must retain separate uncertainty labels. No reference geometry, hidden-face filling, arbitrary periodic phase repair or new paid generation.
 
 Each meaningful experiment will append a dated log entry with intent, exact inputs/settings, commands, outcome, failures, tests, artifacts and next conclusion. Public commits contain source, compact evidence and selected synthetic visuals, not raw runtime data or model binaries.
+
+## Public reproduction bundle
+
+The owner subsequently authorized the relevant video, raw tracking/evidence and actual models for this public experiment. [Robot reproducibility bundle](artifacts/robot-reproducibility.zip) includes the silent input video, measured data, model files and preserved comparisons. [GLB](artifacts/robot-grid-candidates.glb) and [PLY](artifacts/robot-grid-candidates.ply) are the exact sparse baseline geometry. [Hashes and sizes](results/public-artifacts.json) verify file integrity, not reconstruction accuracy. Credentials, unrelated private data and target reference-generator geometry are excluded. This authorization does not change the privacy policy for earlier experiments.
