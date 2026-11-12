@@ -1,0 +1,35 @@
+[
+  {
+    "file": "neighbor-development-evidence.zip",
+    "mode": "development",
+    "bytes": 1650429,
+    "sha256": "54343c23d8bb0f318cde3a1c212e3fe2dc33207f5d600d091ac51105c602c024",
+    "logical_files": 218,
+    "stored_members": 107,
+    "aliases": 114,
+    "all_logical_hashes_verified": true,
+    "extracted_and_restored_hashes_verified": true
+  },
+  {
+    "file": "neighbor-waist-evidence.zip",
+    "mode": "waist",
+    "bytes": 5444588,
+    "sha256": "7376b6657a34d82b3695af754fdd6540d38ae2dfee1d1cae03f04b485f1219fc",
+    "logical_files": 127,
+    "stored_members": 90,
+    "aliases": 40,
+    "all_logical_hashes_verified": true,
+    "extracted_and_restored_hashes_verified": true
+  },
+  {
+    "file": "neighbor-robot-evidence.zip",
+    "mode": "robot",
+    "bytes": 727962,
+    "sha256": "8f9180af9dadd4097ffe7b09df65e9b02cd809170252e2d54f8de909005da53a",
+    "logical_files": 77,
+    "stored_members": 55,
+    "aliases": 25,
+    "all_logical_hashes_verified": true,
+    "extracted_and_restored_hashes_verified": true
+  }
+]
