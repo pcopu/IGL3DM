@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "opencv": "5.0.0",
+  "pillow": "13.0.0",
+  "scikit_image": "0.26.0",
+  "blender": "Blender 4.3.2",
+  "new_installs": false
+}

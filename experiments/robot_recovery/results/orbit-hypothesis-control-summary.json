@@ -1,0 +1,2201 @@
+{
+  "pear48_base": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": false,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "85e134c75c95396d53a35517146bbef4ceebc76695f2e0c76674f1170a9d68e9",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 21255,
+      "hypotheses_before_deduplication": 1118,
+      "unique_hypotheses": 957,
+      "ambiguous_hypotheses_rejected": 0,
+      "heldout_colliding_associations_rejected": 6,
+      "selected_tracks": 310,
+      "calibration_conflicting_hypotheses_rejected": 647,
+      "rejection_counts": {
+        "insufficient_broad_support": 7562,
+        "seed_not_retained": 12427,
+        "training_gate": 133,
+        "refit_lost_support": 15
+      },
+      "heldout_predictions": 999,
+      "heldout_matched_predictions": 897,
+      "heldout_nearest_error_px": {
+        "median": 0.26004969866642114,
+        "p95": 3.500525601753281,
+        "max": 16.735013762585247
+      },
+      "seconds": 13.180276870727539,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 310,
+      "point_identity_counts": {
+        "wrong_identity": 61,
+        "unresolved": 61,
+        "correct": 188
+      },
+      "faces": 158,
+      "face_identity_counts": {
+        "wrong_track_identity": 57,
+        "correct": 33,
+        "unresolved": 68
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 151,
+        "unresolved": 5,
+        "changed_physical_cell": 2
+      },
+      "strict_correct_face_fraction_all": 0.2088607594936709,
+      "unique_correct_physical_faces": 33,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 151,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 33,
+      "strict_geometric_visibility_coverage": 0.04700854700854701,
+      "known_correct_point_3d_error": {
+        "n": 188,
+        "median": 0.0071952167263769785,
+        "p95": 0.00829068963310827,
+        "max": 0.009529730226091009
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 188,
+    "assembly": {
+      "points": 310,
+      "observed_quads": 158,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Hypothesis calibration only: 90-degree support and training p95<=1.5px; withheld pixels never select point models.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 310,
+        "vertices_used_by_faces": 240,
+        "unused_candidate_points": 70,
+        "display_triangles": 316,
+        "face_connected_components_by_shared_vertex": 2,
+        "component_used_vertex_counts_descending": [
+          234,
+          6
+        ],
+        "boundary_edges": 168,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 13,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    }
+  },
+  "pear48_veto": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "85e134c75c95396d53a35517146bbef4ceebc76695f2e0c76674f1170a9d68e9",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 21255,
+      "hypotheses_before_deduplication": 1118,
+      "unique_hypotheses": 957,
+      "ambiguous_hypotheses_rejected": 424,
+      "heldout_colliding_associations_rejected": 6,
+      "selected_tracks": 276,
+      "calibration_conflicting_hypotheses_rejected": 257,
+      "rejection_counts": {
+        "insufficient_broad_support": 7562,
+        "seed_not_retained": 12427,
+        "training_gate": 133,
+        "refit_lost_support": 15
+      },
+      "heldout_predictions": 875,
+      "heldout_matched_predictions": 799,
+      "heldout_nearest_error_px": {
+        "median": 0.24085419403854758,
+        "p95": 2.9509201214720755,
+        "max": 16.735013762585247
+      },
+      "seconds": 13.501866579055786,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 276,
+      "point_identity_counts": {
+        "wrong_identity": 45,
+        "unresolved": 45,
+        "correct": 186
+      },
+      "faces": 123,
+      "face_identity_counts": {
+        "wrong_track_identity": 47,
+        "correct": 27,
+        "unresolved": 49
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 120,
+        "unresolved": 3
+      },
+      "strict_correct_face_fraction_all": 0.21951219512195122,
+      "unique_correct_physical_faces": 27,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 120,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 27,
+      "strict_geometric_visibility_coverage": 0.038461538461538464,
+      "known_correct_point_3d_error": {
+        "n": 186,
+        "median": 0.007165975350353041,
+        "p95": 0.00813781968184132,
+        "max": 0.008881129293043473
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 186,
+    "assembly": {
+      "points": 276,
+      "observed_quads": 123,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Hypothesis calibration only: 90-degree support and training p95<=1.5px; withheld pixels never select point models.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 276,
+        "vertices_used_by_faces": 206,
+        "unused_candidate_points": 70,
+        "display_triangles": 246,
+        "face_connected_components_by_shared_vertex": 4,
+        "component_used_vertex_counts_descending": [
+          135,
+          51,
+          16,
+          4
+        ],
+        "boundary_edges": 160,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 13,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    }
+  },
+  "bent48_base": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": false,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "85e134c75c95396d53a35517146bbef4ceebc76695f2e0c76674f1170a9d68e9",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 23222,
+      "hypotheses_before_deduplication": 1197,
+      "unique_hypotheses": 1035,
+      "ambiguous_hypotheses_rejected": 0,
+      "heldout_colliding_associations_rejected": 78,
+      "selected_tracks": 223,
+      "calibration_conflicting_hypotheses_rejected": 812,
+      "rejection_counts": {
+        "insufficient_broad_support": 7305,
+        "seed_not_retained": 14611,
+        "training_gate": 85,
+        "refit_lost_support": 24
+      },
+      "heldout_predictions": 749,
+      "heldout_matched_predictions": 628,
+      "heldout_nearest_error_px": {
+        "median": 0.248149187577269,
+        "p95": 2.4102034015866147,
+        "max": 16.540705435522177
+      },
+      "seconds": 14.261369943618774,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 223,
+      "point_identity_counts": {
+        "wrong_identity": 45,
+        "unresolved": 37,
+        "correct": 141
+      },
+      "faces": 83,
+      "face_identity_counts": {
+        "correct": 28,
+        "unresolved": 32,
+        "wrong_track_identity": 23
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 81,
+        "unresolved": 2
+      },
+      "strict_correct_face_fraction_all": 0.3373493975903614,
+      "unique_correct_physical_faces": 28,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 81,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 28,
+      "strict_geometric_visibility_coverage": 0.03977272727272727,
+      "known_correct_point_3d_error": {
+        "n": 141,
+        "median": 0.006452752608605001,
+        "p95": 0.00874795622654112,
+        "max": 0.010482587601124962
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 141,
+    "assembly": {
+      "points": 223,
+      "observed_quads": 83,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Hypothesis calibration only: 90-degree support and training p95<=1.5px; withheld pixels never select point models.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 223,
+        "vertices_used_by_faces": 117,
+        "unused_candidate_points": 106,
+        "display_triangles": 166,
+        "face_connected_components_by_shared_vertex": 1,
+        "component_used_vertex_counts_descending": [
+          117
+        ],
+        "boundary_edges": 66,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 15,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    }
+  },
+  "bent48_veto": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "85e134c75c95396d53a35517146bbef4ceebc76695f2e0c76674f1170a9d68e9",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 23222,
+      "hypotheses_before_deduplication": 1197,
+      "unique_hypotheses": 1035,
+      "ambiguous_hypotheses_rejected": 405,
+      "heldout_colliding_associations_rejected": 72,
+      "selected_tracks": 216,
+      "calibration_conflicting_hypotheses_rejected": 414,
+      "rejection_counts": {
+        "insufficient_broad_support": 7305,
+        "seed_not_retained": 14611,
+        "training_gate": 85,
+        "refit_lost_support": 24
+      },
+      "heldout_predictions": 712,
+      "heldout_matched_predictions": 611,
+      "heldout_nearest_error_px": {
+        "median": 0.24243823993700175,
+        "p95": 1.6474271811228915,
+        "max": 16.540705435522177
+      },
+      "seconds": 14.426886796951294,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 216,
+      "point_identity_counts": {
+        "wrong_identity": 33,
+        "unresolved": 32,
+        "correct": 151
+      },
+      "faces": 72,
+      "face_identity_counts": {
+        "wrong_track_identity": 10,
+        "correct": 34,
+        "unresolved": 28
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 70,
+        "unresolved": 2
+      },
+      "strict_correct_face_fraction_all": 0.4722222222222222,
+      "unique_correct_physical_faces": 34,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 70,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 34,
+      "strict_geometric_visibility_coverage": 0.048295454545454544,
+      "known_correct_point_3d_error": {
+        "n": 151,
+        "median": 0.006484650599493451,
+        "p95": 0.00843995945948265,
+        "max": 0.010482587601124962
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 151,
+    "assembly": {
+      "points": 216,
+      "observed_quads": 72,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Hypothesis calibration only: 90-degree support and training p95<=1.5px; withheld pixels never select point models.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 216,
+        "vertices_used_by_faces": 109,
+        "unused_candidate_points": 107,
+        "display_triangles": 144,
+        "face_connected_components_by_shared_vertex": 1,
+        "component_used_vertex_counts_descending": [
+          109
+        ],
+        "boundary_edges": 72,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 15,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    }
+  },
+  "pear96_veto": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "85e134c75c95396d53a35517146bbef4ceebc76695f2e0c76674f1170a9d68e9",
+      "camera_sha256": "7af045c50bbf89961754c49d472fb98b8860994687408193528224accb4d7909",
+      "frame_count": 96,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        73,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        93,
+        95
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44,
+        49,
+        54,
+        59,
+        64,
+        69,
+        74,
+        79,
+        84,
+        89,
+        94
+      ],
+      "seeds_tested": 41077,
+      "hypotheses_before_deduplication": 1718,
+      "unique_hypotheses": 1229,
+      "ambiguous_hypotheses_rejected": 131,
+      "heldout_colliding_associations_rejected": 0,
+      "selected_tracks": 366,
+      "calibration_conflicting_hypotheses_rejected": 732,
+      "rejection_counts": {
+        "seed_not_retained": 36157,
+        "insufficient_broad_support": 3106,
+        "refit_lost_support": 16,
+        "training_gate": 80
+      },
+      "heldout_predictions": 2452,
+      "heldout_matched_predictions": 2311,
+      "heldout_nearest_error_px": {
+        "median": 0.22292947436692145,
+        "p95": 2.2347605828426613,
+        "max": 17.044195378894614
+      },
+      "seconds": 36.8823299407959,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 366,
+      "point_identity_counts": {
+        "wrong_identity": 32,
+        "unresolved": 112,
+        "correct": 222
+      },
+      "faces": 244,
+      "face_identity_counts": {
+        "correct": 32,
+        "unresolved": 140,
+        "wrong_track_identity": 72
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 238,
+        "unresolved": 6
+      },
+      "strict_correct_face_fraction_all": 0.13114754098360656,
+      "unique_correct_physical_faces": 32,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 238,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 32,
+      "strict_geometric_visibility_coverage": 0.045454545454545456,
+      "known_correct_point_3d_error": {
+        "n": 222,
+        "median": 0.00679539177120549,
+        "p95": 0.008264528018301028,
+        "max": 0.0087919310976272
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 222,
+    "assembly": {
+      "points": 366,
+      "observed_quads": 244,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Hypothesis calibration only: 90-degree support and training p95<=1.5px; withheld pixels never select point models.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 366,
+        "vertices_used_by_faces": 301,
+        "unused_candidate_points": 65,
+        "display_triangles": 488,
+        "face_connected_components_by_shared_vertex": 1,
+        "component_used_vertex_counts_descending": [
+          301
+        ],
+        "boundary_edges": 116,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 25,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    }
+  },
+  "bent48_lk": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 13,
+    "point_identity_counts": {
+      "wrong_identity": 13
+    },
+    "faces": 0,
+    "face_identity_counts": {},
+    "source_cell_identity_counts": {},
+    "strict_correct_face_fraction_all": null,
+    "unique_correct_physical_faces": 0,
+    "duplicate_correct_physical_faces": 0,
+    "unique_locally_correct_physical_faces": 0,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 0,
+    "strict_geometric_visibility_coverage": 0.0,
+    "known_correct_point_3d_error": {
+      "n": 0,
+      "median": null,
+      "p95": null,
+      "max": null
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ]
+  },
+  "pear48_resolvable": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "resolvability_gate": true,
+        "minimum_detected_node_spacing_px": 6,
+        "minimum_calibration_density": 0.9,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "a730aa022f4f988f1ea51b57f41c77421a510b486accdcf24437ccd4d1636927",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 21255,
+      "hypotheses_before_deduplication": 886,
+      "unique_hypotheses": 748,
+      "ambiguous_hypotheses_rejected": 193,
+      "heldout_colliding_associations_rejected": 20,
+      "selected_tracks": 295,
+      "calibration_conflicting_hypotheses_rejected": 260,
+      "rejection_counts": {
+        "insufficient_broad_support": 7858,
+        "seed_not_retained": 12429,
+        "training_gate": 51,
+        "refit_lost_support": 31
+      },
+      "heldout_predictions": 912,
+      "heldout_matched_predictions": 831,
+      "heldout_nearest_error_px": {
+        "median": 0.23098060320194236,
+        "p95": 2.638155660370417,
+        "max": 16.735013762585247
+      },
+      "seconds": 12.493095874786377,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 295,
+      "point_identity_counts": {
+        "wrong_identity": 32,
+        "unresolved": 57,
+        "correct": 206
+      },
+      "faces": 140,
+      "face_identity_counts": {
+        "wrong_track_identity": 44,
+        "correct": 30,
+        "unresolved": 66
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 135,
+        "unresolved": 5
+      },
+      "strict_correct_face_fraction_all": 0.21428571428571427,
+      "unique_correct_physical_faces": 30,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 135,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 702,
+      "strict_covered_visible_faces": 30,
+      "strict_geometric_visibility_coverage": 0.042735042735042736,
+      "known_correct_point_3d_error": {
+        "n": 206,
+        "median": 0.007122142201118996,
+        "p95": 0.008221216870798291,
+        "max": 0.009015338576153177
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 206,
+    "assembly": {
+      "points": 295,
+      "observed_quads": 140,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Calibration-only broad-view hypothesis; heldout images are prediction tests, not a point acceptance gate.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 295,
+        "vertices_used_by_faces": 220,
+        "unused_candidate_points": 75,
+        "display_triangles": 280,
+        "face_connected_components_by_shared_vertex": 2,
+        "component_used_vertex_counts_descending": [
+          151,
+          69
+        ],
+        "boundary_edges": 160,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 13,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    },
+    "structural_validation": {
+      "passed": true,
+      "models": 295,
+      "calibration_nodes_unique": 4062,
+      "matched_heldout_nodes_unique": 831,
+      "maximum_xyz_recompute_error": 0.0,
+      "maximum_observed_coordinate_difference": 0.0,
+      "minimum_calibration_density": 0.9,
+      "maximum_final_training_residual_px": 1.959674332025564,
+      "camera_sha256_matches": true,
+      "truth_read": false,
+      "checks": [
+        "Heldout nodes absent from all model fits.",
+        "Every emitted coordinate is an actual independently detected node.",
+        "All calibration and emitted heldout nodes are one-to-one.",
+        "All XYZ values reproduce from calibration observations only.",
+        "Rejected predictions are never inserted."
+      ]
+    }
+  },
+  "bent48_resolvable": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "resolvability_gate": true,
+        "minimum_detected_node_spacing_px": 6,
+        "minimum_calibration_density": 0.9,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "a730aa022f4f988f1ea51b57f41c77421a510b486accdcf24437ccd4d1636927",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 23222,
+      "hypotheses_before_deduplication": 1031,
+      "unique_hypotheses": 883,
+      "ambiguous_hypotheses_rejected": 261,
+      "heldout_colliding_associations_rejected": 66,
+      "selected_tracks": 218,
+      "calibration_conflicting_hypotheses_rejected": 404,
+      "rejection_counts": {
+        "seed_not_retained": 14651,
+        "insufficient_broad_support": 7468,
+        "refit_lost_support": 34,
+        "training_gate": 38
+      },
+      "heldout_predictions": 711,
+      "heldout_matched_predictions": 622,
+      "heldout_nearest_error_px": {
+        "median": 0.2279637360976133,
+        "p95": 1.3404300360997468,
+        "max": 16.540705435522177
+      },
+      "seconds": 13.456732034683228,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 218,
+      "point_identity_counts": {
+        "wrong_identity": 29,
+        "unresolved": 27,
+        "correct": 162
+      },
+      "faces": 90,
+      "face_identity_counts": {
+        "unresolved": 32,
+        "correct": 46,
+        "wrong_track_identity": 12
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 88,
+        "unresolved": 2
+      },
+      "strict_correct_face_fraction_all": 0.5111111111111111,
+      "unique_correct_physical_faces": 46,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 88,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 46,
+      "strict_geometric_visibility_coverage": 0.06534090909090909,
+      "known_correct_point_3d_error": {
+        "n": 162,
+        "median": 0.006540028829336325,
+        "p95": 0.008552339090442996,
+        "max": 0.010482587601124962
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 162,
+    "assembly": {
+      "points": 218,
+      "observed_quads": 90,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Calibration-only broad-view hypothesis; heldout images are prediction tests, not a point acceptance gate.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 218,
+        "vertices_used_by_faces": 122,
+        "unused_candidate_points": 96,
+        "display_triangles": 180,
+        "face_connected_components_by_shared_vertex": 1,
+        "component_used_vertex_counts_descending": [
+          122
+        ],
+        "boundary_edges": 62,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 15,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    },
+    "structural_validation": {
+      "passed": true,
+      "models": 218,
+      "calibration_nodes_unique": 3164,
+      "matched_heldout_nodes_unique": 622,
+      "maximum_xyz_recompute_error": 0.0,
+      "maximum_observed_coordinate_difference": 0.0,
+      "minimum_calibration_density": 0.9,
+      "maximum_final_training_residual_px": 1.89462909290242,
+      "camera_sha256_matches": true,
+      "truth_read": false,
+      "checks": [
+        "Heldout nodes absent from all model fits.",
+        "Every emitted coordinate is an actual independently detected node.",
+        "All calibration and emitted heldout nodes are one-to-one.",
+        "All XYZ values reproduce from calibration observations only.",
+        "Rejected predictions are never inserted."
+      ]
+    }
+  },
+  "pear96_resolvable": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "resolvability_gate": true,
+        "minimum_detected_node_spacing_px": 6,
+        "minimum_calibration_density": 0.9,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "a730aa022f4f988f1ea51b57f41c77421a510b486accdcf24437ccd4d1636927",
+      "camera_sha256": "7af045c50bbf89961754c49d472fb98b8860994687408193528224accb4d7909",
+      "frame_count": 96,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        73,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        93,
+        95
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44,
+        49,
+        54,
+        59,
+        64,
+        69,
+        74,
+        79,
+        84,
+        89,
+        94
+      ],
+      "seeds_tested": 41077,
+      "hypotheses_before_deduplication": 1652,
+      "unique_hypotheses": 1176,
+      "ambiguous_hypotheses_rejected": 101,
+      "heldout_colliding_associations_rejected": 0,
+      "selected_tracks": 357,
+      "calibration_conflicting_hypotheses_rejected": 718,
+      "rejection_counts": {
+        "seed_not_retained": 36170,
+        "insufficient_broad_support": 3194,
+        "refit_lost_support": 17,
+        "training_gate": 44
+      },
+      "heldout_predictions": 2400,
+      "heldout_matched_predictions": 2271,
+      "heldout_nearest_error_px": {
+        "median": 0.22088919761232478,
+        "p95": 2.1185000452048297,
+        "max": 17.044195378894614
+      },
+      "seconds": 42.080748319625854,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 357,
+      "point_identity_counts": {
+        "wrong_identity": 30,
+        "unresolved": 113,
+        "correct": 214
+      },
+      "faces": 234,
+      "face_identity_counts": {
+        "correct": 32,
+        "unresolved": 138,
+        "wrong_track_identity": 64
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 228,
+        "unresolved": 6
+      },
+      "strict_correct_face_fraction_all": 0.13675213675213677,
+      "unique_correct_physical_faces": 32,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 228,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 32,
+      "strict_geometric_visibility_coverage": 0.045454545454545456,
+      "known_correct_point_3d_error": {
+        "n": 214,
+        "median": 0.006826711515302896,
+        "p95": 0.008291560515196443,
+        "max": 0.0087919310976272
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 214,
+    "assembly": {
+      "points": 357,
+      "observed_quads": 234,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Calibration-only broad-view hypothesis; heldout images are prediction tests, not a point acceptance gate.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 357,
+        "vertices_used_by_faces": 295,
+        "unused_candidate_points": 62,
+        "display_triangles": 468,
+        "face_connected_components_by_shared_vertex": 2,
+        "component_used_vertex_counts_descending": [
+          291,
+          4
+        ],
+        "boundary_edges": 122,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 3,
+      "face_observations_max": 25,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    },
+    "structural_validation": {
+      "passed": true,
+      "models": 357,
+      "calibration_nodes_unique": 9744,
+      "matched_heldout_nodes_unique": 2271,
+      "maximum_xyz_recompute_error": 0.0,
+      "maximum_observed_coordinate_difference": 0.0,
+      "minimum_calibration_density": 0.9,
+      "maximum_final_training_residual_px": 2.110142595179994,
+      "camera_sha256_matches": true,
+      "truth_read": false,
+      "checks": [
+        "Heldout nodes absent from all model fits.",
+        "Every emitted coordinate is an actual independently detected node.",
+        "All calibration and emitted heldout nodes are one-to-one.",
+        "All XYZ values reproduce from calibration observations only.",
+        "Rejected predictions are never inserted."
+      ]
+    }
+  },
+  "barrel48_base": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": false,
+        "resolvability_gate": false,
+        "minimum_detected_node_spacing_px": null,
+        "minimum_calibration_density": null,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "a730aa022f4f988f1ea51b57f41c77421a510b486accdcf24437ccd4d1636927",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 21130,
+      "hypotheses_before_deduplication": 969,
+      "unique_hypotheses": 838,
+      "ambiguous_hypotheses_rejected": 0,
+      "heldout_colliding_associations_rejected": 8,
+      "selected_tracks": 325,
+      "calibration_conflicting_hypotheses_rejected": 513,
+      "rejection_counts": {
+        "insufficient_broad_support": 6929,
+        "seed_not_retained": 13113,
+        "training_gate": 112,
+        "refit_lost_support": 7
+      },
+      "heldout_predictions": 1048,
+      "heldout_matched_predictions": 923,
+      "heldout_nearest_error_px": {
+        "median": 0.3277786357228526,
+        "p95": 5.178485407156003,
+        "max": 17.44435669255957
+      },
+      "seconds": 16.014375925064087,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 325,
+      "point_identity_counts": {
+        "wrong_identity": 52,
+        "unresolved": 56,
+        "correct": 217
+      },
+      "faces": 178,
+      "face_identity_counts": {
+        "correct": 45,
+        "wrong_track_identity": 72,
+        "unresolved": 61
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 178
+      },
+      "strict_correct_face_fraction_all": 0.25280898876404495,
+      "unique_correct_physical_faces": 45,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 178,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 45,
+      "strict_geometric_visibility_coverage": 0.06392045454545454,
+      "known_correct_point_3d_error": {
+        "n": 217,
+        "median": 0.0071349454254485585,
+        "p95": 0.008793587861944672,
+        "max": 0.01191184480846679
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 217,
+    "assembly": {
+      "points": 325,
+      "observed_quads": 178,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Calibration-only broad-view hypothesis; heldout images are prediction tests, not a point acceptance gate.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 325,
+        "vertices_used_by_faces": 277,
+        "unused_candidate_points": 48,
+        "display_triangles": 356,
+        "face_connected_components_by_shared_vertex": 3,
+        "component_used_vertex_counts_descending": [
+          267,
+          6,
+          4
+        ],
+        "boundary_edges": 192,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 4,
+      "face_observations_max": 15,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    },
+    "structural_validation": {
+      "passed": true,
+      "models": 325,
+      "calibration_nodes_unique": 4448,
+      "matched_heldout_nodes_unique": 923,
+      "maximum_xyz_recompute_error": 0.0,
+      "maximum_observed_coordinate_difference": 0.0,
+      "minimum_calibration_density": 0.7647058823529411,
+      "maximum_final_training_residual_px": 1.9391942474440897,
+      "camera_sha256_matches": true,
+      "truth_read": false,
+      "checks": [
+        "Heldout nodes absent from all model fits.",
+        "Every emitted coordinate is an actual independently detected node.",
+        "All calibration and emitted heldout nodes are one-to-one.",
+        "All XYZ values reproduce from calibration observations only.",
+        "Rejected predictions are never inserted."
+      ]
+    }
+  },
+  "barrel48_resolvable": {
+    "hypotheses": {
+      "settings": {
+        "holdout_frame_modulus": 5,
+        "holdout_frame_remainder": 4,
+        "anchor_stride": 4,
+        "seed_min_angle_deg": 30,
+        "maximum_window_span_deg": 180,
+        "match_radius_px": 2.0,
+        "nearest_margin_px": 0.5,
+        "max_missing_calibration_samples": 1,
+        "min_calibration_observations": 9,
+        "min_observed_span_deg": 90,
+        "refit_rounds": 2,
+        "training_p95_max_px": 1.5,
+        "condition_max": 20,
+        "truth_used": false,
+        "competing_hypothesis_veto": true,
+        "resolvability_gate": true,
+        "minimum_detected_node_spacing_px": 6,
+        "minimum_calibration_density": 0.9,
+        "heldout_collision_policy": "reject all"
+      },
+      "source_sha256": "a730aa022f4f988f1ea51b57f41c77421a510b486accdcf24437ccd4d1636927",
+      "camera_sha256": "971022b97b86b3f51cb578223f69cbc359e2cd31ff95fd2035abf1b85209c137",
+      "frame_count": 48,
+      "calibration_frames": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ],
+      "heldout_frames": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44
+      ],
+      "seeds_tested": 21130,
+      "hypotheses_before_deduplication": 749,
+      "unique_hypotheses": 643,
+      "ambiguous_hypotheses_rejected": 101,
+      "heldout_colliding_associations_rejected": 2,
+      "selected_tracks": 316,
+      "calibration_conflicting_hypotheses_rejected": 226,
+      "rejection_counts": {
+        "insufficient_broad_support": 7171,
+        "seed_not_retained": 13134,
+        "training_gate": 53,
+        "refit_lost_support": 23
+      },
+      "heldout_predictions": 983,
+      "heldout_matched_predictions": 900,
+      "heldout_nearest_error_px": {
+        "median": 0.30520595453995153,
+        "p95": 4.631354601762722,
+        "max": 17.434894689764246
+      },
+      "seconds": 13.904126405715942,
+      "limitations": [
+        "Camera model is supplied, not recovered or validated here.",
+        "Nearest heldout node error is not physical identity error.",
+        "Selection is greedy set packing, not a proven global optimum.",
+        "Periodic and reflective ambiguities may produce coherent wrong trajectories.",
+        "Missing/occluded coordinates are never synthesized."
+      ]
+    },
+    "identity": {
+      "evaluation_only": true,
+      "settings": {
+        "maximum_association_distance_px": 3.0,
+        "minimum_nearest_separation_px": 1.0,
+        "physical_vertex_canonicalization_decimals": 7,
+        "full_track_required": true
+      },
+      "points": 316,
+      "point_identity_counts": {
+        "wrong_identity": 29,
+        "correct": 237,
+        "unresolved": 50
+      },
+      "faces": 164,
+      "face_identity_counts": {
+        "correct": 66,
+        "wrong_track_identity": 41,
+        "unresolved": 57
+      },
+      "source_cell_identity_counts": {
+        "correct_same_cell": 164
+      },
+      "strict_correct_face_fraction_all": 0.4024390243902439,
+      "unique_correct_physical_faces": 66,
+      "duplicate_correct_physical_faces": 0,
+      "unique_locally_correct_physical_faces": 164,
+      "available_non_degenerate_truth_faces": 704,
+      "geometrically_visible_faces_with_support": 704,
+      "strict_covered_visible_faces": 66,
+      "strict_geometric_visibility_coverage": 0.09375,
+      "known_correct_point_3d_error": {
+        "n": 237,
+        "median": 0.007019004011695259,
+        "p95": 0.008723453190085634,
+        "max": 0.010297145306351743
+      },
+      "limitations": [
+        "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+        "Ambiguous or unresolved observations remain in all denominators.",
+        "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+        "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+      ]
+    },
+    "unique_correct_physical_vertices": 237,
+    "assembly": {
+      "points": 316,
+      "observed_quads": 164,
+      "settings": {
+        "minimum_observations": 3,
+        "minimum_yaw_span_deg": 15,
+        "max_node_track_distance_px": 4,
+        "nearest_margin_px": 1,
+        "collision_policy": "reject all",
+        "point_gate": "Calibration-only broad-view hypothesis; heldout images are prediction tests, not a point acceptance gate.",
+        "point_geometry_refitted": false,
+        "camera_refitted": false,
+        "hidden_completion": false
+      },
+      "topology": {
+        "input_vertices": 316,
+        "vertices_used_by_faces": 279,
+        "unused_candidate_points": 37,
+        "display_triangles": 328,
+        "face_connected_components_by_shared_vertex": 5,
+        "component_used_vertex_counts_descending": [
+          223,
+          26,
+          22,
+          4,
+          4
+        ],
+        "boundary_edges": 220,
+        "nonmanifold_edges": 0,
+        "zero_area_display_triangles": 0,
+        "watertight_edge_incidence": false,
+        "surface_winding_orientability_checked": false,
+        "self_intersections_checked": false,
+        "notes": "Counts only; no coordinate, winding, connectivity or surface repair."
+      },
+      "face_observations_min": 4,
+      "face_observations_max": 15,
+      "limitations": [
+        "All topology is image-conditioned, not proof of physical identities.",
+        "Same periodic phase errors may survive both tracking and repeated cells.",
+        "Camera is experimental and uncalibrated.",
+        "Face winding and self intersections not validated."
+      ]
+    },
+    "structural_validation": {
+      "passed": true,
+      "models": 316,
+      "calibration_nodes_unique": 4277,
+      "matched_heldout_nodes_unique": 900,
+      "maximum_xyz_recompute_error": 0.0,
+      "maximum_observed_coordinate_difference": 0.0,
+      "minimum_calibration_density": 0.9,
+      "maximum_final_training_residual_px": 1.93433992452808,
+      "camera_sha256_matches": true,
+      "truth_read": false,
+      "checks": [
+        "Heldout nodes absent from all model fits.",
+        "Every emitted coordinate is an actual independently detected node.",
+        "All calibration and emitted heldout nodes are one-to-one.",
+        "All XYZ values reproduce from calibration observations only.",
+        "Rejected predictions are never inserted."
+      ]
+    }
+  },
+  "barrel48_lk": {
+    "evaluation_only": true,
+    "settings": {
+      "maximum_association_distance_px": 3.0,
+      "minimum_nearest_separation_px": 1.0,
+      "physical_vertex_canonicalization_decimals": 7,
+      "full_track_required": true
+    },
+    "points": 14,
+    "point_identity_counts": {
+      "wrong_identity": 14
+    },
+    "faces": 0,
+    "face_identity_counts": {},
+    "source_cell_identity_counts": {},
+    "strict_correct_face_fraction_all": null,
+    "unique_correct_physical_faces": 0,
+    "duplicate_correct_physical_faces": 0,
+    "unique_locally_correct_physical_faces": 0,
+    "available_non_degenerate_truth_faces": 704,
+    "geometrically_visible_faces_with_support": 704,
+    "strict_covered_visible_faces": 0,
+    "strict_geometric_visibility_coverage": 0.0,
+    "known_correct_point_3d_error": {
+      "n": 0,
+      "median": null,
+      "p95": null,
+      "max": null
+    },
+    "limitations": [
+      "Geometric visibility is an upper-bound denominator, not evidence of detector readability.",
+      "Ambiguous or unresolved observations remain in all denominators.",
+      "Shared control cameras are declared acquisition metadata; this does not evaluate unknown camera calibration.",
+      "No truth labels, positions or face connectivity are used to select or repair algorithm outputs."
+    ]
+  }
+}

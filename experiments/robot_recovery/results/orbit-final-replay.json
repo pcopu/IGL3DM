@@ -1,0 +1,48 @@
+{
+  "exact_replay": {
+    "candidate_points.json": {
+      "identical": true,
+      "sha256": "79cc82ec29a0d7394282ec7fe91315be6a04fb847e68b9f20e95b1b1031e53e8"
+    },
+    "tracks.json": {
+      "identical": true,
+      "sha256": "bf2d48c77b7eaa5d00ca74f61e5baa08b9dff1bc00bd55d038e8e77f31ddca3f"
+    },
+    "frame_nodes.json": {
+      "identical": true,
+      "sha256": "c27c12fa043eb2725c63bcc3774ca3eb90090e713a9cf22843723ae6dc487722"
+    },
+    "heldout_predictions.json": {
+      "identical": true,
+      "sha256": "96038f6e1f031fb4cbd0089cbd9a041f099919ee845437c082b1512ab47aecc4"
+    },
+    "hypotheses.json": {
+      "identical": true,
+      "sha256": "2acb217e0960e8d18b9b5aabb421bce86c25cceece121d6aba336ea3944ea4fe"
+    },
+    "hypothesis_veto.json": {
+      "identical": true,
+      "sha256": "09fc46a0ac026f6ca7fcb9ace679f1bcc3f257e9cda484abf05669b208c4c212"
+    }
+  },
+  "validator": {
+    "passed": true,
+    "models": 198,
+    "calibration_nodes_unique": 8197,
+    "matched_heldout_nodes_unique": 1931,
+    "maximum_xyz_recompute_error": 0.0,
+    "maximum_observed_coordinate_difference": 0.0,
+    "minimum_calibration_density": 0.9032258064516129,
+    "maximum_final_training_residual_px": 1.9922737051896697,
+    "camera_sha256_matches": true,
+    "truth_read": false,
+    "checks": [
+      "Heldout nodes absent from all model fits.",
+      "Every emitted coordinate is an actual independently detected node.",
+      "All calibration and emitted heldout nodes are one-to-one.",
+      "All XYZ values reproduce from calibration observations only.",
+      "Rejected predictions are never inserted."
+    ]
+  },
+  "source_sha256": "a05168dd2ce18ba7a1a6af69d7cae357050363437050529585a1796c4cc76d57"
+}
