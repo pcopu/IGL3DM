@@ -1,0 +1,46 @@
+[
+  {
+    "file": "orbit-pear-evidence.zip",
+    "mode": "pear",
+    "bytes": 3615831,
+    "sha256": "9ef261462e493eaadb47a4ba27d7f9f57b171783fcf002c2e268297bfe099972",
+    "logical_evidence_files": 111,
+    "stored_members": 97,
+    "identical_aliases": 17,
+    "all_logical_member_hashes_verified": true,
+    "extraction_and_alias_restoration_verified": true
+  },
+  {
+    "file": "orbit-bent-evidence.zip",
+    "mode": "bent",
+    "bytes": 5717376,
+    "sha256": "f75a5dc589f2bdb1857449b98a20752cded9bd19e67b4c5d23e62c406776ae08",
+    "logical_evidence_files": 90,
+    "stored_members": 84,
+    "identical_aliases": 9,
+    "all_logical_member_hashes_verified": true,
+    "extraction_and_alias_restoration_verified": true
+  },
+  {
+    "file": "orbit-barrel-evidence.zip",
+    "mode": "barrel",
+    "bytes": 5225862,
+    "sha256": "1380c212ed0415a98750ca96a10f746aa468351cf93318f55b845cd8392ec82e",
+    "logical_evidence_files": 75,
+    "stored_members": 73,
+    "identical_aliases": 5,
+    "all_logical_member_hashes_verified": true,
+    "extraction_and_alias_restoration_verified": true
+  },
+  {
+    "file": "robot-orbit-association.zip",
+    "mode": "robot",
+    "bytes": 801691,
+    "sha256": "4c20176c63ccd382127c87534f3d4bf14de7632a9e75aca755aa38a01364da0b",
+    "logical_evidence_files": 43,
+    "stored_members": 44,
+    "identical_aliases": 2,
+    "all_logical_member_hashes_verified": true,
+    "extraction_and_alias_restoration_verified": true
+  }
+]
